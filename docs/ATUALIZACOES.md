@@ -1,0 +1,24 @@
+# Atualizações sem perder sua configuração
+
+O pacote público é mantido junto do produto. Cada versão leva código, instruções e manifesto de hashes. Isso não atualiza automaticamente uma central já instalada.
+
+## Pelo aviso do aplicativo
+
+Quando houver versão nova confirmada, o proprietário vê uma faixa sálvia acima da navegação. Clique em Ver atualização e copie o pedido no modal. Ele inclui o endereço da sua instalação e o repositório oficial, para funcionar mesmo em outra conversa do Work. O assistente lê o README e este guia, obtém a release oficial e conduz os passos abaixo. O aviso não instala código automaticamente. É possível ocultá-lo durante a visita.
+
+Sem aviso, pode-se pedir a conferência manual da versão. Não trate silêncio da telemetria como garantia de estar atualizado. Não existe garantia de manutenção permanente.
+
+Para atualizar sua instalação, forneça a nova versão completa ao Work e peça: “Atualize minha central existente usando este pacote, preservando meu Site, acesso, viagens, comprovantes e capa. Leia docs/ATUALIZACOES.md antes de alterar.”
+
+O Work deve:
+
+1. Conferir o manifesto da nova cópia limpa, a versão instalada e o Site vinculado na cópia pessoal. Registrar adaptações próprias que precisam ser preservadas.
+2. Preparar versão de retorno da fonte e conferir uma estratégia de recuperação dos dados antes de migrações. Reverter código não desfaz mudanças no banco.
+3. Incorporar as diferenças de código numa cópia de trabalho; preservar `.openai/hosting.json`, banco, bucket, segredos, permissões, UUID Photon, identidade/credencial em central_installation, aceite, dados e arquivos privados. Nunca copiar estado de exemplo ou de outra pessoa por cima desses dados.
+4. Instalar pelo lockfile, executar a conferência de tipos/build e verificar os fluxos afetados na instalação. Aplicar apenas migrações pendentes pelo fluxo oficial. Se houver alteração incompatível ou potencial perda de dados, preparar a solução e explicar o impacto antes de prosseguir.
+5. Mostrar o resultado e confirmar se a pessoa deseja publicar agora ou fazer mais ajustes. Aguardar a resposta, salvo pedido explícito de publicação da versão atual já recebido. Depois, publicar no mesmo Site e conferir URL, acesso restrito, dados anteriores e funções alteradas. Registrar versão/evidências em continuidade privada. Não ampliar audiência.
+
+Atualizar o repositório público não autoriza enviar os dados da instalação ao GitHub. A pasta configurada não deve ser redistribuída como se fosse o template limpo. O verificador de distribuição é executado antes da configuração; depois dela, hashes/arquivos extras podem mudar legitimamente.
+
+
+A versão com destinos OSM requer a migração aditiva `0007_trip_destinations`, antes de servir o novo código. Ela acrescenta referências geográficas vazias às viagens existentes; preserva o texto anterior e todos os vínculos. Confirme destinos antigos na interface, sem geocodificação ou substituição automática em lote.

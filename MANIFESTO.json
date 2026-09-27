@@ -1,0 +1,2061 @@
+{
+  "version": "0.1.0-preview.50",
+  "status": "distribution-setup-and-independent-installation-pending",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 267,
+      "sha256": "20d6fa46145dd500851e43a93f280289a76c9477a808e46e9c03ab32ebd1a73a"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 7102,
+      "sha256": "70520b0717002516281244f0a95596074c5693d135b291b6efd37e017bb8c253"
+    },
+    {
+      "path": "COMECE_AQUI.md",
+      "bytes": 2035,
+      "sha256": "79af8718e609e3efa15f46ab5002a0dbee5d5cb01547f89b4c1f6cde1af2391f"
+    },
+    {
+      "path": "CONFIGURAR_NO_WORK.md",
+      "bytes": 9890,
+      "sha256": "2b6a9a72602e1ca5ed689564465bc1b1173aad7f547e18778f0ae6f68bb9053e"
+    },
+    {
+      "path": "CREDITOS.md",
+      "bytes": 1565,
+      "sha256": "47bd57f10ec844af0681aea638e2ba96278c09ecbb34b62925c1c6fbdaf6e31a"
+    },
+    {
+      "path": "docs/ATUALIZACOES.md",
+      "bytes": 3104,
+      "sha256": "681add1e570e3ee82ee2a5749660eb82a313b0b7e6151daf87e15e7343ea3c82"
+    },
+    {
+      "path": "docs/IMPORTACAO.md",
+      "bytes": 4714,
+      "sha256": "b402f58e22912709aa8d934171a59c1a3ead0d4efbc943255584b83001432aad"
+    },
+    {
+      "path": "GUIA_DO_PRODUTO.md",
+      "bytes": 16720,
+      "sha256": "39cd4b545fbe164bd852fa9f28bb1db219937f4299613aa817c7cb80ce6cfe52"
+    },
+    {
+      "path": "LICENSE.md",
+      "bytes": 4443,
+      "sha256": "94b92b5418857ee9eb804765ab270e06fff3204355592fd4adb390382e6d582e"
+    },
+    {
+      "path": "ONBOARDING.md",
+      "bytes": 10124,
+      "sha256": "b6891246d28599fce82cfd5556d2ca79bf86be85ab08f33c9319ef0a8e044041"
+    },
+    {
+      "path": "PRIVACIDADE.md",
+      "bytes": 4563,
+      "sha256": "91ce198b8f80b0500b21c8c725acce20557e550d98aeda37358f3bad1bdb46b1"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3416,
+      "sha256": "8df149e166a9cca6be45e5ccc7d0c1ba093f7456ca1aaa3249d852b62f0630c2"
+    },
+    {
+      "path": "scripts/registrar-aceite.mjs",
+      "bytes": 1509,
+      "sha256": "13ac294838f7c99406e6adf2e92056ebd695335fad9767a2cb111fa0ec20075b"
+    },
+    {
+      "path": "scripts/verificar-pacote.mjs",
+      "bytes": 1702,
+      "sha256": "e625188e36ff1336104bba8b3a5d060d604bdea16207d3342adcba95076e90f3"
+    },
+    {
+      "path": "site/.npmrc",
+      "bytes": 76,
+      "sha256": "d2797503e01bdb96b5645fb9d4ff5b61093fdc283cb4fa85e350a3150297077a"
+    },
+    {
+      "path": "site/.openai/hosting.example.json",
+      "bytes": 35,
+      "sha256": "bcc60135f698bbe83722987ef0705bfb2f389f9eb1a163007cbb4c9ceab301cf"
+    },
+    {
+      "path": "site/app/api/destinations/search/route.ts",
+      "bytes": 536,
+      "sha256": "a0d30496f3358f15a6315394b6d53c639b0b7fd9327bc8135128ff3c3d1172ff"
+    },
+    {
+      "path": "site/app/api/documents/[id]/route.ts",
+      "bytes": 1039,
+      "sha256": "1c08729cc235612c8d67bcebaca2db7f2b2b4e0b6b826c1a57567f4b57655954"
+    },
+    {
+      "path": "site/app/api/installation/route.ts",
+      "bytes": 593,
+      "sha256": "e6c6cf0a3f2d8c87218b581c8a2316003c894cb61ad1d98f90f0310bd54165f8"
+    },
+    {
+      "path": "site/app/api/profile/cover/route.ts",
+      "bytes": 3040,
+      "sha256": "756abfeba67eeeb99d28a06f5b4f3314c127251edd62a67a8417780f2a65a90f"
+    },
+    {
+      "path": "site/app/api/trips/[id]/cover/route.ts",
+      "bytes": 2398,
+      "sha256": "362fbd387c07b42c6b15745c7abeefbe37b05a615cdbc44cc8d42a934f86cc52"
+    },
+    {
+      "path": "site/app/api/trips/[id]/import/route.ts",
+      "bytes": 464,
+      "sha256": "05749754acdb3072e06b0d5a116d4e2e854f82757b6bc1a1914fe88f1a172e78"
+    },
+    {
+      "path": "site/app/api/trips/[id]/lists/route.ts",
+      "bytes": 1733,
+      "sha256": "3855b779c4d8624407592f4097aadee29cf6cc0bc10dae597ddf6cbd9505fcde"
+    },
+    {
+      "path": "site/app/api/trips/[id]/locations/route.ts",
+      "bytes": 844,
+      "sha256": "f5c73ed61c815084e37b42d18b11c7f1d99690cc1d9ddb92ef0f3e36b0cfe71d"
+    },
+    {
+      "path": "site/app/api/trips/[id]/map-point/route.ts",
+      "bytes": 1733,
+      "sha256": "44bcdde68ce8694c7a985bdb9be6ffef283e161802435bff42c7d9f409d2db61"
+    },
+    {
+      "path": "site/app/api/trips/[id]/members/route.ts",
+      "bytes": 1399,
+      "sha256": "a5c4e59f501e361d98f3dfe04235c507d1fa1d02b10e2f834c7cc98c2d73ea14"
+    },
+    {
+      "path": "site/app/api/trips/[id]/period-items/route.ts",
+      "bytes": 676,
+      "sha256": "67005f3808ec3578b67b1e9f0925b305361f731b533e1e4e1fa1557c3aefb09d"
+    },
+    {
+      "path": "site/app/api/trips/[id]/place-search/route.ts",
+      "bytes": 1194,
+      "sha256": "56023596ca7c032bb1548e46318044aa7a2a49008bcb8ac3336d571641d63023"
+    },
+    {
+      "path": "site/app/api/trips/[id]/places/[placeId]/photo-search/route.ts",
+      "bytes": 703,
+      "sha256": "127c5e29238defc167d0a6b432e59f245bbb0383bb54839ab2e06496ee88c3fc"
+    },
+    {
+      "path": "site/app/api/trips/[id]/places/[placeId]/photo/route.ts",
+      "bytes": 3608,
+      "sha256": "9d3cfef0a225cd3ea51a5a4f21a614cd75aa429329ca15d2623bedd7493b1355"
+    },
+    {
+      "path": "site/app/api/trips/[id]/places/route.ts",
+      "bytes": 3718,
+      "sha256": "fd7eb6ad5c061cd0f59229bdcc906b05e1ce4beb0a0cf033a0d5d2cd92da6c05"
+    },
+    {
+      "path": "site/app/api/trips/[id]/reservations/[reservationId]/route.ts",
+      "bytes": 756,
+      "sha256": "82f20144c221fe79d2a89122cfd46463252f21c9a1e1efb426201335cdef09de"
+    },
+    {
+      "path": "site/app/api/trips/[id]/reviews/route.ts",
+      "bytes": 1036,
+      "sha256": "6f466ea488e8ae2d6ea4d12d4481c6a165bf37b4a5400da23f517c7ea30eb404"
+    },
+    {
+      "path": "site/app/api/trips/[id]/route.ts",
+      "bytes": 2409,
+      "sha256": "4668b6c65c39226104d9f0fa78bc0634b7ebc3543b547db29198bb906569249d"
+    },
+    {
+      "path": "site/app/api/trips/[id]/timeline/route.ts",
+      "bytes": 2826,
+      "sha256": "5b279952fa625d1dda6009a6a13ba1f8d8524055162e0d202a73aa2eb0bbe88f"
+    },
+    {
+      "path": "site/app/api/trips/route.ts",
+      "bytes": 1309,
+      "sha256": "26718dbf870b05415b6ad1edd8caf3ee45aa98eb45d66639a2c40d586db694c2"
+    },
+    {
+      "path": "site/app/chatgpt-auth.ts",
+      "bytes": 2550,
+      "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+    },
+    {
+      "path": "site/app/cover-editor.tsx",
+      "bytes": 3026,
+      "sha256": "7c80983e8d45c5f4ee84bd9b9bb54bbd96b4682818d5a62e9dcd693cdae06642"
+    },
+    {
+      "path": "site/app/date-time-fields.tsx",
+      "bytes": 7358,
+      "sha256": "523d7269a7f3ca87b147697b746e00ef8774d420967267d373047eefce872e41"
+    },
+    {
+      "path": "site/app/day-map.tsx",
+      "bytes": 4668,
+      "sha256": "3a5bbe635de34f1762d54e53071c42c2c83c1ba850239c628dbe88284d6cf9ce"
+    },
+    {
+      "path": "site/app/day-timeline.tsx",
+      "bytes": 11220,
+      "sha256": "b09d40b1792a3b9f53ae57e27e9fd175e4e5306349914fea03e682ea50389d21"
+    },
+    {
+      "path": "site/app/destination-picker.tsx",
+      "bytes": 4064,
+      "sha256": "ec188ec97037469f3e4104a6e54a7a5018e7026ef86c54f890c0a4a2a2a64b17"
+    },
+    {
+      "path": "site/app/document-viewer.tsx",
+      "bytes": 10824,
+      "sha256": "af0e6243bd150f0b015e8204f1e5838cbcdc7d4cbebd2e0293dc4544d2a33027"
+    },
+    {
+      "path": "site/app/globals.css",
+      "bytes": 105282,
+      "sha256": "5a5df6b8c84115f53e98a91e1bf134016bd979f4d08d2b0bbde16bc278dee93e"
+    },
+    {
+      "path": "site/app/home-cover.tsx",
+      "bytes": 1824,
+      "sha256": "5df956b31c61cc800759927108b846d8824d5507df1d7ff57a49fd0fc944f750"
+    },
+    {
+      "path": "site/app/installation-client.tsx",
+      "bytes": 4087,
+      "sha256": "94d7baaa4d4c0542d972f34135a697ca3fe0ce016cd098a7cc18bfc6ff1ebf6c"
+    },
+    {
+      "path": "site/app/installation.css",
+      "bytes": 2758,
+      "sha256": "98c544cf0045cd7675ab1676d1f9a3df67b9552147b07a894285931a1f2bcba7"
+    },
+    {
+      "path": "site/app/layout.tsx",
+      "bytes": 1096,
+      "sha256": "ba345f1747609b620643a2be9b6274050a04d69d7f39d4efc0285885a62ded86"
+    },
+    {
+      "path": "site/app/page.tsx",
+      "bytes": 744,
+      "sha256": "a7e8a884f7f70141d49eba968bdfdbca432e35c17f07c5bdbf6053df8fb47b51"
+    },
+    {
+      "path": "site/app/pending-hub.tsx",
+      "bytes": 3271,
+      "sha256": "4069f6b0d62dd1a0e88158be4ddb2028e4ec051127750b21f8f016446b408ff7"
+    },
+    {
+      "path": "site/app/place-address.tsx",
+      "bytes": 442,
+      "sha256": "63666b1ca6a922745c57faebf611c851e1463cf6b1b0168071ca9e9acdc04164"
+    },
+    {
+      "path": "site/app/place-photo-editor.tsx",
+      "bytes": 4491,
+      "sha256": "166596333bb0b27a34c5c18434f9291d62400a40764c8cc515b4dd7a3f2a9ecb"
+    },
+    {
+      "path": "site/app/place-photo.tsx",
+      "bytes": 982,
+      "sha256": "199fd00ee515285e8498682f38eb7f30ad8c73ab150ec0c8d7beb6b31e71fda7"
+    },
+    {
+      "path": "site/app/planning-workspace.tsx",
+      "bytes": 33498,
+      "sha256": "bcd21b514a02016d2477e412207b13aa7b82413eda67048fa9945ff841633081"
+    },
+    {
+      "path": "site/app/reservation-editor.tsx",
+      "bytes": 4044,
+      "sha256": "96fbe15f30573132aab874bed9952be229dd01a18b2889bc9873ed1e05861a9e"
+    },
+    {
+      "path": "site/app/travel-app.tsx",
+      "bytes": 32334,
+      "sha256": "133bb05d7a5e781a6257e490b1878883e06f74ccd913bb1761b42dfa87090c4a"
+    },
+    {
+      "path": "site/app/trip-date-picker.tsx",
+      "bytes": 2779,
+      "sha256": "07e0c231e435493ba668ccaa406bfa390bc43bcf435b3bb92cca7716dd2be184"
+    },
+    {
+      "path": "site/app/trip-editor.tsx",
+      "bytes": 5714,
+      "sha256": "5def9914ed6d820184242b3fcefc265f28006c959fa4c9fd2e3d9e7abaee2c0a"
+    },
+    {
+      "path": "site/app/use-day-order.ts",
+      "bytes": 2226,
+      "sha256": "c90817f20846249bd0ff5b3482e3048e34b789f1bf434ebe5829e59d138add87"
+    },
+    {
+      "path": "site/app/use-reservation-locations.ts",
+      "bytes": 1937,
+      "sha256": "4ae0505cff98b6f7bd93a97b50b6e252e37d713b6624f4a78869c54ab1213de7"
+    },
+    {
+      "path": "site/build/sites-vite-plugin.LICENSE",
+      "bytes": 1063,
+      "sha256": "7de1e115d165f176e68f962acdb809b5ab8d8ae78d3981e0701392b2ac50c713"
+    },
+    {
+      "path": "site/build/sites-vite-plugin.ts",
+      "bytes": 7185,
+      "sha256": "07af20e7097d9ed1d76f7c446d02997550b8fc5ca89668b249e25eabd62c6834"
+    },
+    {
+      "path": "site/cloudflare-env.d.ts",
+      "bytes": 219,
+      "sha256": "a5bfc9f375569315ab78798b58f2ecf71d86038fcbe772b252ab4ec4821f9787"
+    },
+    {
+      "path": "site/components.json",
+      "bytes": 420,
+      "sha256": "31f4ca67a4a62572571003d3d5aac85ee6fbfca67a192924bac6b168d95e98fd"
+    },
+    {
+      "path": "site/components/ui/accordion.tsx",
+      "bytes": 2048,
+      "sha256": "a4f153089ba886dfcf73fac26b5c01ca933fa12fbe88df6fb723912bfffdfbb0"
+    },
+    {
+      "path": "site/components/ui/alert-dialog.tsx",
+      "bytes": 5439,
+      "sha256": "9a8d950f2b9b4352d5ebb762fb44d5c28c2d353aa29712071973656a8736e311"
+    },
+    {
+      "path": "site/components/ui/alert.tsx",
+      "bytes": 1614,
+      "sha256": "2cc59b5f7bda91c1670884b1bf46bfc8a2a6f226cef184f5762acc037188885b"
+    },
+    {
+      "path": "site/components/ui/aspect-ratio.tsx",
+      "bytes": 274,
+      "sha256": "b1c157886236782cb92d8fbcd4749532aaf6d8aabefd6e157ca40358f902f407"
+    },
+    {
+      "path": "site/components/ui/attachment.tsx",
+      "bytes": 6002,
+      "sha256": "ae8a25dd1a896d3964e3ef54d97e51221b418cde287dfd794428b89951c5c790"
+    },
+    {
+      "path": "site/components/ui/avatar.tsx",
+      "bytes": 2916,
+      "sha256": "58a846bf1617b94b9681921db9b8461d0145f311424663d11678a06b6153cb34"
+    },
+    {
+      "path": "site/components/ui/badge.tsx",
+      "bytes": 1776,
+      "sha256": "46a0de5224f6a5d5d63d45246534288518dce888f031064bff925bbc7fe6ad97"
+    },
+    {
+      "path": "site/components/ui/breadcrumb.tsx",
+      "bytes": 2350,
+      "sha256": "d4c0831bba2212e778248f54a6ace6ef378df8bba4616d1abf27787a31eabae5"
+    },
+    {
+      "path": "site/components/ui/bubble.tsx",
+      "bytes": 4699,
+      "sha256": "870cc0c5cfc8a515053f7e41e706a6bd017a909b45f1305fd3b164a52cc4483b"
+    },
+    {
+      "path": "site/components/ui/button-group.tsx",
+      "bytes": 2202,
+      "sha256": "784c89d8ee683e1bc972ae69e6ea8225a7f63abe22aa1b5fc3423ae8a2a399c0"
+    },
+    {
+      "path": "site/components/ui/button.tsx",
+      "bytes": 2241,
+      "sha256": "007024665c2f21bf6e4d483bbbe0cc2caefc136593b5933fa7f0ab30805fd976"
+    },
+    {
+      "path": "site/components/ui/calendar.tsx",
+      "bytes": 7832,
+      "sha256": "3855fbe0d3f8ad3a4b93071f98b76a9f6782d46ec8b05f5d2ddbee1e4e39bc84"
+    },
+    {
+      "path": "site/components/ui/card.tsx",
+      "bytes": 1987,
+      "sha256": "c48dd3b96be90a7066f1aebf294f0af9d00ebcdc367d5d4aca55429ade570c1c"
+    },
+    {
+      "path": "site/components/ui/carousel.tsx",
+      "bytes": 5556,
+      "sha256": "b7ea0dda3903d972c186f739e23da61f547bc83b5a0bf13b16856577846d5fc3"
+    },
+    {
+      "path": "site/components/ui/chart.tsx",
+      "bytes": 10614,
+      "sha256": "45aa5ea4a386f4fb5b8869ff4bab3a08cf89255190ee322043baf84c3e950b6a"
+    },
+    {
+      "path": "site/components/ui/checkbox.tsx",
+      "bytes": 1214,
+      "sha256": "b23ab9d4deeedf2ac8f512c368361ede681aa383437ef48563a6f9b7dbe95f27"
+    },
+    {
+      "path": "site/components/ui/collapsible.tsx",
+      "bytes": 795,
+      "sha256": "c6598e5584f4258b5d9fefadbc5ad6a66888ad58729f4b634a0bb2d9c513188b"
+    },
+    {
+      "path": "site/components/ui/combobox.tsx",
+      "bytes": 9158,
+      "sha256": "2d68e78b2dc7e38a085f222dede60a80b4f8229a6e91732c484605e204d46735"
+    },
+    {
+      "path": "site/components/ui/command.tsx",
+      "bytes": 4818,
+      "sha256": "361193df1e3d64a9e9b5048f045264782fcb387aab3f00f2b805fdcbf538b16a"
+    },
+    {
+      "path": "site/components/ui/context-menu.tsx",
+      "bytes": 8268,
+      "sha256": "2cf1fcf59df0649a3e2a126d1df2f639145f6b6bf5689ee54af1f40ab1245017"
+    },
+    {
+      "path": "site/components/ui/dialog.tsx",
+      "bytes": 4463,
+      "sha256": "e5f8118320153b0cd7cd395431a19a2daeb00e02625577b92f8a302a206bf0af"
+    },
+    {
+      "path": "site/components/ui/direction.tsx",
+      "bytes": 506,
+      "sha256": "84ae2ad658207f0e0f367978e5508cd8027cd00c29c41d3d13db21a708c3d1e6"
+    },
+    {
+      "path": "site/components/ui/drawer.tsx",
+      "bytes": 4255,
+      "sha256": "cb6eaf58eb0757ca91af284e5d925b89a42ad7eb19cb3f44c575a3487aa9350f"
+    },
+    {
+      "path": "site/components/ui/dropdown-menu.tsx",
+      "bytes": 8487,
+      "sha256": "9439814774d1db1b0c608a20cacc807b5bfcee4d3de409f42158e0376539982e"
+    },
+    {
+      "path": "site/components/ui/empty.tsx",
+      "bytes": 2396,
+      "sha256": "ae95bdcf367a076ae02e7925f14522a148798f72d9651749c6d55497dba584c0"
+    },
+    {
+      "path": "site/components/ui/field.tsx",
+      "bytes": 6159,
+      "sha256": "ba67d76f017ac059fc86cf8c344e0b2991c4322d3619e125498c19b87f6eefbd"
+    },
+    {
+      "path": "site/components/ui/form.tsx",
+      "bytes": 3757,
+      "sha256": "315b46bb75ab7d1c6061b5d750aa4bedf6e7a455e15e2d7f9182f053d5972b1e"
+    },
+    {
+      "path": "site/components/ui/hover-card.tsx",
+      "bytes": 1526,
+      "sha256": "f5d8df42c59370ec14d61bcc54f7d68e9bb7dfa0d6a872b2f7cffc2aafbf23b8"
+    },
+    {
+      "path": "site/components/ui/input-group.tsx",
+      "bytes": 5065,
+      "sha256": "6afbd58fea4c438e6252dc4568bddc122e84ababead4ad5cee50ace01100c9a0"
+    },
+    {
+      "path": "site/components/ui/input-otp.tsx",
+      "bytes": 2254,
+      "sha256": "161946daa89f0eda2575b9271c0494e35807c4ffb55598a49f67160c17fec299"
+    },
+    {
+      "path": "site/components/ui/input.tsx",
+      "bytes": 962,
+      "sha256": "8c4612a7c41319ac5049daa3b34b080f9784b6245c17780eb87c127e58e473db"
+    },
+    {
+      "path": "site/components/ui/item.tsx",
+      "bytes": 4486,
+      "sha256": "6e2144d6d87142dbbe56d568810bf546318c8aa661447ebb0d76ebbf382cb45f"
+    },
+    {
+      "path": "site/components/ui/kbd.tsx",
+      "bytes": 862,
+      "sha256": "6088c3a5432338b1719c17e9b5d0e1fa74fd1f66060f248fc88909d33a82cd13"
+    },
+    {
+      "path": "site/components/ui/label.tsx",
+      "bytes": 606,
+      "sha256": "a476e41f08b9de5bd447de66a33d8bc2ad18f2fa6b96c064778bab4b6f439f4c"
+    },
+    {
+      "path": "site/components/ui/marker.tsx",
+      "bytes": 1864,
+      "sha256": "3d798763f094b2bb5e7ade2d5cd1b9bab498bc8ca7fd4cfaf4e5835bdedc34a0"
+    },
+    {
+      "path": "site/components/ui/menubar.tsx",
+      "bytes": 8389,
+      "sha256": "9243af8afcea03703398ccd1c2a8c0a87ad6cbaf2bd272fb609f5b79fe46aebb"
+    },
+    {
+      "path": "site/components/ui/message-scroller.tsx",
+      "bytes": 3992,
+      "sha256": "bb7660a248e4e9589c3816c7c1c199ea1381a70d2c8476ae895b567a7a4d86cf"
+    },
+    {
+      "path": "site/components/ui/message.tsx",
+      "bytes": 2232,
+      "sha256": "9d2952bf3b641081f09aa2739535e6bbd1be0a4946789752a2c20d8aaef43185"
+    },
+    {
+      "path": "site/components/ui/native-select.tsx",
+      "bytes": 1995,
+      "sha256": "007516b111fca8c98a6c40c94ab91bb68cc5b52afce1ed1f5e510c3d86e7347c"
+    },
+    {
+      "path": "site/components/ui/navigation-menu.tsx",
+      "bytes": 6658,
+      "sha256": "889d358a77de88e9cb6f39ea4895ea4c76eaf01d731b74e44f1c41e97a78a044"
+    },
+    {
+      "path": "site/components/ui/pagination.tsx",
+      "bytes": 2717,
+      "sha256": "374ad135c3d4ff3ec080a0009cd9745cdd0e12faa89d2b0e86074f11e5127fd1"
+    },
+    {
+      "path": "site/components/ui/popover.tsx",
+      "bytes": 2357,
+      "sha256": "31c350309ff5d3034e6ecf1b0eda75ba8855bdbf987fc7ad6d71f0ef07c5a447"
+    },
+    {
+      "path": "site/components/ui/progress.tsx",
+      "bytes": 755,
+      "sha256": "c8c26e8f5f041c3cdf4915347dc1d9c022f9448f149990fadcaf303e952fa57d"
+    },
+    {
+      "path": "site/components/ui/radio-group.tsx",
+      "bytes": 1460,
+      "sha256": "fe5ce39636d0818c2bf9c4eebddff893d1225fa2c81b5fa4bb8cbb39a8c913ce"
+    },
+    {
+      "path": "site/components/ui/resizable.tsx",
+      "bytes": 1815,
+      "sha256": "bc63958467aa00557c551bb0d96a5ae4c965c1e1ba2380e595949d933b132f7c"
+    },
+    {
+      "path": "site/components/ui/scroll-area.tsx",
+      "bytes": 1639,
+      "sha256": "8bd9d986b2844c9a87de825c6de4787b6739b36c3dc9a05ccf3eb107160e4043"
+    },
+    {
+      "path": "site/components/ui/select.tsx",
+      "bytes": 6532,
+      "sha256": "809025b2e2ae817a3a5d247bcd4f49cc5b72b9c9edbea8f3b675d163ff341919"
+    },
+    {
+      "path": "site/components/ui/separator.tsx",
+      "bytes": 694,
+      "sha256": "6da346505c8629a4668420d2a5ca48891383bbe0b0ceb14163537c671879427e"
+    },
+    {
+      "path": "site/components/ui/sheet.tsx",
+      "bytes": 4332,
+      "sha256": "a0260e40da3042755dd4f67f20cf10b709c96630327542c253f5310aa774bfec"
+    },
+    {
+      "path": "site/components/ui/sidebar.tsx",
+      "bytes": 21526,
+      "sha256": "4a8d73e7730a2b1fcecfca31299ed26db65c2307b84197a59c6ec7c01c7ad28e"
+    },
+    {
+      "path": "site/components/ui/skeleton.tsx",
+      "bytes": 276,
+      "sha256": "ba48dd5be5a6a1378bd4e011028654b5bf419f1e7d20ee4b9f8330c1264e7239"
+    },
+    {
+      "path": "site/components/ui/slider.tsx",
+      "bytes": 1991,
+      "sha256": "0e37484f4b416e79ac18c655cac961aefacf6e67085cfc2b320ea8af545635a3"
+    },
+    {
+      "path": "site/components/ui/sonner.tsx",
+      "bytes": 1034,
+      "sha256": "13ccc9b0fe4248e622f83a1d3b2f0566b72b5e04162d7d0c8db8945ecc71b55f"
+    },
+    {
+      "path": "site/components/ui/spinner.tsx",
+      "bytes": 331,
+      "sha256": "3e6e6e8d37fb4069f8e43e55318f8db06fbc36e6c8be0096da3c9337c1c798b9"
+    },
+    {
+      "path": "site/components/ui/switch.tsx",
+      "bytes": 1408,
+      "sha256": "386d4d4deb39f34126f9700fe9bf5393d238485dd94018bba9d154dda84c62ae"
+    },
+    {
+      "path": "site/components/ui/table.tsx",
+      "bytes": 2478,
+      "sha256": "20e5a7f224959c6b75802995706a97e9da171f693d4b6b1b436388fcd9df96f3"
+    },
+    {
+      "path": "site/components/ui/tabs.tsx",
+      "bytes": 3653,
+      "sha256": "7cd595b5ac3bf22f0dfdc1438aa4731506cad6ae9745b3cc18f698fd7cf979ff"
+    },
+    {
+      "path": "site/components/ui/textarea.tsx",
+      "bytes": 759,
+      "sha256": "253cdeb487c73beaaccdf47fc163e36e7d5b7ae6ddf09a4f64998a109a112979"
+    },
+    {
+      "path": "site/components/ui/toggle-group.tsx",
+      "bytes": 2308,
+      "sha256": "69f643e889e933f05c1439084480d8646f66a161c7d1cf0730ee926382ade35e"
+    },
+    {
+      "path": "site/components/ui/toggle.tsx",
+      "bytes": 1565,
+      "sha256": "ba4d0b0a2b2fee75dc36dfc19e32082e721024b919050c97fd5dc70faa924e16"
+    },
+    {
+      "path": "site/components/ui/tooltip.tsx",
+      "bytes": 1830,
+      "sha256": "a0784eb77831a799fad7991df4f1b666f876201565a80175e1aa68733574a2e4"
+    },
+    {
+      "path": "site/db/index.ts",
+      "bytes": 423,
+      "sha256": "dc7610b00b918e0ffff1360a63626f16655ced3064b2eaf96095a4101fb14bcd"
+    },
+    {
+      "path": "site/db/schema.ts",
+      "bytes": 5183,
+      "sha256": "c6c357118b94e5d2460160f72df95f06c85205dad453c1644e943864573d881f"
+    },
+    {
+      "path": "site/drizzle.config.ts",
+      "bytes": 148,
+      "sha256": "af081f7384aaeb0082cf422e29f139d137ca2f6a57c69b2c37b9fb1f8479867b"
+    },
+    {
+      "path": "site/drizzle/0000_shocking_black_tom.sql",
+      "bytes": 1525,
+      "sha256": "385f32db0f989b17c59089ae11c94007a7990a4a206a37832dbdbe4e5409a54e"
+    },
+    {
+      "path": "site/drizzle/0001_classy_firedrake.sql",
+      "bytes": 1696,
+      "sha256": "c55b214f908600d0dbc2b2bc4844dd5b3a9fa77c908869e023aabce2ce9da279"
+    },
+    {
+      "path": "site/drizzle/0002_rainy_quentin_quire.sql",
+      "bytes": 311,
+      "sha256": "45391ef17a43e73329b8cd1628cce71905554634e6081b42a8014be277ff1d3b"
+    },
+    {
+      "path": "site/drizzle/0003_colossal_synch.sql",
+      "bytes": 234,
+      "sha256": "cd99e7f824787fb938816f83e133cf87f05963dda9f17dfa078e282db135801f"
+    },
+    {
+      "path": "site/drizzle/0004_day_order.sql",
+      "bytes": 269,
+      "sha256": "7b7300ae9aca0ebf2e93b672d98efa56a7a3c8c58c7886f1e3a070d6d437bd61"
+    },
+    {
+      "path": "site/drizzle/0005_user_preferences.sql",
+      "bytes": 138,
+      "sha256": "f84a8b53dc1c3e888babd0ed73f1159bd9b415d66ac372cff3feb917251a27ba"
+    },
+    {
+      "path": "site/drizzle/0006_place_photos.sql",
+      "bytes": 110,
+      "sha256": "331f7a955489bc4899580addfd53f5250eb5d5fca2c94f54377f9ed66bb350e0"
+    },
+    {
+      "path": "site/drizzle/0007_trip_destinations.sql",
+      "bytes": 75,
+      "sha256": "9b877260e236a682eaab6d87f213801be334722dd7422bc8e7e0a9a1481a7773"
+    },
+    {
+      "path": "site/drizzle/0008_gigantic_red_shift.sql",
+      "bytes": 655,
+      "sha256": "50f6ee8e3a39a0ccdfa4339bb3ae429d3f48f3dcf6b050e5107ae5d7c767e441"
+    },
+    {
+      "path": "site/drizzle/0009_central_installation.sql",
+      "bytes": 272,
+      "sha256": "0f254370c75afaf641a4da672b6a2029b84a1fea6c6b53ffe8e97b30b79c46f5"
+    },
+    {
+      "path": "site/drizzle/meta/_journal.json",
+      "bytes": 1501,
+      "sha256": "5bacb02aea13db301889385fb63c9b77bbb54173a51ac70329001404f4519125"
+    },
+    {
+      "path": "site/drizzle/meta/0000_snapshot.json",
+      "bytes": 8084,
+      "sha256": "63c04e895b60ed26e983113dbaceac59d5c8f558d02cc15b175c299b94054f51"
+    },
+    {
+      "path": "site/drizzle/meta/0001_snapshot.json",
+      "bytes": 15652,
+      "sha256": "72e582e09d6f3b00352c40f274fa48ec42bda36ce560e6420541b38d85af9382"
+    },
+    {
+      "path": "site/drizzle/meta/0002_snapshot.json",
+      "bytes": 17252,
+      "sha256": "ba3beea1af8f8e887cc37b02ecec306d1c7f3bc7dcbcbfe9a2e3d983f00ff153"
+    },
+    {
+      "path": "site/drizzle/meta/0003_snapshot.json",
+      "bytes": 17873,
+      "sha256": "23971de3a6e894f063592ae092970e4d03642e0547fc34b6a6176487a28fa0a3"
+    },
+    {
+      "path": "site/drizzle/meta/0004_snapshot.json",
+      "bytes": 19377,
+      "sha256": "e648a131b8a4a66e1d5d01e2817db01f4b66d3f70880004befff52cc61633f64"
+    },
+    {
+      "path": "site/drizzle/meta/0005_snapshot.json",
+      "bytes": 20188,
+      "sha256": "dbbe6a44cf492b6a151c86eead0113267f809b6ad9400c10328af2874b2c2180"
+    },
+    {
+      "path": "site/drizzle/meta/0006_snapshot.json",
+      "bytes": 20556,
+      "sha256": "05d5fa35543d07f161f951ee5b08cd1a3136672a48642e6794a72b62530812ec"
+    },
+    {
+      "path": "site/drizzle/meta/0007_snapshot.json",
+      "bytes": 20791,
+      "sha256": "3b89b3bfe244e7655e77c6c3d81a48ab8e5c2db5ee597da3b21c478e2abfa1cd"
+    },
+    {
+      "path": "site/drizzle/meta/0008_snapshot.json",
+      "bytes": 23962,
+      "sha256": "a9d751c9421807a0436a3c16c3fbae0a87ce1d0660cc897c7f018202fdb2dfe5"
+    },
+    {
+      "path": "site/drizzle/meta/0009_snapshot.json",
+      "bytes": 25559,
+      "sha256": "4ab4a15a0079607a1b6f0bd237608ce02f505b0794cbe4be8060e32383ae8e68"
+    },
+    {
+      "path": "site/eslint.config.mjs",
+      "bytes": 846,
+      "sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06"
+    },
+    {
+      "path": "site/hooks/use-mobile.ts",
+      "bytes": 565,
+      "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "path": "site/lib/contracts.ts",
+      "bytes": 3789,
+      "sha256": "195b98196829d3293a1e6164d38d12de734b9f183d8f84c4efea608427a6501b"
+    },
+    {
+      "path": "site/lib/date-time-fields.ts",
+      "bytes": 1629,
+      "sha256": "4d6b11b80f0529118bad7e365851de2d34510f8ffe96fb5911c7e651e5c6a6ec"
+    },
+    {
+      "path": "site/lib/distribution-config.ts",
+      "bytes": 489,
+      "sha256": "340486794ed63c090029c2aa267eed1077de1893c1fc09e4f0d39d133a6d5c7e"
+    },
+    {
+      "path": "site/lib/document-preview.ts",
+      "bytes": 531,
+      "sha256": "93ccdf4daceb40ea4af6dace5b1610788d2af6e81fafeaded1a71018c02a8c74"
+    },
+    {
+      "path": "site/lib/geography.ts",
+      "bytes": 5429,
+      "sha256": "c2da9b0ceafc1a57c9959850ced94817c09696e1dd7d788b5becfe84bf39536c"
+    },
+    {
+      "path": "site/lib/installation-contract.ts",
+      "bytes": 2106,
+      "sha256": "650088a0a82c3ac97f534adf9e11ad2c5fa7a3a267f637dbe62a8bafc5e4c31e"
+    },
+    {
+      "path": "site/lib/installation.ts",
+      "bytes": 4233,
+      "sha256": "bd0082cb1dbe586834dcf4c00bc70d47b37256d8b7a83579c0dcd32ef88e83fc"
+    },
+    {
+      "path": "site/lib/photo-contracts.ts",
+      "bytes": 284,
+      "sha256": "71ba87c7aae5fdcfbec088dc9f4c89ad76e6084b4cabc3e0922e9fc3799fc27f"
+    },
+    {
+      "path": "site/lib/photon.ts",
+      "bytes": 3693,
+      "sha256": "26ae928dcdae46b538ceee47ffc2fd1b1c59c00057228402d71d41bd6202b372"
+    },
+    {
+      "path": "site/lib/place-links.ts",
+      "bytes": 1246,
+      "sha256": "6f472261e2a0f5daf4c69d6b16ff764351807b00f589dea7101e71d2c64b76f9"
+    },
+    {
+      "path": "site/lib/place-photos.ts",
+      "bytes": 7150,
+      "sha256": "81a49aa2b1b0b55c369d3c1d3898e45b9c918dda62f63cb28013c92da0c5176c"
+    },
+    {
+      "path": "site/lib/place-presentation.ts",
+      "bytes": 934,
+      "sha256": "5b994d228c17f5f5e197c7e9764da20cad2190fd477c465419d074f8f0fec158"
+    },
+    {
+      "path": "site/lib/prepare-photo.ts",
+      "bytes": 881,
+      "sha256": "9e778ddc9de7a02d82a1ea9a273091961d7d42396fad9b2bc0212d000a44ca38"
+    },
+    {
+      "path": "site/lib/reservation-locations.ts",
+      "bytes": 4868,
+      "sha256": "c8fccf3462d8aefb1adedb7417596cfa7ee7c79ea7361866b375a62af526b0e5"
+    },
+    {
+      "path": "site/lib/reservation-map.ts",
+      "bytes": 1550,
+      "sha256": "9598a21201c0622d7ff8071bab8b6b3b40340cdb6877bbfbcd22157f222698d2"
+    },
+    {
+      "path": "site/lib/resolve-map-point.ts",
+      "bytes": 1873,
+      "sha256": "a8a06d9579bee7ed0f4138e747e7a2f826b23a73113e4b6c70dc30951ebcc0f0"
+    },
+    {
+      "path": "site/lib/schedule-locations.ts",
+      "bytes": 369,
+      "sha256": "ccf56870287cb647776a08cd8eb005cbec29473b12815f458f23e2e275dd4eaf"
+    },
+    {
+      "path": "site/lib/search-context.ts",
+      "bytes": 2889,
+      "sha256": "e70ac4796dc39abbf6bef63e74e55e1fd979e63cfafda4d70baf095d03ea96b5"
+    },
+    {
+      "path": "site/lib/service.ts",
+      "bytes": 14891,
+      "sha256": "4bd22511d3de246cdcdd791918caf30d44c4568bd00c7f245e9ee98bf008cec3"
+    },
+    {
+      "path": "site/lib/timeline.ts",
+      "bytes": 2282,
+      "sha256": "9012813b16f167242b2e1c60b3a38bbb89ea6a5bddf469fdb1378185461bb2e0"
+    },
+    {
+      "path": "site/lib/utils.ts",
+      "bytes": 177,
+      "sha256": "53f3d3d070f0a9082934da25b875f9499855c2b0693868dd28be8c23d8730f68"
+    },
+    {
+      "path": "site/next.config.ts",
+      "bytes": 133,
+      "sha256": "614bce25b089c3f19b1e17a6346c74b858034040154c6621e7d35303004767cc"
+    },
+    {
+      "path": "site/package-lock.json",
+      "bytes": 509248,
+      "sha256": "1d8d0be67622924b463c9962e313d6ae424b4dae3f0c35791e9fd79e28a9e366"
+    },
+    {
+      "path": "site/package.json",
+      "bytes": 2272,
+      "sha256": "7fcc9c7815d15e8d1b45b8757b5cd5dead26bdb52f448c93a27f11c56cc502a0"
+    },
+    {
+      "path": "site/postcss.config.mjs",
+      "bytes": 94,
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "site/public/alpes.jpg",
+      "bytes": 2431184,
+      "sha256": "0af0027583dc4d9c85ba56cae3391d9abacc1c219741d1b55168c4eb9d8b8cac"
+    },
+    {
+      "path": "site/public/apple-touch-icon.png",
+      "bytes": 5036,
+      "sha256": "0d22b9df53de63238f0fe6964af9bfd9a2ad9faf725b71132e00aec64e8c46f0"
+    },
+    {
+      "path": "site/public/design/manrope-0.ttf",
+      "bytes": 94972,
+      "sha256": "a13d9b41b0a471ce58f0e46d377fa3cc76615e4632c3b15eb397caadf7a13f0a"
+    },
+    {
+      "path": "site/public/design/manrope-1.ttf",
+      "bytes": 95060,
+      "sha256": "f433e5d333be1128d8ec8a28b8aadd0314d10e14e4105406076666bc830fc15d"
+    },
+    {
+      "path": "site/public/design/manrope-2.ttf",
+      "bytes": 95096,
+      "sha256": "6bad1a774228464cc88b8b0271555b266f7a3c64a7bedf15e165fdab4f6ac0ce"
+    },
+    {
+      "path": "site/public/design/manrope-3.ttf",
+      "bytes": 94928,
+      "sha256": "b9584e099e0e7f1e1e914c3037aabb9010c50346a3ce8df5eeeeecc0563044d8"
+    },
+    {
+      "path": "site/public/design/manrope-4.ttf",
+      "bytes": 95688,
+      "sha256": "b8f802f05b322a7345805f5b89f8bb976604cc719a91530918d5ce3c47160950"
+    },
+    {
+      "path": "site/public/design/OFL.txt",
+      "bytes": 4387,
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "site/public/favicon.svg",
+      "bytes": 541,
+      "sha256": "922646ece8755dd71ab32fdd60eba85f815b0f0dba27eddfbbd355abb21d6016"
+    },
+    {
+      "path": "site/public/icon-192.png",
+      "bytes": 5510,
+      "sha256": "7047235c4d5d40933d4bc26f66599f2ad93a09aae41bae610c64c98fd9365847"
+    },
+    {
+      "path": "site/public/icon-32.png",
+      "bytes": 889,
+      "sha256": "70d3bd8289fb95316b0560f1d0826347ae641d8a9942342b4921ceeefa5256c9"
+    },
+    {
+      "path": "site/public/icon-512.png",
+      "bytes": 20196,
+      "sha256": "924b5dab64429f0fafb0b85fad87ba4235d8ce440ecb56b5ad78fe3f33c4ffd7"
+    },
+    {
+      "path": "site/public/icon-maskable-512.png",
+      "bytes": 18653,
+      "sha256": "beb3daa91e046e8241c8502630a6fc184d19b0ca21ecee89f934160469ff2ce2"
+    },
+    {
+      "path": "site/public/manifest.webmanifest",
+      "bytes": 573,
+      "sha256": "51a4461d0d53690d4d4a22f13e5a39752ba9c0dd5507e0f0157db5e4ee68a6ee"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-EUC-H.bcmap",
+      "bytes": 2404,
+      "sha256": "d92a261336dc18b8c03a46eb4d462382d33f4338fa195d303256b2031434c874"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-EUC-V.bcmap",
+      "bytes": 173,
+      "sha256": "61670bebc4e4827b67230c054fd0d820d6e30c3584d02e386804e62bbedc032a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-H.bcmap",
+      "bytes": 2379,
+      "sha256": "ece6415b853d61e1b2560165151407d35cf16e6556932b85a13ea75276b77402"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-RKSJ-H.bcmap",
+      "bytes": 2398,
+      "sha256": "696b1f973c97623496703809eaaa5f9b40696c77540057413f4b826a08edfa7b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-RKSJ-V.bcmap",
+      "bytes": 173,
+      "sha256": "53cb6d560ab377da48cf65d6dcacb0bdb31f13fab7066c580de38c12a73a7ff9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78-V.bcmap",
+      "bytes": 169,
+      "sha256": "289000f02fd34872b6975503217f33abae6bee676e7d28f640473a67c8db1712"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78ms-RKSJ-H.bcmap",
+      "bytes": 2651,
+      "sha256": "a2442595218f5f8bd8e1b42188e368587d876cfe0cc4cd87196f077c878f72e2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/78ms-RKSJ-V.bcmap",
+      "bytes": 290,
+      "sha256": "f8ddceba96bfd9d3740bd1789ee30d1f47c78371520a8084f71f7df58f19be0b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/83pv-RKSJ-H.bcmap",
+      "bytes": 905,
+      "sha256": "44040051ec818fe09b9703472bea72efd2759d5eeb5ff0d77c718d6bb5e6d1df"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90ms-RKSJ-H.bcmap",
+      "bytes": 721,
+      "sha256": "c13e043e85ff715b75bb03801e8fd0fb8f3a75e4a48496faa6baaf92b5b48ba1"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90ms-RKSJ-V.bcmap",
+      "bytes": 290,
+      "sha256": "499bb916ce1adbe4289b6e5811f4dc20eb238cdc2ffad20cf26ae56716885bab"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90msp-RKSJ-H.bcmap",
+      "bytes": 715,
+      "sha256": "7b8b3b8bbf821702e9a4df9f3596ce292380c8c1b0925dedadbb4e4b2d80498b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90msp-RKSJ-V.bcmap",
+      "bytes": 291,
+      "sha256": "6296c2b5c07dca8128e96d5296d621a3268803d4fa0e5812a21e52fe2802aacb"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90pv-RKSJ-H.bcmap",
+      "bytes": 982,
+      "sha256": "fb5103f03d3a34547e18d316e52b6d9b26e485c662999222f84d2ba54c2e4fa8"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/90pv-RKSJ-V.bcmap",
+      "bytes": 260,
+      "sha256": "7bcb5ad2ba55b9662ce379e16c2d9cc2b82d621a579807353741172e4af615c2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Add-H.bcmap",
+      "bytes": 2419,
+      "sha256": "a2ffab28b990998181bcca9b0e914bb2207820f100ae31d5c469444892e5ad8e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Add-RKSJ-H.bcmap",
+      "bytes": 2413,
+      "sha256": "b29f4b52e2465d0485856d5e69f1ba69927deb2848d8fd328c8035583b35bb7e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Add-RKSJ-V.bcmap",
+      "bytes": 287,
+      "sha256": "2aa2232c283a3f5d0997c2834a36cead0b79ce2657944cfeed08140c293460ff"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Add-V.bcmap",
+      "bytes": 282,
+      "sha256": "25125d3b1be64e86b2df5b3344170b45a42bcaa0b46e43a34314ef73c166e542"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-0.bcmap",
+      "bytes": 317,
+      "sha256": "8c65be9d51a9f269a547dc12460707aaf4031ab67ebe8a2900f4b4cc6b3e450e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-1.bcmap",
+      "bytes": 371,
+      "sha256": "73152bc1a59cc594b414ac6068be48e5512b96ae85920c40e32a99269fdb0c04"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-2.bcmap",
+      "bytes": 376,
+      "sha256": "a1b8d353bdef9584c820464e8f1c9e2013d64ebf433cba0aa831dddf515818c2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-3.bcmap",
+      "bytes": 401,
+      "sha256": "2ffc0c75c79fafde506163d3c08c390d183251009f3fbf6ae50d1167d14b9570"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-4.bcmap",
+      "bytes": 405,
+      "sha256": "98a1f470c878c6b9691a4d7aef776af8ac9b55f5587c9fafa00547f3bf655716"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-5.bcmap",
+      "bytes": 406,
+      "sha256": "ddd6e29955eb8cb545f2ebd09c628c3bbda5023256eda1b728f743c75fb77829"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-6.bcmap",
+      "bytes": 406,
+      "sha256": "317bb2db71e0e5b7b0c47b75de1da915c2e22f65f0c0861507f9ca7ba238f8a2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-CNS1-UCS2.bcmap",
+      "bytes": 41193,
+      "sha256": "e665837f2197c6bd08cd8955ad4d6932cee2398e2e328b25b00e6bfb3bd72af9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-0.bcmap",
+      "bytes": 217,
+      "sha256": "8b81cce8a11d510e505704953cfa4e4ab080c1a0cab991145a3512ee433946b9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-1.bcmap",
+      "bytes": 250,
+      "sha256": "0426983081788ec7202703e71f1efa4b860f75b936994236010b39d89251a81e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-2.bcmap",
+      "bytes": 465,
+      "sha256": "e67b37a83b160ab3831306a71a605893b24454ee81ac9b6123bf2d3984d268d5"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-3.bcmap",
+      "bytes": 470,
+      "sha256": "aa299afc3e12a28726147305f191be28c7498078c8b182ece7886ac79cd99078"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-4.bcmap",
+      "bytes": 601,
+      "sha256": "8fbd7d74c2ddb1350c1cecce54a73fde3f5453093d4bed445283ec0033d2097f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-5.bcmap",
+      "bytes": 625,
+      "sha256": "c22cb2fcff24112fa31dab2111bdc51957006576d31aad5a25e67793ac01428c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-GB1-UCS2.bcmap",
+      "bytes": 33974,
+      "sha256": "20507620260c0c935c35afc1e70e5888aa7125d5ec7ffc03cef1959feb2c1641"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-0.bcmap",
+      "bytes": 225,
+      "sha256": "464f08905236f5703b1f5cf8358767c8b18e6bcc808840d081f1de2c7ab38134"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-1.bcmap",
+      "bytes": 226,
+      "sha256": "4c823848722187d1ffe75ae3f5f9126ccd2d7895a05fad14c919fb119e037008"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-2.bcmap",
+      "bytes": 233,
+      "sha256": "7810fb808e367e70429e90a9478fe6a3fdc3e214f25c7582ce9c2da6a242315c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-3.bcmap",
+      "bytes": 242,
+      "sha256": "84deb1828711ad3d390c9899c38abce1bf619d65ff7bf1a326ec95acc45f08f8"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-4.bcmap",
+      "bytes": 337,
+      "sha256": "3f8a4f974919c2b8bae5d10175ffa2673be140481e00840542c85d48ef184067"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-5.bcmap",
+      "bytes": 430,
+      "sha256": "1d3ce4ff28d977f8cf37a912ae4ec811f4175c3167b1ec0b2567feec3e79e1db"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-6.bcmap",
+      "bytes": 485,
+      "sha256": "5609797b9401b30be72ef9645da62a87829f058c3be4b5c623383119f584b1d9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Japan1-UCS2.bcmap",
+      "bytes": 40951,
+      "sha256": "66c5d0dc4964f4093e77b194023f3a0f689324028ec8330e1e1d0570bcba7c2f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Korea1-0.bcmap",
+      "bytes": 241,
+      "sha256": "dfb8c3874f0e5a8c3acf597d2c12d2b63e90bc5e4f0fce990ec4c56077d80b32"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Korea1-1.bcmap",
+      "bytes": 386,
+      "sha256": "62f277b7b1c441c007797ae707d5c37258d029ce4661a2b911e2e1ee35e6adc1"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Korea1-2.bcmap",
+      "bytes": 391,
+      "sha256": "1d77068af462f96d7ad28ad7e7d43eef6423c685b479d7dc25ff5df38db0380d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Adobe-Korea1-UCS2.bcmap",
+      "bytes": 23293,
+      "sha256": "857b723088be97255053562bfa41bd1075a7f7910d3bab59a0645c8bbc7060ff"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/B5-H.bcmap",
+      "bytes": 1086,
+      "sha256": "718ad0ffbef4c34f8f3f31292c462e519cd567a5511fc8b346c60010d64f4ef9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/B5-V.bcmap",
+      "bytes": 142,
+      "sha256": "b5c37383517477620ced927b6b4ffd4f4cc6230d8051b5b46a21d6768e07f7d8"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/B5pc-H.bcmap",
+      "bytes": 1099,
+      "sha256": "bab6028aead1d6149400e904ab10cfd319082d826473ed4c582c8eeed920f17e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/B5pc-V.bcmap",
+      "bytes": 144,
+      "sha256": "41543142b9767f3b76133899fc8453282b01ad3c653acaeea42d78c5a7d08c63"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS-EUC-H.bcmap",
+      "bytes": 1780,
+      "sha256": "e8f89cd61e6486b948205da46499d659ed0aed949b7095fd3c8e95ffe2b0e7a9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS-EUC-V.bcmap",
+      "bytes": 1920,
+      "sha256": "cae422bec2ac6dbe86bf921cec942bacd2d0b733ffcca5f91b3ba14e917025a0"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS1-H.bcmap",
+      "bytes": 706,
+      "sha256": "e8487971ab20cd16f3de3e8ac56ec994b72b658ad113f2818239dfd5108f501a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS1-V.bcmap",
+      "bytes": 143,
+      "sha256": "42df8076aaa7574505e7304af83a3323ec032c4177d64b1309db8c043d594a8a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS2-H.bcmap",
+      "bytes": 504,
+      "sha256": "bc6024d274d440f0625c69e25f37036ef6cb6689432ceaa160d3432a2a716ca7"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/CNS2-V.bcmap",
+      "bytes": 93,
+      "sha256": "2e4f70a8afd23a121030fc2e5b5f3816e903b11e7ba8b8c09654b31c80399c38"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETen-B5-H.bcmap",
+      "bytes": 1125,
+      "sha256": "87ee6b3f5bfda5fe26fa35431264c7d73070d10dbbf398a75185d63ae322c18d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETen-B5-V.bcmap",
+      "bytes": 158,
+      "sha256": "47dc0d2c21e3bde317947aec1675ceabc1d5460a60bf9c24334b8c407a17172c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETenms-B5-H.bcmap",
+      "bytes": 101,
+      "sha256": "d5f5a73da4173b7da9a3a20e16f26f9cd5d12deb1553409919e0cec6fd37fdee"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETenms-B5-V.bcmap",
+      "bytes": 172,
+      "sha256": "18252fca90f472f479af1bddd60d6ab51c8e1b55dcf6845951426504934543e0"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETHK-B5-H.bcmap",
+      "bytes": 4426,
+      "sha256": "d2f10fa519336bc4efcc7b6deb9604b75429946b40d82e311cb3a97a1994c89a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/ETHK-B5-V.bcmap",
+      "bytes": 158,
+      "sha256": "1fea3fd0d9f0f679f80505800851ef2e4131d81127e18c006938ffa2f4c8b247"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/EUC-H.bcmap",
+      "bytes": 578,
+      "sha256": "f9939cd57fccdc65c5d9f4c205fd497ebdbd283643308da5663801a8c1d9c595"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/EUC-V.bcmap",
+      "bytes": 170,
+      "sha256": "1283a50a706507c4436da83ede9ad7a4440be25378f2e96f6c81a430081426a3"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Ext-H.bcmap",
+      "bytes": 2536,
+      "sha256": "4000ed4e61a1c668ef453bbd0603cfa383defa793abd46a57ed870d7f527350b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Ext-RKSJ-H.bcmap",
+      "bytes": 2542,
+      "sha256": "e0d2f0df337660e73813238dd4a725f11f0621b90f3273857db253d0e7694caa"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Ext-RKSJ-V.bcmap",
+      "bytes": 218,
+      "sha256": "f617a22b6d67febb187990952006c91a9f5a4db21155d268c656252d0c21985d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Ext-V.bcmap",
+      "bytes": 215,
+      "sha256": "c2087fb845a9e3acea0c2922cd40e6af67e11957bec74dcd597f1285edd490ce"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GB-EUC-H.bcmap",
+      "bytes": 549,
+      "sha256": "928bad06fd84a48f5ba7150d7716609119fb660f2aaa73eccad81ddab9b9d203"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GB-EUC-V.bcmap",
+      "bytes": 179,
+      "sha256": "a9ad88ac2479da529b16dc48abc5952332e27bc355335f91df5729a587533324"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GB-H.bcmap",
+      "bytes": 528,
+      "sha256": "1018c777a8910b5bb46d7d54a4aee9d51ca5cff8addb2b41c969d9101cb3fd1c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GB-V.bcmap",
+      "bytes": 175,
+      "sha256": "0b96789143c0bbf9f1641ae7165b3456dccd14dabffcbb0bd654d5bf6f94f863"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBK-EUC-H.bcmap",
+      "bytes": 14692,
+      "sha256": "2103fed28650ede096a2281104a1a8a4304dae0db414342c636867522307123b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBK-EUC-V.bcmap",
+      "bytes": 180,
+      "sha256": "a7fd35dd14d9dbdb955f34e6c0630618b6620dfd09d4283b2f65a65ce77fcaea"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBK2K-H.bcmap",
+      "bytes": 19662,
+      "sha256": "3d919ae72af16c5cc6846ec87a4326a9f125e493c59d3628429d35c2c95fe8c4"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBK2K-V.bcmap",
+      "bytes": 219,
+      "sha256": "b927fdfd595c07ce9158bf2ec13f4641b2e83b01c70989dadfabd6ed7c6ac2dc"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBKp-EUC-H.bcmap",
+      "bytes": 14686,
+      "sha256": "d15ebd8e81fb4fe8a244f1b1e877922e03500ac69eddf5001093e502430451d2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBKp-EUC-V.bcmap",
+      "bytes": 181,
+      "sha256": "fdc736d46e642625dccc8ad8c59f2c69fc7db7a13f2e799c6c6b779e707bb97a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBpc-EUC-H.bcmap",
+      "bytes": 557,
+      "sha256": "3c4a4eb82f05abe51f6650985c630e180438bfdd491318f5d20d2ec29236e1c3"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBpc-EUC-V.bcmap",
+      "bytes": 181,
+      "sha256": "215bdfa2842705624b4cf4cd29b8e3c720f1e192365e0305c11030a424c84d7c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBT-EUC-H.bcmap",
+      "bytes": 7290,
+      "sha256": "dc5f44e48a39f3367ae28665027d8ab1d8cedb5a9dcc5068a900acd6709f60f9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBT-EUC-V.bcmap",
+      "bytes": 180,
+      "sha256": "a1ad24e63653b8aa388c18fa5e498f007564e43dde699a9f91ccb4645c999be8"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBT-H.bcmap",
+      "bytes": 7269,
+      "sha256": "8afda745a505763f3ff54c8126eeb48ef376ea9ed07d9f42ff9a22c5c547ec57"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBT-V.bcmap",
+      "bytes": 176,
+      "sha256": "cdc2ec5c3c7c7033290c9a8894878202f08674eb9b1ae7d36218430326768771"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBTpc-EUC-H.bcmap",
+      "bytes": 7298,
+      "sha256": "7b23e2f7bfdb6c918f567b7324bf858f398bd8cd5f268d74ece19a3c91bf4f32"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/GBTpc-EUC-V.bcmap",
+      "bytes": 182,
+      "sha256": "d7a1b13ead9ab511cf2cd01de6ce8b02aa8e8767e84895337d7a3b67f039f93b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/H.bcmap",
+      "bytes": 553,
+      "sha256": "a0233e21047ec00b852125b243cbcf30abee511155b6d8159c24f944384bc9ee"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Hankaku.bcmap",
+      "bytes": 132,
+      "sha256": "b454701f7aecd7856769016dfd04ca64280a060f2c67a2466d50b4395d24974e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Hiragana.bcmap",
+      "bytes": 124,
+      "sha256": "2ed669394756dd9458651cd9995ab29ab691ecb7686659003306cdf22767a414"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKdla-B5-H.bcmap",
+      "bytes": 2654,
+      "sha256": "5242bce18fb13ab4cc59b146a03eba36e4ce42667eeff09e10981a9d2aa4996b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKdla-B5-V.bcmap",
+      "bytes": 148,
+      "sha256": "2e0537f786c0791d41a925f72bad2d4e7268aa6cbf15a1400a722672cec38e2c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKdlb-B5-H.bcmap",
+      "bytes": 2414,
+      "sha256": "fdc8159984bf5dbe475c0d5dfcb621ecee4dea07c38c668bd77f4c679e23b9b3"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKdlb-B5-V.bcmap",
+      "bytes": 148,
+      "sha256": "b249eb9dcb915ab45057c5d4d7aa55ef88d0efbb092af6bae0b2d4705d139abf"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKgccs-B5-H.bcmap",
+      "bytes": 2292,
+      "sha256": "ab64c7fc5e9b2e97750cc4f269b0da14fd8649e49151b7598c8df86599bac591"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKgccs-B5-V.bcmap",
+      "bytes": 149,
+      "sha256": "02ebdf7cdffb5395fb21091cd58a013a18ae5388922822f9dc6292ef16b98956"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKm314-B5-H.bcmap",
+      "bytes": 1772,
+      "sha256": "bfd8bbde6b36a9da4c1c902c74121a30d9807a7079a00eeea218be6adc223cef"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKm314-B5-V.bcmap",
+      "bytes": 149,
+      "sha256": "2a64a815cfb6fdd480674a868762e3d161fda17543b20c9209978559f0667164"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKm471-B5-H.bcmap",
+      "bytes": 2171,
+      "sha256": "49d7c037758826b5b6c0fa329c35bbf25d3943197754e72ecd30c6fb04d745e6"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKm471-B5-V.bcmap",
+      "bytes": 149,
+      "sha256": "be24c109e78aa4fe3c1f27d30aab3ed0741e783fa1b6b6c2719741072b54b132"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKscs-B5-H.bcmap",
+      "bytes": 4437,
+      "sha256": "08599378f41d96b40537adef6e6edcc4a787bc63f5accf47c026df4905a13914"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/HKscs-B5-V.bcmap",
+      "bytes": 159,
+      "sha256": "d073542b7dad1c4cbf01c1af5f0cd13218d1281a491956e310c55702fc8705c4"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Katakana.bcmap",
+      "bytes": 100,
+      "sha256": "3b6ca6642fbf8822da00d5e58a8aa275216d5c32dbf2bd73e934197fc9fc5c53"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-EUC-H.bcmap",
+      "bytes": 1848,
+      "sha256": "6784e16dbc5861c036c23d3e55f0d4ba0975a3e464da0ee8e49bcfff0be070c4"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-EUC-V.bcmap",
+      "bytes": 164,
+      "sha256": "fdb36bad85e9924823d49db374067988e024cf80fc894711f2c9178951cbbe95"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-H.bcmap",
+      "bytes": 1831,
+      "sha256": "c1f6d61f1d3304fd539a65ae72624fa567ecc3853bf52e283958a7a2515b3eee"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-Johab-H.bcmap",
+      "bytes": 16791,
+      "sha256": "939993d213f68db763bf156217c217ae23af082b91a0eacecf3d11eb4ff8ef8c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-Johab-V.bcmap",
+      "bytes": 166,
+      "sha256": "5d61967aac0e666def721e8b8d0fed8f95a879a14f2e76ce516c3d11c621e519"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSC-V.bcmap",
+      "bytes": 160,
+      "sha256": "d7da5afd9f1fe74816d79c9325f0139a4efb6438664ebfdf9a7aa92f3034360f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCms-UHC-H.bcmap",
+      "bytes": 2787,
+      "sha256": "5b70d8f6a4fa9e2283dc649f0ff95d906d56efbee50a20e8d2faec3a8fed078e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCms-UHC-HW-H.bcmap",
+      "bytes": 2789,
+      "sha256": "a5e6ba22aceb02fdedee11bfb9ed138463d89e85b87810b9f075b469d936f8ec"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCms-UHC-HW-V.bcmap",
+      "bytes": 169,
+      "sha256": "890332a6a26880d463a12f2a6ff048bf9cf7e45077cfb1ca8815b89baa7bf411"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCms-UHC-V.bcmap",
+      "bytes": 166,
+      "sha256": "1631b531c9a40c8cbe24c2317dba107362e49fa6e18af620414d627c111d570c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCpc-EUC-H.bcmap",
+      "bytes": 2024,
+      "sha256": "709480682c55cedbb0124b9960d78e28febeee0df2e34607d61aac6601647ec7"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/KSCpc-EUC-V.bcmap",
+      "bytes": 166,
+      "sha256": "031707887d6fc2378a36cdb6775334fd7a236c3f95048d8436abf43fe26fc49d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/LICENSE",
+      "bytes": 2080,
+      "sha256": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/NWP-H.bcmap",
+      "bytes": 2765,
+      "sha256": "286c6c9e335da330928a01edc3c97a3a623f1f7f3c42762b0a7dc2f651b1a78f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/NWP-V.bcmap",
+      "bytes": 252,
+      "sha256": "3a75fb7b59adfb172710758c425d8ac6c93fd5360a64dd4afd5dd04e60ab4b4d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/RKSJ-H.bcmap",
+      "bytes": 534,
+      "sha256": "a70de61a22a898f693f02cc011c3e3cff2e10aaa7cddb4661e456a21ae859f78"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/RKSJ-V.bcmap",
+      "bytes": 170,
+      "sha256": "68c1a64506471a524ea5cfc3b3a9f8f70031989a6bd95427b1351f33ccf50b06"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/Roman.bcmap",
+      "bytes": 96,
+      "sha256": "1c6b3ef9d9e5cb1aa329142ce9414b90f9b6d7f9182a2a9e927378dab8f0d43f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UCS2-H.bcmap",
+      "bytes": 48280,
+      "sha256": "779428116752f34e2490a1941d24e4634c71e3c22d053b811d2090ae2fb3c704"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UCS2-V.bcmap",
+      "bytes": 156,
+      "sha256": "1e5cc184b850ea44abc2df8ae5674279df668e8edf5e2a1a2ea2bd77adbd280f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF16-H.bcmap",
+      "bytes": 50419,
+      "sha256": "32ff139b3c7b91d6ad25f994701f3ce7b242906022c418fd73e6493fc228bfe5"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF16-V.bcmap",
+      "bytes": 156,
+      "sha256": "278eb1e68d1a236c60ef59472cf0176ee0d45f364285e76ca12419a08d46fb9a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF32-H.bcmap",
+      "bytes": 52679,
+      "sha256": "bf26eb67fe19ee5ba915799e80ca72408400aa8342fdf6a244a4f44de8f97336"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF32-V.bcmap",
+      "bytes": 160,
+      "sha256": "f7da3caf83ceb1cb37936fa10700d9ba6e9c3f72c5bc9724e3ac79bff0c0179e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF8-H.bcmap",
+      "bytes": 53629,
+      "sha256": "2f2a742bcd1a84a148a4a518b9eed51a8f9c6ca5ed3bc5e2e41fff97de5dc2d8"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniCNS-UTF8-V.bcmap",
+      "bytes": 157,
+      "sha256": "b7c3f10780a8c62dd1c8ff6c30dc1e4e23b6cdc87c3a96fcd514cc98ffd3af9d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UCS2-H.bcmap",
+      "bytes": 43366,
+      "sha256": "9201569b402e81ad8860650bd86350c4fa28e5dd5971f05fcacaf40f51de18ed"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UCS2-V.bcmap",
+      "bytes": 193,
+      "sha256": "f10282335e4d64203bc2a653a3a47d745ec76c8ae04549f4d50180c1899be216"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF16-H.bcmap",
+      "bytes": 44086,
+      "sha256": "386fd39581245c034da016a92d23f3df1117d169f996100050b264fc09a84e35"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF16-V.bcmap",
+      "bytes": 178,
+      "sha256": "0473cfbba612b92dd9918f0ff8aee9112897c48e0ffdc0eb82da3144ed8ea84a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF32-H.bcmap",
+      "bytes": 45738,
+      "sha256": "f48a145dc4e3ed1dca1dde7111716a72306a2a4191ab05c6bae3a5c3a961cd2f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF32-V.bcmap",
+      "bytes": 182,
+      "sha256": "106acc49b7118bdef944e32107b4f348238f3929a0a15d3b7aab7b9101535993"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF8-H.bcmap",
+      "bytes": 46837,
+      "sha256": "f217b439c80ee5fa1bc2cf6d1defcc319f8d84483d166a00ee199e05a68588df"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniGB-UTF8-V.bcmap",
+      "bytes": 181,
+      "sha256": "a64df947632878eacc532fa193c735c92a383b7d66e6f8374ac193af7c64fc63"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UCS2-H.bcmap",
+      "bytes": 25439,
+      "sha256": "ad2352f40870880fbf7f8ee5abadff743fbd025fbf9830b8ada472d1c5e4da0b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UCS2-HW-H.bcmap",
+      "bytes": 119,
+      "sha256": "16e87edca954177c0881c874859d6783220925d821b5cdfb8755b61ebd93f9ce"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UCS2-HW-V.bcmap",
+      "bytes": 680,
+      "sha256": "1973457e2c0192819947e56068625b34fb9a72ecc8a476ce6d7eaae5f73e2e5c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UCS2-V.bcmap",
+      "bytes": 664,
+      "sha256": "42a133d8e2ce9dd6d2288018e01592d2bf2435b326d39b94ea0b6e6a44ac33d3"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF16-H.bcmap",
+      "bytes": 39443,
+      "sha256": "f6a89c5688978548c83fcee990e205bc63c74274d5c69b49032a3bd4c49a05ee"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF16-V.bcmap",
+      "bytes": 643,
+      "sha256": "c67126fc7c73850855186bb0d6482ac0a365057e0b58778c4ab9f234683fef53"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF32-H.bcmap",
+      "bytes": 40539,
+      "sha256": "96195950ce0fe24443d8eb426fa6b88534ec421d7bef9046f0b2362809cfba73"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF32-V.bcmap",
+      "bytes": 677,
+      "sha256": "ed4dafda402bdd19c4d5d8bf2ab41473c0f86f384552b4c7b963d6627daedeb1"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF8-H.bcmap",
+      "bytes": 41695,
+      "sha256": "798fb0bf06ab0788d1f6a91c2db7de581612eef03c628f10e8f7ecd8f70ab448"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS-UTF8-V.bcmap",
+      "bytes": 678,
+      "sha256": "1021611424f913b2df0bfdbe94bd327c04e224ec89d8e821c6501ea3d21f4265"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF16-H.bcmap",
+      "bytes": 39534,
+      "sha256": "710a32d7cb43fd6bd9dbf30da5971f8c941590f74441e208d852c2be0e74cc97"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF16-V.bcmap",
+      "bytes": 647,
+      "sha256": "3b149aff5c5707b57fb3215d1775852c8b1f413ec0f679ea628f25cf87fe098d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF32-H.bcmap",
+      "bytes": 40630,
+      "sha256": "8d2658e18741af7937d586a57c89729a6fec0d86121197c1f8518aa58b29cdfb"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF32-V.bcmap",
+      "bytes": 681,
+      "sha256": "6dd475782f2897648a683c48b2fa015a15b8f06856760bddc8a17a63f418bacb"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF8-H.bcmap",
+      "bytes": 41779,
+      "sha256": "691c614ce432b3e62486efb54e5c84c6da5afe9b51b21253bde4758feb484183"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJIS2004-UTF8-V.bcmap",
+      "bytes": 682,
+      "sha256": "40a8c7ea2d46711c5f78fc9a878a7db68b1543ba5cd60ecf14f519a2deb829b7"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISPro-UCS2-HW-V.bcmap",
+      "bytes": 705,
+      "sha256": "6826f94d789d7bf1960668c1c5819c34c9585c1b23152fbc19ee81c7df08524b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISPro-UCS2-V.bcmap",
+      "bytes": 689,
+      "sha256": "493de9fd1a08f7946065d8ab58f0c3c9fe489f5a0f109f2d05a3169b4bd5789f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISPro-UTF8-V.bcmap",
+      "bytes": 726,
+      "sha256": "6181d382cf736c5e09492e8be9f26f31fa25b7462253f23ab16646af432cad81"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISX0213-UTF32-H.bcmap",
+      "bytes": 40517,
+      "sha256": "692044e1fb33445668632bc9fe7386805c624864be1ddeb29d65bb0c99fc630c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISX0213-UTF32-V.bcmap",
+      "bytes": 684,
+      "sha256": "dd54e16ca7bffb3a886242549b2bf7d78a277087f7c60d2636f118c21a5b0646"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISX02132004-UTF32-H.bcmap",
+      "bytes": 40608,
+      "sha256": "f80ea5a989be30ccda5a8804baef6d3b4b044d2b339bf8b31c671b2466171cf6"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniJISX02132004-UTF32-V.bcmap",
+      "bytes": 688,
+      "sha256": "94c22bd99e771c5fbe0dd8dc39850570d4db0075074aca13e272813edd7cc57f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UCS2-H.bcmap",
+      "bytes": 25783,
+      "sha256": "a1081396ab4adb6f4a5b6c15f896963c244c1c9bcb65ce5616d06096a1b9811c"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UCS2-V.bcmap",
+      "bytes": 178,
+      "sha256": "6cab547431958fbdc1d401d06ebd4dd61a73f5509a10f974df32bcbca11a2e43"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF16-H.bcmap",
+      "bytes": 26327,
+      "sha256": "42d35b396286499dfae1737a07adb3a64500df37b426580bfb1d3ea872938519"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF16-V.bcmap",
+      "bytes": 164,
+      "sha256": "5bdb7390c80dcc136cb47d41dc7460082560969c17322ee739fe3020fb642410"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF32-H.bcmap",
+      "bytes": 26451,
+      "sha256": "3a01ec51ed1b828101351e337ffb8250abe11880032e5210f881170fed2588de"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF32-V.bcmap",
+      "bytes": 168,
+      "sha256": "dfda895eceaed081af030dbbb962b49629eea817fc3c02bae15db93d0c68acd7"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF8-H.bcmap",
+      "bytes": 27790,
+      "sha256": "3fac9c65145f72d7d42157a3b9c5ed6904632184e6a0888f2b828699afd2002f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/UniKS-UTF8-V.bcmap",
+      "bytes": 169,
+      "sha256": "9ecc6cf30dd354b9778ddba163b6cc7302b087ce9f39d1ba73472d2b75ed13ca"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/V.bcmap",
+      "bytes": 166,
+      "sha256": "b9ad1c0c09ff14bca52f9a28a9767eb857ad0e8946e64ba14c7387a7eb69866a"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/cmaps/WP-Symbol.bcmap",
+      "bytes": 179,
+      "sha256": "543923bead225732aba30976690ee89095a19628277b5863efecc2c728d5d7bf"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/iccs/CGATS001Compat-v2-micro.icc",
+      "bytes": 8464,
+      "sha256": "73e1ba37d2bad5bab2a964f40a9eed96209666efc067c3322626214bbef234a0"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/iccs/LICENSE",
+      "bytes": 6553,
+      "sha256": "286e4fd7b447330b2c88e23890e3cd0a9d38cb398d4a59cb247f578ccbda3213"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/LICENSE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/pdf.worker.min.mjs",
+      "bytes": 1265413,
+      "sha256": "8ab0e5e30031b4a06ecfddd5ae9562f0227f830ee7ec9ed1a968b134243d2386"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitDingbats.pfb",
+      "bytes": 29513,
+      "sha256": "845c752392b6c914fb989c75a08b7792b88f542d2499042ef2889f8c814a16ed"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitFixed.pfb",
+      "bytes": 17597,
+      "sha256": "b6c8fe53f134b8b6d4578cd2d544df4cee9624c4efa8d51a560fb40ea296101b"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitFixedBold.pfb",
+      "bytes": 18055,
+      "sha256": "f1b7159702973f54fc86254ea38bcf3712b2a736eb3a0995751e9f4bb45ad603"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitFixedBoldItalic.pfb",
+      "bytes": 19151,
+      "sha256": "8a000945843bd31add06aee63bf9fd41b7578b4f3242a4b7cd46349ad9d24d4d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitFixedItalic.pfb",
+      "bytes": 18746,
+      "sha256": "5007faf8320fa1fcc08b8894b356ad976f60b992ba29ee5272578bbdebaf3876"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitSerif.pfb",
+      "bytes": 19469,
+      "sha256": "4f57d2b9d884af8f907bf22df6019b52d86cbf6214fdbd02b1ae05472a543f35"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitSerifBold.pfb",
+      "bytes": 19395,
+      "sha256": "0bdf4b04e964139818d51eda03d566ba999fc3ba2421b1c6c51f9dc969022e80"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitSerifBoldItalic.pfb",
+      "bytes": 20733,
+      "sha256": "a406cac82583bf98175cb62c87ed5e95c45fbb34eece63a10b0a13e793cb2e10"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitSerifItalic.pfb",
+      "bytes": 21227,
+      "sha256": "610ae0687198045c4db5d1a6650fd5e92536631706382eb8b72e38df578d0ae9"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/FoxitSymbol.pfb",
+      "bytes": 16729,
+      "sha256": "47967d055530e7357088a08403115425643ec2cdfd6201ba8af0fbd7116c1539"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LiberationSans-Bold.ttf",
+      "bytes": 137052,
+      "sha256": "361c61b82d575c5c35fd9157fda8b0194bcfcd0d88ea8521a4fb5dd53d33dddc"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LiberationSans-BoldItalic.ttf",
+      "bytes": 135124,
+      "sha256": "a224075ac17495ad0a3af3bc0a419ac0704a8b3fd1095456201fb9b095fc281d"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LiberationSans-Italic.ttf",
+      "bytes": 162036,
+      "sha256": "832b4406dbef23628800d3aaad21048534ac84d7e3ad955be83b8172ed8ef512"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LiberationSans-Regular.ttf",
+      "bytes": 139512,
+      "sha256": "f8ace1f892b2bd9dc1792ba7f097fa7588f84fed48321480e04de5390828221f"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LICENSE_FOXIT",
+      "bytes": 1553,
+      "sha256": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/standard_fonts/LICENSE_LIBERATION",
+      "bytes": 22154,
+      "sha256": "d2c4d5b3e115a519cb58eb691aa64538397e2611f9ebe801392cf9667997e7dc"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/jbig2_nowasm_fallback.js",
+      "bytes": 145703,
+      "sha256": "04c795a6657a4553a64b781ea3e85256203d913c3b71b72b85fa3ce00622f458"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/jbig2.wasm",
+      "bytes": 104852,
+      "sha256": "e6bee67724a7b5436fe8162638e3708cfc8d52b6342db69a49715e30ff27cfdc"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_JBIG2",
+      "bytes": 12862,
+      "sha256": "9e66b7f1b934a28b37f3bc4dac97915de1674271e79a0a88182a18ed9731b4d1"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_OPENJPEG",
+      "bytes": 2112,
+      "sha256": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_PDFJS_JBIG2",
+      "bytes": 555,
+      "sha256": "aad3cce09842e00e9e11ad5e8fef8cc02fbc3a3768fe2f007443b9cee37aaee5"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_PDFJS_OPENJPEG",
+      "bytes": 1285,
+      "sha256": "717fc62da03292dbb4dd0c8280bd4ce7bb8550dcf31d772bc93455fb50313425"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_PDFJS_QCMS",
+      "bytes": 1036,
+      "sha256": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/LICENSE_QCMS",
+      "bytes": 1121,
+      "sha256": "36d847ae882f6574ebc72f56a4f354e4f104fde4a584373496482e97d52d31bc"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/openjpeg_nowasm_fallback.js",
+      "bytes": 451590,
+      "sha256": "0f998419819da4491d8302222aa9e2ff2494685641aa2a6c21c3760c29f3e319"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/openjpeg.wasm",
+      "bytes": 252032,
+      "sha256": "004a0e62db930ba9ff2a22212f4554d0bb57a0635a8287caf70f98117cee14ba"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/qcms_bg.wasm",
+      "bytes": 96589,
+      "sha256": "663d86126d5f5fcb1c61490f94353e2a8375660b8c5498ab3ebab5a34b08800e"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/quickjs-eval.js",
+      "bytes": 6232,
+      "sha256": "fe7930418e869791ce892567dbd0bc4698152b7e550b5cefa553992c56ddc325"
+    },
+    {
+      "path": "site/public/pdfjs/6.3.289/wasm/quickjs-eval.wasm",
+      "bytes": 469105,
+      "sha256": "7bcacc9f22cacf7e9b23866d2a6d1639693d40c7f144e41b7c69ed37ba9cbe8f"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 842,
+      "sha256": "afc4cf3e30451bb1dce0fbd2bafbd204d5d04dbb9b3bee1d03b0e887614774a8"
+    },
+    {
+      "path": "site/scripts/build-verified.sh",
+      "bytes": 661,
+      "sha256": "2ae5329ac860076070c9217a43106a15cb5ecf907a0f7baeb9ef903f76b53c68"
+    },
+    {
+      "path": "site/scripts/execution-profile.mjs",
+      "bytes": 624,
+      "sha256": "2e71116f4d2b70cff8bb70436f8dd5c709ec7ff62893424530f404e0193d3630"
+    },
+    {
+      "path": "site/scripts/generate-icons.mjs",
+      "bytes": 1262,
+      "sha256": "a6307a2579c3ee9fd7dc9d01c2754867b5d78245b85f55591c9a5d718d91dbbc"
+    },
+    {
+      "path": "site/scripts/install-ci.mjs",
+      "bytes": 1685,
+      "sha256": "4a5a92d60a08d0ba54effd8373da2da06284312c55b767287c68a0bec7200da7"
+    },
+    {
+      "path": "site/scripts/install-ci.sh",
+      "bytes": 6783,
+      "sha256": "10d8764a61be50351dc3496e13588270de7956f0aa5f1189c49cabb2d89fe5c0"
+    },
+    {
+      "path": "site/scripts/install-pnpm.sh",
+      "bytes": 9024,
+      "sha256": "db980d931c7d1fb6d64dfede2fc698227d9bbd3bbb94f50a8966d9eb980bf10c"
+    },
+    {
+      "path": "site/scripts/npm-install.mjs",
+      "bytes": 7025,
+      "sha256": "9715c6a32d1d4a0289ef6376a0e819c3b6a6416b8a9877733d9fb4339ce626b6"
+    },
+    {
+      "path": "site/scripts/pnpm-install.mjs",
+      "bytes": 10642,
+      "sha256": "380309d06af721775377f805e90bbba27118e91bf67cd6c87ca59b9ef56453e8"
+    },
+    {
+      "path": "site/scripts/preparar-local.mjs",
+      "bytes": 832,
+      "sha256": "22e3841429e984f3d727ff94ae31d955de27a16beb6d66f8433246a5ce49b18d"
+    },
+    {
+      "path": "site/scripts/prepare-pdf-assets.mjs",
+      "bytes": 543,
+      "sha256": "02de1b0adb2ceb530c99d2694fe46d07689f657fb9feef2c017a9f1c684583ea"
+    },
+    {
+      "path": "site/scripts/run-framework.mjs",
+      "bytes": 1035,
+      "sha256": "98ed362978e1a35a12c992477d44b44083f92148dec63fedb90bda21d5206363"
+    },
+    {
+      "path": "site/scripts/sites-env.mjs",
+      "bytes": 906,
+      "sha256": "5de99d6806b01f0ee0b941af3684d75dcf1afbbcff22cb95bfa2e584c5dafa88"
+    },
+    {
+      "path": "site/scripts/sites-env.sh",
+      "bytes": 1530,
+      "sha256": "df86ebfc27d2f00860036658e933ac0ddd7b5f6879aa5d51218f0863c7e1fb60"
+    },
+    {
+      "path": "site/tsconfig.json",
+      "bytes": 800,
+      "sha256": "7199c6e4e400921e8049729840165a39f1476fa97901bed00239e7697bfe8da4"
+    },
+    {
+      "path": "site/vendor/react-zoom-pan-pinch.LICENSE",
+      "bytes": 1061,
+      "sha256": "307a51ebd506a98ed81835dc830ea0649bc41646cef5f17851147b6777002757"
+    },
+    {
+      "path": "site/vendor/shadcn-tailwind-4.13.0.css",
+      "bytes": 16041,
+      "sha256": "bc7d83425702955b4cb67cb14ede9d603f9d912376d57a2d81d661094d2a782a"
+    },
+    {
+      "path": "site/vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "bytes": 1063,
+      "sha256": "1564074e13439397221ffd522e2e504d56561994a23d371aa5e3ad43e4f5423f"
+    },
+    {
+      "path": "site/vite.config.ts",
+      "bytes": 2240,
+      "sha256": "4b9d8a6b14fd155328847bc6cd063c6bf44c58c64de8d46911cdf0ede611e367"
+    }
+  ]
+}

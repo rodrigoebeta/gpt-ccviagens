@@ -1,0 +1,15 @@
+# Keep each installation's data, consent receipt and configuration private.
+**/.private/
+**/.env
+**/.env.*
+**/.openai/hosting.json
+**/.wrangler/
+**/.sites-runtime/
+**/.cache/
+**/.tmp/
+**/node_modules/
+**/dist/
+**/.next/
+**/.vinext/
+**/*.tsbuildinfo
+**/npm-debug.log*

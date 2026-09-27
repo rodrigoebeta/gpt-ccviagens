@@ -1,0 +1,3 @@
+import {access,database,handle,identity,respond} from '@/lib/service';
+export const dynamic='force-dynamic';
+export async function GET(_:Request,{params}:{params:Promise<{id:string}>}){return handle(async()=>{const {id}=await params;await access(id,await identity());const db=database();const {results}=await db.prepare("SELECT id,title AS name,start_date AS startDate,end_date AS endDate,'reservation' AS kind FROM reservations WHERE trip_id=? UNION ALL SELECT id,json_extract(data,'$.name') AS name,date AS startDate,date AS endDate,'place' AS kind FROM places WHERE trip_id=? AND date IS NOT NULL ORDER BY startDate").bind(id,id).all();return respond({items:results});});}

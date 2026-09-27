@@ -1,0 +1,17 @@
+# Preserve the manifest bytes across Windows/Linux clones and GitHub archives.
+* text eol=lf
+*.bcmap -text
+*.pfb -text
+*.ttf -text
+*.woff -text
+*.woff2 -text
+*.otf -text
+*.wasm -text
+*.icc -text
+*.jpg -text
+*.jpeg -text
+*.png -text
+*.ico -text
+*.webp -text
+*.avif -text
+*.pdf -text

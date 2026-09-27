@@ -1,7 +1,12 @@
 {
-  "version": "0.1.0-preview.50",
+  "version": "0.1.0-preview.51",
   "status": "distribution-setup-and-independent-installation-pending",
   "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 282,
+      "sha256": "622fdf64d2aea83e27cc9b4c24d3659c37c6cfbcf2c7a458e60532943113abc9"
+    },
     {
       "path": ".gitignore",
       "bytes": 267,
@@ -9,18 +14,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 7102,
-      "sha256": "70520b0717002516281244f0a95596074c5693d135b291b6efd37e017bb8c253"
+      "bytes": 7101,
+      "sha256": "40acf28fd240903cca62b71c2a9289caafc6081e757347460c72f554c434a259"
     },
     {
       "path": "COMECE_AQUI.md",
-      "bytes": 2035,
-      "sha256": "79af8718e609e3efa15f46ab5002a0dbee5d5cb01547f89b4c1f6cde1af2391f"
+      "bytes": 2034,
+      "sha256": "e0fb2b366169c5c332e84180257ac2862bf3bcaf7448c113b7797d6589acf8f3"
     },
     {
       "path": "CONFIGURAR_NO_WORK.md",
-      "bytes": 9890,
-      "sha256": "2b6a9a72602e1ca5ed689564465bc1b1173aad7f547e18778f0ae6f68bb9053e"
+      "bytes": 9821,
+      "sha256": "61cf19c8c96a27b760c96e948b0e5d69bdbcb4825dbed0fa3e1937bcff4bd5bc"
     },
     {
       "path": "CREDITOS.md",
@@ -29,18 +34,18 @@
     },
     {
       "path": "docs/ATUALIZACOES.md",
-      "bytes": 3104,
-      "sha256": "681add1e570e3ee82ee2a5749660eb82a313b0b7e6151daf87e15e7343ea3c82"
+      "bytes": 3086,
+      "sha256": "b0e7e5d476e341502252f21bbc4c845a5187db59ea1721b8a8eab04d3ee4e8b2"
     },
     {
       "path": "docs/IMPORTACAO.md",
-      "bytes": 4714,
-      "sha256": "b402f58e22912709aa8d934171a59c1a3ead0d4efbc943255584b83001432aad"
+      "bytes": 4691,
+      "sha256": "e60daff269a9f4b4ae5bab243e4074d70439494b8412a7d09a96a37edab22813"
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 16720,
-      "sha256": "39cd4b545fbe164bd852fa9f28bb1db219937f4299613aa817c7cb80ce6cfe52"
+      "bytes": 16600,
+      "sha256": "d44a921dc0517814211ddb14205f208036d0f8c3d254ce0f533ee30c6dbac942"
     },
     {
       "path": "LICENSE.md",
@@ -49,18 +54,18 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 10124,
-      "sha256": "b6891246d28599fce82cfd5556d2ca79bf86be85ab08f33c9319ef0a8e044041"
+      "bytes": 10072,
+      "sha256": "930c232ec0b5ef3d8767d932e8fa4f0c7d8dd6bd5fecadbeb23960f58832399f"
     },
     {
       "path": "PRIVACIDADE.md",
-      "bytes": 4563,
-      "sha256": "91ce198b8f80b0500b21c8c725acce20557e550d98aeda37358f3bad1bdb46b1"
+      "bytes": 4561,
+      "sha256": "f7cdce7a9b7729bd373de862711415d4fbb853502663d787318c157621a152a7"
     },
     {
       "path": "README.md",
-      "bytes": 3416,
-      "sha256": "8df149e166a9cca6be45e5ccc7d0c1ba093f7456ca1aaa3249d852b62f0630c2"
+      "bytes": 3378,
+      "sha256": "ed00fc9a745782708e9d75b33233f081e1639493c6902241c7c21b0c8b129b4d"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -119,18 +124,18 @@
     },
     {
       "path": "site/app/api/trips/[id]/locations/route.ts",
-      "bytes": 844,
-      "sha256": "f5c73ed61c815084e37b42d18b11c7f1d99690cc1d9ddb92ef0f3e36b0cfe71d"
+      "bytes": 843,
+      "sha256": "c6c3b9a6e44201d5aa5e658c56fd4873d40ea986a02be6c0df1abb00621afca1"
     },
     {
       "path": "site/app/api/trips/[id]/map-point/route.ts",
-      "bytes": 1733,
-      "sha256": "44bcdde68ce8694c7a985bdb9be6ffef283e161802435bff42c7d9f409d2db61"
+      "bytes": 1715,
+      "sha256": "2aaf424d27254748e38844e61859d35093476929846903d689dc3d893898e737"
     },
     {
       "path": "site/app/api/trips/[id]/members/route.ts",
-      "bytes": 1399,
-      "sha256": "a5c4e59f501e361d98f3dfe04235c507d1fa1d02b10e2f834c7cc98c2d73ea14"
+      "bytes": 1393,
+      "sha256": "606ceb87c5f6dd596bdc86ba6956fd741f880839bfb63eb4dc723c376db1682f"
     },
     {
       "path": "site/app/api/trips/[id]/period-items/route.ts",
@@ -139,8 +144,8 @@
     },
     {
       "path": "site/app/api/trips/[id]/place-search/route.ts",
-      "bytes": 1194,
-      "sha256": "56023596ca7c032bb1548e46318044aa7a2a49008bcb8ac3336d571641d63023"
+      "bytes": 1178,
+      "sha256": "8ea4835f7b509e3d01cd25385204d620554e489be1ab6d918f29490a8f6df0be"
     },
     {
       "path": "site/app/api/trips/[id]/places/[placeId]/photo-search/route.ts",
@@ -169,8 +174,8 @@
     },
     {
       "path": "site/app/api/trips/[id]/route.ts",
-      "bytes": 2409,
-      "sha256": "4668b6c65c39226104d9f0fa78bc0634b7ebc3543b547db29198bb906569249d"
+      "bytes": 2387,
+      "sha256": "18b60887bb133b591c8b46355a4e88d97c3e4c75692466bec35cccb55bd47b71"
     },
     {
       "path": "site/app/api/trips/[id]/timeline/route.ts",
@@ -179,8 +184,8 @@
     },
     {
       "path": "site/app/api/trips/route.ts",
-      "bytes": 1309,
-      "sha256": "26718dbf870b05415b6ad1edd8caf3ee45aa98eb45d66639a2c40d586db694c2"
+      "bytes": 1303,
+      "sha256": "df5b6875d39504894d4a60f1ff9e3190a770954b2f17a631f06d5c1b78038e0f"
     },
     {
       "path": "site/app/chatgpt-auth.ts",
@@ -199,18 +204,18 @@
     },
     {
       "path": "site/app/day-map.tsx",
-      "bytes": 4668,
-      "sha256": "3a5bbe635de34f1762d54e53071c42c2c83c1ba850239c628dbe88284d6cf9ce"
+      "bytes": 4618,
+      "sha256": "4dbf9ebf52f915cbd67d25a4949a6d1983cc741092800b366a7de1bed84f7df1"
     },
     {
       "path": "site/app/day-timeline.tsx",
-      "bytes": 11220,
-      "sha256": "b09d40b1792a3b9f53ae57e27e9fd175e4e5306349914fea03e682ea50389d21"
+      "bytes": 11164,
+      "sha256": "bdeaf84c7c338fb630c321c2b1ff8060130ae4ee6ede799ded6af776d05d6318"
     },
     {
       "path": "site/app/destination-picker.tsx",
-      "bytes": 4064,
-      "sha256": "ec188ec97037469f3e4104a6e54a7a5018e7026ef86c54f890c0a4a2a2a64b17"
+      "bytes": 4045,
+      "sha256": "8a5f0ab57a97c9e812f889d9d411782c9620a7f13434b8d93c0863ffe25c5b17"
     },
     {
       "path": "site/app/document-viewer.tsx",
@@ -219,13 +224,13 @@
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 105282,
-      "sha256": "5a5df6b8c84115f53e98a91e1bf134016bd979f4d08d2b0bbde16bc278dee93e"
+      "bytes": 104771,
+      "sha256": "88ac8af4fca78dfa2e475c5309a5a7bebe0a8d09245cc21f87b39fd358078640"
     },
     {
       "path": "site/app/home-cover.tsx",
-      "bytes": 1824,
-      "sha256": "5df956b31c61cc800759927108b846d8824d5507df1d7ff57a49fd0fc944f750"
+      "bytes": 1823,
+      "sha256": "276376c9712c2d37cd6937855021168a3364f927328078b75f15f11e9b1dcf3a"
     },
     {
       "path": "site/app/installation-client.tsx",
@@ -234,8 +239,8 @@
     },
     {
       "path": "site/app/installation.css",
-      "bytes": 2758,
-      "sha256": "98c544cf0045cd7675ab1676d1f9a3df67b9552147b07a894285931a1f2bcba7"
+      "bytes": 2756,
+      "sha256": "af78477a23d4bb3ce68b3943d446ab5e27f41988d21ce59768aeca0e92e2445f"
     },
     {
       "path": "site/app/layout.tsx",
@@ -249,8 +254,8 @@
     },
     {
       "path": "site/app/pending-hub.tsx",
-      "bytes": 3271,
-      "sha256": "4069f6b0d62dd1a0e88158be4ddb2028e4ec051127750b21f8f016446b408ff7"
+      "bytes": 3270,
+      "sha256": "217ab5031aba39b77dd3d01496217e6daada5946196b127d04e9177c08627c03"
     },
     {
       "path": "site/app/place-address.tsx",
@@ -269,8 +274,8 @@
     },
     {
       "path": "site/app/planning-workspace.tsx",
-      "bytes": 33498,
-      "sha256": "bcd21b514a02016d2477e412207b13aa7b82413eda67048fa9945ff841633081"
+      "bytes": 33333,
+      "sha256": "12ab412c96734a1c0d4fcee32bb9b0cb9772f1eb71e02b01048db292b60590db"
     },
     {
       "path": "site/app/reservation-editor.tsx",
@@ -279,8 +284,8 @@
     },
     {
       "path": "site/app/travel-app.tsx",
-      "bytes": 32334,
-      "sha256": "133bb05d7a5e781a6257e490b1878883e06f74ccd913bb1761b42dfa87090c4a"
+      "bytes": 32238,
+      "sha256": "f39a6973efda4fd8b117a1233ddfbcd6ea17f2d6ca5a61f0a42755cf63c96362"
     },
     {
       "path": "site/app/trip-date-picker.tsx",
@@ -289,8 +294,8 @@
     },
     {
       "path": "site/app/trip-editor.tsx",
-      "bytes": 5714,
-      "sha256": "5def9914ed6d820184242b3fcefc265f28006c959fa4c9fd2e3d9e7abaee2c0a"
+      "bytes": 5631,
+      "sha256": "ca802006f58bd0bd31464da597790abb9353637c27b413cf283a776eebd37583"
     },
     {
       "path": "site/app/use-day-order.ts",
@@ -299,8 +304,8 @@
     },
     {
       "path": "site/app/use-reservation-locations.ts",
-      "bytes": 1937,
-      "sha256": "4ae0505cff98b6f7bd93a97b50b6e252e37d713b6624f4a78869c54ab1213de7"
+      "bytes": 1936,
+      "sha256": "e62ff6c94836ff91eeacdeae58696529601ff2858e4381d0272d72f6b006aa7b"
     },
     {
       "path": "site/build/sites-vite-plugin.LICENSE",
@@ -424,8 +429,8 @@
     },
     {
       "path": "site/components/ui/dialog.tsx",
-      "bytes": 4463,
-      "sha256": "e5f8118320153b0cd7cd395431a19a2daeb00e02625577b92f8a302a206bf0af"
+      "bytes": 4305,
+      "sha256": "600462520e12603d7c7766cdc4a5732ffe81276a509a3a0b7dfdf0e22793aaa6"
     },
     {
       "path": "site/components/ui/direction.tsx",
@@ -564,8 +569,8 @@
     },
     {
       "path": "site/components/ui/sheet.tsx",
-      "bytes": 4332,
-      "sha256": "a0260e40da3042755dd4f67f20cf10b709c96630327542c253f5310aa774bfec"
+      "bytes": 4189,
+      "sha256": "57e3670de828414a67b1e13c4c4ddb7e76c9bacb6e4196ce94be18af397a46aa"
     },
     {
       "path": "site/components/ui/sidebar.tsx",
@@ -634,8 +639,8 @@
     },
     {
       "path": "site/db/schema.ts",
-      "bytes": 5183,
-      "sha256": "c6c357118b94e5d2460160f72df95f06c85205dad453c1644e943864573d881f"
+      "bytes": 5119,
+      "sha256": "3fccecf0c5b4d7badc92a1183563f8f248b7a1090020117cd77e5d0c4940d5d9"
     },
     {
       "path": "site/drizzle.config.ts",
@@ -759,8 +764,8 @@
     },
     {
       "path": "site/lib/contracts.ts",
-      "bytes": 3789,
-      "sha256": "195b98196829d3293a1e6164d38d12de734b9f183d8f84c4efea608427a6501b"
+      "bytes": 3756,
+      "sha256": "eef7abb26eb213071ec023f1682e685fc44a2f37e9f6b5cf067f131f999a6b3c"
     },
     {
       "path": "site/lib/date-time-fields.ts",
@@ -769,8 +774,8 @@
     },
     {
       "path": "site/lib/distribution-config.ts",
-      "bytes": 489,
-      "sha256": "340486794ed63c090029c2aa267eed1077de1893c1fc09e4f0d39d133a6d5c7e"
+      "bytes": 478,
+      "sha256": "d65aed82be05e5c72c2eb06f1ab79876d5012f14bc181c534749ede3660281d7"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -779,8 +784,8 @@
     },
     {
       "path": "site/lib/geography.ts",
-      "bytes": 5429,
-      "sha256": "c2da9b0ceafc1a57c9959850ced94817c09696e1dd7d788b5becfe84bf39536c"
+      "bytes": 5380,
+      "sha256": "5ecd3a0166ee897f8d0c7476758fa47d9eb9b11bac5fadc8f8ea1d0c8ba68f32"
     },
     {
       "path": "site/lib/installation-contract.ts",
@@ -789,8 +794,8 @@
     },
     {
       "path": "site/lib/installation.ts",
-      "bytes": 4233,
-      "sha256": "bd0082cb1dbe586834dcf4c00bc70d47b37256d8b7a83579c0dcd32ef88e83fc"
+      "bytes": 4231,
+      "sha256": "c271dfbad9ecdd108f4dabb34db11c427798171cfbc48bd4617ec3ba570d911c"
     },
     {
       "path": "site/lib/photo-contracts.ts",
@@ -799,8 +804,8 @@
     },
     {
       "path": "site/lib/photon.ts",
-      "bytes": 3693,
-      "sha256": "26ae928dcdae46b538ceee47ffc2fd1b1c59c00057228402d71d41bd6202b372"
+      "bytes": 3670,
+      "sha256": "dc3341f37a27712b5124cfe9bee62cc7d09a46f2e7839b1e270921a91878c01f"
     },
     {
       "path": "site/lib/place-links.ts",
@@ -824,38 +829,38 @@
     },
     {
       "path": "site/lib/reservation-locations.ts",
-      "bytes": 4868,
-      "sha256": "c8fccf3462d8aefb1adedb7417596cfa7ee7c79ea7361866b375a62af526b0e5"
+      "bytes": 4867,
+      "sha256": "4e996bd889a227a9717383d1542ec49432611bb0c765906beda02935c9dc46da"
     },
     {
       "path": "site/lib/reservation-map.ts",
-      "bytes": 1550,
-      "sha256": "9598a21201c0622d7ff8071bab8b6b3b40340cdb6877bbfbcd22157f222698d2"
+      "bytes": 1531,
+      "sha256": "e309e44eab7d1ad328c6fc00eb09640c19f5d3b982a2ec176f75764ff766e15d"
     },
     {
       "path": "site/lib/resolve-map-point.ts",
-      "bytes": 1873,
-      "sha256": "a8a06d9579bee7ed0f4138e747e7a2f826b23a73113e4b6c70dc30951ebcc0f0"
+      "bytes": 1856,
+      "sha256": "b00bc06eaf76067d66cb81af72e160aa117d8d185546ea1138156017e29805cd"
     },
     {
       "path": "site/lib/schedule-locations.ts",
-      "bytes": 369,
-      "sha256": "ccf56870287cb647776a08cd8eb005cbec29473b12815f458f23e2e275dd4eaf"
+      "bytes": 368,
+      "sha256": "adc7413a7c61b36893f1fd75fd0a8bbce40f0097cc1d7ef6c8a89d0528a5c332"
     },
     {
       "path": "site/lib/search-context.ts",
-      "bytes": 2889,
-      "sha256": "e70ac4796dc39abbf6bef63e74e55e1fd979e63cfafda4d70baf095d03ea96b5"
+      "bytes": 2860,
+      "sha256": "1418561d436f44f9b4196ffe4b1f43111d8fc31fa73d91df02da7daa2db2fc58"
     },
     {
       "path": "site/lib/service.ts",
-      "bytes": 14891,
-      "sha256": "4bd22511d3de246cdcdd791918caf30d44c4568bd00c7f245e9ee98bf008cec3"
+      "bytes": 14781,
+      "sha256": "f4feedbf16ab51ccd54248f3903b826273c32f55b87eb31b61f3378d501e2ba3"
     },
     {
       "path": "site/lib/timeline.ts",
-      "bytes": 2282,
-      "sha256": "9012813b16f167242b2e1c60b3a38bbb89ea6a5bddf469fdb1378185461bb2e0"
+      "bytes": 2251,
+      "sha256": "0cae0de06ebaeda29982a38eef27441e352aead6cc01ccdabb391b7528c66796"
     },
     {
       "path": "site/lib/utils.ts",
@@ -1964,8 +1969,8 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 842,
-      "sha256": "afc4cf3e30451bb1dce0fbd2bafbd204d5d04dbb9b3bee1d03b0e887614774a8"
+      "bytes": 835,
+      "sha256": "a5d349b513e90c667b4da6ac79238ef0f9ca50829be5c7e11b6e63126f846cfc"
     },
     {
       "path": "site/scripts/build-verified.sh",

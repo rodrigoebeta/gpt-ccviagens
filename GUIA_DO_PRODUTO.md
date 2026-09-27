@@ -1,6 +1,6 @@
 # Guia da Central de Viagens
 
-Distribuição preview.50: endpoints oficiais preparados com prefixo de caminho /telemetria-ccv/v1/activity e /telemetria-ccv/v1/release, preservado integralmente nas requisições. ready:false mantém a coleta desativada até a validação da infraestrutura e do fluxo de instalação. Quem instala usa os endereços fornecidos no produto; não instala o serviço receptor nem configura DNS.
+Distribuição preview.51: endpoints oficiais preparados com prefixo de caminho /telemetria-ccv/v1/activity e /telemetria-ccv/v1/release, preservado integralmente nas requisições. ready:false mantém a coleta desativada até a validação da infraestrutura e do fluxo de instalação. Quem instala usa os endereços fornecidos no produto; não instala o serviço receptor nem configura DNS.
 
 Na Programação, as hospedagens ativas aparecem em uma faixa acima do roteiro, com período e ação Ver reserva. No dia da saída, o rótulo indica o check-out. A faixa permanece visível em dias sem eventos de entrada ou saída.
 

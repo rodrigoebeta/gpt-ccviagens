@@ -78,4 +78,4 @@ Entregue a URL, o que foi verificado, as limitações específicas e a próxima 
 
 Se precisar mudar de conversa/ambiente, forneça briefing pronto com versão, URL da própria instalação, vínculo privado disponível pelo meio permitido, decisões, etapas concluídas, bloqueio e próxima ação. Não inclua segredos ou dependências da máquina anterior. Para atualizar uma central existente, siga [docs/ATUALIZACOES.md](docs/ATUALIZACOES.md).
 
-A instalação em conta independente ainda está em validação. Registre a evidência da instalação atual antes de declará-la concluída; não trate este roteiro como prova de execução.
+Registre a evidência da instalação atual antes de declará-la concluída; não trate este roteiro como prova de execução.

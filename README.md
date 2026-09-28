@@ -27,7 +27,7 @@ Leia [LICENSE.md](LICENSE.md) e [PRIVACIDADE.md](PRIVACIDADE.md). Uso pessoal e 
 
 O aviso sálvia de atualização permite copiar um pedido curto para o Work. Ele identifica a própria instalação e o repositório, preserva seus dados e exige publicação autorizada. Atualizações futuras não são garantidas.
 
-**Liberado para instalação e uso real, com aceite explícito antes da coleta.** A primeira instalação em conta independente ainda será validada durante o uso; essa pendência não impede começar. O Work deve registrar o que conseguiu verificar e qualquer limitação encontrada.
+**Liberado para instalação e uso real, com aceite explícito antes da coleta.** O Work conduz a configuração na sua conta e registra o que conseguiu verificar e qualquer limitação encontrada.
 
 ## Para o Work
 

@@ -1,6 +1,6 @@
 # Guia da Central de Viagens
 
-Distribuição liberada para instalação e uso real. A coleta está habilitada no produto (ready:true), mas só funciona após o aceite explícito e a configuração dos termos de cada instalação. A primeira instalação independente ainda será validada durante o uso. A atividade vai ao endpoint oficial /telemetria-ccv/v1/activity; anúncios de atualização são consultados pelo servidor no release.json do repositório oficial no GitHub. Quem instala usa os endereços fornecidos: não instala receptor, Docker ou VPS.
+Distribuição liberada para instalação e uso real. A coleta está habilitada no produto (ready:true), mas só funciona após o aceite explícito e a configuração dos termos de cada instalação. A atividade vai ao endpoint oficial /telemetria-ccv/v1/activity; anúncios de atualização são consultados pelo servidor no release.json do repositório oficial no GitHub. Quem instala usa os endereços fornecidos: não instala receptor, Docker ou VPS.
 
 Na Programação, as hospedagens ativas aparecem em uma faixa acima do roteiro, com período e ação Ver reserva. No dia da saída, o rótulo indica o check-out. A faixa permanece visível em dias sem eventos de entrada ou saída.
 
@@ -103,7 +103,7 @@ O Work prepara Sites, banco e armazenamento da própria pessoa. O aplicativo com
 
 A central precisa de internet. Um atalho na tela inicial do celular facilita o acesso, mas não garante uso offline. Sincronização automática das fontes de reservas, sugestões de IA dentro do painel e busca automática de capas não fazem parte da entrega. Uma fonte autorizada no Work não dá ao Site acesso automático à caixa postal, pasta ou serviço.
 
-O fluxo de instalação em conta independente ainda está em validação. O Work registra o que comprovou na instalação de cada pessoa; build local não prova publicação, e largura móvel simulada não prova funcionamento em um telefone real.
+O Work deve conferir publicação, login e persistência dos dados na sua instalação antes de declará-la concluída. Teste o acesso pelo seu celular; uma simulação de largura não substitui essa conferência.
 
 
 ### Aviso de revisão na programação
@@ -114,9 +114,9 @@ No painel de uma reserva, **Editar reserva** fica no cabeçalho junto à data, a
 
 ## Licenciamento, telemetria e versões
 
-A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. A oferta gratuita e sem anúncios inclui telemetria como parte essencial do modelo de manutenção: os indicadores de uso orientam a continuidade do projeto. Sem eles, o desenvolvimento e os recursos de versões futuras podem ser reduzidos ou encerrados, nos limites legais. Aceite explícito, após apresentação dos termos, precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Uso real liberado com ready:true; o aceite continua obrigatório por instalação. A validação do fluxo completo em conta independente permanece pendente e deve ser registrada durante a primeira instalação.
+A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. A oferta gratuita e sem anúncios inclui telemetria como parte essencial do modelo de manutenção: os indicadores de uso orientam a continuidade do projeto. Sem eles, o desenvolvimento e os recursos de versões futuras podem ser reduzidos ou encerrados, nos limites legais. Aceite explícito, após apresentação dos termos, precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Uso real liberado com ready:true; o aceite continua obrigatório por instalação.
 
-Faixa sálvia aprovada acima da navegação, para o proprietário, com modal que copia pedido de atualização contendo instalação e repositório. Anúncio e manifesto usam a mesma versão do aplicativo, publicados junto do pacote. Consulta periódica pelo servidor ao GitHub sem identificador, domínio ou credencial da instalação; normalmente uma vez a cada 24 horas de uso após ativação. Descoberta de versão não instala automaticamente. O Work prepara backup/recuperação, preserva dados/personalizações e publica após autorização. O painel central e a infraestrutura de telemetria pertencem ao titular e não são distribuídos; entregas comuns do pacote não exigem sua atualização.
+Faixa sálvia acima da navegação, para o proprietário, com modal que copia pedido de atualização contendo instalação e repositório. Anúncio e manifesto usam a mesma versão do aplicativo, publicados junto do pacote. Consulta periódica pelo servidor ao GitHub sem identificador, domínio ou credencial da instalação; normalmente uma vez a cada 24 horas de uso após ativação. Descoberta de versão não instala automaticamente. O Work prepara backup/recuperação, preserva dados/personalizações e publica após autorização. O painel central e a infraestrutura de telemetria pertencem ao titular e não são distribuídos; entregas comuns do pacote não exigem sua atualização.
 
 Proteção da telemetria: receptor com registros identificadores cifrados e backups criptografados; leitura administrativa autorizada e assinada pelo servidor privado. Chaves e infraestrutura do titular não pertencem à instalação pública. Os controles não representam certificação de conformidade ou proteção absoluta contra comprometimento da infraestrutura.
 

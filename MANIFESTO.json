@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.55",
+  "version": "0.1.0-preview.56",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 7970,
-      "sha256": "35e8b8a40f56eaacbbf94761e7799968aedab2aec62773022fe967dbc3d2899d"
+      "bytes": 7938,
+      "sha256": "353cf364a6b6a76f5b56f650fa55786e5c5061f4a812606f826fdf6db056c97e"
     },
     {
       "path": "COMECE_AQUI.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "CONFIGURAR_NO_WORK.md",
-      "bytes": 10623,
-      "sha256": "da4b3ffcc41f10be7d9b894b5070943069b1a8b7acb86378c285b2401d25f4c9"
+      "bytes": 10558,
+      "sha256": "f08dc703bf2fbe42b393b178ec7cb1723d2d94054fffd013197aaadc59c8cf35"
     },
     {
       "path": "CREDITOS.md",
@@ -44,8 +44,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 17889,
-      "sha256": "04333c9744cc04cab02b6507f15386c6b4b7d942145cb48bcc30841ef0b6f698"
+      "bytes": 17646,
+      "sha256": "a4be6e7850eb74d11546e91f8bacfb2fcec62f15b9287f0cd956852903f75122"
     },
     {
       "path": "LICENSE.md",
@@ -64,13 +64,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 3951,
-      "sha256": "e60bfcc62009433f596c17456e183b86c91df838439e3cb3967d47f5875f5afd"
+      "bytes": 3864,
+      "sha256": "0d9bb67de83eff3c543de7469f2e80e6a41892b57ff5892206089926b5401e6f"
     },
     {
       "path": "release.json",
-      "bytes": 336,
-      "sha256": "9f33c00fdc6801cbfd1adea2e799ac0f21e914ff213e94a7a3693499a1b4349f"
+      "bytes": 281,
+      "sha256": "5a745e8213450dc520f3269df3096b3cafb410a0a7e9f2d4c3128bc4a4ccddf5"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -780,7 +780,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 505,
-      "sha256": "bc04b3c7740e791b33f11e241a00a91c0fd8a633dfa32a9729a3071357fe655d"
+      "sha256": "e9c8aac58b5e7caac5329773dbe02842f77356b6713d842917109b4138ed574c"
     },
     {
       "path": "site/lib/document-preview.ts",

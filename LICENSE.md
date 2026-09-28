@@ -1,8 +1,12 @@
 # Licença de uso da Central de Viagens
 
-Versão 2026-09-27.2 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
+Versão 2026-09-27.3 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
 
-**Termos da distribuição liberada para instalação e uso real.** O fluxo completo em conta independente ainda está em validação. A liberação não representa revisão jurídica ou certificação de conformidade.
+## Oferta gratuita e condições
+
+A Central de Viagens é disponibilizada gratuitamente pelo titular, sem anúncios no aplicativo. A telemetria descrita em PRIVACIDADE.md é parte essencial do modelo adotado para viabilizar essa oferta: permite conhecer a adoção, acompanhar a atividade e as versões utilizadas e orientar o investimento na manutenção dos recursos. Os dados não são vendidos nem usados para publicidade.
+
+A oferta e o uso da distribuição oficial estão sujeitos a esta licença, ao aviso de privacidade e à legislação aplicável. A manutenção da telemetria integra essas condições, nos limites permitidos pela lei. Ela sustenta as decisões de continuidade do projeto; não constitui promessa de manutenção permanente nem de preservação de todos os recursos em versões futuras.
 
 ## Permissão de uso
 
@@ -18,13 +22,17 @@ Modificações autorizadas para uso próprio não concedem permissão de distrib
 
 ## Telemetria e aceite
 
-A distribuição oficial inclui telemetria obrigatória, conforme PRIVACIDADE.md. Antes de sua ativação, a pessoa responsável pela instalação deve receber os termos e manifestar explicitamente o aceite. O assistente de instalação não aceita em nome dela. Não desative ou adultere deliberadamente o mecanismo para contornar esta condição. Indisponibilidade temporária de rede ou do receptor não bloqueia o aplicativo nem comprova descumprimento.
+A distribuição oficial inclui telemetria obrigatória, conforme PRIVACIDADE.md. Ao confirmar que deseja prosseguir com a instalação depois de receber e aceitar estes termos e o aviso de privacidade, a pessoa responsável concorda com as condições dessa oferta. O aceite deve ser explícito e registrado antes de ativar a coleta; o simples download ou pedido inicial de instalação não o substitui. O assistente não aceita em nome da pessoa. Se ela não concordar, deve encerrar a instalação antes da ativação.
+
+Não desative ou adultere deliberadamente o mecanismo para contornar esta condição, ressalvados os direitos assegurados pela legislação aplicável. Indisponibilidade temporária de rede ou do receptor não bloqueia o aplicativo nem comprova descumprimento.
 
 O aceite contratual não substitui a definição da base legal adequada ao eventual tratamento de dados pessoais nem afasta direitos previstos em lei. Alterações materiais das condições devem ser informadas antes de exigir novo aceite ou ampliar a coleta.
 
 ## Atualizações e continuidade
 
-A consulta de versões informa atualizações que forem disponibilizadas. Ela não garante novas versões, manutenção permanente, entrega de avisos ou instalação automática. O titular pode decidir a continuidade do desenvolvimento conforme adoção, recursos e observância da licença. A atualização assistida preserva dados e personalizações e requer autorização de publicação. O encerramento de novas versões não aciona bloqueio remoto das cópias já instaladas.
+A consulta de versões informa atualizações que forem disponibilizadas. Ela não garante novas versões, manutenção permanente, entrega de avisos ou instalação automática. O titular pode decidir a continuidade do desenvolvimento conforme adoção, recursos e observância da licença. Sem os indicadores fornecidos pela telemetria, ou se não houver condições de manter a oferta, o desenvolvimento poderá ser reduzido ou encerrado e recursos poderão ser alterados ou retirados de versões futuras, observados os direitos aplicáveis. Mudanças materiais nas condições serão informadas antes de sua adoção; este aceite não autoriza a ampliação silenciosa da coleta.
+
+A atualização assistida preserva dados e personalizações e requer autorização de publicação. Essas possibilidades não representam retirada automática de funções de uma instalação nem bloqueio remoto: o aplicativo não contém esse comando. O encerramento de novas versões não apaga viagens ou documentos das cópias já instaladas.
 
 ## Escopo e terceiros
 

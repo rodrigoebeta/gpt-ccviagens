@@ -1,8 +1,12 @@
 # Telemetria e privacidade da distribuição
 
-Versão 2026-09-27.2. Responsável: **Rodrigo Purchio**. Contato para dúvidas, permissões e exercício de direitos: **contato@rodrigoebeta.com**.
+Versão 2026-09-27.3. Responsável: **Rodrigo Purchio**. Contato para dúvidas, permissões e exercício de direitos: **contato@rodrigoebeta.com**.
 
-**Distribuição liberada para instalação e uso real.** A coleta exige informação prévia, aceite explícito e configuração dos termos da própria instalação. O fluxo completo em conta independente será verificado na primeira instalação real. A liberação e a infraestrutura de hospedagem não representam certificação automática de conformidade com a LGPD.
+## Por que esta oferta inclui telemetria
+
+A Central de Viagens é disponibilizada gratuitamente pelo titular e sem anúncios no aplicativo. A telemetria é parte essencial do modelo adotado para viabilizar sua existência e continuidade: os indicadores de uso permitem avaliar a adoção, priorizar correções e decidir quais recursos podem continuar recebendo manutenção. Os dados não são vendidos nem usados para publicidade.
+
+Essa oferta inclui telemetria obrigatória, informada antes da instalação, e está condicionada aos termos de LICENSE.md, a este aviso e à legislação aplicável. Sem esses indicadores, ou se não houver condições de manter o projeto, o desenvolvimento poderá ser reduzido ou encerrado e funções poderão ser alteradas ou retiradas de versões futuras, observados os direitos aplicáveis e a comunicação de mudanças materiais. Isso não é um mecanismo de bloqueio remoto nem de retirada automática de funções da sua cópia.
 
 ## Finalidades e dados
 
@@ -20,7 +24,11 @@ Proposta implementada de retenção: registros identificáveis são removidos ap
 
 ## Aceite e ativação
 
-O assistente apresenta os termos antes de configurar a coleta e solicita manifestação explícita. A pessoa pode recusar e encerrar a instalação. O registro do aceite contratual não autoriza qualquer tratamento: a base legal aplicável, as informações sobre operadores/transferências e os procedimentos para exercício de direitos devem ser revisados antes da distribuição. Não declarar a solução "LGPD aprovada".
+O assistente apresenta estes termos, as finalidades, os dados coletados e as consequências da recusa antes de configurar a coleta. Ao confirmar que deseja prosseguir com a instalação após receber e aceitar essas informações, você concorda com as condições da oferta. A confirmação deve ser explícita e registrada; baixar o código ou pedir inicialmente para instalá-lo não equivale a aceitar informações que ainda não foram apresentadas. O assistente não pode aceitar em seu nome. Se você não concordar, a instalação é encerrada antes de ativar a coleta.
+
+O aceite se refere às condições da oferta e às finalidades descritas, não a uma autorização genérica para qualquer uso de dados. Ele não dispensa o responsável de adotar uma base legal apropriada para cada tratamento de dados pessoais e de cumprir os deveres de transparência e os direitos previstos na legislação aplicável. A gratuidade não afasta esses deveres. Você pode exercer seus direitos pelo contato acima, inclusive revogar consentimento quando essa for a base legal do tratamento. O exercício desses direitos não implica sua renúncia a outras proteções legais.
+
+Mudanças materiais nas finalidades, nos dados coletados ou nas condições da oferta serão informadas antes de sua adoção, com novo aceite quando necessário. Este aviso não autoriza coleta retroativa nem ampliação silenciosa da telemetria.
 
 ## Atualizações
 

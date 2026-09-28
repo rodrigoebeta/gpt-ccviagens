@@ -1,7 +1,7 @@
 // Public publisher information; no installation credentials belong here.
 export const distribution = {
-  version: '0.1.0-preview.54',
-  termsVersion: '2026-09-27.2',
+  version: '0.1.0-preview.55',
+  termsVersion: '2026-09-27.3',
   publisher: 'Rodrigo Purchio',
   contact: 'contato@rodrigoebeta.com',
   repository: 'https://github.com/rodrigoebeta/gpt-ccviagens',

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.54",
+  "version": "0.1.0-preview.55",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Instalação e uso real liberados com aceite explícito da telemetria. Importação de reservas aceita arquivos e outras fontes autorizadas, além do Gmail, preservando a identificação das origens."
+  "notes": "Termos e aviso de privacidade esclarecem como a telemetria viabiliza a oferta gratuita e sem anúncios, as condições de continuidade e o aceite informado durante a instalação. Os dados coletados permanecem os mesmos."
 }

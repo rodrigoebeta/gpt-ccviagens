@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.56",
+  "version": "0.1.0-preview.57",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -44,8 +44,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 17646,
-      "sha256": "a4be6e7850eb74d11546e91f8bacfb2fcec62f15b9287f0cd956852903f75122"
+      "bytes": 17918,
+      "sha256": "6120c3147c8943b0eba9aab0171a732491dc95d1df1cce1578b349a33f6c4c21"
     },
     {
       "path": "LICENSE.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 281,
-      "sha256": "5a745e8213450dc520f3269df3096b3cafb410a0a7e9f2d4c3128bc4a4ccddf5"
+      "bytes": 258,
+      "sha256": "afc8db4258bfdc2a7e01c96ec96a0f2f301bf2b7e8dc17e5ff66a0fef24971e9"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -229,8 +229,8 @@
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 105465,
-      "sha256": "c237d24810c498b267e1b80f335d086ca42f4af09143a6cf6aea3639e107f661"
+      "bytes": 106994,
+      "sha256": "7d28a7b8a5fa249ecfd1125dbaf5387ed76e0c7e978dccb14366990e04e7d6e2"
     },
     {
       "path": "site/app/home-cover.tsx",
@@ -289,8 +289,8 @@
     },
     {
       "path": "site/app/travel-app.tsx",
-      "bytes": 32738,
-      "sha256": "6b8e61c015145e32ee8f7488bb76937fc3644403f56a4508d59797ceef415351"
+      "bytes": 33089,
+      "sha256": "ff4c9ef68dbf1ab7239239eab7736e1dbe78c9cd5c43ee5a1d1e64821346b7e8"
     },
     {
       "path": "site/app/trip-date-picker.tsx",
@@ -780,7 +780,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 505,
-      "sha256": "e9c8aac58b5e7caac5329773dbe02842f77356b6713d842917109b4138ed574c"
+      "sha256": "95b77a57733a8c202fdbfe94659f56ceb7f97130cfd6d3757f85870535f89aaa"
     },
     {
       "path": "site/lib/document-preview.ts",

@@ -8,6 +8,8 @@ Referência do aplicativo incluído no pacote. Para instalar, siga [CONFIGURAR_N
 
 ## Viagens e navegação
 
+No rodapé, **Sobre este painel** reúne informações sobre sua privacidade, telemetria e condições de uso. Abra a seção para consultar o resumo, os termos completos e o contato para permissões. Os créditos da imagem e **Sair da conta** ficam ao final da seção.
+
 Em **Detalhes e convidados → Editar viagem**, o proprietário e quem tem permissão **Pode editar** podem corrigir o nome, o período e os destinos. Não é preciso criar outra viagem: capa, convidados, documentos, reservas, listas e lugares são preservados. Os horários e as datas dos itens não mudam automaticamente. O período precisa conter todas as reservas salvas e os lugares agendados; se necessário, amplie o período, ajuste os itens na programação e só então encurte. Ao alterar as datas, um aviso lista antecipadamente os itens que ficariam fora e impede salvar esse período. **Nenhuma reserva é apagada.** Uma edição concorrente pede atualização da página antes de tentar novamente.
 
 No editor, os campos rolam quando necessário e as ações Cancelar/Salvar ficam visíveis no rodapé.

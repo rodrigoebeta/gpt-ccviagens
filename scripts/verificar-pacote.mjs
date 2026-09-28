@@ -24,6 +24,20 @@ async function walk(dir = '') {
   }
 }
 await walk();
+try {
+  const bytes = await readFile(path.join(root, 'release.json'));
+  const release = JSON.parse(bytes.toString('utf8'));
+  const config = await readFile(path.join(root, 'site/lib/distribution-config.ts'), 'utf8');
+  const literal = key => {
+    const matches = [...config.matchAll(new RegExp(`^\\s*${key}:\\s*'([^'\\r\\n]+)',?\\s*$`, 'gm'))];
+    if (matches.length !== 1) throw Error(`Campo inválido: ${key}`);
+    return matches[0][1];
+  };
+  const github = /^https:\/\/github\.com\/([\w-]+)\/([\w.-]+)$/.exec(literal('repository'));
+  if (bytes.length > 6000 || Object.keys(release).sort().join(',') !== 'notes,repository,version' || !/^\d+\.\d+\.\d+(?:-preview\.\d+)?$/.test(release.version) || typeof release.notes !== 'string' || !release.notes.trim() || release.notes.length > 2000) throw Error('Formato de anúncio inválido');
+  if (release.version !== manifest.version || release.version !== literal('version') || release.repository !== literal('repository')) throw Error('Versão/repositório divergentes');
+  if (!github || literal('releaseEndpoint') !== `https://raw.githubusercontent.com/${github[1]}/${github[2]}/main/release.json`) throw Error('Endereço do anúncio divergente');
+} catch (error) { problems.push(`Anúncio de atualização: ${error.message}`); }
 const hosting = JSON.parse(await readFile(path.join(root, 'site/.openai/hosting.example.json'), 'utf8'));
 if (JSON.stringify(hosting) !== JSON.stringify({ d1: 'DB', r2: 'BUCKET' })) problems.push('Vínculo Sites não está neutro');
 if (problems.length) { console.error(problems.join('\n')); process.exitCode = 1; }

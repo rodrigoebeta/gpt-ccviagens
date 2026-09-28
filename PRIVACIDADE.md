@@ -2,7 +2,7 @@
 
 Versão 2026-09-27.1. Responsável: **Rodrigo Purchio**. Contato para dúvidas, permissões e exercício de direitos: **contato@rodrigoebeta.com**.
 
-**Rascunho: não distribuir como instalação pronta.** Repositório oficial, endereço do receptor, acesso entre instalações e base legal ainda precisam ser definidos/validados. A coleta permanece desativada no código até a conclusão dessa preparação. Infraestrutura de hospedagem não representa certificação automática de conformidade com a LGPD.
+**Rascunho: não distribuir como instalação pronta.** Repositório e endereços oficiais definidos; fluxo completo em instalação independente, acesso entre instalações e base legal ainda precisam de validação. A coleta permanece desativada no código até a conclusão dessa preparação. Infraestrutura de hospedagem não representa certificação automática de conformidade com a LGPD.
 
 ## Finalidades e dados
 
@@ -24,7 +24,7 @@ O assistente apresenta os termos antes de configurar a coleta e solicita manifes
 
 ## Atualizações
 
-A consulta da última versão é uma operação separada da recepção de atividade, ainda que ocorra na mesma rotina. O aviso não instala código nem dá acesso remoto à sua conta. As atualizações são conduzidas pelo seu assistente, preservando dados, permissões e personalizações, com publicação autorizada. A consulta pode falhar e não representa garantia de manutenção futura.
+A consulta da última versão é uma operação separada da recepção de atividade, ainda que ocorra na mesma rotina. O servidor da Central obtém o arquivo público `release.json` do repositório oficial pelo domínio `raw.githubusercontent.com`, operado pelo GitHub. Essa requisição não inclui identificador, domínio, credencial da instalação ou dados de viagens; parte do servidor, não do navegador da pessoa. O provedor pode processar metadados técnicos de rede, como o IP de saída do servidor, conforme suas políticas. O aviso não instala código nem dá acesso remoto à sua conta. As atualizações são conduzidas pelo seu assistente, preservando dados, permissões e personalizações, com publicação autorizada. A consulta pode falhar e não representa garantia de manutenção futura.
 
 Uma falha temporária no envio não impede o uso da Central. O serviço não contém comando de bloqueio remoto. Instalações que removam ou bloqueiem o mecanismo podem não aparecer nas métricas; os números não representam uma contagem certificada de todas as cópias existentes.
 

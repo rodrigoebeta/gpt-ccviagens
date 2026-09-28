@@ -6,7 +6,9 @@ O pacote público é mantido junto do produto. Cada versão leva código, instru
 
 Quando houver versão nova confirmada, o proprietário vê uma faixa sálvia acima da navegação. Clique em Ver atualização e copie o pedido no modal. Ele inclui o endereço da sua instalação e o repositório oficial, para funcionar mesmo em outra conversa do Work. O assistente lê o README e este guia, obtém a release oficial e conduz os passos abaixo. O aviso não instala código automaticamente. É possível ocultá-lo durante a visita.
 
-Sem aviso, pode-se pedir a conferência manual da versão. Não trate silêncio da telemetria como garantia de estar atualizado. Não existe garantia de manutenção permanente.
+O servidor da Central consulta `release.json` no repositório público oficial, separadamente do envio de atividade. O anúncio acompanha o pacote na mesma publicação do repositório. Com a instalação ativada e os termos aceitos, a consulta ocorre durante o uso, normalmente uma vez a cada 24 horas; não é uma notificação imediata. Uma falha no envio de telemetria não impede a tentativa de consultar versões. O GitHub recebe a consulta ao arquivo público, sem identificador, domínio ou credencial da instalação. Nenhum acesso à infraestrutura do titular é necessário para atualizar a Central.
+
+Sem aviso, pode-se pedir a conferência manual da versão. Não trate ausência do aviso como garantia de estar atualizado. Não existe garantia de manutenção permanente. Centrais antigas que ainda consultam o anúncio no receptor de telemetria precisam receber esta atualização uma vez pelo Work para adotar o endereço no GitHub. Não apagar a configuração nem reinstalar a Central para isso.
 
 Para atualizar sua instalação, forneça a nova versão completa ao Work e peça: “Atualize minha central existente usando este pacote, preservando meu Site, acesso, viagens, comprovantes e capa. Leia docs/ATUALIZACOES.md antes de alterar.”
 

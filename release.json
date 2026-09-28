@@ -1,0 +1,5 @@
+{
+  "version": "0.1.0-preview.53",
+  "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
+  "notes": "Consulta de novas versões pelo repositório oficial, sem depender de atualizar o serviço de telemetria. Atualização assistida, preservando dados e configurações da sua Central."
+}

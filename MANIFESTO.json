@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.51",
+  "version": "0.1.0-preview.53",
   "status": "distribution-setup-and-independent-installation-pending",
   "files": [
     {
@@ -34,8 +34,8 @@
     },
     {
       "path": "docs/ATUALIZACOES.md",
-      "bytes": 3086,
-      "sha256": "b0e7e5d476e341502252f21bbc4c845a5187db59ea1721b8a8eab04d3ee4e8b2"
+      "bytes": 3921,
+      "sha256": "5bd5456a19ca9f9ff6b109631e1fab5fd439f9408dc60f6186eac5a83273c5bc"
     },
     {
       "path": "docs/IMPORTACAO.md",
@@ -44,8 +44,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 17062,
-      "sha256": "ebf3766f5198f28dde191c059b5c43ad5ab125d7b2e504b6b24780bd44da9587"
+      "bytes": 17583,
+      "sha256": "37d0d12e212bf2182a6e9717e4676a84c79bad86398ccdc95eacff8f3c517750"
     },
     {
       "path": "LICENSE.md",
@@ -59,13 +59,18 @@
     },
     {
       "path": "PRIVACIDADE.md",
-      "bytes": 4561,
-      "sha256": "f7cdce7a9b7729bd373de862711415d4fbb853502663d787318c157621a152a7"
+      "bytes": 5014,
+      "sha256": "1a614c6c1b281eb61fdc81402d4b8e6275d761fd1ff7d95530905dd96f27d28c"
     },
     {
       "path": "README.md",
       "bytes": 3378,
       "sha256": "ed00fc9a745782708e9d75b33233f081e1639493c6902241c7c21b0c8b129b4d"
+    },
+    {
+      "path": "release.json",
+      "bytes": 298,
+      "sha256": "8b9ee4a566e400d1999bfe309e38341fe2bd7223df355cc1fc5afeb5562e1101"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -74,8 +79,8 @@
     },
     {
       "path": "scripts/verificar-pacote.mjs",
-      "bytes": 1702,
-      "sha256": "e625188e36ff1336104bba8b3a5d060d604bdea16207d3342adcba95076e90f3"
+      "bytes": 2986,
+      "sha256": "4a6b21eec7a0834888554b14fe756399c313ac0d88d24ec6b2174376f2f6b36f"
     },
     {
       "path": "site/.npmrc",
@@ -774,8 +779,8 @@
     },
     {
       "path": "site/lib/distribution-config.ts",
-      "bytes": 478,
-      "sha256": "59e18be443fb909c0dcf9f6bdbd79d6cf5bc44e5b0cee740d01fe6a94bd5bd68"
+      "bytes": 506,
+      "sha256": "12f7e33c4103ecb13a052a44884a195e0544d2b216d145cc2fafb4ece616b449"
     },
     {
       "path": "site/lib/document-preview.ts",

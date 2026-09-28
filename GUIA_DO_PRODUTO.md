@@ -1,6 +1,6 @@
 # Guia da Central de Viagens
 
-Distribuição preview.51: endpoints oficiais preparados com prefixo de caminho /telemetria-ccv/v1/activity e /telemetria-ccv/v1/release, preservado integralmente nas requisições. ready:false mantém a coleta desativada até a validação da infraestrutura e do fluxo de instalação. Quem instala usa os endereços fornecidos no produto; não instala o serviço receptor nem configura DNS.
+Distribuição preview.53: atividade enviada ao endpoint oficial com caminho /telemetria-ccv/v1/activity; anúncio de atualização consultado pelo servidor no arquivo release.json do repositório público oficial no GitHub. ready:false mantém a coleta e a consulta desativadas até a validação do fluxo completo e o aceite. Quem instala usa os endereços fornecidos no produto; não instala o serviço receptor nem configura DNS. Instalações com o endereço antigo de anúncios precisam receber esta atualização uma vez pelo Work, preservando dados/configuração.
 
 Na Programação, as hospedagens ativas aparecem em uma faixa acima do roteiro, com período e ação Ver reserva. No dia da saída, o rótulo indica o check-out. A faixa permanece visível em dias sem eventos de entrada ou saída.
 
@@ -114,9 +114,9 @@ No painel de uma reserva, **Editar reserva** fica no cabeçalho junto à data, a
 
 ## Licenciamento, telemetria e versões — preparação
 
-A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. Aceite explícito precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Repositório oficial definido; validação do receptor ainda pendente; ready:false impede a ativação atual.
+A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. Aceite explícito precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Repositório oficial definido; validação do fluxo completo em instalação independente ainda pendente; ready:false impede a ativação atual.
 
-Faixa sálvia aprovada acima da navegação, para o proprietário, com modal que copia pedido de atualização contendo instalação e repositório. Descoberta de versão não instala automaticamente. O Work prepara backup/recuperação, preserva dados/personalizações e publica após autorização. O painel central e a infraestrutura de telemetria pertencem ao titular e não são distribuídos.
+Faixa sálvia aprovada acima da navegação, para o proprietário, com modal que copia pedido de atualização contendo instalação e repositório. Anúncio e manifesto usam a mesma versão do aplicativo, publicados junto do pacote. Consulta periódica pelo servidor ao GitHub sem identificador, domínio ou credencial da instalação; normalmente uma vez a cada 24 horas de uso após ativação. Descoberta de versão não instala automaticamente. O Work prepara backup/recuperação, preserva dados/personalizações e publica após autorização. O painel central e a infraestrutura de telemetria pertencem ao titular e não são distribuídos; entregas comuns do pacote não exigem sua atualização.
 
 Proteção da telemetria: receptor com registros identificadores cifrados e backups criptografados; leitura administrativa autorizada e assinada pelo servidor privado. Chaves e infraestrutura do titular não pertencem à instalação pública. Os controles não representam certificação de conformidade ou proteção absoluta contra comprometimento da infraestrutura.
 

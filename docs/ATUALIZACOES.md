@@ -8,7 +8,7 @@ Quando houver versão nova confirmada, o proprietário vê uma faixa sálvia aci
 
 O servidor da Central consulta `release.json` no repositório público oficial, separadamente do envio de atividade. O anúncio acompanha o pacote na mesma publicação do repositório. Com a instalação ativada e os termos aceitos, a consulta ocorre durante o uso, normalmente uma vez a cada 24 horas; não é uma notificação imediata. Uma falha no envio de telemetria não impede a tentativa de consultar versões. O GitHub recebe a consulta ao arquivo público, sem identificador, domínio ou credencial da instalação. Nenhum acesso à infraestrutura do titular é necessário para atualizar a Central.
 
-Sem aviso, pode-se pedir a conferência manual da versão. Não trate ausência do aviso como garantia de estar atualizado. Não existe garantia de manutenção permanente. Centrais antigas que ainda consultam o anúncio no receptor de telemetria precisam receber esta atualização uma vez pelo Work para adotar o endereço no GitHub. Não apagar a configuração nem reinstalar a Central para isso.
+Sem aviso, pode-se pedir a conferência manual da versão. Não trate ausência do aviso como garantia de estar atualizado. Não existe garantia de manutenção permanente.
 
 Para atualizar sua instalação, forneça a nova versão completa ao Work e peça: “Atualize minha central existente usando este pacote, preservando meu Site, acesso, viagens, comprovantes e capa. Leia docs/ATUALIZACOES.md antes de alterar.”
 
@@ -21,6 +21,3 @@ O Work deve:
 5. Mostrar o resultado e confirmar se a pessoa deseja publicar agora ou fazer mais ajustes. Aguardar a resposta, salvo pedido explícito de publicação da versão atual já recebido. Depois, publicar no mesmo Site e conferir URL, acesso restrito, dados anteriores e funções alteradas. Registrar versão/evidências em continuidade privada. Não ampliar audiência.
 
 Atualizar o repositório público não autoriza enviar os dados da instalação ao GitHub. A pasta configurada não deve ser redistribuída como se fosse o template limpo. O verificador de distribuição é executado antes da configuração; depois dela, hashes/arquivos extras podem mudar legitimamente.
-
-
-A versão com destinos OSM requer a migração aditiva `0007_trip_destinations`, antes de servir o novo código. Ela acrescenta referências geográficas vazias às viagens existentes; preserva o texto anterior e todos os vínculos. Confirme destinos antigos na interface, sem geocodificação ou substituição automática em lote.

@@ -1,8 +1,8 @@
 # Telemetria e privacidade da distribuição
 
-Versão 2026-09-27.1. Responsável: **Rodrigo Purchio**. Contato para dúvidas, permissões e exercício de direitos: **contato@rodrigoebeta.com**.
+Versão 2026-09-27.2. Responsável: **Rodrigo Purchio**. Contato para dúvidas, permissões e exercício de direitos: **contato@rodrigoebeta.com**.
 
-**Rascunho: não distribuir como instalação pronta.** Repositório e endereços oficiais definidos; fluxo completo em instalação independente, acesso entre instalações e base legal ainda precisam de validação. A coleta permanece desativada no código até a conclusão dessa preparação. Infraestrutura de hospedagem não representa certificação automática de conformidade com a LGPD.
+**Distribuição liberada para instalação e uso real.** A coleta exige informação prévia, aceite explícito e configuração dos termos da própria instalação. O fluxo completo em conta independente será verificado na primeira instalação real. A liberação e a infraestrutura de hospedagem não representam certificação automática de conformidade com a LGPD.
 
 ## Finalidades e dados
 

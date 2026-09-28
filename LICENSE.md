@@ -1,8 +1,8 @@
 # Licença de uso da Central de Viagens
 
-Versão 2026-09-27.1 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
+Versão 2026-09-27.2 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
 
-**Minuta em preparação para distribuição. Revisão jurídica e validação da instalação independente pendentes.**
+**Termos da distribuição liberada para instalação e uso real.** O fluxo completo em conta independente ainda está em validação. A liberação não representa revisão jurídica ou certificação de conformidade.
 
 ## Permissão de uso
 

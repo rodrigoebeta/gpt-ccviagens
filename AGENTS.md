@@ -23,6 +23,7 @@ Leia README.md, CONFIGURAR_NO_WORK.md e GUIA_DO_PRODUTO.md; depois siga ONBOARDI
 
 - Um pedido `Instale <URL do repositório>` inicia o roteiro pelo README.md. Obtenha o pacote completo de uma versão oficial, confira o manifesto e siga a instalação guiada; se o acesso ao Git não estiver disponível, oriente fornecer o pacote completo. Não invente arquivos faltantes.
 - Leia LICENSE.md e PRIVACIDADE.md antes de configurar. Preserve autoria, avisos de terceiros e marcadores de procedência. Modificações pessoais/internas são permitidas; distribuição/comercialização exigem autorização escrita do titular.
+- Esta versão está liberada para instalação e uso real. O primeiro ensaio independente permanece pendente; registre os resultados sem tratá-lo como bloqueio ou como validação já concluída.
 - Telemetria obrigatória exige informação prévia e manifestação explícita da pessoa. Não aceite em seu nome, não presuma consentimento pelo download e não altere ready:false para contornar distribuição ainda não liberada. Use scripts/registrar-aceite.mjs somente após aceite; mantenha o registro privado e reutilize-o em retomadas.
 - Não adicione campos à telemetria nem envie viagens/documentos/usuários. Credenciais administrativas, Docker, banco central e painel do titular não são parte da instalação da audiência. Nunca peça credenciais do titular.
 - Preserve o ID da instalação nas atualizações. Ao clonar para uma instalação independente, gere uma identidade própria; não duplique o estado de central_installation.
@@ -40,7 +41,7 @@ Leia README.md, CONFIGURAR_NO_WORK.md e GUIA_DO_PRODUTO.md; depois siga ONBOARDI
 
 - Use autorizações nas interfaces oficiais; nunca peça senhas, tokens ou cookies no chat. Não grave segredos em código, manifesto ou continuidade.
 - Consulte o contrato executável antes de gerar importações. Use datas do serviço com ano, fontes verdadeiras, identidade estável da reserva e bytes originais; não invente dados ausentes.
-- Ler Gmail não autoriza enviar mensagens, alterar caixa postal ou modificar reservas no fornecedor. Gmail conectado ao Work não cria integração automática com o Site.
+- Importe de qualquer fonte acessível e autorizada: e-mail, pasta local, arquivos, nuvem ou outra superfície. Gmail é opcional. Confira o acesso real; um caminho mencionado não garante que a conversa possa ler a pasta. Siga docs/IMPORTACAO.md e preserve referências reais, sem inventar identificadores Gmail para outras fontes. Ler fontes não autoriza enviar mensagens, mover/apagar arquivos nem modificar reservas no fornecedor. Acesso do Work não cria integração automática com o Site.
 - Sem escrita autenticada disponível, prepare o JSON privado e guie a pessoa para importá-lo. Nunca forje cabeçalhos de identidade no Site hospedado.
 - Documentos PDF/imagem/TXT abrem no visualizador; explique páginas, zoom, ajuste e download opcional. Preserve o original e obtenha concordância para conversão de formatos não aceitos.
 - Resuma mensagens em campos úteis; não despeje HTML, cabeçalhos ou anexos decorativos na conversa.

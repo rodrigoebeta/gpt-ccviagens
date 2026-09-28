@@ -1,6 +1,6 @@
 # Guia da Central de Viagens
 
-Distribuição preview.53: atividade enviada ao endpoint oficial com caminho /telemetria-ccv/v1/activity; anúncio de atualização consultado pelo servidor no arquivo release.json do repositório público oficial no GitHub. ready:false mantém a coleta e a consulta desativadas até a validação do fluxo completo e o aceite. Quem instala usa os endereços fornecidos no produto; não instala o serviço receptor nem configura DNS. Instalações com o endereço antigo de anúncios precisam receber esta atualização uma vez pelo Work, preservando dados/configuração.
+Distribuição liberada para instalação e uso real. A coleta está habilitada no produto (ready:true), mas só funciona após o aceite explícito e a configuração dos termos de cada instalação. A primeira instalação independente ainda será validada durante o uso. A atividade vai ao endpoint oficial /telemetria-ccv/v1/activity; anúncios de atualização são consultados pelo servidor no release.json do repositório oficial no GitHub. Quem instala usa os endereços fornecidos: não instala receptor, Docker ou VPS.
 
 Na Programação, as hospedagens ativas aparecem em uma faixa acima do roteiro, com período e ação Ver reserva. No dia da saída, o rótulo indica o check-out. A faixa permanece visível em dias sem eventos de entrada ou saída.
 
@@ -10,7 +10,7 @@ Referência do aplicativo incluído no pacote. Para instalar, siga [CONFIGURAR_N
 
 Em **Detalhes e convidados → Editar viagem**, o proprietário e quem tem permissão **Pode editar** podem corrigir o nome, o período e os destinos. Não é preciso criar outra viagem: capa, convidados, documentos, reservas, listas e lugares são preservados. Os horários e as datas dos itens não mudam automaticamente. O período precisa conter todas as reservas salvas e os lugares agendados; se necessário, amplie o período, ajuste os itens na programação e só então encurte. Ao alterar as datas, um aviso lista antecipadamente os itens que ficariam fora e impede salvar esse período. **Nenhuma reserva é apagada.** Uma edição concorrente pede atualização da página antes de tentar novamente.
 
-No editor, os campos rolam quando necessário e as ações Cancelar/Salvar ficam visíveis no rodapé. Destinos anteriores sem localização confirmada são identificados separadamente dos destinos selecionados no mapa.
+No editor, os campos rolam quando necessário e as ações Cancelar/Salvar ficam visíveis no rodapé.
 
 As áreas principais são **Viagens**, **Programação** e **Documentos da Viagem**. No celular, a navegação principal fica na parte inferior. Confira a viagem selecionada antes de incluir ou alterar dados. O destaque da seção selecionada é independente do contorno de foco do teclado. Use Tab para percorrer os controles; ao fechar Nova viagem, o foco retorna ao botão ou seletor que abriu o formulário.
 
@@ -20,7 +20,7 @@ Os cartões mostram nome, status, Período e Destinos sobre fundo claro. O botã
 
 ## Destinos e sugestões por proximidade
 
-Ao criar ou editar uma viagem, busque cidades, municípios, estados, regiões ou países e escolha a correspondência do OpenStreetMap. Confira estado e país para evitar nomes iguais. É possível selecionar vários destinos. Nomes antigos são preservados e identificados como ainda sem localização confirmada; confirme-os pela busca quando desejar usá-los como referência.
+Ao criar ou editar uma viagem, busque cidades, municípios, estados, regiões ou países e escolha a correspondência do OpenStreetMap. Confira estado e país para evitar nomes iguais. É possível selecionar vários destinos.
 
 Ao adicionar um lugar, a busca usa o dia selecionado para priorizar: **hospedagem daquele dia → lugares do roteiro → destinos confirmados da viagem**. Uma hospedagem precisa ter nome/endereço identificáveis no OSM; se houver dúvida ou indisponibilidade, o painel informa e utiliza as outras referências. Hospedagens canceladas e de outros dias não entram nessa preferência. Na troca de hotéis, a hospedagem que começa mais recentemente tem preferência.
 
@@ -42,7 +42,7 @@ O **Roteiro** reúne lugares, transportes, atividades, check-ins e check-outs. E
 
 Todos os itens do dia podem ser reordenados por arraste. A alça também aceita teclado (Espaço, setas e Escape); o menu oferece mover para cima ou para baixo. A ordem é compartilhada e permanece após recarregar. Em conflito com uma alteração de outra pessoa, atualize os dados antes de tentar novamente.
 
-Horários aparecem nos itens que os possuem. Mudar a ordem não muda os horários ou as datas da reserva. Lugares novos não exigem nem apresentam campo de horário; horários de registros antigos podem aparecer como referência. Para alterar o dia de um lugar já programado, edite sua data.
+Horários aparecem nos itens que os possuem. Mudar a ordem não muda os horários ou as datas da reserva. Lugares novos não exigem nem apresentam campo de horário. Para alterar o dia de um lugar já programado, edite sua data.
 
 ## Listas, lugares e mapa
 
@@ -58,7 +58,7 @@ No menu de um local do roteiro, **Remover do roteiro** limpa a data e o horário
 
 Marcar como **visitado** atualiza o mesmo lugar na lista e no Roteiro. Os visitados deixam de aparecer no mapa, mantendo a numeração dos demais; desmarcar restaura sua exibição. Abra o mapa pelas ações do Roteiro. O mapa também inclui reservas ativas: hotéis em todos os dias entre check-in e checkout (inclusive), aeroportos nos dias do voo e estações/terminais nos dias de partida ou chegada. Origem e destino aparecem juntos quando são no mesmo dia. Esses pontos usam ícones próprios e não criam itens extras na linha do tempo; cancelamentos são excluídos. O mapa pode ser aberto mesmo quando há somente uma hospedagem no dia.
 
-Após importar uma reserva, o painel tenta localizar hospedagens, aeroportos, estações e terminais em segundo plano. A reserva é salva mesmo quando a consulta falha. Resultados ficam guardados para todos os participantes autorizados; alterações no nome/endereço ou destino de referência provocam nova verificação. Reservas antigas são verificadas ao abrir a programação. Consultas interrompidas são retomadas; buscas usam o cache e o intervalo de requisições do Photon. Não é necessário abrir o mapa.
+Após importar uma reserva, o painel tenta localizar hospedagens, aeroportos, estações e terminais em segundo plano. A reserva é salva mesmo quando a consulta falha. Resultados ficam guardados para todos os participantes autorizados; alterações no nome/endereço ou destino de referência provocam nova verificação. Reservas ainda sem verificação são conferidas ao abrir a programação. Consultas interrompidas são retomadas; buscas usam o cache e o intervalo de requisições do Photon. Não é necessário abrir o mapa.
 
 A central de pendências fica acima do roteiro e da hospedagem, mesmo com o mapa fechado. Ela reúne revisões dos dados e localizações não confirmadas, cada qual com sua ação. Conferir reserva abre os dados existentes; editores podem corrigi-los. Tentar localizar novamente respeita o intervalo do serviço. Falhas temporárias de conexão são identificadas separadamente e não significam endereço incorreto. Nenhuma pendência altera automaticamente os dados originais. Informe o nome completo do hotel, aeroporto ou estação e cidade/país. Dados do OpenStreetMap podem estar incompletos.
 
@@ -66,7 +66,7 @@ Fotos podem ser próprias ou vir das fontes oferecidas pelo aplicativo. Confira 
 
 ## Reservas e revisões
 
-O Work prepara a importação de trens, voos, hotéis e atividades a partir das confirmações autorizadas no Gmail. Em **Documentos da Viagem → Importar reserva**, selecione o arquivo preparado. O painel recebe um JSON por reserva com seus documentos; não interpreta diretamente PDFs ou mensagens avulsas. O procedimento do agente está em [Importação](docs/IMPORTACAO.md).
+O assistente prepara a importação de trens, voos, ônibus, hotéis e atividades a partir de qualquer fonte que consiga acessar com autorização: e-mail, pasta local, arquivos anexados, armazenamento em nuvem ou outra superfície. Gmail é uma opção. O acesso depende das ferramentas disponíveis naquela conversa; quando necessário, a pessoa fornece os arquivos por um meio acessível. Em **Documentos da Viagem → Importar reserva**, selecione o arquivo preparado. O painel recebe um JSON por reserva com seus documentos; não interpreta diretamente PDFs ou mensagens avulsas. O procedimento do agente está em [Importação](docs/IMPORTACAO.md).
 
 Reimportar a mesma reserva não deve duplicá-la. Alterações, cancelamentos, conflitos com edições manuais e dados fora do período podem exigir decisão em **Para revisar**. Confira a versão atual e a proposta antes de resolver uma pendência.
 
@@ -101,7 +101,7 @@ O convidado vê os mesmos dados da viagem compartilhada. Um leitor consulta; um 
 
 O Work prepara Sites, banco e armazenamento da própria pessoa. O aplicativo começa vazio. A busca/mapa usam serviços abertos; o aplicativo já inclui cache e controle local de consultas. A identificação da instalação é gerada automaticamente; não é uma chave nem uma garantia de cota do Photon. Nenhum cadastro adicional é exigido para esse recurso.
 
-A central precisa de internet. Um atalho na tela inicial do celular facilita o acesso, mas não garante uso offline. Sincronização automática do Gmail, sugestões de IA dentro do painel e busca automática de capas não fazem parte da entrega. Gmail autorizado no Work não dá ao Site acesso automático à caixa postal.
+A central precisa de internet. Um atalho na tela inicial do celular facilita o acesso, mas não garante uso offline. Sincronização automática das fontes de reservas, sugestões de IA dentro do painel e busca automática de capas não fazem parte da entrega. Uma fonte autorizada no Work não dá ao Site acesso automático à caixa postal, pasta ou serviço.
 
 O fluxo de instalação em conta independente ainda está em validação. O Work registra o que comprovou na instalação de cada pessoa; build local não prova publicação, e largura móvel simulada não prova funcionamento em um telefone real.
 
@@ -112,9 +112,9 @@ Quando há reservas da viagem para conferir, um aviso abaixo do calendário most
 
 No painel de uma reserva, **Editar reserva** fica no cabeçalho junto à data, acima das abas Informações e Documentos, para quem possui permissão de edição. Em telas estreitas, a ação pode aparecer abaixo da data no mesmo grupo.
 
-## Licenciamento, telemetria e versões — preparação
+## Licenciamento, telemetria e versões
 
-A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. Aceite explícito precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Repositório oficial definido; validação do fluxo completo em instalação independente ainda pendente; ready:false impede a ativação atual.
+A distribuição usa licença proprietária com uso pessoal/profissional interno e modificações próprias permitidos; redistribuição/comercialização dependem de autorização expressa. LICENSE.md e PRIVACIDADE.md detalham as condições. Instalação por pedido curto com URL do repositório, guiada pelo Work. Aceite explícito precede ativação da telemetria obrigatória; fora de chatgpt.site inclui hostname, sem dados de viagens. Uso real liberado com ready:true; o aceite continua obrigatório por instalação. A validação do fluxo completo em conta independente permanece pendente e deve ser registrada durante a primeira instalação.
 
 Faixa sálvia aprovada acima da navegação, para o proprietário, com modal que copia pedido de atualização contendo instalação e repositório. Anúncio e manifesto usam a mesma versão do aplicativo, publicados junto do pacote. Consulta periódica pelo servidor ao GitHub sem identificador, domínio ou credencial da instalação; normalmente uma vez a cada 24 horas de uso após ativação. Descoberta de versão não instala automaticamente. O Work prepara backup/recuperação, preserva dados/personalizações e publica após autorização. O painel central e a infraestrutura de telemetria pertencem ao titular e não são distribuídos; entregas comuns do pacote não exigem sua atualização.
 

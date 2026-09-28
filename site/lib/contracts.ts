@@ -5,12 +5,18 @@ export const dateValue=z.string().regex(/^\d{4}-\d{2}-\d{2}$/).refine(v=>!Number
 const short=z.string().trim().min(1).max(300);
 export const tripInput=z.object({name:short,startDate:dateValue,endDate:dateValue,destinations:z.string().trim().max(1000),destinationLocations:z.array(destinationInput).max(20).default([])}).strict().refine(v=>v.startDate<=v.endDate,'Confira o período').refine(v=>(Date.parse(v.endDate)-Date.parse(v.startDate))/86400000<=366,'Use viagens de até um ano');
 const time=z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/).optional();
+// Preserve the original Gmail shape for existing imports and fingerprints.
+export const reservationSourceInput=z.discriminatedUnion('provider',[
+ z.object({provider:z.literal('gmail'),messageId:z.string().regex(/^[a-f0-9]{10,40}$/),subject:short}),
+ z.object({provider:z.literal('file'),filename:short,sha256:z.string().regex(/^[a-f0-9]{64}$/),subject:short}).strict(),
+ z.object({provider:z.literal('external'),system:short,reference:z.string().trim().min(1).max(2000),subject:short}).strict(),
+]);
 export const reservationInput=z.object({
  sourceKey:short,kind:z.enum(['train','flight','bus','hotel','activity']),title:short,startDate:dateValue,endDate:dateValue,
  startTime:time,endTime:time,timezone:z.string().max(100).optional(),endTimezone:z.string().max(100).optional(),
  location:z.string().max(1000).optional(),destination:z.string().max(1000).optional(),confirmation:z.string().max(200).optional(),
  travelers:z.array(short).max(30).default([]),notes:z.string().max(12000).default(''),
- sources:z.array(z.object({provider:z.literal('gmail'),messageId:z.string().regex(/^[a-f0-9]{10,40}$/),subject:short})).min(1).max(50),
+ sources:z.array(reservationSourceInput).min(1).max(50),
 }).strict().refine(v=>v.startDate<=v.endDate,'Confira as datas');
 export const importInput=z.object({version:z.literal(1),reservation:reservationInput,documents:z.array(z.object({
  filename:short,label:short,mime:z.enum(['application/pdf','image/png','image/jpeg','image/gif','image/webp','text/plain']),base64:z.string().min(4).max(14000000)

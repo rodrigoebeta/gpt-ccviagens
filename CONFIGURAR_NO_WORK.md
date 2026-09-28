@@ -14,7 +14,7 @@ Confira as ferramentas/habilidades oficiais do Sites na conta atual e consulte a
 
 ## Aceite antes da configuração
 
-Depois da conferência somente de leitura, consulte LICENSE.md, PRIVACIDADE.md e site/lib/distribution-config.ts. Se ready:false, repository, telemetryEndpoint ou releaseEndpoint estiverem ausentes, preserve o trabalho e informe que a distribuição oficial ainda não foi liberada; não invente endereços nem remova esse bloqueio.
+Depois da conferência somente de leitura, consulte LICENSE.md, PRIVACIDADE.md e site/lib/distribution-config.ts. Se ready estiver false ou se repository, telemetryEndpoint ou releaseEndpoint estiverem ausentes, preserve o trabalho e informe que a distribuição oficial ainda não foi liberada; não invente endereços nem remova esse bloqueio.
 
 Apresente uso permitido/restrições, coleta obrigatória, finalidade, campos, envio do hostname externo, responsável, retenção e direitos. Obtenha manifestação explícita da pessoa antes de ativar a coleta. Não aceite por ela. Só depois execute node scripts/registrar-aceite.mjs --aceite-explicito-confirmado. Preserve .private/aceite.json e não repita aceite válido nas retomadas. O aceite contratual não comprova por si só conformidade legal.
 
@@ -66,7 +66,7 @@ Abra a URL publicada, conclua o login oficial quando a pessoa precisar participa
 
 Se surgir `Failed to fetch`, confira primeiro URL atual e login: uma aba com endereço antigo pode mostrar dados já carregados e falhar nas novas consultas. Se persistir, examine a requisição e os registros do serviço antes de mudar permissões.
 
-Siga as etapas de [ONBOARDING.md](ONBOARDING.md), sem entregar toda a lista de uma vez. Gmail só precisa ser conectado no momento da importação. Não condicione listas/mapa a Gmail, IA, automações ou serviços adicionais.
+Siga as etapas de [ONBOARDING.md](ONBOARDING.md), sem entregar toda a lista de uma vez. Peça acesso somente à fonte escolhida no momento da importação: e-mail, pasta local, arquivos ou outra superfície disponível ao assistente. Um caminho local por si só não dá acesso ao Work; se necessário, oriente o envio dos arquivos. Não condicione a instalação, listas ou mapa ao Gmail ou a outro conector de reservas.
 
 ## Conferir telemetria e versão
 

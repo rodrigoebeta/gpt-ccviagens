@@ -7,7 +7,7 @@ Seu site de viagens está pronto. O ChatGPT Work instala na sua conta do Sites, 
 1. Abra uma conversa no ChatGPT Work na conta que será dona da central.
 2. Disponibilize esta pasta completa: pelo repositório, pelo ZIP ou pela pasta acessível à conversa. Se o link não permitir ler o código, use o ZIP. Só este README não contém o aplicativo.
 3. Peça: `Instale https://github.com/rodrigoebeta/gpt-ccviagens`. O Work lê este README e conduz a instalação. [COMECE_AQUI.md](COMECE_AQUI.md) é a alternativa detalhada.
-4. Siga as orientações do Work para autorizar o Sites, entrar no painel e cadastrar sua primeira viagem. A conexão com Gmail é pedida somente na hora de importar reservas.
+4. Siga as orientações do Work para autorizar o Sites, entrar no painel e cadastrar sua primeira viagem. Na hora de importar reservas, escolha a fonte: e-mail, pasta local, arquivos anexados, armazenamento em nuvem ou outra superfície que o assistente consiga acessar com sua autorização. Gmail é uma opção, não um requisito.
 
 Você não precisa programar, escolher um design ou executar comandos. Também não precisa de uma chave do Google Maps ou de IA. Autorizações acontecem nas interfaces oficiais; nunca envie senhas, tokens ou cookies na conversa.
 
@@ -27,7 +27,7 @@ Leia [LICENSE.md](LICENSE.md) e [PRIVACIDADE.md](PRIVACIDADE.md). Uso pessoal e 
 
 O aviso sálvia de atualização permite copiar um pedido curto para o Work. Ele identifica a própria instalação e o repositório, preserva seus dados e exige publicação autorizada. Atualizações futuras não são garantidas.
 
-**Entrega em preparação:** repositório oficial definido; validação do receptor, revisão dos termos e ensaio independente pendentes. Não ativar nem enviar telemetria enquanto `ready` estiver falso na configuração de distribuição.
+**Liberado para instalação e uso real, com aceite explícito antes da coleta.** A primeira instalação em conta independente ainda será validada durante o uso; essa pendência não impede começar. O Work deve registrar o que conseguiu verificar e qualquer limitação encontrada.
 
 ## Para o Work
 
@@ -35,4 +35,4 @@ Leia [AGENTS.md](AGENTS.md) e siga [CONFIGURAR_NO_WORK.md](CONFIGURAR_NO_WORK.md
 
 **Instalação em conta independente ainda em validação.** O pacote contém o produto, mas o fluxo completo em outra conta ainda precisa ser confirmado. O Work deve verificar a disponibilidade do Sites na sua conta e informar qualquer impedimento. A instalação começa sem viagens, documentos ou vínculo com outro Site.
 
-A importação atual usa um arquivo preparado pelo Work e carregado no painel autenticado. Sincronização automática do Gmail, sugestões de IA no painel e uso completo sem internet não estão incluídos.
+A importação atual usa um arquivo preparado pelo Work e carregado no painel autenticado. Sincronização automática das fontes de reservas, sugestões de IA no painel e uso completo sem internet não estão incluídos.

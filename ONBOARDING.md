@@ -1,64 +1,94 @@
 # Onboarding guiado pelo Work
 
-## Localizações e pendências
+Comece após publicação e login. Leia GUIA_DO_PRODUTO.md e confira os controles atuais da Central. Apresente uma etapa curta por rodada e use **Question** (ou ferramenta equivalente) com opções clicáveis. Os rótulos abaixo orientam a criação das perguntas; não são botões de Markdown.
 
-Após importar uma reserva, o painel tenta localizar hospedagens, aeroportos, estações e terminais em segundo plano. A reserva é salva mesmo quando a consulta falha. Resultados ficam guardados para todos os participantes autorizados; alterações no nome/endereço ou destino de referência provocam nova verificação. Reservas ainda sem verificação são conferidas ao abrir a programação. Consultas interrompidas são retomadas; buscas usam o cache e o intervalo de requisições do Photon. Não é necessário abrir o mapa.
+## Continuidade obrigatória
 
-A central de pendências fica acima do roteiro e da hospedagem, mesmo com o mapa fechado. Ela reúne revisões dos dados e localizações não confirmadas, cada qual com sua ação. Conferir reserva abre os dados existentes; editores podem corrigi-los. Tentar localizar novamente respeita o intervalo do serviço. Falhas temporárias de conexão são identificadas separadamente e não significam endereço incorreto. Nenhuma pendência altera automaticamente os dados originais.
+O onboarding deve cobrir: compartilhamento nas duas camadas; criação da viagem pela pessoa na Central; oferta de importação; reservas e documentos; Scheduled Tasks; locais em listas e roteiro. **Não encerre porque a pessoa adiou a viagem, não tem reservas ou não conectou e-mail.** Adiar a prática não pula a explicação nem as próximas rodadas. Respeite uma pausa explícita da pessoa e registre onde retomar.
 
-Use este roteiro depois de concluir a instalação. A pessoa aprende usando sua própria central; você conduz a conversa e executa o que ela já autorizou. Leia [GUIA_DO_PRODUTO.md](GUIA_DO_PRODUTO.md) para conhecer os recursos antes de ensinar.
+Use duas ou três opções curtas por pergunta, com resposta livre opcional. Texto livre pela ferramenta Question somente quando a informação não puder ser escolhida ou inferida. Não peça para digitar “sim”, números ou prompts para continuar no mesmo chat. Se a ferramenta não estiver disponível, explique uma vez e use a alternativa mais curta, sem simular botões. Espere a resposta real para ações dependentes dela; silêncio ou opção pré-selecionada não são confirmação.
 
-## Como conduzir
+Registre por etapa: apresentado, praticado, verificado, prática adiada ou bloqueado. Não marque uma explicação obrigatória como adiada só porque faltam dados para praticar. Não crie dados de exemplo. Não repita decisões confirmadas.
 
-Apresente uma etapa curta de cada vez: objetivo, ação disponível e resultado. Quando depender da pessoa, diga onde clicar, por que e o que deverá aparecer. Confira a interface atual antes de nomear controles. Não despeje esta tabela inteira na conversa nem delegue comandos técnicos à pessoa.
+## 1. Entrar e entender o compartilhamento
 
-Use dados reais autorizados. Não cadastre exemplos, altere reservas, marque visitados ou convide alguém apenas para demonstrar. Se a pessoa quiser aprender sem modificar dados, explique na tela e registre como apresentado, sem alegar que foi exercitado. Recursos opcionais podem ser pulados; registre para não perguntar novamente.
+Entregue a URL confirmada pelo Sites, guie o login oficial e apresente Viagens, Programação e Documentos da Viagem. Question: **SIM, abri minha Central** / **Preciso de ajuda para entrar**. Se falhar, confira URL e sessão antes de alterar configurações.
 
-## Primeiros passos e passeio pelo produto
+Antes de encerrar o turno de instalação, explique as duas permissões:
 
-| Etapa | Trabalho do Work e ação da pessoa quando necessária | Conclusão e recuperação |
-| --- | --- | --- |
-| 1. Entrar | Entregue a URL publicada e ajude a concluir o login oficial. Mostre Viagens, Programação e Documentos da Viagem. | Confirme a conta correta e o acesso restrito. Se falhar, confira URL atual e sessão antes de alterar configurações. |
-| 2. Criar a primeira viagem | Peça apenas nome, período com ano e destinos ainda ausentes. Cadastre pela sessão autenticada, ou guie a pessoa no formulário. Mostre como selecionar outra viagem e abrir Detalhes e convidados. | Confira os dados após recarregar. Se não persistirem, retome o diagnóstico de banco/migrações; não peça que cadastre repetidamente. |
-| 3. Importar reservas | Quando houver reservas para importar, confira a fonte escolhida, o acesso disponível e o recorte autorizado. Prepare o arquivo seguindo docs/IMPORTACAO.md. Se necessário, oriente Documentos da Viagem → Importar reserva → selecionar o arquivo privado preparado. | Confira uma reserva, suas datas, passageiros e documentos após recarga. Valide reimportação sem duplicata. Se não houver acesso à fonte, ofereça o envio dos arquivos por um meio disponível; se ainda não for possível importar, siga com lugares sem inventar dados. Gmail não é obrigatório. |
-| 4. Ver documentos | Abra um comprovante disponível e mostre páginas, ajuste à tela, zoom, pinça no celular e Baixar como ação opcional. | O clique deve abrir o visualizador. Se falhar, confira formato/sessão e tente novamente; o original continua disponível para download. Não baixe cópias repetidas para ensinar. |
-| 5. Guardar ideias | Mostre Queremos visitar, renomear e criar listas. Ajude a guardar um lugar escolhido pela pessoa usando busca ou nome/link. Explique lista, dia ou ambos. | Confira lista e localização. Se a busca falhar, use cadastro manual; não escolha um estabelecimento apenas pela semelhança do nome. |
-| 6. Montar o dia | Selecione uma data; mostre faixa semanal e calendário. Programe um lugar escolhido usando Incluir no dia, ou adicione diretamente ao dia sem lista. Explique arrastar da lista no computador. | Lugar e reservas aparecem no Roteiro. Confira a data; não crie cópia do lugar para fazer a inclusão. |
-| 7. Ordenar e acompanhar | Mostre arraste de todos os itens, alternativa pelo menu e teclado. Explique que horários existentes são referências e não mudam ao ordenar. Mostre visitado na lista/Roteiro e o mapa do dia: números para lugares, ícones para hospedagem durante toda a estadia e transportes na partida/chegada. Explique os pontos não localizados e como conferir o endereço da reserva. | Ao fazer uma mudança solicitada, confira após recarga. Visitado é o mesmo estado nos dois locais e sai do mapa. Em conflito, atualize antes de tentar novamente. |
-| 8. Ajustar reservas e revisar | Mostre onde editar uma reserva e ajustar horários, incluindo check-in/out, sem reimportação. Apresente Para revisar; só resolva uma pendência real conforme a decisão da pessoa. | Explique que mudar a central não altera o fornecedor. Confira ajustes salvos; não crie um conflito para demonstrar a revisão. |
-| 9. Personalizar, opcional | Ofereça capa própria da viagem, imagem inicial da conta e fotos de lugares. Diferencie as duas capas. Sugestões de fotos exigem conferência do local. | Se escolhida, confira imagem e recarga e mostre como retornar ao padrão. Falha de envio não impede o uso da central. |
-| 10. Entender compartilhamento | Explique sempre as duas permissões descritas abaixo. Só execute o convite se solicitado. | A pessoa conhece a diferença entre entrada no Site, leitura/edição de dados e edição do código. Registre o compartilhamento como adiado quando não for desejado. |
-| 11. Usar no celular, opcional | Oriente abrir a URL no telefone. Se desejar, ajude a adicionar à tela inicial pelo menu do navegador. Mostre navegação inferior, dia atual e controles de zoom no documento. | Peça retorno sobre login, navegação e pinça; distinga relato de teste observado. Um atalho não habilita funcionamento offline. |
-| 12. Continuar usando | Recapitule apenas o que foi apresentado, o que a pessoa praticou e o que ficou adiado. Entregue URL e acesso ao guia. Explique como pedir novas importações e atualizações. | Registre o próximo passo concreto. Se a pessoa interromper o passeio, retome da etapa pendente, sem reinstalar ou repetir consentimentos. |
+- No [painel Sites](https://chatgpt.com/sites), abrir a Central → **Compartilhar / Share** libera a entrada no aplicativo para outras contas. Mantenha acesso somente aos convidados, conforme as opções disponíveis. Não é preciso conceder edição do Site.
+- Na **URL real da Central**, abrir **Viagens → Detalhes e convidados → Convidados** libera os dados daquela viagem para o mesmo e-mail. Escolher **Pode visualizar** ou **Pode editar**. Repetir em cada viagem que quiser compartilhar.
 
-## Compartilhar uma viagem
+Inclua a URL real da Central como link, junto ao caminho. Use um link de gerenciamento mais específico apenas se retornado e verificado. O modal de convidados não tem endereço próprio no aplicativo atual; não invente parâmetros para abri-lo.
 
-Primeiro explique: **Sites permite entrar; Convidados permite acessar os dados de uma viagem e define se a pessoa pode editá-los.** Ambos precisam estar configurados. Não é necessário dar acesso de edição ao código do Site.
+Question: **Entendi; continuar** / **Quero ajuda para compartilhar**. A explicação é obrigatória; convites só quando solicitados. Sem viagem, apresente o fluxo e adie a prática. Se solicitado, obtenha somente destinatário, viagem e papel ausentes por Question. Confira ambas as listas. O formulário da Central não envia e-mail. A tela do proprietário não comprova o acesso do convidado: confirme com a conta autorizada quando possível. Entrou sem ver dados? Confira e-mail e permissão da viagem. Não entrou? Confira Sites e login. Revogar uma camada não revoga automaticamente a outra.
 
-Quando solicitado, obtenha viagem, e-mail da conta e papel desejado. Pelo fluxo oficial do Sites, confira/libere a entrada. No painel, com a conta proprietária, abra a viagem → **Detalhes e convidados → Convidados**, informe o mesmo e-mail e escolha **Pode visualizar** ou **Pode editar**. Oriente a pessoa a salvar se a interação depender dela. O formulário do aplicativo não envia e-mail.
+## 2. A pessoa cria a viagem pela Central
 
-Confira as duas listas de acesso. Peça que o convidado entre com a conta autorizada e confirme a viagem. A tela do proprietário não comprova o acesso do convidado. Se ele entra mas não vê os dados, confira e-mail e autorização por viagem; se não entra, confira compartilhamento do Sites e login. Não torne o Site público para resolver.
+Oriente **Viagens → Nova viagem**, preencher nome, período com ano e destinos, selecionar a cidade/região correta e salvar. Esses campos são preenchidos no formulário, não coletados no chat para o agente cadastrar. Se a viagem já existe, reconheça e use-a; não peça outra.
 
-Para mudar o papel, salve o mesmo e-mail com outra permissão; para revogar os dados da viagem, use Remover. Revogar a entrada no Sites é uma ação separada.
+Question: **SIM, criei pela Central** / **Quero criar depois** / **Preciso de ajuda**.
 
-## Continuidade pessoal
+- Criou: confira dados e persistência após recarga, por leitura autenticada quando disponível. Identifique o que foi observado e o que foi relatado.
+- Depois: registre prática adiada e siga imediatamente à oferta de importação.
+- Ajuda: oriente o formulário, confirme ou permita adiar a prática e siga para importação.
 
-Em `.private/HANDOFF.md`, registre URL, versão instalada, etapas apresentadas/praticadas/adiadas, evidências, limitações e próxima ação; em `.private/TASK_PLAN.md`, mantenha as pendências. Não guarde senhas, cookies ou conteúdo integral de e-mails. Ao mudar de conversa, forneça um briefing pronto com esses dados e disponibilize os arquivos da própria instalação pelo meio permitido, sem depender da máquina anterior.
+Falha de persistência exige diagnóstico de login, banco e migrações; não solicite repetidos cadastros. Continue as explicações independentes.
 
-O passeio está concluído quando a central está acessível, a pessoa consegue continuar sua viagem e cada recurso foi apresentado ou explicitamente adiado. Não bloqueie o uso porque não há convidados, fotos ou reservas disponíveis para demonstrar.
+## 3. Sempre oferecer importação, começando pelo e-mail conectado
 
-## Corrigir uma viagem
+Verifique primeiro quais ferramentas e conexões de e-mail estão disponíveis, sem ler conteúdo só para descobrir a conta. Plugin no catálogo, instalado e conta autenticada são estados diferentes. Considere qualquer serviço acessível, incluindo Gmail e Outlook; não exija Gmail.
 
-Mostre **Detalhes e convidados → Editar viagem**. A pessoa pode ajustar nome, datas e destinos sem recriar nada; proprietários e editores têm essa opção. Explique que mudar o período não remarca reservas ou lugares. Se algum item ficar fora, o painel pede para manter o intervalo ou ajustar os itens primeiro. Para transferir o roteiro para outro período, amplie o intervalo para incluir as duas datas, ajuste os itens e depois reduza. Confira o resultado salvo e a programação; não altere reservas com fornecedores por esse fluxo.
+Com conexão confirmada, identifique o serviço e proponha buscar reservas de viagens recentes. Question: **Buscar no e-mail conectado** / **Usar arquivos ou outra fonte** / **Conhecer o fluxo por enquanto**. Se houver várias contas, ofereça escolha quando necessário. A opção de busca autoriza somente o recorte explicado; não autoriza enviar, apagar ou alterar mensagens.
 
-## Confirmar destinos e buscar por proximidade
+Sem conexão, Question: **Conectar meu e-mail** / **Usar arquivos ou outra fonte** / **Conhecer o fluxo por enquanto**. Descubra o plugin correto e conduza autorização oficial; siga o guia de instalação para eventual novo chat. Para arquivos, oriente o controle de anexar ou a fonte/pasta acessível. Não solicite upload numa ferramenta Question que só aceite texto; use-a apenas para escolhas e confirmação. Não prometa acesso local no Work da web.
 
-Em Nova viagem ou Editar viagem, demonstre a busca de um destino e a seleção da cidade/região correta pelo estado e país. Ao adicionar um lugar ao dia, explique a preferência por hospedagem, roteiro e destinos; confira a indicação de proximidade ou o aviso de que não foi possível localizar a hospedagem. Mostre como desativar o contexto para buscar outro local. Não prometa catálogo completo ou distância por trajeto.
+**Com viagem:** leia as viagens autorizadas e suas datas. Se houver várias, ofereça escolha. Busque pelas datas dos serviços e referências da viagem, não só pelo recebimento da mensagem: uma compra feita meses antes pode pertencer ao período. Confira a correspondência e permissão de edição antes de importar.
 
-Ao mudar o período, mostre o aviso amarelo com os itens afetados: nenhuma reserva será apagada, e o período incompatível não é salvo. Corrija a programação ou mantenha suas datas incluídas antes de salvar.
+**Sem viagem:** ainda ofereça conexão, arquivos e explicação. Para salvar, será necessário criar uma viagem na Central. Pode haver busca exploratória pontual autorizada de confirmações recentes: ofereça **Últimos 30 dias de mensagens** / **Últimos 90 dias de mensagens** e explique que isso é um recorte inicial de mensagens, não filtro de datas dos serviços nem automação. Resuma somente reservas relevantes, sem criar viagem ou importar. Oriente a criação na interface com base nas datas conferidas. Se a pessoa adiar novamente, prossiga com documentos, Scheduled Tasks e locais, sem insistir nem iniciar busca recorrente irrestrita.
 
-## Atualizações e privacidade
+Sem resultados ou reservas, registre prática adiada e continue. Não termine o onboarding nessa etapa.
 
-Mostre ao proprietário o acesso permanente a LICENSE.md e PRIVACIDADE.md pelo guia da instalação. Explique a faixa sálvia: ela só aparece quando uma versão mais recente foi confirmada. O modal copia o pedido com a URL da Central e do repositório; não é necessário memorizar comandos. Não simule uma atualização real na instalação da pessoa apenas para ensinar. Registre como apresentado se não houver versão nova.
+## 4. Reservas e documentos
 
-Ao ensinar o arraste da lista, mostre a linha **Inserir aqui** para escolher início, meio ou fim do roteiro; pelo teclado, Espaço pega, setas escolhem e Espaço solta. Mostre **Remover do roteiro** somente em locais vinculados a uma lista: retorna à lista de origem sem apagar o local, sua foto ou suas notas. Locais sem lista não têm essa opção.
+Explique: o Work lê confirmações e comprovantes autorizados, extrai os dados, reúne os documentos e envia à viagem existente. A Central guarda a reserva e os anexos; reimportações reconhecem a mesma reserva. Divergências ficam para conferir, preservando ajustes manuais.
+
+Siga docs/IMPORTACAO.md. **Priorize a API autenticada**, já existente em `POST /api/trips/{id}/import`, sem usar a interface. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Documentos da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
+
+Confira datas, passageiros, documentos, recarga e reimportação sem duplicatas. Diferencie salvo, já existente, atualizado e **Para revisar**. Mostre abrir o documento, páginas, zoom, Ajustar, pinça no celular e Baixar (opcional). PDF/imagens/TXT são aceitos; siga o guia para conversões. Sem comprovante, explique sem inventar arquivo.
+
+Question: **Entendi; ver automação** / **Preciso de ajuda com a importação**. Resolva a dúvida e continue; não use “quer aprender mais?” como portão para encerrar.
+
+## 5. Scheduled Tasks: explicação obrigatória
+
+Explique: “Uma tarefa agendada pode procurar novas confirmações e documentos para viagens que você já cadastrou. Ela **não cria viagens**. O período de referência vem de cada viagem da Central; a seleção usa as datas reais do voo, hospedagem, transporte ou atividade, com ano, e não apenas quando o e-mail chegou.”
+
+Cada execução relê viagens e permissões antes de pesquisar. Sem viagens elegíveis, não pesquisa a caixa postal. Não importa serviços fora do período nem escolhe entre viagens sobrepostas arbitrariamente. A busca retorna candidatos; é preciso ler as datas dos serviços para confirmar a correspondência. Alterações/cancelamentos de reservas vinculadas seguem revisão, sem mudar datas ou criar viagens silenciosamente.
+
+Question: **Quero configurar a tarefa** / **Entendi; configurar depois** / **Tenho uma dúvida**. A explicação é obrigatória, a ativação é opcional e depende da escolha. Siga o procedimento de docs/IMPORTACAO.md; obtenha frequência/horário/fuso ausentes por Question, oferecendo escolhas quando possível.
+
+Ter a API não comprova acesso de uma tarefa na nuvem. Verifique transporte autenticado, leitura das viagens, e-mail, anexos e escrita **no ambiente agendado**. Só declare automação completa após uma execução real confirmada. Se faltar conexão, informe o bloqueio e registre a configuração pendente; não crie um lembrete ou uma rotina de preparar arquivos como se fossem importação automática. Prossiga para locais.
+
+No desktop, tarefas com arquivos locais exigem computador ligado e aplicativo executando. Para funcionar com o computador desligado, use nuvem com fontes e ferramentas acessíveis ali. Mostre **Scheduled / Agendadas**, ou o link real retornado pela ferramenta, para consultar, pausar e editar. Agendamento salvo não comprova importação executada.
+
+## 6. Locais em listas e roteiros
+
+Guie **Programação → Guardar lugar**: buscar nome/cidade, usar link ou cadastrar manualmente. Confira nome/endereço e correspondência. Em **Guardar em**, escolher lista, dia ou ambos. **Queremos visitar** guarda ideias e pode ser renomeada; outras listas são opcionais.
+
+Selecione o dia e use **Incluir no dia** para programar um lugar. No computador, pode arrastar da lista até **Inserir aqui** na posição desejada; teclado: Espaço, setas, Espaço; Escape cancela. Reordenar não muda horários das reservas. **Remover do roteiro**, quando o local pertence a uma lista, retira a data e preserva local/lista; excluir o lugar é outra ação.
+
+Question: **Quero adicionar um local** / **Entendi; praticar depois** / **Preciso de ajuda**. Sem viagem, explique e registre a prática futura. Se praticar, confira lista/dia e persistência; não salve lugares só para demonstrar.
+
+Mostre mapa do dia, números dos lugares, hospedagem durante a estadia e transportes na partida/chegada. Um link sozinho não garante coordenadas. Visitado é compartilhado entre lista/roteiro e retira o ponto do mapa. Explique **Priorizar o contexto do dia**, referência usada e desativação. Busca não garante catálogo completo nem distância por trajeto.
+
+## 7. Revisão, opcionais e conclusão
+
+Apresente edição e pendências: **Detalhes e convidados → Editar viagem** corrige nome, datas e destinos. Se itens ficarem fora do período, a Central exige ajustes prévios e não apaga reservas. Editar a Central não altera o fornecedor. Não provoque conflitos para demonstrar.
+
+Localizações de reservas são verificadas em segundo plano e guardadas para participantes autorizados. A reserva fica salva se a busca falhar. A central de pendências reúne revisões e locais não confirmados: **Conferir reserva** abre os dados; **Tentar localizar novamente** respeita o intervalo do serviço. Falha de conexão não prova endereço incorreto.
+
+Fotos/capas e celular são opcionais: Question **Quero experimentar** / **Deixar para depois**. Diferencie capa da viagem e imagem inicial da conta. Atalho no telefone não oferece uso offline. Mostre **Sobre este painel**, termos, privacidade e faixa sálvia quando houver atualização. Não simule uma atualização real para ensinar.
+
+Só declare onboarding apresentado depois das etapas obrigatórias 1 a 6. Entregue URL real, links de compartilhamento, estado da importação e automação (verificada, adiada ou bloqueada), práticas e pendências. Distinga **instalação publicada**, **onboarding apresentado** e **fluxos verificados**. Sem viagem não é possível comprovar persistência/importação, mas é possível explicar todo o uso.
+
+Registre versão, projeto, URL, decisões, evidências, etapas e próxima ação em `.private/HANDOFF.md` e `.private/TASK_PLAN.md`; inclua identificação não secreta da tarefa se existir. Na nuvem, preserve continuidade privada acessível ao projeto. Não guarde credenciais nem conteúdo integral de e-mails. Na troca de chat, forneça briefing preenchido e retome sem reinstalar ou repetir consentimentos.

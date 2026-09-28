@@ -8,6 +8,12 @@ Referência do aplicativo incluído no pacote. Para instalar, siga [CONFIGURAR_N
 
 ## Viagens e navegação
 
+A criação de viagens pelo assistente está prevista para uma futura conexão autenticada, mediante pedido explícito. Essa conexão ainda não está disponível neste pacote. O cadastro inicial continua pela Central, e a rotina de importação agendada não cria viagens.
+
+Na instalação, o Work verifica Sites primeiro e orienta ativação/novo chat se necessário. Reúne os chats em um projeto, reutilizando a pasta selecionada ou sugerindo **Central de Viagens** em Documentos no desktop; na web, usa fontes acessíveis ao projeto. Solicita **centraldeviagem** como nome do Site e entrega a URL efetivamente retornada. O pedido de instalação inclui publicação privada do produto fornecido após verificações e aceite, sem escolhas de design ou confirmação repetida de publicação.
+
+O acompanhamento usa perguntas de múltipla escolha. Você cria sua viagem em **Viagens → Nova viagem** e confirma no chat. Mesmo se deixar a criação para depois, o Work continua ensinando importação/documentos, Scheduled Tasks, locais em listas/roteiros e compartilhamento. A prática pode ficar pendente sem interromper as explicações.
+
 No rodapé, **Sobre este painel** reúne informações sobre sua privacidade, telemetria e condições de uso. Abra a seção para consultar o resumo, os termos completos e o contato para permissões. Os créditos da imagem e **Sair da conta** ficam ao final da seção.
 
 Em **Detalhes e convidados → Editar viagem**, o proprietário e quem tem permissão **Pode editar** podem corrigir o nome, o período e os destinos. Não é preciso criar outra viagem: capa, convidados, documentos, reservas, listas e lugares são preservados. Os horários e as datas dos itens não mudam automaticamente. O período precisa conter todas as reservas salvas e os lugares agendados; se necessário, amplie o período, ajuste os itens na programação e só então encurte. Ao alterar as datas, um aviso lista antecipadamente os itens que ficariam fora e impede salvar esse período. **Nenhuma reserva é apagada.** Uma edição concorrente pede atualização da página antes de tentar novamente.
@@ -68,7 +74,9 @@ Fotos podem ser próprias ou vir das fontes oferecidas pelo aplicativo. Confira 
 
 ## Reservas e revisões
 
-O assistente prepara a importação de trens, voos, ônibus, hotéis e atividades a partir de qualquer fonte que consiga acessar com autorização: e-mail, pasta local, arquivos anexados, armazenamento em nuvem ou outra superfície. Gmail é uma opção. O acesso depende das ferramentas disponíveis naquela conversa; quando necessário, a pessoa fornece os arquivos por um meio acessível. Em **Documentos da Viagem → Importar reserva**, selecione o arquivo preparado. O painel recebe um JSON por reserva com seus documentos; não interpreta diretamente PDFs ou mensagens avulsas. O procedimento do agente está em [Importação](docs/IMPORTACAO.md).
+O assistente importa trens, voos, ônibus, hotéis e atividades de fontes acessíveis e autorizadas: e-mail, pasta local, arquivos ou nuvem. Primeiro verifica se há e-mail conectado e oferece usá-lo; Gmail não é obrigatório. Com acesso oficialmente autenticado, envia diretamente à API da viagem existente, sem usar o painel. Se esse acesso faltar, prepara um arquivo para selecionar em **Documentos da Viagem → Importar reserva**. Cada importação contém uma reserva e seus documentos; o painel não interpreta PDFs ou mensagens avulsas. Veja [Importação](docs/IMPORTACAO.md).
+
+Scheduled Tasks pode repetir a busca e importação quando houver conexão autenticada de leitura/escrita no ambiente agendado. **Não cria viagens**: relê as já cadastradas e seleciona reservas pelas datas dos serviços dentro do período de referência de cada uma, incluindo o ano. Compras antecipadas também podem corresponder; só a data do e-mail não basta. Sem viagem elegível, não pesquisa a caixa postal. A configuração é opcional; sua explicação faz parte do onboarding. A existência da API não comprova acesso da tarefa: o Work deve verificar uma execução real antes de declarar automação funcional. Sem essa conexão, o agendamento permanece pendente.
 
 Reimportar a mesma reserva não deve duplicá-la. Alterações, cancelamentos, conflitos com edições manuais e dados fora do período podem exigir decisão em **Para revisar**. Confira a versão atual e a proposta antes de resolver uma pendência.
 
@@ -90,6 +98,8 @@ O cabeçalho reúne a contagem e Importar reserva para quem pode editar. Cada re
 
 Existem duas permissões independentes:
 
+Abra o [painel Sites](https://chatgpt.com/sites) e o compartilhamento da sua Central para liberar a entrada. Depois use a URL da própria Central, **Viagens → Detalhes e convidados → Convidados**, para liberar cada viagem ao mesmo e-mail. O Work entrega os dois links durante o onboarding; não existe link próprio para abrir diretamente o modal de convidados.
+
 | Onde | O que permite |
 | --- | --- |
 | Compartilhamento do Sites | Entrar no aplicativo com a conta autorizada |
@@ -103,7 +113,7 @@ O convidado vê os mesmos dados da viagem compartilhada. Um leitor consulta; um 
 
 O Work prepara Sites, banco e armazenamento da própria pessoa. O aplicativo começa vazio. A busca/mapa usam serviços abertos; o aplicativo já inclui cache e controle local de consultas. A identificação da instalação é gerada automaticamente; não é uma chave nem uma garantia de cota do Photon. Nenhum cadastro adicional é exigido para esse recurso.
 
-A central precisa de internet. Um atalho na tela inicial do celular facilita o acesso, mas não garante uso offline. Sincronização automática das fontes de reservas, sugestões de IA dentro do painel e busca automática de capas não fazem parte da entrega. Uma fonte autorizada no Work não dá ao Site acesso automático à caixa postal, pasta ou serviço.
+A Central precisa de internet. Um atalho no celular não garante uso offline. Sugestões de IA dentro do painel e busca automática de capas não fazem parte da entrega. Uma fonte autorizada no Work não dá ao Site acesso automático à caixa postal ou pasta. Scheduled Tasks requer configuração e validação próprias; execução local com arquivos depende de computador ligado e aplicativo aberto, enquanto a nuvem precisa de fontes/conexões acessíveis ali.
 
 O Work deve conferir publicação, login e persistência dos dados na sua instalação antes de declará-la concluída. Teste o acesso pelo seu celular; uma simulação de largura não substitui essa conferência.
 

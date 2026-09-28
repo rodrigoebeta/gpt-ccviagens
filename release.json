@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.57",
+  "version": "0.1.0-preview.58",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Informações sobre privacidade, telemetria e condições de uso organizadas para facilitar a leitura, com acesso direto aos termos completos."
+  "notes": "Instalação guiada com verificação de Sites, projeto e perguntas de múltipla escolha. Onboarding contínuo com criação da viagem pela Central, importação por API autenticada, documentos, compartilhamento e locais em listas/roteiros. Orientação de Scheduled Tasks com verificação obrigatória do acesso e da execução antes de declarar automação funcional."
 }

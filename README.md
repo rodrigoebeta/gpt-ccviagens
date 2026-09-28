@@ -4,10 +4,11 @@ Seu site de viagens está pronto. O ChatGPT Work instala na sua conta do Sites, 
 
 ## Como começar
 
-1. Abra uma conversa no ChatGPT Work na conta que será dona da central.
+1. Na conta que será dona da Central, confira **Sites** antes da instalação. Se precisar habilitar o plugin, abra **Plugins**, encontre Sites e conclua a ativação disponível. Os menus variam; o Work ajuda a localizar. Após instalar, inicie um novo chat Work para carregar o plugin. [Sites](https://chatgpt.com/sites) é o painel de gerenciamento.
 2. Disponibilize esta pasta completa: pelo repositório, pelo ZIP ou pela pasta acessível à conversa. Se o link não permitir ler o código, use o ZIP. Só este README não contém o aplicativo.
 3. Peça: `Instale https://github.com/rodrigoebeta/gpt-ccviagens`. O Work lê este README e conduz a instalação. [COMECE_AQUI.md](COMECE_AQUI.md) é a alternativa detalhada.
-4. Siga as orientações do Work para autorizar o Sites, entrar no painel e cadastrar sua primeira viagem. Na hora de importar reservas, escolha a fonte: e-mail, pasta local, arquivos anexados, armazenamento em nuvem ou outra superfície que o assistente consiga acessar com sua autorização. Gmail é uma opção, não um requisito.
+4. O Work reúne os chats em um projeto e reutiliza sua pasta; se não houver, sugere **Central de Viagens** em Documentos no desktop. Na web, usa fontes acessíveis ao projeto. Instala e publica com acesso restrito após seu aceite, solicitando **centraldeviagem** ao Sites.
+5. Entre na Central e crie sua viagem pela interface. Responda às opções clicáveis no chat. Mesmo se adiar o cadastro, o Work continua ensinando importação, documentos, Scheduled Tasks, listas, roteiro e compartilhamento. Começa oferecendo e-mail conectado; arquivos, pastas e nuvem também podem ser usados com acesso autorizado. Gmail não é obrigatório.
 
 Você não precisa programar, escolher um design ou executar comandos. Também não precisa de uma chave do Google Maps ou de IA. Autorizações acontecem nas interfaces oficiais; nunca envie senhas, tokens ou cookies na conversa.
 
@@ -33,6 +34,6 @@ O aviso sálvia de atualização permite copiar um pedido curto para o Work. Ele
 
 Leia [AGENTS.md](AGENTS.md) e siga [CONFIGURAR_NO_WORK.md](CONFIGURAR_NO_WORK.md). O aplicativo completo está em `site/`; o manifesto e o verificador conferem a integridade antes da instalação. [Importação](docs/IMPORTACAO.md), [atualizações](docs/ATUALIZACOES.md) e [créditos](CREDITOS.md) complementam a entrega.
 
-**Instalação em conta independente ainda em validação.** O pacote contém o produto, mas o fluxo completo em outra conta ainda precisa ser confirmado. O Work deve verificar a disponibilidade do Sites na sua conta e informar qualquer impedimento. A instalação começa sem viagens, documentos ou vínculo com outro Site.
+**Roteiro em validação.** A conclusão exige conferir o fluxo atualizado e a execução agendada autenticada. O Work verifica as capacidades da conta e informa impedimentos. A instalação começa sem viagens, documentos ou vínculo com outro Site.
 
-A importação atual usa um arquivo preparado pelo Work e carregado no painel autenticado. Sincronização automática das fontes de reservas, sugestões de IA no painel e uso completo sem internet não estão incluídos.
+A importação pode usar a API autenticada diretamente; se esse acesso não estiver disponível ao Work, ele prepara um arquivo para seleção no painel. Scheduled Tasks depende das conexões de e-mail e de leitura/escrita autenticadas na Central, verificadas no ambiente agendado; não há tarefa pré-ativada. Sugestões de IA no painel e uso completo sem internet não estão incluídos.

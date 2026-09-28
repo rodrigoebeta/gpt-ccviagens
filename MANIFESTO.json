@@ -44,8 +44,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 16600,
-      "sha256": "d44a921dc0517814211ddb14205f208036d0f8c3d254ce0f533ee30c6dbac942"
+      "bytes": 17062,
+      "sha256": "ebf3766f5198f28dde191c059b5c43ad5ab125d7b2e504b6b24780bd44da9587"
     },
     {
       "path": "LICENSE.md",
@@ -54,8 +54,8 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 10072,
-      "sha256": "930c232ec0b5ef3d8767d932e8fa4f0c7d8dd6bd5fecadbeb23960f58832399f"
+      "bytes": 10427,
+      "sha256": "3c08c4af79d8cf9d58b2ff04da68dd1826b3acaf27d23ce393c64cd055edb1df"
     },
     {
       "path": "PRIVACIDADE.md",
@@ -209,8 +209,8 @@
     },
     {
       "path": "site/app/day-timeline.tsx",
-      "bytes": 11164,
-      "sha256": "bdeaf84c7c338fb630c321c2b1ff8060130ae4ee6ede799ded6af776d05d6318"
+      "bytes": 10487,
+      "sha256": "a718f21ac7a9e4af52b4439ed3efde3648165c2c0c59ad03a5785a95a68fdc6d"
     },
     {
       "path": "site/app/destination-picker.tsx",
@@ -224,8 +224,8 @@
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 104771,
-      "sha256": "88ac8af4fca78dfa2e475c5309a5a7bebe0a8d09245cc21f87b39fd358078640"
+      "bytes": 105465,
+      "sha256": "c237d24810c498b267e1b80f335d086ca42f4af09143a6cf6aea3639e107f661"
     },
     {
       "path": "site/app/home-cover.tsx",
@@ -274,8 +274,8 @@
     },
     {
       "path": "site/app/planning-workspace.tsx",
-      "bytes": 33333,
-      "sha256": "12ab412c96734a1c0d4fcee32bb9b0cb9772f1eb71e02b01048db292b60590db"
+      "bytes": 35995,
+      "sha256": "65b28ba01ec92e127467c0248ff74a3374103791d0b7a6e2e01ffac9882fbb20"
     },
     {
       "path": "site/app/reservation-editor.tsx",
@@ -775,7 +775,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 478,
-      "sha256": "d65aed82be05e5c72c2eb06f1ab79876d5012f14bc181c534749ede3660281d7"
+      "sha256": "59e18be443fb909c0dcf9f6bdbd79d6cf5bc44e5b0cee740d01fe6a94bd5bd68"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -859,8 +859,8 @@
     },
     {
       "path": "site/lib/timeline.ts",
-      "bytes": 2251,
-      "sha256": "0cae0de06ebaeda29982a38eef27441e352aead6cc01ccdabb391b7528c66796"
+      "bytes": 2528,
+      "sha256": "c72a88a199067590b873384e6df16c57afecd2abc1b92a7614898ced87fddd34"
     },
     {
       "path": "site/lib/utils.ts",

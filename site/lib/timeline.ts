@@ -29,3 +29,10 @@ export function mergeEventOrder(saved:string[],current:string[]):string[]{
  const allowed=new Set(current),seen=new Set<string>();
  return [...saved,...current].filter(id=>{if(!allowed.has(id)||seen.has(id))return false;seen.add(id);return true;});
 }
+
+// Remove obsolete saved ranks for the returning place before inserting it.
+export function insertEventAt(current:string[],id:string,index:number):string[]{
+ const ids=current.filter(value=>value!==id);
+ ids.splice(Math.max(0,Math.min(index,ids.length)),0,id);
+ return ids;
+}

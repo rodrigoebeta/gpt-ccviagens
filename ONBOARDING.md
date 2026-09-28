@@ -60,3 +60,5 @@ Ao mudar o período, mostre o aviso amarelo com os itens afetados: nenhuma reser
 ## Atualizações e privacidade
 
 Mostre ao proprietário o acesso permanente a LICENSE.md e PRIVACIDADE.md pelo guia da instalação. Explique a faixa sálvia: ela só aparece quando uma versão mais recente foi confirmada. O modal copia o pedido com a URL da Central e do repositório; não é necessário memorizar comandos. Não simule uma atualização real na instalação da pessoa apenas para ensinar. Registre como apresentado se não houver versão nova.
+
+Ao ensinar o arraste da lista, mostre a linha **Inserir aqui** para escolher início, meio ou fim do roteiro; pelo teclado, Espaço pega, setas escolhem e Espaço solta. Mostre **Remover do roteiro** somente em locais vinculados a uma lista: retorna à lista de origem sem apagar o local, sua foto ou suas notas. Locais sem lista não têm essa opção.

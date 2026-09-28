@@ -52,7 +52,9 @@ Um lugar pode ficar em uma lista, em um dia ou nos dois. Ao adicionar pelo dia, 
 
 Use **Guardar lugar**, pesquise o nome e confira o resultado. A busca usa Photon/OpenStreetMap e não exige chave. Você também pode cadastrar por nome ou link. Um link sozinho não garante coordenadas: apenas lugares com localização podem aparecer no mapa. Se a busca estiver indisponível, use o cadastro manual; evite repetir tentativas em sequência.
 
-Use **Incluir no dia** para programar um lugar guardado. No computador, também é possível arrastar um lugar sem data da lista para o dia aberto. **Mais opções** reúne endereço completo, página original, direções, fotos, edição e remoção conforme os dados disponíveis.
+Use **Incluir no dia** para programar um lugar guardado. No computador, também é possível arrastar um lugar sem data da lista até a posição desejada no roteiro do dia aberto. A linha “Inserir aqui” indica o destino; pelo teclado, use Espaço, setas e Espaço para soltar (Escape cancela). **Mais opções** reúne endereço completo, página original, direções, fotos, edição e remoção conforme os dados disponíveis.
+
+No menu de um local do roteiro, **Remover do roteiro** limpa a data e o horário e mantém o mesmo local na lista de origem, com foto, notas e estado de visita preservados. A opção aparece somente quando o local pertence a uma lista. **Remover lugar** continua sendo a exclusão completa, com confirmação.
 
 Marcar como **visitado** atualiza o mesmo lugar na lista e no Roteiro. Os visitados deixam de aparecer no mapa, mantendo a numeração dos demais; desmarcar restaura sua exibição. Abra o mapa pelas ações do Roteiro. O mapa também inclui reservas ativas: hotéis em todos os dias entre check-in e checkout (inclusive), aeroportos nos dias do voo e estações/terminais nos dias de partida ou chegada. Origem e destino aparecem juntos quando são no mesmo dia. Esses pontos usam ícones próprios e não criam itens extras na linha do tempo; cancelamentos são excluídos. O mapa pode ser aberto mesmo quando há somente uma hospedagem no dia.
 

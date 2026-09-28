@@ -546,3 +546,12 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .pending-hub .pending-icon{width:20px;height:20px;flex:none;margin-top:3px;padding:0}.hub-action>svg{width:16px;height:16px}.pending-hub[open] .hub-action>svg{transform:rotate(180deg)}.hub-progress{display:flex;align-items:center;gap:6px;margin-top:4px}.hub-progress svg{width:14px;height:14px}.pending-checking,.pending-load-error{font-size:13px;line-height:1.6;padding:16px 0;color:#6b604a}.pending-load-error button{display:flex;align-items:center;gap:8px;min-height:44px;text-decoration:underline}.pending-load-error svg{width:16px}.pending-actions button:disabled{opacity:.5;cursor:wait}
 
 .pending-hub>summary:focus-visible{outline:2px solid var(--green);outline-offset:-5px}
+
+/* Insertion targets share the existing itinerary drag context. */
+.timeline-insertion{height:0;position:relative;list-style:none;margin-left:26px}
+.timeline-insertion.is-active{height:28px}
+.timeline-insertion.is-active:before{content:'';position:absolute;left:0;right:0;top:50%;height:2px;background:var(--line)}
+.timeline-insertion.is-target:before{background:var(--green)}
+.timeline-insertion span{position:relative;display:table;margin:auto;padding:0 10px;background:var(--page);color:var(--green);font-size:13px;font-weight:600;line-height:28px}
+.schedule.drop-ready{background:transparent}
+#route-title:focus-visible{outline:2px solid var(--focus);outline-offset:4px;border-radius:4px}

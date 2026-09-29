@@ -101,3 +101,9 @@ O custo cresce com a janela. Se o executor não cobrir todos os resultados dentr
 - **Revogar o acesso da API:** quando solicitado, remover `CENTRAL_SYNC_TOKEN_SHA256` do runtime e aplicar a revisão por deploy. As rotas sync e assistant passam a recusar essa credencial. Informar esse alcance; dados e login normal da Central são preservados.
 
 Não transmitir dados de viagem à telemetria para testar. A instalação independente e a tarefa real precisam ser conferidas na conta da pessoa; não anunciar compatibilidade universal com todos os ambientes a partir de teste local.
+
+## Contrato atualizado e tarefas já existentes
+
+Em toda execução, ler `GET /api/sync/capabilities` e seu `reservationImportContract` antes de montar pacotes. O mesmo contrato acompanha `GET /api/sync/trips` e `GET /api/sync/trips/{id}`, com todos os campos, dados de voo/tickets, pontos OSM, limites e regras por categoria. A rotina usa exclusivamente `/api/sync`; a descoberta não autoriza gerenciamento nem amplia o escopo confirmado.
+
+Uma atualização da Central não reescreve prompts salvos no agendador. Ao atualizar uma tarefa existente, substituir suas instruções pelo PROMPT_SCHEDULED_TASK.md atual, preenchendo os dados daquela instalação e preservando T0, frequência, fuso, fontes, contas e escopo. Não recriar a tarefa com um novo marco inicial. Verificar a primeira execução na nuvem e a leitura posterior dos campos; testes locais da API não comprovam essa execução.

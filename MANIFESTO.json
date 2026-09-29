@@ -1,5 +1,5 @@
 {
-  "version": "0.2.3",
+  "version": "0.2.4",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -29,13 +29,13 @@
     },
     {
       "path": "CREDITOS.md",
-      "bytes": 1606,
-      "sha256": "9d2a78bf690dc572f7d7af07128ebc7dff176a5c334f933ddce4c4bbd86d6d5a"
+      "bytes": 2101,
+      "sha256": "d2afcb9634f0a9e3547915b3ee536156b5bd3633c74d99fcf2c1f797af2126be"
     },
     {
       "path": "docs/API_ASSISTENTE.md",
-      "bytes": 14668,
-      "sha256": "ee4a2b146aa15630bf868d47f645f9f438cc107f8cc1ec448f10ca7b97e87194"
+      "bytes": 15627,
+      "sha256": "f0d2afb6dd653fa21235c5ff977bd0f6ae1c12128148d34f6b7210a1cbc3ee82"
     },
     {
       "path": "docs/ATUALIZACOES.md",
@@ -44,28 +44,28 @@
     },
     {
       "path": "docs/IMPORTACAO.md",
-      "bytes": 20060,
-      "sha256": "9c45686add2427c5683690e6db235e135c1c571e3eb08a23a2eed4ec91d79fd8"
+      "bytes": 22031,
+      "sha256": "57474b8756d80daae3e6b33c08f394e3d53dccb1195a95d0a1dd710994a02400"
     },
     {
       "path": "docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 15485,
-      "sha256": "374307fe53bab90d1a789e0816344c80d7db6012e2a16bdf03aeeeb2eedbfe0f"
+      "bytes": 17848,
+      "sha256": "b977a7a16940f6fa0c53b8e28f2e816a1b72d88c96a32270791dd4eb17379165"
     },
     {
       "path": "docs/PROMPT_WORK_API.md",
-      "bytes": 2884,
-      "sha256": "b92730d615f91591e2b0ca37debfa100fcc7af2419e0a1f7191306447c2b24f1"
+      "bytes": 3553,
+      "sha256": "20016e82a8c258a396c0ecbaf87e598764f3692052e4e3b50de391f3ea12580a"
     },
     {
       "path": "docs/SINCRONIZACAO.md",
-      "bytes": 19354,
-      "sha256": "c832a14b2d775c04dc821a9bb3fbe23cb332d386dad19028e6dd7399e2a1c4d3"
+      "bytes": 20252,
+      "sha256": "512f0fe03d307e1599d5c1bf33864c23cef69ef22a3a5cc2f7f57ad9ce800c9c"
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 32876,
-      "sha256": "39080f403fab267ba2e016a0538fb49f14e4267bd70ac255acd8d8db61d7e389"
+      "bytes": 33990,
+      "sha256": "386e332579b340551ab4c98b803ba9e7eb25714a81ee737469224554143e4c82"
     },
     {
       "path": "LICENSE.md",
@@ -74,8 +74,8 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 25840,
-      "sha256": "dd0f350b9c2f03b9fb558f839e8255ddd4a24d53c143425119f453f9e377e022"
+      "bytes": 26073,
+      "sha256": "403255779ddd6da824e72296032e5b358be9e4490f9c5538773304c7d868b0d6"
     },
     {
       "path": "PRIVACIDADE.md",
@@ -89,8 +89,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 823,
-      "sha256": "6542b05cbe5472ab7052664ed3ae2cfbbe74c6988925e2372f37796e99032b9d"
+      "bytes": 671,
+      "sha256": "7abbf0477ba31a4719c5f2d37ff27896ba6e572452564743a5dfefed5d4cdf9e"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -111,6 +111,11 @@
       "path": "site/.openai/hosting.example.json",
       "bytes": 35,
       "sha256": "bcc60135f698bbe83722987ef0705bfb2f389f9eb1a163007cbb4c9ceab301cf"
+    },
+    {
+      "path": "site/app/api/airports/[iata]/route.ts",
+      "bytes": 434,
+      "sha256": "d1085c3ff01b95858f6a1aaef8eaf3f346453dc92f90778cf9ee51c42b6db7f4"
     },
     {
       "path": "site/app/api/assistant/[...path]/route.ts",
@@ -138,19 +143,24 @@
       "sha256": "756abfeba67eeeb99d28a06f5b4f3314c127251edd62a67a8417780f2a65a90f"
     },
     {
+      "path": "site/app/api/sync/capabilities/route.ts",
+      "bytes": 505,
+      "sha256": "e5691e6c9d5cf26db2a367ad5989d08632eeaddc469af8f086f3b173b89a5b17"
+    },
+    {
       "path": "site/app/api/sync/trips/[id]/import/route.ts",
       "bytes": 774,
       "sha256": "43cbb81348aa8bd308c9c4170de05fb5297961705de6f0497613bfc3ef0a10f9"
     },
     {
       "path": "site/app/api/sync/trips/[id]/route.ts",
-      "bytes": 483,
-      "sha256": "8249e921d3aa372b626893887638cbc121a86290ecda520e1902808255295f46"
+      "bytes": 574,
+      "sha256": "fec652968e38c4d1665cee05f5c5ccf876dc87621a4c9e89763d15ef532739e8"
     },
     {
       "path": "site/app/api/sync/trips/route.ts",
-      "bytes": 269,
-      "sha256": "db9ccda06951124a2800445f86833a8463f82a39ddcf12c34a40f5771125af80"
+      "bytes": 365,
+      "sha256": "9c0ec63648bb535a07e19391ab0732ae3e8cabb7b0d5cb1324cfcf4d3b5ce566"
     },
     {
       "path": "site/app/api/trips/[id]/cover/route.ts",
@@ -289,8 +299,8 @@
     },
     {
       "path": "site/app/flight-fields.tsx",
-      "bytes": 2599,
-      "sha256": "7b2bfdec021a34aafbd2df32f08f74b6ce893fa67ff32e7373304c8441a88bc8"
+      "bytes": 4802,
+      "sha256": "d9dd78983b6858645ade5b77a76f6caef7db6c02747b27fba275130f26ddfb7c"
     },
     {
       "path": "site/app/flight-summary.tsx",
@@ -299,8 +309,8 @@
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 125192,
-      "sha256": "b15d6a39897214c66cdeeef0ab647b96158f412cbbb39a624e2173d7bcd0d3ce"
+      "bytes": 125287,
+      "sha256": "e9ce54e32f1523d4199822eea771c80845918b0c7fc0a2306741569773caace0"
     },
     {
       "path": "site/app/home-cover.tsx",
@@ -369,8 +379,8 @@
     },
     {
       "path": "site/app/reservation-editor.tsx",
-      "bytes": 11759,
-      "sha256": "0fd5e68e6007f26c20af0cadfee6593fc7c72315e3abcf902d3232f4e888ff42"
+      "bytes": 11991,
+      "sha256": "bd0aee80e9d6ec204fba0ba36b63c6300d790a229607b1bb0575f38b68dfeaac"
     },
     {
       "path": "site/app/reservation-icon.tsx",
@@ -893,9 +903,24 @@
       "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
     },
     {
+      "path": "site/lib/airport-autofill.ts",
+      "bytes": 992,
+      "sha256": "a836b445a17d3d054ceebf0eb87bcef0c33a63f26beab24add4aed44dba1069e"
+    },
+    {
+      "path": "site/lib/airport-data.json",
+      "bytes": 519497,
+      "sha256": "65b73b79303aeee69135862c3d338e38ea2eb9493e9ad41725fc08c6f7d47a3a"
+    },
+    {
+      "path": "site/lib/airports.ts",
+      "bytes": 842,
+      "sha256": "7c3b88036207e339079a7377a5e1820e274f63714d14965bd4b1a96b79315a2a"
+    },
+    {
       "path": "site/lib/assistant-api.ts",
-      "bytes": 11808,
-      "sha256": "130824767fbfb9fe0b4180b32698711838fa145afa80fc0ccb2229f538ec49fe"
+      "bytes": 10965,
+      "sha256": "51c04be139d04ef3bdfdee73cd79bec6c1d4c8cf0d16fbb340b0e590e470423f"
     },
     {
       "path": "site/lib/assistant-context.ts",
@@ -920,7 +945,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 494,
-      "sha256": "fa26a30f02f02a0df3f8006d581a9526e9990d06fa995458be531d50d475da50"
+      "sha256": "a28a4875938320e6294bc4c35485ca39a064d27a40994f14a06f30751f88bb07"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -941,6 +966,11 @@
       "path": "site/lib/geography.ts",
       "bytes": 6687,
       "sha256": "ed281e67e81ee48077b4e8eb78997cdb222860add468d723db3fcb374da514b5"
+    },
+    {
+      "path": "site/lib/import-contract.ts",
+      "bytes": 5493,
+      "sha256": "8cbbe600d61cecd2444d6d69be90a2a979d3cf0f9211f8a7ba0dcd90a31cd240"
     },
     {
       "path": "site/lib/installation-contract.ts",

@@ -10,7 +10,7 @@ Eventos e atividades de vários dias aparecem no roteiro e na marcação do cale
 
 O progresso da localização aparece uma única vez no cabeçalho das pendências. Enquanto houver somente buscas em andamento, o aviso não oferece uma seção vazia para abrir.
 
-## Reservas e documentos — versão 0.2.3
+## Reservas e documentos — versão 0.2.4
 
 Em **Adicionar reserva**, todas as categorias oferecem Documentos opcionais: seleção múltipla de PDF/imagens, até 10 MB por arquivo, 20 MB e 20 documentos por cadastro. Cada arquivo aparece como pill com abertura para conferência e remoção antes de salvar; não há prévia embutida. Arquivos ficam apenas no rascunho até salvar, inclusive ao trocar categoria; cancelar descarta a seleção. Reserva e documentos são salvos juntos, com validação e repetição sem duplicar. Depois, a consulta continua em **Ver reserva → Documentos**, cujo **Adicionar documento** permanece disponível em reservas manuais e importadas automaticamente.
 
@@ -183,3 +183,8 @@ Faixa sálvia acima da navegação, para o proprietário, com modal que copia pe
 
 Proteção da telemetria: receptor com registros identificadores cifrados e backups criptografados; leitura administrativa autorizada e assinada pelo servidor privado. Chaves e infraestrutura do titular não pertencem à instalação pública. Os controles não representam certificação de conformidade ou proteção absoluta contra comprometimento da infraestrutura.
 
+## Aeroportos e importação completa
+
+O cadastro e a edição de voos preenchem nome e localização de referência pelo código IATA usando catálogo local OurAirports. Preservam texto manual e ponto selecionado; trocar código substitui apenas valores ainda gerados na edição atual. A localização reúne nome, cidade atendida e país: não confirma rua, CEP, terminal, fuso ou endereço histórico. Código desconhecido ou falha permite preencher manualmente, sem novas chamadas ao OSM.
+
+As APIs de importação interativa e sincronização aceitam os campos comuns e específicos de todas as categorias, inclusive `flight`, tickets e pontos OSM. `reservationImportContract` compartilhado aparece nas capacidades de ambos os caminhos e na lista/detalhe das viagens de sincronização; instrui o assistente a enviar todos os dados comprovados, preservar valores existentes e conferir o retorno. Guias e prompt agendado usam o contrato da instalação em cada execução. Prompts de tarefas já salvas precisam ser atualizados preservando T0 e as escolhas existentes; publicar o aplicativo não os reescreve.

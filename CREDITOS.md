@@ -12,3 +12,5 @@ Nenhuma captura de referência externa ou fotografia pessoal acompanha a distrib
 Arrastar e ordenar: @dnd-kit/core6.3.1, sortable10.0.0 e utilities3.2.2 (MIT, Claudéric Demers); licenças preservadas nos respectivos pacotes instalados.
 
 Visualizador: PDF.js/pdfjs-dist6.3.289 (Mozilla, Apache-2.0; https://mozilla.github.io/pdf.js/) e react-zoom-pan-pinch4.2.0 (prc5, MIT; https://github.com/BetterTyped/react-zoom-pan-pinch). Recursos e licenças PDF em site/public/pdfjs/6.3.289; licença de zoom em site/vendor/. Nenhum documento enviado a visualizador externo.
+
+Catálogo de aeroportos: [OurAirports](https://ourairports.com/data/), dados em domínio público. Recorte local de aeroportos com IATA de três letras, consultado em 29/09/2026; fonte e hash do CSV registrados em `site/lib/airport-data.json`. Nomes e cidades atendidas seguem o catálogo, sem garantia de endereço postal ou situação histórica. Não inclui rua, CEP, terminal nem confirmação OSM. A base é atualizada junto com o aplicativo, sem consulta externa durante o preenchimento.

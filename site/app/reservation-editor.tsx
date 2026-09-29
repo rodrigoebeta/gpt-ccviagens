@@ -10,6 +10,7 @@ import ReservationLocationField from './reservation-location-field';
 import TimezoneField from './timezone-field';
 import {FlightIdentityFields,FlightAirportFields,FlightTicketsField} from './flight-fields';
 import {cleanFlightDetails,flightTitle} from '@/lib/flight-details';
+import {fillAirport} from '@/lib/airport-autofill';
 import ReservationDocumentsField,{type PendingDocument} from './reservation-documents-field';
 import {readDocumentBase64} from '@/lib/document-upload';
 type Draft=Omit<ReservationData,'sourceKey'|'sources'>;
@@ -43,8 +44,8 @@ export default function ReservationEditor({reservation:r,trip,day,onClose,onSave
   </div>
   <div className={'reservation-stages'+(transport?' reservation-stages-transport':'')}>
    {([false,true] as const).map(isEnd=>{const stage=isEnd?end:start;return <fieldset className="reservation-stage" key={isEnd?'end':'start'}><legend>{stage.charAt(0).toUpperCase()+stage.slice(1)}</legend><div className="reservation-stage-fields">
-    {flight&&<FlightAirportFields isEnd={isEnd} value={draft.flight??{}} onChange={patch=>update({flight:{...draft.flight,...patch}})}/>}
-    {transport&&<ReservationLocationField trip={trip} day={isEnd?draft.endDate:draft.startDate} label={(flight?'Endereço do aeroporto de ':'Local de ')+stage} value={(isEnd?draft.destination:draft.location)??''} point={isEnd?draft.destinationPoint:draft.locationPoint} onChange={value=>update(isEnd?{destination:value,destinationPoint:undefined}:{location:value,locationPoint:undefined})} onSelect={point=>update(isEnd?{destination:point.address,destinationPoint:point}:{location:point.address,locationPoint:point})}/>}
+    {flight&&<FlightAirportFields isEnd={isEnd} value={draft.flight??{}} location={(isEnd?draft.destination:draft.location)??''} disabled={busy} onChange={patch=>update({flight:{...draft.flight,...patch}})} onLookup={(code,airport,previous)=>setDraft(current=>fillAirport(current,isEnd,code,airport,previous))}/>}
+    {transport&&<ReservationLocationField trip={trip} day={isEnd?draft.endDate:draft.startDate} label={(flight?'Localização do aeroporto de ':'Local de ')+stage} value={(isEnd?draft.destination:draft.location)??''} point={isEnd?draft.destinationPoint:draft.locationPoint} onChange={value=>update(isEnd?{destination:value,destinationPoint:undefined}:{location:value,locationPoint:undefined})} onSelect={point=>update(isEnd?{destination:point.address,destinationPoint:point}:{location:point.address,locationPoint:point})}/>}
     <div className="reservation-stage-time">
      <DateField label={'Data de '+stage} name={isEnd?'endDate':'startDate'} required min={isEnd?draft.startDate||trip.start_date:trip.start_date} max={trip.end_date} value={isEnd?draft.endDate:draft.startDate} onChange={value=>update(isEnd?{endDate:value}:{startDate:value})}/>
      <TimeField label={'Horário de '+stage} name={isEnd?'endTime':'startTime'} value={(isEnd?draft.endTime:draft.startTime)??''} onChange={value=>update(isEnd?{endTime:value}:{startTime:value})}/>

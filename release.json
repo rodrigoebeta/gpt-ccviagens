@@ -1,5 +1,5 @@
 {
-  "version": "0.2.3",
+  "version": "0.2.4",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Versão 0.2.3. Eventos e atividades de vários dias aparecem em todas as datas no roteiro e no calendário. Dias intermediários mostram Em andamento, sem repetir o horário de abertura. Toasts mais compactos; progresso de localização reunido no cabeçalho das pendências. Créditos atualizados com a licença de uso.\nFusos ordenados pelo GMT da data da reserva, do menor para o maior, com nomes preservados.\nVoos com códigos IATA, nomes de aeroportos, número do voo, localizador e vários tickets com passageiro opcional no card, na consulta, no cadastro e na edição. Campos antigos preservados sem conversão automática.\nEndereços resumidos nos cards, com o original preservado na consulta e na edição."
+  "notes": "Versão 0.2.4. Preenchimento de nome e localização de aeroportos pelo IATA, preservando dados manuais e pontos selecionados. Catálogo local sem novas chamadas ao OSM; localização de referência não substitui endereço postal confirmado.\r\nAPIs, guias e instruções de sincronização compartilham o contrato completo das reservas, incluindo dados de voo, múltiplos tickets e pontos no mapa. Assistente orientado a consultar os campos atuais e conferir o que foi salvo. Tarefas já existentes precisam receber o prompt atualizado sem mudar seu marco inicial."
 }

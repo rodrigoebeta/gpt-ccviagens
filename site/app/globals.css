@@ -672,7 +672,8 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .reservation-editor-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 var(--reservation-inset) var(--reservation-section-gap);scrollbar-gutter:stable;scroll-padding-block:16px}
 .reservation-identity,.reservation-stage-fields{display:grid;gap:var(--reservation-field-gap);min-width:0}
 .flight-identity-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.flight-airport-fields{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px}
+.flight-airport-fields{display:grid;grid-template-columns:160px minmax(0,1fr);align-items:end;gap:16px}
+.flight-airport-hint{grid-column:1/-1;font-size:12px;line-height:1.5;margin:0}
 .flight-identity-fields label,.flight-airport-fields label,.flight-ticket-fields label{display:grid;align-content:start;gap:8px;min-width:0}
 .flight-tickets-field{border-top:1px solid var(--line);padding-top:16px;min-width:0}
 .flight-tickets-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}

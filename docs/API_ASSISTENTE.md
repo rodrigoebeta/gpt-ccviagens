@@ -6,7 +6,7 @@ Para continuar em outra conversa, o instalador preenche e entrega [PROMPT_WORK_A
 
 ## Descoberta e autenticação
 
-Comece por `GET /api/assistant/capabilities`. A resposta contém os caminhos, métodos, contratos e regras da versão instalada. Não adivinhe endpoints. As rotas abaixo têm prefixo `/api/assistant`, usam JSON em escritas e aceitam o mesmo par de headers:
+Comece por `GET /api/assistant/capabilities`. A resposta contém os caminhos, métodos, contratos e regras da versão instalada. Leia `reservationImportContract` a cada execução: todos os campos aceitos, subcampos de voo/tickets/pontos, limites e regras por categoria. Envie dados disponíveis e comprovados; preserve campos já conhecidos ao atualizar. Não dependa de uma lista de campos memorizada. Não adivinhe endpoints. As rotas abaixo têm prefixo `/api/assistant`, usam JSON em escritas e aceitam o mesmo par de headers:
 
 - `OAI-Sites-Authorization: Bearer <token>`
 - `X-Central-Sync-Token: <token>`
@@ -114,3 +114,7 @@ Convidar na viagem não libera o login privado do Site. O agente explica as duas
 Após cada escrita, confira a resposta e releia o recurso relevante. Em timeout de criação de viagem, lista ou lugar, consulte os recursos antes de tentar novamente para evitar duplicação; esses POSTs não possuem chave de idempotência. API publicada, autenticação HTTP, importação com anexos e execução do Scheduled Tasks são verificações distintas. Não afirme que o agendador funciona apenas porque a chamada interativa funcionou. O ensaio de instalação independente continua necessário.
 
 A localização automática de hospedagens usa também endereço completo conforme IMPORTACAO.md. O upload manual em Documentos é uma rota de interface autenticada e não amplia o catálogo `/api/assistant`; para o assistente, os anexos continuam pelo contrato de importação existente.
+
+## Aeroportos por código IATA
+
+`GET /api/assistant/airports/{iata}` faz consulta exata no catálogo local OurAirports, sem chamada ao OSM. Retorna `status` (`found`, `not_found` ou `ambiguous`), `airport` (`iata`, `name`, `location`, `sourceUrl`) ou `null`, `provider` e `catalogDate`. Código inválido retorna 400. `location` reúne nome, cidade atendida e país; não é endereço postal validado. Preencha apenas lacunas ou valores ainda derivados do código, preservando endereço, terminal e ponto já confirmados. Código de cidade não substitui IATA de aeroporto. Consulte [IMPORTACAO.md](IMPORTACAO.md) para os campos `flight` e a distinção entre texto e ponto no mapa.

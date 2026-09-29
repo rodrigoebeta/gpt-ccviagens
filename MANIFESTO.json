@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.62",
+  "version": "0.1.0",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -89,8 +89,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 789,
-      "sha256": "532dc991e7200c3ec7c49492f26979d65d0cbea72d428faa3cde941f794f7cf3"
+      "bytes": 815,
+      "sha256": "cd62f9d416087f56f4b975133a6527f1a5d0c198ee05286d5b5b67602a8ad526"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -859,8 +859,8 @@
     },
     {
       "path": "site/lib/distribution-config.ts",
-      "bytes": 505,
-      "sha256": "76903a2408bb90711fe35efd08d44f6ba587b7e492387c024a75dbc703f877a6"
+      "bytes": 494,
+      "sha256": "f68e7ad766aff6987c0e97d218a40c53c0a4fceab91e2d7051d1165cd176fb4c"
     },
     {
       "path": "site/lib/document-preview.ts",

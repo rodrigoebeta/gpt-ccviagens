@@ -1,10 +1,11 @@
 import {env} from 'cloudflare:workers';
 import {getChatGPTUser,type ChatGPTUser} from '@/app/chatgpt-auth';
+import {assistantIdentity} from './assistant-context';
 import {importInput,reservationInput,type ReservationData} from './contracts';
 export class AppError extends Error{constructor(public status:number,message:string){super(message)}}
 export function database(){if(!env.DB)throw new AppError(503,'Armazenamento indisponível. Tente novamente.');return env.DB;}
 export function bucket(){if(!env.BUCKET)throw new AppError(503,'Comprovantes indisponíveis. Tente novamente.');return env.BUCKET;}
-export async function identity(){const u=await getChatGPTUser();if(!u)throw new AppError(401,'Entre com sua conta do ChatGPT.');return u;}
+export async function identity(){const u=assistantIdentity()??await getChatGPTUser();if(!u)throw new AppError(401,'Entre com sua conta do ChatGPT.');return u;}
 export async function access(id:string,u:ChatGPTUser,write=false,owner=false){
  const db=database();const trip=await db.prepare('SELECT * FROM trips WHERE id=?').bind(id).first<{owner_id:string;start_date:string;end_date:string}>();
  if(!trip)throw new AppError(404,'Viagem não encontrada.');if(trip.owner_id===u.userId)return {...trip,role:'owner'};
@@ -13,7 +14,7 @@ export async function access(id:string,u:ChatGPTUser,write=false,owner=false){
  if(!m.user_id)await db.prepare('UPDATE members SET user_id=? WHERE trip_id=? AND email=? AND user_id IS NULL').bind(u.userId,id,u.email.toLowerCase()).run();
  return {...trip,role:m.role};
 }
-export function csrf(req:Request){if(req.headers.get('origin')!==new URL(req.url).origin)throw new AppError(403,'Reabra o painel para continuar.');}
+export function csrf(req:Request){if(!assistantIdentity()&&req.headers.get('origin')!==new URL(req.url).origin)throw new AppError(403,'Reabra o painel para continuar.');}
 export async function readJson(req:Request,max=25000000){
  if(Number(req.headers.get('content-length')??0)>max)throw new AppError(413,'Arquivo muito grande. Limite: 25 MB.');
  const reader=req.body?.getReader();if(!reader)throw new AppError(400,'Arquivo vazio.');let size=0;const chunks:Uint8Array[]=[];
@@ -35,20 +36,55 @@ export async function listReservations(tripId:string){const db=database();const 
 
 type ImportBundle=ReturnType<typeof importInput.parse>;
 type StoredReservation={fingerprint:string;data:string;status:string;manual_override?:number};
+// A durable fence prevents trip deletion from finishing while an R2 write can
+// still arrive. Each attempt owns unique keys: a losing import may safely remove
+// its own bytes without deleting a concurrent winner's document or review.
+export async function withTripUpload<T>(tripId:string,keys:string[],write:()=>Promise<T>):Promise<T>{
+ if(!keys.length)return write();
+ const db=database(),uploadId=crypto.randomUUID();
+ const registered=await db.prepare(`INSERT INTO trip_uploads(id,trip_id,object_keys,status,created_at)
+  SELECT ?,id,?,'active',? FROM trips WHERE id=? AND NOT EXISTS (SELECT 1 FROM trip_deletions WHERE id=?)`)
+  .bind(uploadId,JSON.stringify(keys),new Date().toISOString(),tripId,tripId).run();
+ if(!registered.meta.changes)throw new AppError(404,'Viagem não encontrada.');
+ try{return await write();}finally{
+  try{
+   // All PUT promises have settled before this flag changes. Never expire an
+   // active fence by age: a slow or interrupted request must not lose its guard.
+   await db.prepare("UPDATE trip_uploads SET status='settled' WHERE id=?").bind(uploadId).run();
+   for(const key of keys){
+    const referenced=await db.prepare(`SELECT 1 FROM documents WHERE object_key=? UNION ALL
+     SELECT 1 FROM reviews WHERE object_key=? UNION ALL SELECT 1 FROM places WHERE photo_key=? UNION ALL
+     SELECT 1 FROM trips WHERE cover_key=? LIMIT 1`).bind(key,key,key,key).first();
+    if(!referenced)await bucket().delete(key);
+   }
+   await db.prepare('DELETE FROM trip_uploads WHERE id=?').bind(uploadId).run();
+  }catch{
+   // Retain keys for the deletion retry instead of losing cleanup evidence.
+   console.error('Trip upload cleanup pending',uploadId);
+  }
+ }
+}
 async function queueReview(tripId:string,id:string,bundle:ImportBundle,reason:string,base:string|null){
- const key=await digest(tripId+'\n'+JSON.stringify(bundle)),objectKey='reviews/'+tripId+'/'+key;
- await bucket().put(objectKey,JSON.stringify(bundle),{httpMetadata:{contentType:'application/json'}});
- await database().prepare('INSERT INTO reviews (id,trip_id,reservation_id,object_key,reason,status,base_fingerprint,created_at) VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(id) DO NOTHING').bind(key,tripId,id,objectKey,reason,'pending',base,new Date().toISOString()).run();
- const row=await database().prepare('SELECT status FROM reviews WHERE id=?').bind(key).first<{status:string}>();
- return {reservationId:id,created:false,documentsAdded:0,reviewId:key,reviewRequired:row?.status==='pending',reviewStatus:row?.status};
+ const key=await digest(tripId+'\n'+JSON.stringify(bundle)),objectKey='reviews/'+tripId+'/'+key+'/'+crypto.randomUUID();
+ return withTripUpload(tripId,[objectKey],async()=>{
+  await bucket().put(objectKey,JSON.stringify(bundle),{httpMetadata:{contentType:'application/json'}});
+  await database().prepare('INSERT INTO reviews (id,trip_id,reservation_id,object_key,reason,status,base_fingerprint,created_at) VALUES (?,?,?,?,?,?,?,?) ON CONFLICT(id) DO NOTHING').bind(key,tripId,id,objectKey,reason,'pending',base,new Date().toISOString()).run();
+  const row=await database().prepare('SELECT status FROM reviews WHERE id=?').bind(key).first<{status:string}>();
+  if(!row)throw new AppError(404,'Viagem não encontrada.');
+  return {reservationId:id,created:false,documentsAdded:0,reviewId:key,reviewRequired:row.status==='pending',reviewStatus:row.status};
+ });
 }
 // Original bytes are staged in R2 first. D1 commits the reservation, history and
 // file references in one batch, guarded by the version the caller inspected.
 async function persistBundle(tripId:string,id:string,bundle:ImportBundle,existing:StoredReservation|null,reviewId?:string,manual=false){
  const db=database(),r=bundle.reservation,status=bundle.change?.action==='cancel'?'cancelled':'active';
  const data=JSON.stringify(r),fingerprint=status==='active'?await digest(data):await digest(data+'\ncancelled'),now=new Date().toISOString();
- const files=await Promise.all(bundle.documents.map(async f=>{const bytes=decodeFile(f.base64,f.mime),hash=await digest(bytes);return {...f,bytes,hash,id:await digest(id+'\n'+hash),key:'trips/'+tripId+'/'+id+'/'+hash};}));
- let added=0;for(const f of files){const saved=await db.prepare('SELECT id FROM documents WHERE reservation_id=? AND sha256=?').bind(id,f.hash).first();if(!saved){await bucket().put(f.key,f.bytes,{httpMetadata:{contentType:f.mime}});added++;}}
+ const decoded=await Promise.all(bundle.documents.map(async f=>{const bytes=decodeFile(f.base64,f.mime),hash=await digest(bytes);return {...f,bytes,hash,id:await digest(id+'\n'+hash),key:'trips/'+tripId+'/'+id+'/'+hash+'/'+crypto.randomUUID()};}));
+ const files=[...new Map(decoded.map(f=>[f.hash,f])).values()];
+ const staged:typeof files=[];
+ for(const f of files){const saved=await db.prepare('SELECT object_key FROM documents WHERE reservation_id=? AND sha256=?').bind(id,f.hash).first<{object_key:string}>();if(saved)f.key=saved.object_key;else staged.push(f);}
+ return withTripUpload(tripId,staged.map(f=>f.key),async()=>{
+ for(const f of staged)await bucket().put(f.key,f.bytes,{httpMetadata:{contentType:f.mime}});
  const statements=[];
  const reviewGuard=reviewId?' AND EXISTS (SELECT 1 FROM reviews WHERE id=? AND status=\'pending\')':'';
  const reviewArgs=reviewId?[reviewId]:[];
@@ -60,11 +96,14 @@ async function persistBundle(tripId:string,id:string,bundle:ImportBundle,existin
  }
  for(const f of files)statements.push(db.prepare('INSERT INTO documents (id,reservation_id,object_key,filename,mime,label,bytes,sha256) SELECT ?,?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM reservations WHERE id=? AND fingerprint=?)'+reviewGuard+' ON CONFLICT(reservation_id,sha256) DO NOTHING').bind(f.id,id,f.key,f.filename,f.mime,f.label,f.bytes.length,f.hash,id,fingerprint,...reviewArgs));
  if(reviewId)statements.push(db.prepare("UPDATE reviews SET status='accepted' WHERE id=? AND status='pending' AND EXISTS (SELECT 1 FROM reservations WHERE id=? AND fingerprint=?)").bind(reviewId,id,fingerprint));
- if(statements.length)await db.batch(statements);
+ const results=statements.length?await db.batch(statements):[];
+ const documentsOffset=existing?(existing.fingerprint!==fingerprint?2:0):1;
+ const added=results.slice(documentsOffset,documentsOffset+files.length).reduce((count,result)=>count+result.meta.changes,0);
  const saved=await db.prepare('SELECT fingerprint FROM reservations WHERE id=?').bind(id).first<{fingerprint:string}>();
  if(saved?.fingerprint!==fingerprint)throw new AppError(409,'A reserva mudou em outra edição. Atualize e compare novamente.');
  if(reviewId){const resolved=await db.prepare('SELECT status FROM reviews WHERE id=?').bind(reviewId).first<{status:string}>();if(resolved?.status!=='accepted')throw new AppError(409,'Esta revisão foi resolvida em outra edição. Atualize a lista.');}
- return {reservationId:id,created:!existing,documentsAdded:added,updated:!!existing&&existing.fingerprint!==fingerprint,cancelled:status==='cancelled'};
+ return {reservationId:id,created:!existing&&results[0]?.meta.changes===1,documentsAdded:added,updated:!!existing&&existing.fingerprint!==fingerprint,cancelled:status==='cancelled'};
+ });
 }
 export async function importReservation(tripId:string,user:ChatGPTUser,input:unknown){
  const trip=await access(tripId,user,true),bundle=importInput.parse(input),r=bundle.reservation;

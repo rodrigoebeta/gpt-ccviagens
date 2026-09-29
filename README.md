@@ -1,5 +1,7 @@
 # Sua Central de Viagens
 
+O Work também opera o produto por [API do assistente](docs/API_ASSISTENTE.md): viagens, listas, locais, roteiro, reservas, revisões, documentos, capas e convidados. Após configurar a autenticação, consultar `/api/assistant/capabilities`, executar o pedido autorizado e conferir a persistência. Ensinar esse caminho durante o onboarding, sem substituir a prática inicial pela interface.
+
 Seu site de viagens está pronto. O ChatGPT Work instala na sua conta do Sites, ajuda a importar suas reservas e ensina você a usar o painel.
 
 ## Como começar
@@ -36,4 +38,6 @@ Leia [AGENTS.md](AGENTS.md) e siga [CONFIGURAR_NO_WORK.md](CONFIGURAR_NO_WORK.md
 
 **Roteiro em validação.** A conclusão exige conferir o fluxo atualizado e a execução agendada autenticada. O Work verifica as capacidades da conta e informa impedimentos. A instalação começa sem viagens, documentos ou vínculo com outro Site.
 
-A importação pode usar a API autenticada diretamente; se esse acesso não estiver disponível ao Work, ele prepara um arquivo para seleção no painel. Scheduled Tasks depende das conexões de e-mail e de leitura/escrita autenticadas na Central, verificadas no ambiente agendado; não há tarefa pré-ativada. Sugestões de IA no painel e uso completo sem internet não estão incluídos.
+A importação pode usar a API autenticada diretamente; se esse acesso não estiver disponível ao Work, ele prepara um arquivo para seleção no painel. No onboarding, o agente oferece uma tarefa opcional na nuvem, identifica fontes conectadas adequadas ou ajuda a conectar uma, como e-mail. Scheduled Tasks depende de acesso à fonte e de leitura/escrita autenticadas na Central, verificados no ambiente agendado; não há tarefa pré-ativada. Sugestões de IA no painel e uso completo sem internet não estão incluídos.
+
+A API de automação `/api/sync` vem incluída e desativada até sua configuração. Ao escolher ativar, o Work segue [Sincronização](docs/SINCRONIZACAO.md) e prepara o [prompt completo da tarefa](docs/PROMPT_SCHEDULED_TASK.md), com os dados da sua instalação e sem credenciais no texto. Cada instalação usa identidade e token próprios; o executor obtém a credencial a cada execução. O agente cria pela ferramenta nativa quando disponível ou entrega o prompt pronto para colar diretamente no Scheduled Tasks cloud. O início do acompanhamento fica fixo, e tarefa salva e importação efetivamente verificada são informadas separadamente.

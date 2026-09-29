@@ -71,6 +71,20 @@
       "when": 1790537859129,
       "tag": "0009_central_installation",
       "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "6",
+      "when": 1790634454254,
+      "tag": "0010_trip_deletions",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "6",
+      "when": 1790641480527,
+      "tag": "0011_trip_uploads",
+      "breakpoints": true
     }
   ]
 }

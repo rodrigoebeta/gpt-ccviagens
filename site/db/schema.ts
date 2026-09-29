@@ -1,4 +1,12 @@
 import { sqliteTable, text, integer, real, primaryKey, uniqueIndex, index } from 'drizzle-orm/sqlite-core';
+export const tripUploads=sqliteTable('trip_uploads',{
+ id:text('id').primaryKey(),tripId:text('trip_id').notNull(),objectKeys:text('object_keys').notNull(),
+ status:text('status').notNull().default('active'),createdAt:text('created_at').notNull(),
+},t=>[index('trip_uploads_trip').on(t.tripId)]);
+export const tripDeletions=sqliteTable('trip_deletions',{
+ id:text('id').primaryKey(),ownerId:text('owner_id').notNull(),confirmName:text('confirm_name').notNull(),
+ objectKeys:text('object_keys').notNull(),createdAt:text('created_at').notNull(),
+});
 export const centralInstallation=sqliteTable('central_installation',{
  singleton:integer('singleton').primaryKey(),id:text('id').notNull(),token:text('token').notNull(),
  nextAttemptAt:integer('next_attempt_at').notNull().default(0),lastSentAt:integer('last_sent_at'),

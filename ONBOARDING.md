@@ -1,5 +1,7 @@
 # Onboarding guiado pelo Work
 
+O Work também opera o produto por [API do assistente](docs/API_ASSISTENTE.md): viagens, listas, locais, roteiro, reservas, revisões, documentos, capas e convidados. Após configurar a autenticação, consultar `/api/assistant/capabilities`, executar o pedido autorizado e conferir a persistência. Ensinar esse caminho durante o onboarding, sem substituir a prática inicial pela interface.
+
 Comece após publicação e login. Leia GUIA_DO_PRODUTO.md e confira os controles atuais da Central. Apresente uma etapa curta por rodada e use **Question** (ou ferramenta equivalente) com opções clicáveis. Os rótulos abaixo orientam a criação das perguntas; não são botões de Markdown.
 
 ## Continuidade obrigatória
@@ -53,23 +55,56 @@ Sem resultados ou reservas, registre prática adiada e continue. Não termine o 
 
 Explique: o Work lê confirmações e comprovantes autorizados, extrai os dados, reúne os documentos e envia à viagem existente. A Central guarda a reserva e os anexos; reimportações reconhecem a mesma reserva. Divergências ficam para conferir, preservando ajustes manuais.
 
-Siga docs/IMPORTACAO.md. **Priorize a API autenticada**, já existente em `POST /api/trips/{id}/import`, sem usar a interface. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Documentos da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
+Siga docs/IMPORTACAO.md. **Priorize a API autenticada do assistente**, em `POST /api/assistant/trips/{id}/import`, após configurar a autenticação da própria instalação conforme docs/SINCRONIZACAO.md. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Documentos da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
 
 Confira datas, passageiros, documentos, recarga e reimportação sem duplicatas. Diferencie salvo, já existente, atualizado e **Para revisar**. Mostre abrir o documento, páginas, zoom, Ajustar, pinça no celular e Baixar (opcional). PDF/imagens/TXT são aceitos; siga o guia para conversões. Sem comprovante, explique sem inventar arquivo.
 
 Question: **Entendi; ver automação** / **Preciso de ajuda com a importação**. Resolva a dúvida e continue; não use “quer aprender mais?” como portão para encerrar.
 
-## 5. Scheduled Tasks: explicação obrigatória
+## 5. Scheduled Tasks: oferecer sincronização opcional na nuvem
 
-Explique: “Uma tarefa agendada pode procurar novas confirmações e documentos para viagens que você já cadastrou. Ela **não cria viagens**. O período de referência vem de cada viagem da Central; a seleção usa as datas reais do voo, hospedagem, transporte ou atividade, com ano, e não apenas quando o e-mail chegou.”
+Explique: “Uma tarefa na nuvem pode consultar sua Central em horários combinados, procurar novas reservas em uma fonte que você autorizar e salvar os dados e comprovantes nas viagens existentes. Ela **não cria viagens** nem precisa do computador ligado quando todas as ferramentas e fontes estão disponíveis na nuvem. A busca acontece a cada execução; não é uma atualização instantânea a cada mensagem.”
 
-Cada execução relê viagens e permissões antes de pesquisar. Sem viagens elegíveis, não pesquisa a caixa postal. Não importa serviços fora do período nem escolhe entre viagens sobrepostas arbitrariamente. A busca retorna candidatos; é preciso ler as datas dos serviços para confirmar a correspondência. Alterações/cancelamentos de reservas vinculadas seguem revisão, sem mudar datas ou criar viagens silenciosamente.
+O recorte inicial é o instante de cadastro da tarefa, chamado **T0**, e permanece fixo. Em e-mail, ele considera mensagens recebidas desde esse instante; nas outras fontes, exige um marcador temporal equivalente confirmado. A associação usa separadamente as datas reais dos serviços, com ano, e os destinos das viagens. A rotina relê viagens e permissões em cada execução, não pesquisa fontes sem viagens elegíveis e encaminha ambiguidades para conferência. Não escolhe viagens sobrepostas arbitrariamente, altera suas datas nem apaga reservas automaticamente.
 
-Question: **Quero configurar a tarefa** / **Entendi; configurar depois** / **Tenho uma dúvida**. A explicação é obrigatória, a ativação é opcional e depende da escolha. Siga o procedimento de docs/IMPORTACAO.md; obtenha frequência/horário/fuso ausentes por Question, oferecendo escolhas quando possível.
+### 5.1. Descobrir fontes e oferecer a escolha
 
-Ter a API não comprova acesso de uma tarefa na nuvem. Verifique transporte autenticado, leitura das viagens, e-mail, anexos e escrita **no ambiente agendado**. Só declare automação completa após uma execução real confirmada. Se faltar conexão, informe o bloqueio e registre a configuração pendente; não crie um lembrete ou uma rotina de preparar arquivos como se fossem importação automática. Prossiga para locais.
+Inspecione as ferramentas e os metadados das conexões disponíveis, sem ler mensagens ou documentos para inventariar contas. Reutilize as escolhas da importação, mas confirme sua disponibilidade no executor na nuvem. Plugin no catálogo, plugin instalado, conta autenticada no chat e ferramenta disponível no executor são verificações diferentes.
 
-No desktop, tarefas com arquivos locais exigem computador ligado e aplicativo executando. Para funcionar com o computador desligado, use nuvem com fontes e ferramentas acessíveis ali. Mostre **Scheduled / Agendadas**, ou o link real retornado pela ferramenta, para consultar, pausar e editar. Agendamento salvo não comprova importação executada.
+Avalie cada fonte pelo que suas ferramentas realmente permitem: busca ou listagem paginada com datas, identificadores estáveis, leitura do conteúdo e obtenção dos bytes originais de anexos. Identifique a conta autorizada. E-mail é um exemplo; uma pasta em nuvem também pode ser adequada se oferecer essas capacidades. Um arquivo local ou uma conexão só no desktop não vira fonte da tarefa na nuvem. Ferramenta apenas de busca textual não comprova transferência de anexos. Explique limitações concretas antes de oferecer ativação completa.
+
+- Com uma fonte apta já conectada, use Question: **Configurar com [fonte]** / **Escolher outra fonte** / **Configurar depois**. Substitua o rótulo pela conexão real; se houver várias fontes/contas aptas, ofereça as opções reais em uma rodada curta. Não suponha que todas foram autorizadas.
+- Sem fonte apta, use Question: **Conectar uma fonte** / **Conhecer o fluxo** / **Configurar depois**. Sugira e-mail quando fizer sentido e ofereça somente conectores confirmados para aquela conta. Conduza a autorização oficial e verifique a conexão; não peça senha ou token. Se a conexão exigir novo chat, entregue a retomada e preserve decisões já tomadas.
+
+A explicação é obrigatória; ativar é opcional. Adiar, não conectar uma fonte ou ainda não ter viagem não encerra o onboarding: registre o estado e continue para locais. Se faltar identidade comprovada ou viagem para validar a instalação, prepare as escolhas e o prompt, mas registre a ativação/verificação pendente conforme docs/SINCRONIZACAO.md. Não crie viagem fictícia para completar o onboarding.
+
+### 5.2. Preparar a tarefa da própria instalação
+
+Obtenha somente o que ainda faltar por Question, com duas ou três escolhas por rodada: fonte/conta e pasta ou caixa autorizada, todas as viagens elegíveis ou viagens específicas, frequência/horário e fuso IANA. Uma sugestão de frequência não é escolha confirmada. Informe que o recorte começa no cadastro e que importações históricas anteriores a T0 são uma ação separada. Confirme também a política de avisos de novas importações, revisões e falhas conforme as opções reais do agendador.
+
+Siga [docs/SINCRONIZACAO.md](docs/SINCRONIZACAO.md) para conferir o Site, a identidade real e a autenticação. **Cada instalação tem seu próprio projeto, URL, identidade e credencial.** Obtenha o token existente pelo `get_site` daquele projeto somente em memória, configure o hash/principal no servidor e aplique a revisão de ambiente quando necessário. Reutilize configuração válida; não repita provisionamento nem rotacione credenciais automaticamente. Explique uma vez que a mesma credencial também permite operações da API do assistente, embora esta rotina use apenas `/api/sync`.
+
+Preencha [docs/PROMPT_SCHEDULED_TASK.md](docs/PROMPT_SCHEDULED_TASK.md) integralmente com os dados e decisões dessa instalação. Não copie projeto, URL, identidade ou conta do autor ou de outra pessoa. O texto da tarefa não contém token, hash, cookies ou outros segredos; o executor obtém a credencial própria por `get_site` a cada execução. Inclua os contratos e instruções necessários no próprio prompt, sem depender deste arquivo local, de outro chat ou de links que o executor precise descobrir.
+
+Defina T0 uma única vez, em UTC com data e hora completas, e guarde-o no prompt e na continuidade privada. Prefira o horário real de criação retornado pelo agendador, salvando-o no texto antes da primeira execução. Se esse horário não for exposto, registre o instante em que a pessoa confirmar **Criar tarefa**, explicando “acompanhar a partir de agora”; nesse caso, o intervalo entre confirmação e salvamento também será pesquisado. No cadastro manual, registre o instante escolhido antes de entregar o texto. Não grave apenas a expressão “agora” para o executor resolver depois. Em retomadas, falha de criação ou recriação, preserve T0; não o mova para a última execução. A rotina consulta novamente o intervalo desde T0 até o início de cada execução, com paginação e deduplicação persistida na Central. Não prometa cursor entre execuções: ele não faz parte deste fluxo. Se o volume exceder o que o executor consegue examinar, a execução deve relatar cobertura incompleta; não avançar um marco imaginário e perder mensagens.
+
+### 5.3. Criar com o menor número de ações
+
+Apresente um resumo curto com fonte/conta, escopo, frequência, fuso, início do acompanhamento e destino na Central. Se a criação ainda não estiver autorizada, use Question: **Criar tarefa** / **Ajustar opções** / **Configurar depois**. A resposta **Criar tarefa** autoriza o agente a executar a criação descrita; não peça uma segunda confirmação equivalente. Se a pessoa já autorizou esse mesmo resumo, prossiga diretamente. Question coleta a decisão: por si só não cria nem envia o prompt a um agendador.
+
+Descubra a ferramenta nativa disponível e leia seu contrato. Se ela permitir criar uma tarefa com execução **na nuvem**, use-a com o prompt integral e a programação confirmada. Exiba botão/cartão nativo de criação somente quando uma ferramenta real suportar essa ação e preencher esse conteúdo. Não invente botão Markdown, deep link, ID de ferramenta ou parâmetro para encaminhar o prompt, nem use uma automação local como substituta.
+
+Sem ferramenta de criação neste chat, entregue diretamente à pessoa o **prompt integral preenchido**, pronto para colar no campo de instruções de uma nova **Scheduled Task na nuvem**, e os campos separados de nome, frequência/horário e fuso. Indique os controles efetivamente disponíveis e as conexões que devem acompanhar a tarefa. Não exija passar por outro chat do Work como etapa intermediária. Registre T0 e explique seu significado antes de entregar o texto; não deixe um placeholder literal no prompt. Se a pessoa retomar mais tarde, preserve o marco já escolhido e informe o intervalo que será pesquisado.
+
+Antes de repetir uma criação que sofreu timeout, consulte o agendador e confira se a tarefa já existe. Preserve e reutilize o ID confirmado; não duplique recorrências. Após salvar, confira ID, ambiente de execução na nuvem, estado habilitado, recorrência, próxima execução, fuso, texto integral salvo, T0 e conexões selecionadas, usando os campos que a ferramenta realmente disponibilizar. Quando depender de confirmação da pessoa, registre que foi relatado. A ausência de um campo não autoriza inventá-lo.
+
+### 5.4. Conferir a primeira execução e continuar
+
+Separe **preparada**, **cadastrada**, **executada** e **importação verificada**. Uma execução real precisa confirmar, nessa conta, acesso a Sites e HTTP autenticado, leitura das viagens e da fonte, seleção temporal e transferência de anexos quando houver. Para comprovar importação, releia a reserva/documentos persistidos e a deduplicação de uma reserva real autorizada. Sem viagens ou novidades, uma execução vazia é válida, mas não comprova importação/anexos. Um teste prévio em outra instalação não dispensa essa conferência.
+
+Se faltar ferramenta, conexão ou acesso, registre o bloqueio específico e a próxima ação; não troque silenciosamente por lembrete ou preparação manual de arquivos. Não encerre o onboarding esperando uma primeira execução futura: registre a verificação pendente e siga para locais. Quando o resultado chegar, confira-o sem reiniciar a instalação ou repetir consentimentos.
+
+Mostre **Scheduled / Agendadas**, ou o link real retornado pelo agendador, para consultar resultados, pausar e editar. Explique que as importações da rotina ficam na Central; a tarefa não exclui reservas após processá-las. Registre ID/link não secreto da tarefa, T0, fontes/contas, escolhas, evidências e eventuais limitações na continuidade privada acessível ao projeto, sem conteúdo integral de mensagens nem credenciais.
 
 ## 6. Locais em listas e roteiros
 

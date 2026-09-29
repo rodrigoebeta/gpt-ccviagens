@@ -14,7 +14,7 @@ export async function GET(req:Request,{params}:Context){return handle(async()=>{
  if(day<trip.start_date||day>trip.end_date)throw new AppError(422,'Escolha um dia dentro da viagem.');
  const row=await database().prepare('SELECT event_ids,revision FROM day_orders WHERE trip_id=? AND day=?').bind(id,day).first<{event_ids:string;revision:number}>();
  // Return only saved ranks. The client also has the current events and merges new arrivals.
- return respond({ids:row?JSON.parse(row.event_ids):[],revision:row?.revision??0});
+ return respond({ids:row?JSON.parse(row.event_ids):[],currentIds:await currentIds(id,day),revision:row?.revision??0});
 });}
 export async function POST(req:Request,{params}:Context){return handle(async()=>{
  csrf(req);const input=z.object({day:dateValue,revision:z.number().int().min(0),ids:z.array(z.string().min(1).max(200)).max(2000)}).strict().parse(await readJson(req,450000));

@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.58",
+  "version": "0.1.0-preview.62",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Instalação guiada com verificação de Sites, projeto e perguntas de múltipla escolha. Onboarding contínuo com criação da viagem pela Central, importação por API autenticada, documentos, compartilhamento e locais em listas/roteiros. Orientação de Scheduled Tasks com verificação obrigatória do acesso e da execução antes de declarar automação funcional."
+  "notes": "API autenticada para o assistente operar a Central e sincronizar reservas com documentos. Onboarding de sincronização opcional na nuvem com escolha das fontes conectadas, credenciais próprias por instalação e prompt completo para a tarefa. Criação nativa quando disponível ou orientação direta para Scheduled Tasks, com início fixo, recuperação de falhas e proteção contra duplicatas e versões antigas. Excluir viagem disponível no editor do proprietário, com confirmação e retomada de limpeza pendente. Exclusão de listas e limpeza de arquivos protegidas contra operações simultâneas. Configuração e primeira execução verificadas separadamente."
 }

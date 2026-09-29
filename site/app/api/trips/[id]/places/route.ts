@@ -12,7 +12,8 @@ export async function POST(req:Request,{params}:Context){return handle(async()=>
  csrf(req);const input=await readJson(req,16000),{id}=await params,trip=await access(id,await identity(),true),data=placeInput.parse(input);
  if(data.date&&(data.date<trip.start_date||data.date>trip.end_date))throw new AppError(422,'Escolha uma data dentro da viagem.');
  if(data.listId!==null&&!await database().prepare('SELECT id FROM place_lists WHERE id=? AND trip_id=?').bind(data.listId,id).first())throw new AppError(400,'Escolha uma lista desta viagem.');
- const key=crypto.randomUUID();await database().prepare('INSERT INTO places (id,trip_id,data,date,position,revision) SELECT ?,?,?,?,COALESCE(MAX(position),0)+1024,1 FROM places WHERE trip_id=?').bind(key,id,JSON.stringify(data),data.date,id).run();
+ const key=crypto.randomUUID(),saved=await database().prepare('INSERT INTO places (id,trip_id,data,date,position,revision) SELECT ?,?,?,?,(SELECT COALESCE(MAX(position),0)+1024 FROM places WHERE trip_id=?),1 WHERE ? IS NULL OR EXISTS (SELECT 1 FROM place_lists WHERE id=? AND trip_id=?)').bind(key,id,JSON.stringify(data),data.date,id,data.listId,data.listId,id).run();
+ if(!saved.meta.changes)throw new AppError(409,'A lista mudou. Atualize e escolha uma lista existente.');
  return respond({id:key},201);
 });}
 export async function PATCH(req:Request,{params}:Context){return handle(async()=>{
@@ -20,7 +21,7 @@ export async function PATCH(req:Request,{params}:Context){return handle(async()=
  const {id}=await params,trip=await access(id,await identity(),true),data=input.place;
  if(data.date&&(data.date<trip.start_date||data.date>trip.end_date))throw new AppError(422,'Escolha uma data dentro da viagem.');
  if(data.listId!==null&&!await database().prepare('SELECT id FROM place_lists WHERE id=? AND trip_id=?').bind(data.listId,id).first())throw new AppError(400,'Escolha uma lista desta viagem.');
- const result=await database().prepare('UPDATE places SET data=?,date=?,position=COALESCE(?,position),revision=revision+1 WHERE id=? AND trip_id=? AND revision=?').bind(JSON.stringify(data),data.date,input.position??null,input.id,id,input.revision).run();
+ const result=await database().prepare('UPDATE places SET data=?,date=?,position=COALESCE(?,position),revision=revision+1 WHERE id=? AND trip_id=? AND revision=? AND (? IS NULL OR EXISTS (SELECT 1 FROM place_lists WHERE id=? AND trip_id=?))').bind(JSON.stringify(data),data.date,input.position??null,input.id,id,input.revision,data.listId,data.listId,id).run();
  if(!result.meta.changes)throw new AppError(409,'Este lugar mudou em outra edição. Atualize a lista e confira antes de salvar.');
  return respond({saved:true});
 });}

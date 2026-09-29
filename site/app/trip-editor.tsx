@@ -2,7 +2,7 @@
 
 import {useEffect,useRef,useState,type FormEvent} from 'react';
 
-import {Check,LoaderCircle,TriangleAlert} from 'lucide-react';
+import {Check,LoaderCircle,Trash2,TriangleAlert} from 'lucide-react';
 
 import {Button} from '@/components/ui/button';
 
@@ -13,14 +13,16 @@ import {DateField} from './date-time-fields';
 import {tripInput,type Trip} from '@/lib/contracts';
 
 import DestinationPicker from './destination-picker';
+import TripDeleteDialog,{type TripDeletionResult} from './trip-delete-dialog';
 
 type PeriodItem={id:string;name:string;startDate:string;endDate:string;kind:'reservation'|'place'};
 
 
 
-export default function TripEditor({trip,onClose,onSaved}:{trip:Trip;onClose:()=>void;onSaved:(updated:Trip)=>void}){
+export default function TripEditor({trip,onClose,onSaved,onDeleted}:{trip:Trip;onClose:()=>void;onSaved:(updated:Trip)=>void;onDeleted:(result:TripDeletionResult)=>void}){
 
  const [busy,setBusy]=useState(false),[error,setError]=useState('');
+ const [confirmDelete,setConfirmDelete]=useState(false),deleteTrigger=useRef<HTMLButtonElement>(null),removed=useRef(false);
 
  const [start,setStart]=useState(trip.start_date),[end,setEnd]=useState(trip.end_date),[items,setItems]=useState<PeriodItem[]|null>(null),[periodError,setPeriodError]=useState(''),[retry,setRetry]=useState(0);
 
@@ -34,7 +36,7 @@ export default function TripEditor({trip,onClose,onSaved}:{trip:Trip;onClose:()=
 
  async function save(e:FormEvent<HTMLFormElement>){
 
-  e.preventDefault();if(!items||outside.length)return;setError('');const fields=new FormData(e.currentTarget),parsed=tripInput.safeParse({...Object.fromEntries(fields),destinations:[legacy,...destinations.map(d=>d.name)].filter(Boolean).join(' · '),destinationLocations:destinations});
+  e.preventDefault();if(busy||confirmDelete||!items||outside.length)return;setError('');const fields=new FormData(e.currentTarget),parsed=tripInput.safeParse({...Object.fromEntries(fields),destinations:[legacy,...destinations.map(d=>d.name)].filter(Boolean).join(' · '),destinationLocations:destinations});
 
   if(!parsed.success){setError('Confira o nome e as datas. O fim deve ser igual ou posterior ao início, com período de até um ano.');return;}
 
@@ -52,7 +54,7 @@ export default function TripEditor({trip,onClose,onSaved}:{trip:Trip;onClose:()=
 
  }
 
- return <Dialog open onOpenChange={open=>!open&&!busy&&onClose()}><DialogContent className="travel-dialog trip-edit-dialog" onCloseAutoFocus={e=>{e.preventDefault();returnFocus.current?.focus();}}><DialogHeader><DialogTitle>Editar viagem</DialogTitle><DialogDescription>Atualize o nome, o período e os destinos desta viagem.</DialogDescription></DialogHeader>
+ return <Dialog open onOpenChange={open=>!open&&!busy&&!confirmDelete&&onClose()}><DialogContent className="travel-dialog trip-edit-dialog" onCloseAutoFocus={e=>{e.preventDefault();if(removed.current)(document.getElementById('trips-title')??document.getElementById('main'))?.focus();else returnFocus.current?.focus();}}><DialogHeader><DialogTitle>Editar viagem</DialogTitle><DialogDescription>Atualize o nome, o período e os destinos desta viagem.</DialogDescription></DialogHeader>
 
   <form className="form-stack" onSubmit={save}><div className="trip-edit-scroll"><fieldset disabled={busy} className="trip-edit-fields">
 
@@ -74,10 +76,11 @@ export default function TripEditor({trip,onClose,onSaved}:{trip:Trip;onClose:()=
 
   <div className="trip-edit-footer">{error&&<p role="alert" className="form-error">{error}</p>}
 
-   <div className="trip-edit-actions"><Button type="button" variant="ghost" disabled={busy} onClick={onClose}>Cancelar</Button><Button type="submit" className="primary" disabled={busy||!items||outside.length>0}>{busy?<LoaderCircle className="spin"/>:<Check/>}{busy?'Salvando…':'Salvar alterações'}</Button></div>
+   <div className="trip-edit-footer-actions">{trip.role==='owner'&&<Button ref={deleteTrigger} type="button" variant="ghost" className="trip-delete-trigger" disabled={busy} onClick={()=>setConfirmDelete(true)}><Trash2 aria-hidden="true"/>Excluir viagem</Button>}<div className="trip-edit-actions"><Button type="button" variant="ghost" disabled={busy} onClick={onClose}>Cancelar</Button><Button type="submit" className="primary" disabled={busy||!items||outside.length>0}>{busy?<LoaderCircle className="spin"/>:<Check/>}{busy?'Salvando…':'Salvar alterações'}</Button></div></div>
 
   </div></form>
 
+ {confirmDelete&&<TripDeleteDialog trip={{id:trip.id,name:trip.name}} onCancel={()=>setConfirmDelete(false)} returnFocus={()=>deleteTrigger.current?.focus()} onDeleted={result=>{removed.current=true;onDeleted(result);}}/>}
  </DialogContent></Dialog>;
 
 }

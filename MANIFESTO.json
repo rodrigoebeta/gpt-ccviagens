@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0-preview.58",
+  "version": "0.1.0-preview.62",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 11429,
-      "sha256": "9887f2eb26eac4613d5f394175c43613165c1eefd5d48b041606bfe312ae96f1"
+      "bytes": 13799,
+      "sha256": "a8fea28d0a07c3564c172e636afd526c70946917a33275e4e676fee2c12b226c"
     },
     {
       "path": "COMECE_AQUI.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "CONFIGURAR_NO_WORK.md",
-      "bytes": 18124,
-      "sha256": "4d8d4bd98a6abd4fc719c9f3335b0fc940e90c58e8154c27a5d7cb8b355523d5"
+      "bytes": 20299,
+      "sha256": "344c5a987e72e243e5774553b7d7110c2d02561421d54276de1344c159dce22e"
     },
     {
       "path": "CREDITOS.md",
@@ -33,19 +33,39 @@
       "sha256": "47bd57f10ec844af0681aea638e2ba96278c09ecbb34b62925c1c6fbdaf6e31a"
     },
     {
+      "path": "docs/API_ASSISTENTE.md",
+      "bytes": 12732,
+      "sha256": "cda85415a3146e9d4e4b46585743dac208becf7cc93b78cdfd2d205d0c24441f"
+    },
+    {
       "path": "docs/ATUALIZACOES.md",
-      "bytes": 3437,
-      "sha256": "ebe8399a2350db72759527e2128ae3846107e560b33f83701b52518eee0c8e3c"
+      "bytes": 3516,
+      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
     },
     {
       "path": "docs/IMPORTACAO.md",
-      "bytes": 11959,
-      "sha256": "f6b001c685c9aee07aeec4a883c6fe5ff13b82e59399970f36598b55d4cddcd6"
+      "bytes": 13102,
+      "sha256": "8c575e23dcb96ab18757cf3d6ec263459bb9e433d7463335b837432ddb8c001e"
+    },
+    {
+      "path": "docs/PROMPT_SCHEDULED_TASK.md",
+      "bytes": 15457,
+      "sha256": "54dadb5b93381f5af4c5e4702d6849fcd4b2fd3fcbf6499c0a9be2e46078602a"
+    },
+    {
+      "path": "docs/PROMPT_WORK_API.md",
+      "bytes": 2884,
+      "sha256": "b92730d615f91591e2b0ca37debfa100fcc7af2419e0a1f7191306447c2b24f1"
+    },
+    {
+      "path": "docs/SINCRONIZACAO.md",
+      "bytes": 19354,
+      "sha256": "c832a14b2d775c04dc821a9bb3fbe23cb332d386dad19028e6dd7399e2a1c4d3"
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 20151,
-      "sha256": "fd411c78c46cd2fd2b03817fe807e8aa947a87ff6d4e43ec8939f8db2da8e2df"
+      "bytes": 23721,
+      "sha256": "702df91690fea36d21179cffac2d15d30aefc79eebc8f4c7c8c702c81145f4e1"
     },
     {
       "path": "LICENSE.md",
@@ -54,8 +74,8 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 12743,
-      "sha256": "3df9bd058ee1518615c8ec722ddb7abe65c7e7b57bb8b26af4bf2dcf39ae9ea1"
+      "bytes": 20777,
+      "sha256": "0fcaa6e9dfeaaf89c84d68cc5ca5434ea7320d9e9c8e22f71e49e84ebbffb740"
     },
     {
       "path": "PRIVACIDADE.md",
@@ -64,13 +84,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 4547,
-      "sha256": "0f377a208c37a5aa4275d66763350e2db19613d15ee6c2830934ca32b04092c6"
+      "bytes": 5726,
+      "sha256": "035f6741bf66ff02cc27937f985af6d7b4554415c1033221c68ab930fe82be02"
     },
     {
       "path": "release.json",
-      "bytes": 486,
-      "sha256": "9350cb1afd070b227e1c621b52141a59a5b3e1974e9b5c2f66e2c62c61d56fa4"
+      "bytes": 789,
+      "sha256": "532dc991e7200c3ec7c49492f26979d65d0cbea72d428faa3cde941f794f7cf3"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -93,6 +113,11 @@
       "sha256": "bcc60135f698bbe83722987ef0705bfb2f389f9eb1a163007cbb4c9ceab301cf"
     },
     {
+      "path": "site/app/api/assistant/[...path]/route.ts",
+      "bytes": 243,
+      "sha256": "68d0eb09b42fd57736f582da82826a33f0b1e4128ec4f46f36aef7a79eb01225"
+    },
+    {
       "path": "site/app/api/destinations/search/route.ts",
       "bytes": 536,
       "sha256": "a0d30496f3358f15a6315394b6d53c639b0b7fd9327bc8135128ff3c3d1172ff"
@@ -113,9 +138,24 @@
       "sha256": "756abfeba67eeeb99d28a06f5b4f3314c127251edd62a67a8417780f2a65a90f"
     },
     {
+      "path": "site/app/api/sync/trips/[id]/import/route.ts",
+      "bytes": 774,
+      "sha256": "43cbb81348aa8bd308c9c4170de05fb5297961705de6f0497613bfc3ef0a10f9"
+    },
+    {
+      "path": "site/app/api/sync/trips/[id]/route.ts",
+      "bytes": 483,
+      "sha256": "8249e921d3aa372b626893887638cbc121a86290ecda520e1902808255295f46"
+    },
+    {
+      "path": "site/app/api/sync/trips/route.ts",
+      "bytes": 269,
+      "sha256": "db9ccda06951124a2800445f86833a8463f82a39ddcf12c34a40f5771125af80"
+    },
+    {
       "path": "site/app/api/trips/[id]/cover/route.ts",
-      "bytes": 2398,
-      "sha256": "362fbd387c07b42c6b15745c7abeefbe37b05a615cdbc44cc8d42a934f86cc52"
+      "bytes": 2432,
+      "sha256": "ad8312e0e7bd8bf1bbe92fef1dd4fea3b17365c8da3acaecdbf86711a6484f46"
     },
     {
       "path": "site/app/api/trips/[id]/import/route.ts",
@@ -124,8 +164,8 @@
     },
     {
       "path": "site/app/api/trips/[id]/lists/route.ts",
-      "bytes": 1733,
-      "sha256": "3855b779c4d8624407592f4097aadee29cf6cc0bc10dae597ddf6cbd9505fcde"
+      "bytes": 4161,
+      "sha256": "0c6e96b91db1b1c169101c4bed0c10d4c5a0a75be7bfc33007c31d882e036cf4"
     },
     {
       "path": "site/app/api/trips/[id]/locations/route.ts",
@@ -159,13 +199,13 @@
     },
     {
       "path": "site/app/api/trips/[id]/places/[placeId]/photo/route.ts",
-      "bytes": 3608,
-      "sha256": "9d3cfef0a225cd3ea51a5a4f21a614cd75aa429329ca15d2623bedd7493b1355"
+      "bytes": 3590,
+      "sha256": "0686a31c0a1046ddc0f000cab41076cef1d8aa57943109a2422a66e374ee5bf3"
     },
     {
       "path": "site/app/api/trips/[id]/places/route.ts",
-      "bytes": 3718,
-      "sha256": "fd7eb6ad5c061cd0f59229bdcc906b05e1ce4beb0a0cf033a0d5d2cd92da6c05"
+      "bytes": 4051,
+      "sha256": "505cadee89c43134be96b01d2ad7e4c30be4b475a35d24ad57d445d71d9e8ded"
     },
     {
       "path": "site/app/api/trips/[id]/reservations/[reservationId]/route.ts",
@@ -179,18 +219,18 @@
     },
     {
       "path": "site/app/api/trips/[id]/route.ts",
-      "bytes": 2387,
-      "sha256": "18b60887bb133b591c8b46355a4e88d97c3e4c75692466bec35cccb55bd47b71"
+      "bytes": 2704,
+      "sha256": "1b84751b217792d3ca1a7bfd5e85d4682c7a6901f8812233526be6337d293d61"
     },
     {
       "path": "site/app/api/trips/[id]/timeline/route.ts",
-      "bytes": 2826,
-      "sha256": "5b279952fa625d1dda6009a6a13ba1f8d8524055162e0d202a73aa2eb0bbe88f"
+      "bytes": 2862,
+      "sha256": "35d4ffb2323a9fb1496d9b479910b48829fab1b341b6cbf73fb3b01cd87d5213"
     },
     {
       "path": "site/app/api/trips/route.ts",
-      "bytes": 1303,
-      "sha256": "df5b6875d39504894d4a60f1ff9e3190a770954b2f17a631f06d5c1b78038e0f"
+      "bytes": 1522,
+      "sha256": "b799c1f950b88ab6599220a4fcb450ec43a14f6f61e6ce10beb2d415e9c2a7db"
     },
     {
       "path": "site/app/chatgpt-auth.ts",
@@ -229,8 +269,8 @@
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 106994,
-      "sha256": "7d28a7b8a5fa249ecfd1125dbaf5387ed76e0c7e978dccb14366990e04e7d6e2"
+      "bytes": 109417,
+      "sha256": "14b063ce3c3c1a62d2c16ff5b1e846ac696e3d17972c53be47b00e66ddf17008"
     },
     {
       "path": "site/app/home-cover.tsx",
@@ -289,8 +329,8 @@
     },
     {
       "path": "site/app/travel-app.tsx",
-      "bytes": 33089,
-      "sha256": "ff4c9ef68dbf1ab7239239eab7736e1dbe78c9cd5c43ee5a1d1e64821346b7e8"
+      "bytes": 36031,
+      "sha256": "b5525b1b39f158e3e0505c1c4fb320763bff997f3dc6e1f6d95eacd15b561f39"
     },
     {
       "path": "site/app/trip-date-picker.tsx",
@@ -298,9 +338,14 @@
       "sha256": "07e0c231e435493ba668ccaa406bfa390bc43bcf435b3bb92cca7716dd2be184"
     },
     {
+      "path": "site/app/trip-delete-dialog.tsx",
+      "bytes": 3004,
+      "sha256": "00483b201c830b792405c9521031b01922b9cf8180a356d035f90b66a6c68ece"
+    },
+    {
       "path": "site/app/trip-editor.tsx",
-      "bytes": 5631,
-      "sha256": "ca802006f58bd0bd31464da597790abb9353637c27b413cf283a776eebd37583"
+      "bytes": 6528,
+      "sha256": "4be9ba1dd281265487eb161f4af569aff5be4dd7a418a56cd7bde6ebe4fad8a6"
     },
     {
       "path": "site/app/use-day-order.ts",
@@ -324,8 +369,8 @@
     },
     {
       "path": "site/cloudflare-env.d.ts",
-      "bytes": 219,
-      "sha256": "a5bfc9f375569315ab78798b58f2ecf71d86038fcbe772b252ab4ec4821f9787"
+      "bytes": 368,
+      "sha256": "163de22ad9e3787c0f680c89da384c8aa961cb629490487cdff5c9968a86ceee"
     },
     {
       "path": "site/components.json",
@@ -644,8 +689,8 @@
     },
     {
       "path": "site/db/schema.ts",
-      "bytes": 5119,
-      "sha256": "3fccecf0c5b4d7badc92a1183563f8f248b7a1090020117cd77e5d0c4940d5d9"
+      "bytes": 5667,
+      "sha256": "a45b2a2208c2b722890e64cf42a0d2df8230e93f95df5e8fc79d0161caafa832"
     },
     {
       "path": "site/drizzle.config.ts",
@@ -703,9 +748,19 @@
       "sha256": "0f254370c75afaf641a4da672b6a2029b84a1fea6c6b53ffe8e97b30b79c46f5"
     },
     {
+      "path": "site/drizzle/0010_trip_deletions.sql",
+      "bytes": 184,
+      "sha256": "5c3ecdd257cedd97f993d6ea6398fd0d7fe1a58453219c19aff26402d7df30d8"
+    },
+    {
+      "path": "site/drizzle/0011_trip_uploads.sql",
+      "bytes": 280,
+      "sha256": "8779d83f5bd5c1b1a853ccd00f30a6d4cfadf02123beaec690813dc834ee83e6"
+    },
+    {
       "path": "site/drizzle/meta/_journal.json",
-      "bytes": 1501,
-      "sha256": "5bacb02aea13db301889385fb63c9b77bbb54173a51ac70329001404f4519125"
+      "bytes": 1785,
+      "sha256": "c89ca42fd8af27bf95dfa1c6960c38a65f5208f99940b5425731ef4a288e9262"
     },
     {
       "path": "site/drizzle/meta/0000_snapshot.json",
@@ -758,6 +813,16 @@
       "sha256": "4ab4a15a0079607a1b6f0bd237608ce02f505b0794cbe4be8060e32383ae8e68"
     },
     {
+      "path": "site/drizzle/meta/0010_snapshot.json",
+      "bytes": 26694,
+      "sha256": "569f1ea387d9a653b8fc5f55f9cb446df0eb169e096ce288dde7e28016d4fd79"
+    },
+    {
+      "path": "site/drizzle/meta/0011_snapshot.json",
+      "bytes": 28017,
+      "sha256": "cd348d0438ec167eaf64c913f4eea00201bb3b656b7f7c821fb1bb082b4a4a63"
+    },
+    {
       "path": "site/eslint.config.mjs",
       "bytes": 846,
       "sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06"
@@ -766,6 +831,21 @@
       "path": "site/hooks/use-mobile.ts",
       "bytes": 565,
       "sha256": "ad0936f84f1df79d3697bfbff9c18f8ad58431c1cbaf2359c6a853b0fcc9f28b"
+    },
+    {
+      "path": "site/lib/assistant-api.ts",
+      "bytes": 10859,
+      "sha256": "bd66b77ae189cfd003a1e3ccc533e707d710133c2f02198fe115f1fd62b6dc51"
+    },
+    {
+      "path": "site/lib/assistant-context.ts",
+      "bytes": 466,
+      "sha256": "b1fb707930842cee3b29c8e114453de36ba369b2fc3c68752bb165f859a5d24a"
+    },
+    {
+      "path": "site/lib/assistant-trips.ts",
+      "bytes": 5972,
+      "sha256": "dd0912d078b65cf656274679e69b10d1b06b63f9503a977ce74d35fb9d2f0e0f"
     },
     {
       "path": "site/lib/contracts.ts",
@@ -780,7 +860,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 505,
-      "sha256": "04af875b92ebceb90fef9aa7c65742c81277e94f970aa128f6c83a4c67a64589"
+      "sha256": "76903a2408bb90711fe35efd08d44f6ba587b7e492387c024a75dbc703f877a6"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -864,8 +944,13 @@
     },
     {
       "path": "site/lib/service.ts",
-      "bytes": 14781,
-      "sha256": "f4feedbf16ab51ccd54248f3903b826273c32f55b87eb31b61f3378d501e2ba3"
+      "bytes": 17225,
+      "sha256": "f7648b31704fc6817960b9f18f1eae9d3b952efcfd785739596070717ccb68b4"
+    },
+    {
+      "path": "site/lib/sync.ts",
+      "bytes": 4101,
+      "sha256": "5a69206195d21d22f27593af5c3e14080115b936bd56b6c3fd4c077bedc3aa9f"
     },
     {
       "path": "site/lib/timeline.ts",

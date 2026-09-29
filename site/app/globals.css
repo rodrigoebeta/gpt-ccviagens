@@ -464,6 +464,27 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .trip-edit-footer{flex:none;padding:16px 28px 24px;border-top:1px solid var(--line)}
 .trip-edit-footer .form-error{margin-bottom:12px}
 .trip-edit-footer .trip-edit-actions{gap:8px}
+.trip-edit-footer-actions{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.trip-edit-footer-actions>.trip-edit-actions{margin-left:auto}
+.trip-delete-trigger[data-slot=button]{color:var(--destructive);padding-inline:8px;flex-shrink:0}
+.trip-delete-trigger[data-slot=button]:hover:not(:disabled){color:var(--destructive);background:#fbeeee}
+.travel-dialog.trip-delete-dialog{width:min(460px,calc(100% - 32px));max-width:460px!important;padding:28px;gap:16px;z-index:80;overflow-y:auto}
+.trip-delete-dialog [data-slot=alert-dialog-title]{font-size:26px;line-height:1.2;letter-spacing:-.03em;text-align:left}
+.trip-delete-dialog [data-slot=alert-dialog-description]{font-size:14px;line-height:1.7;color:var(--muted);text-align:left;overflow-wrap:anywhere}
+.trip-delete-dialog [data-slot=alert-dialog-description] strong{font-weight:600;color:var(--ink)}
+.trip-delete-dialog .form-error{overflow-wrap:anywhere}
+.trip-delete-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:8px}
+.trip-delete-actions>button{min-height:44px}
+[data-slot=alert-dialog-overlay]:has(+ .trip-delete-dialog){background:#22282055;z-index:75}
+.trip-cleanup-notice{display:flex;align-items:flex-start;gap:12px;padding:16px 20px;margin-bottom:24px;border:1px solid var(--line);border-radius:12px;background:var(--surface);font-size:14px;line-height:1.6}
+.trip-cleanup-notice>svg{width:20px;height:20px;flex:none;margin-top:2px;color:var(--destructive)}
+.trip-cleanup-notice>div{flex:1;min-width:0;overflow-wrap:anywhere}
+.trip-cleanup-notice strong{font-weight:600}
+.trip-cleanup-notice p{color:var(--muted);margin-top:4px}
+.trip-cleanup-notice p.form-error{color:var(--destructive);margin-top:8px}
+.trip-cleanup-notice>button{flex-shrink:0;min-height:44px;align-self:center}
+@media(max-width:600px){.trip-edit-footer-actions{flex-direction:column;align-items:stretch;gap:12px}.trip-edit-footer-actions>.trip-delete-trigger{align-self:flex-start}.trip-edit-footer-actions>.trip-edit-actions{margin-left:0}.trip-cleanup-notice{flex-wrap:wrap;padding:16px}.trip-cleanup-notice>div{flex-basis:calc(100% - 32px)}.trip-cleanup-notice>button{margin-left:32px}}
+@media(max-width:480px){.travel-dialog.trip-delete-dialog{padding:24px;min-width:0}.trip-delete-actions{flex-direction:column;min-width:0}.trip-delete-actions>button{flex:none;width:100%;min-width:0}.trip-delete-actions [data-slot=button]{padding-inline:12px}}
 @media(max-width:480px){.trip-edit-dialog>[data-slot=dialog-header]{padding:24px 64px 20px 20px}.trip-edit-scroll{padding:0 20px 20px}.trip-edit-footer{padding:12px 20px 20px}.trip-edit-dialog .destination-picker{padding-top:20px}}
 
 /* Reservation heading owns its date and edit action, before the content tabs. */

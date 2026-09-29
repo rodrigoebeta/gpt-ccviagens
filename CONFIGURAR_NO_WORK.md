@@ -1,5 +1,7 @@
 # Instalar a Central de Viagens no Sites
 
+O Work também opera o produto por [API do assistente](docs/API_ASSISTENTE.md): viagens, listas, locais, roteiro, reservas, revisões, documentos, capas e convidados. Após configurar a autenticação, consultar `/api/assistant/capabilities`, executar o pedido autorizado e conferir a persistência. Ensinar esse caminho durante o onboarding, sem substituir a prática inicial pela interface.
+
 Roteiro técnico para o GPT Work. Leia [AGENTS.md](AGENTS.md) e [GUIA_DO_PRODUTO.md](GUIA_DO_PRODUTO.md). Execute estas etapas; a pessoa participa apenas das autorizações, informações e ações de interface que dependerem dela. Use [ONBOARDING.md](ONBOARDING.md) depois da publicação.
 
 ## 0. Sites primeiro: conta, ativação e novo chat
@@ -75,7 +77,7 @@ Crie `.private/HANDOFF.md` e `.private/TASK_PLAN.md` para registrar versão do p
 
 ## 4. Aplicar migrações e publicar
 
-O banco novo recebe as migrações de `site/drizzle/`, de `0000` a `0009`, em ordem, com journal/snapshots preservados. Não gere migrações para instalar. Use o procedimento oficial para o banco hospedado e confirme aplicação; migrar uma prévia local não migra a produção. Em retomadas/atualizações, aplique somente as pendentes.
+O banco novo recebe as migrações de `site/drizzle/`, de `0000` a `0011`, em ordem, com journal/snapshots preservados. Não gere migrações para instalar. Use o procedimento oficial para o banco hospedado e confirme aplicação; migrar uma prévia local não migra a produção. Em retomadas/atualizações, aplique somente as pendentes antes de publicar o código que depende delas.
 
 Prepare fonte e artefato pelo fluxo oficial. O artefato deve corresponder ao mesmo commit de fonte e conter a saída `dist/`, inclusive `.openai/hosting.json` e `.openai/drizzle/`. Após vincular a instalação, compile novamente se o build anterior não contiver o vínculo correto. Não inclua dependências instaladas, caches, estado local ou segredos no artefato.
 
@@ -92,13 +94,16 @@ Abra a URL publicada, conclua o login oficial quando a pessoa precisar participa
 | Acesso privado | Conferir audiência e que uma sessão não autorizada não obtém dados/arquivos; não forjar identidade em produção. Se faltar uma segunda sessão para comprovar, registrar a limitação. |
 | Viagem e armazenamento | Guiar a pessoa em Viagens → Nova viagem, confirmar por Question e conferir após recarga. Não cadastrar por ela. Se adiar, registrar prática pendente e continuar a apresentação da importação, Scheduled Tasks e locais. Com a primeira reserva autorizada, conferir persistência e documentos; se falhar, revisar bindings/migrações. |
 | Importação | Seguir docs/IMPORTACAO.md, conferir datas e anexos e repetir a mesma importação sem duplicar. Sem transferência autenticada direta, entregar o JSON privado e guiar a seleção no painel. |
+| Sincronização opcional | Seguir a etapa 5 de ONBOARDING.md: descobrir fontes/contas conectadas e aptas à nuvem, oferecer ativar ou adiar e obter as escolhas ausentes. Configurar docs/SINCRONIZACAO.md com projeto, URL, identidade e credencial exclusivos desta instalação. Salvar docs/PROMPT_SCHEDULED_TASK.md integralmente preenchido, com T0 fixo e sem segredos, pela ferramenta nativa de criação quando disponível; caso contrário, entregar o texto diretamente para o campo de instruções da nova Scheduled Task na nuvem, com a programação separada. Conferir tarefa salva e primeira execução efetiva; registrar preparada, cadastrada, executada e importação verificada como estados distintos. |
 | Planejamento | Ao praticar uma alteração solicitada, conferir lugar/lista/dia, ordem ou visitado após recarga; não alterar dados apenas para demonstrar. |
 | Compartilhamento | Explicar sempre as duas camadas; conferir convidado real somente quando solicitado, conforme ONBOARDING.md. |
 | Celular | Orientar teste no telefone quando disponível. Registrar o que foi observado ou relatado; uma janela estreita não substitui aparelho físico. |
 
 Se surgir `Failed to fetch`, confira primeiro URL atual e login: uma aba com endereço antigo pode mostrar dados já carregados e falhar nas novas consultas. Se persistir, examine a requisição e os registros do serviço antes de mudar permissões.
 
-Siga as etapas de [ONBOARDING.md](ONBOARDING.md), sem entregar toda a lista de uma vez. Peça acesso somente à fonte escolhida no momento da importação: e-mail, pasta local, arquivos ou outra superfície disponível ao assistente. Um caminho local por si só não dá acesso ao Work; se necessário, oriente o envio dos arquivos. Não condicione a instalação, listas ou mapa ao Gmail ou a outro conector de reservas.
+Siga as etapas de [ONBOARDING.md](ONBOARDING.md), sem entregar toda a lista de uma vez. Peça acesso somente à fonte escolhida no momento da importação: e-mail, pasta local, arquivos ou outra superfície disponível ao assistente. Um caminho local por si só não dá acesso ao Work; se necessário, oriente o envio dos arquivos. Para a tarefa na nuvem, escolha uma fonte disponível também naquele executor, com leitura, filtro temporal, IDs estáveis e bytes originais dos anexos. Inventarie ferramentas/metadados antes de ler conteúdo. Não condicione a instalação, listas ou mapa ao Gmail ou a outro conector de reservas.
+
+Ao oferecer a sincronização, use Question com escolhas reais e preserve decisões já confirmadas. Um botão/cartão de criação só existe se a ferramenta disponível o suportar; Question **Criar tarefa** autoriza o agente a usar a ferramenta real, mas não cria o agendamento sozinho. Não invente deep links nem exija outro chat do Work para a pessoa colar um prompt que pode ir diretamente às instruções de Scheduled Tasks. Sem criação nativa, entregue prompt completo e campos de programação, orientando a seleção de execução na nuvem. Em retomadas/recriação, preserve T0 e confira o ID existente antes de criar de novo. A autenticação configurada representa uma pessoa desta instalação; nenhum segredo entra no prompt, e `get_site` deve consultar o projeto próprio em cada execução.
 
 ## Conferir telemetria e versão
 

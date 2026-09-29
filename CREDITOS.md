@@ -7,7 +7,7 @@
 - Dependências npm: versões/integridades em `site/package-lock.json`; cada componente conserva sua própria licença no pacote instalado.
 - Mapa e dados: OpenStreetMap e Photon; mantenha a atribuição visível e as condições dos serviços. Tiles e busca exigem internet.
 
-Nenhuma captura de referência externa ou fotografia pessoal acompanha a distribuição. Uma licença geral de redistribuição do código autoral ainda não foi escolhida; os avisos acima não substituem essa escolha.
+Nenhuma captura de referência externa ou fotografia pessoal acompanha a distribuição. As condições de uso do código autoral estão em [LICENSE.md](LICENSE.md); as licenças dos componentes de terceiros permanecem aplicáveis aos respectivos componentes.
 
 Arrastar e ordenar: @dnd-kit/core6.3.1, sortable10.0.0 e utilities3.2.2 (MIT, Claudéric Demers); licenças preservadas nos respectivos pacotes instalados.
 

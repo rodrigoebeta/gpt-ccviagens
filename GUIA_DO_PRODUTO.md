@@ -1,12 +1,22 @@
 # Guia da Central de Viagens
 
-## Reservas e documentos — versão 0.2.2
+## Programação e avisos
+
+Cards de reserva apresentam o endereço resumido em rua/local e localidade, removendo repetições e variantes de idiomas para leitura. O endereço original permanece salvo e acessível em Ver reserva e na edição; mapas e validação continuam usando o original. O resumo não corrige nem confirma dados geográficos.
+
+Voos têm campos próprios para IATA e nome dos aeroportos de partida/chegada, número do voo, localizador e até 30 tickets com passageiro opcional. Cadastro e edição usam os mesmos campos. O card e Ver reserva destacam origem → destino e exibem voo, localizador e tickets. IATA é normalizado para três letras maiúsculas quando preenchido; campos ausentes permanecem explícitos, sem inferir códigos por cidade. A referência anterior e as anotações permanecem separadas e preservadas; não são convertidas automaticamente em localizador ou ticket.
+
+Eventos e atividades de vários dias aparecem no roteiro e na marcação do calendário em todas as datas do período, inclusive início e fim. Os dias intermediários mostram **Em andamento**, sem inventar ou repetir o horário de abertura; os horários de início e fim permanecem nas respectivas datas. A mesma reserva e seus documentos continuam acessíveis em todos esses dias.
+
+O progresso da localização aparece uma única vez no cabeçalho das pendências. Enquanto houver somente buscas em andamento, o aviso não oferece uma seção vazia para abrir.
+
+## Reservas e documentos — versão 0.2.3
 
 Em **Adicionar reserva**, todas as categorias oferecem Documentos opcionais: seleção múltipla de PDF/imagens, até 10 MB por arquivo, 20 MB e 20 documentos por cadastro. Cada arquivo aparece como pill com abertura para conferência e remoção antes de salvar; não há prévia embutida. Arquivos ficam apenas no rascunho até salvar, inclusive ao trocar categoria; cancelar descarta a seleção. Reserva e documentos são salvos juntos, com validação e repetição sem duplicar. Depois, a consulta continua em **Ver reserva → Documentos**, cujo **Adicionar documento** permanece disponível em reservas manuais e importadas automaticamente.
 
 A navegação e a página usam **Reservas da Viagem**; o contador indica reservas. Cada reserva mantém a aba Documentos, com **Adicionar documento** para proprietário/editor: PDF, JPG, PNG, WebP ou GIF, até 10 MB por arquivo. A seleção envia um arquivo por vez; valida formato/tamanho no cliente e servidor, preserva bytes e dados da reserva e evita duplicatas pelo conteúdo. Leitores continuam apenas consultando. Arquivos de texto já importados permanecem acessíveis, mas não são aceitos nesse upload manual.
 
-No roteiro, cada horário de reserva mostra GMT ao lado, incluindo chegada/fim e check-out, com data e fuso da etapa. Horários ausentes não são inventados; fuso ausente/inválido ou hora ambígua/inexistente na mudança de horário de verão fica explícito. Fusos são selecionados em dropdown com identificador e GMT±HH:MM, calculado para a data de referência (check-in para hospedagem; data de cada etapa para transporte/evento), incluindo horário de verão. Um fuso rege a hospedagem inteira; chegada/fim pode herdar o inicial. Identificadores antigos são preservados se não reconhecidos.
+No roteiro, cada horário de reserva mostra GMT ao lado, incluindo chegada/fim e check-out, com data e fuso da etapa. Horários ausentes não são inventados; fuso ausente/inválido ou hora ambígua/inexistente na mudança de horário de verão fica explícito. Fusos são selecionados em dropdown ordenado pelo GMT crescente da data da etapa (nomes em ordem alfabética apenas no empate), preservando as etiquetas de local/nome. Brasília usa America/Sao_Paulo. Cada opção mostra identificador e GMT±HH:MM, calculado para a data de referência (check-in para hospedagem; data de cada etapa para transporte/evento), incluindo horário de verão. Um fuso rege a hospedagem inteira; chegada/fim pode herdar o inicial. Identificadores antigos são preservados se não reconhecidos.
 
 A localização automática de hospedagens também tenta o endereço quando o nome não corresponde: exige rua, número e cidade presentes, todos os termos fornecidos compatíveis e um único ponto OSM. Endereço incompleto, divergente ou ambíguo continua pendente. Isso não comprova validade da reserva nem endereço histórico. A busca manual aceita nome ou endereço e permite selecionar imóveis sem nome comercial. Nome da hospedagem e ponto selecionado são independentes. O check indica apenas seleção efetiva; resultados oferecem Usar este local.
 

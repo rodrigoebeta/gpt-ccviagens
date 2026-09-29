@@ -159,7 +159,7 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .list-select{max-width:320px}
 @media(max-width:700px){.list-select{max-width:100%}}
 
-/* V12: personal home cover and descriptive navigation. */
+/* Personal home cover and descriptive navigation. */
 .travel-cover-content{pointer-events:none}
 .travel-cover .home-cover-action{position:absolute;right:20px;bottom:20px;display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;border-radius:12px;background:#252724d9;color:#fff;font-size:12px;font-weight:500}
 .home-cover-action svg{width:16px;height:16px}
@@ -569,8 +569,9 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 
 /* Trip-wide pending work remains visible independently of the map. */
 .pending-hub{background:#fbf6eb;border:1px solid #e8d6ae;border-radius:16px;margin-bottom:24px;color:#654e23;overflow:clip}
-.pending-hub>summary{display:flex;align-items:center;justify-content:space-between;gap:24px;cursor:pointer;min-height:88px;padding:16px 24px;list-style:none;background:#faf0db;border-radius:15px}
+.pending-hub>summary,.hub-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px;padding:16px 24px;list-style:none;background:#faf0db;border-radius:15px}
 .pending-hub[open]>summary{border-radius:15px 15px 0 0}
+.pending-hub>summary{cursor:pointer}
 .pending-hub>summary::-webkit-details-marker{display:none}
 .pending-hub>summary:focus-visible{outline-offset:-5px}
 .hub-heading{min-width:0}.hub-heading strong{display:block;font-size:16px;line-height:1.5}.hub-heading small{display:block;font-size:12px;margin-top:4px;line-height:1.6;color:#795e33}
@@ -586,9 +587,9 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .pending-actions .pending-primary{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fffdf8;border:1px solid #d6ccba;border-radius:10px;padding:10px 12px;min-height:44px;font-size:13px;font-weight:600;color:#42634c;text-decoration:none}
 .pending-primary svg{width:16px;height:16px}.pending-actions .pending-primary:hover{background:#edf1e8;border-color:#98ab97}
 .pending-actions .pending-retry{font-size:12px;min-height:44px;padding:8px 4px;color:#42634c;text-decoration:underline;text-underline-offset:3px;line-height:1.5}.pending-actions .pending-retry:hover{color:#253f2c}
-@media(max-width:760px){.pending-hub>summary{padding:16px;gap:12px}.hub-heading strong{font-size:15px}.hub-action{font-size:12px}.hub-body{padding:0 16px}.pending-row{grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0}.pending-row>.pending-actions{grid-column:2;align-items:flex-start;gap:0}.pending-actions .pending-primary{min-width:172px;max-width:100%}.pending-title{display:grid;gap:2px}.pending-copy>p{margin-top:6px}.hub-heading small{max-width:26ch}}
+@media(max-width:760px){.pending-hub>summary,.hub-summary{padding:16px;gap:12px}.hub-heading strong{font-size:15px}.hub-action{font-size:12px}.hub-body{padding:0 16px}.pending-row{grid-template-columns:20px minmax(0,1fr);gap:12px;padding:16px 0}.pending-row>.pending-actions{grid-column:2;align-items:flex-start;gap:0}.pending-actions .pending-primary{min-width:172px;max-width:100%}.pending-title{display:grid;gap:2px}.pending-copy>p{margin-top:6px}.hub-heading small{max-width:26ch}}
 
-.pending-hub .pending-icon{width:20px;height:20px;flex:none;margin-top:3px;padding:0}.hub-action>svg{width:16px;height:16px}.pending-hub[open] .hub-action>svg{transform:rotate(180deg)}.hub-progress{display:flex;align-items:center;gap:6px;margin-top:4px}.hub-progress svg{width:14px;height:14px}.pending-checking,.pending-load-error{font-size:13px;line-height:1.6;padding:16px 0;color:#6b604a}.pending-load-error button{display:flex;align-items:center;gap:8px;min-height:44px;text-decoration:underline}.pending-load-error svg{width:16px}.pending-actions button:disabled{opacity:.5;cursor:wait}
+.pending-hub .pending-icon{width:20px;height:20px;flex:none;margin-top:3px;padding:0}.hub-action>svg{width:16px;height:16px}.pending-hub[open] .hub-action>svg{transform:rotate(180deg)}.hub-heading .hub-progress{display:flex;align-items:flex-start;gap:8px;max-width:none;margin-top:4px}.hub-progress svg{width:14px;height:14px;flex:none;margin-top:3px}.pending-load-error{font-size:13px;line-height:1.6;padding:16px 0;color:#6b604a}.pending-load-error button{display:flex;align-items:center;gap:8px;min-height:44px;text-decoration:underline}.pending-load-error svg{width:16px}.pending-actions button:disabled{opacity:.5;cursor:wait}
 
 .pending-hub>summary:focus-visible{outline:2px solid var(--green);outline-offset:-5px}
 
@@ -666,10 +667,34 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .reservation-editor-footer{justify-content:flex-end}
 .reservation-edit-dialog [data-slot=dialog-title]:focus{outline:none}
 @media(max-width:480px){.day-actions{flex-wrap:wrap}.day-actions [data-slot=button]{flex:1 1 auto}.reservation-category-picker [data-slot=button]{padding:12px}.reservation-editor-footer>[data-slot=button]{flex:1}.reservation-location-search{padding:12px}.reservation-search-row{flex-wrap:wrap}.reservation-search-row input{flex-basis:100%}}
-.travel-dialog.reservation-edit-dialog{--reservation-section-gap:24px;--reservation-field-gap:16px;--reservation-control-gap:8px;--reservation-inset:32px;display:flex;flex-direction:column;gap:0;width:min(640px,calc(100% - 32px));max-width:640px!important;max-height:calc(100dvh - 32px);overflow:hidden;padding:0}
+.travel-dialog.reservation-edit-dialog{--reservation-section-gap:24px;--reservation-field-gap:16px;--reservation-control-gap:8px;--reservation-inset:32px;display:flex;flex-direction:column;gap:0;width:min(640px,calc(100% - 32px));max-width:640px!important;max-height:calc(100dvh - 32px);overflow:clip;padding:0}
 .reservation-edit-dialog>.form-stack{min-height:0;overflow:hidden;gap:0}
 .reservation-editor-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 var(--reservation-inset) var(--reservation-section-gap);scrollbar-gutter:stable;scroll-padding-block:16px}
 .reservation-identity,.reservation-stage-fields{display:grid;gap:var(--reservation-field-gap);min-width:0}
+.flight-identity-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.flight-airport-fields{display:grid;grid-template-columns:160px minmax(0,1fr);gap:16px}
+.flight-identity-fields label,.flight-airport-fields label,.flight-ticket-fields label{display:grid;align-content:start;gap:8px;min-width:0}
+.flight-tickets-field{border-top:1px solid var(--line);padding-top:16px;min-width:0}
+.flight-tickets-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.flight-tickets-heading h3{font-size:16px;margin:0}
+.flight-tickets-heading button{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:13px;color:var(--green)}
+.flight-tickets-heading svg{width:16px;height:16px}
+.flight-tickets-field>p{font-size:12px;margin:4px 0 16px}
+.flight-ticket-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 44px;gap:12px;align-items:end;margin-top:16px}
+.flight-ticket-fields label>.muted{display:inline;font-size:12px}
+.flight-route{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);gap:16px;align-items:start;margin:20px 0}
+.flight-route>div{min-width:0}.flight-route dt{font-size:12px;color:var(--muted);margin-bottom:4px}
+.reservation-address>span,.reservation-address>small{display:block}.reservation-address>small{font-size:12px;line-height:1.5;color:var(--muted);margin-top:4px}
+.flight-route dd{margin:0}.flight-route strong{display:block;font-size:28px;font-weight:700;line-height:1.25;letter-spacing:0}
+.flight-route dd>span{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px;overflow-wrap:anywhere}
+.flight-route>svg{width:20px;height:20px;color:var(--muted);margin-top:30px}
+.flight-identifiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 16px}
+.flight-identifiers>div{min-width:0}.flight-identifiers dt{font-size:12px;color:var(--muted);margin-bottom:4px}
+.flight-identifiers dd{margin:0;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.flight-ticket-numbers{grid-column:1/-1}.flight-ticket-numbers ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.flight-ticket-numbers li{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
+.flight-ticket-numbers small{font-size:12px;font-weight:400;color:var(--muted)}
+@media(max-width:480px){.flight-identity-fields,.flight-airport-fields{grid-template-columns:minmax(0,1fr)}.flight-airport-fields label:first-child input{max-width:120px}.flight-ticket-fields{grid-template-columns:minmax(0,1fr) 44px}.flight-ticket-fields label:nth-child(2){grid-column:1}.flight-ticket-fields>.icon-button{grid-column:2;grid-row:1/3;align-self:start}.flight-route{gap:12px}.flight-route strong{font-size:24px}}
 .reservation-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--reservation-section-gap);padding-top:var(--reservation-section-gap);border-top:1px solid var(--line)}
 .reservation-stage{border:0;padding:0;margin:0;min-width:0}
 .reservation-stage legend{font-size:16px;font-weight:700;padding:0;margin-bottom:var(--reservation-field-gap)}
@@ -708,7 +733,7 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 
 .reservation-document-upload{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin:16px 0 24px;min-width:0}.reservation-document-upload p{margin:0}.reservation-document-upload button{max-width:100%;white-space:normal}
 
-.notice-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:80;display:flex;align-items:center;gap:16px;max-width:min(420px,calc(100vw - 32px));padding:12px 12px 12px 20px;background:var(--ink);color:var(--page);border-radius:12px;box-shadow:0 6px 18px #202b2226}.notice-toast p{display:flex;align-items:center;gap:12px;margin:0;overflow-wrap:anywhere}.notice-toast svg{width:20px;height:20px;flex:none}.notice-toast button{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:8px}.notice-toast button:hover{background:#ffffff18}.notice-toast button:focus-visible{outline:2px solid currentColor;outline-offset:-2px}.planning-status-row{justify-content:flex-end}@media(min-width:761px){.planning-status-row{display:none}}@media(max-width:760px){.notice-toast{bottom:calc(96px + env(safe-area-inset-bottom))}}
+.notice-toast{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:80;display:flex;align-items:center;gap:8px;width:max-content;max-width:min(420px,calc(100vw - 32px));padding:4px 6px 4px 12px;background:var(--ink);color:var(--page);border-radius:12px;box-shadow:0 6px 18px #202b2226}.notice-toast p{display:flex;align-items:center;gap:8px;min-width:0;margin:0;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.notice-toast p span{min-width:0}.notice-toast svg{width:16px;height:16px;flex:none}.notice-toast button{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:8px}.notice-toast button:hover{background:#ffffff18}.notice-toast button:focus-visible{outline:2px solid currentColor;outline-offset:-2px}.planning-status-row{justify-content:flex-end}@media(min-width:761px){.planning-status-row{display:none}}@media(max-width:760px){.notice-toast{bottom:calc(96px + env(safe-area-inset-bottom))}}
 
 .timeline-time{flex-wrap:wrap;gap:4px 8px;min-width:0}.timeline-time small{font-size:12px;font-weight:500;color:var(--muted)}
 

@@ -10,6 +10,7 @@ export function compactAddress(address:string){
  const parts=address.split(',').map(p=>p.trim().split(/\s+-\s+|\s+\/\s+/)[0]).filter(Boolean);
  const unique=parts.filter((p,i)=>parts.findIndex(v=>v.toLocaleLowerCase()===p.toLocaleLowerCase())===i);
  let street=unique.shift()??'';
+ if(/^\d+[\w/-]*$/.test(street)&&unique[0])street=unique.shift()+' '+street;
  if(unique[0]&&/^\d+[\w/-]*$/.test(unique[0]))street+=' '+unique.shift();
  return {street,locality:unique[0]??'',full:address};
 }

@@ -14,6 +14,14 @@ export const reservationSourceInput=z.discriminatedUnion('provider',[
  z.object({provider:z.literal('manual'),entryId:z.string().uuid(),subject:short}).strict(),
 ]);
 export const reservationPointInput=destinationInput.omit({bbox:true});
+const iata=z.string().trim().toUpperCase().regex(/^[A-Z]{3}$/,'Use um código IATA de três letras');
+export const flightDetailsInput=z.object({
+ originIata:iata.optional(),destinationIata:iata.optional(),
+ originAirport:short.optional(),destinationAirport:short.optional(),
+ number:z.string().trim().min(1).max(40).optional(),locator:z.string().trim().min(1).max(100).optional(),
+ tickets:z.array(z.object({number:z.string().trim().min(1).max(100),passenger:short.optional()}).strict()).max(30).optional(),
+}).strict();
+export type FlightDetails=z.infer<typeof flightDetailsInput>;
 export const reservationFields=z.object({
  sourceKey:short,kind:z.enum(['train','flight','bus','hotel','activity','car','transfer','ferry']),title:short,startDate:dateValue,endDate:dateValue,
  startTime:time,endTime:time,timezone:z.string().max(100).optional(),endTimezone:z.string().max(100).optional(),
@@ -21,6 +29,7 @@ export const reservationFields=z.object({
  travelers:z.array(short).max(30).default([]),notes:z.string().max(12000).default(''),
  sources:z.array(reservationSourceInput).min(1).max(50),
  locationPoint:reservationPointInput.optional(),destinationPoint:reservationPointInput.optional(),
+ flight:flightDetailsInput.optional(),
 }).strict();
 function validPoints(v:{kind:string;title:string;location?:string;destination?:string;locationPoint?:z.infer<typeof reservationPointInput>;destinationPoint?:z.infer<typeof reservationPointInput>}){
  return (!v.locationPoint||v.locationPoint.address===v.location)&&(!v.destinationPoint||v.destinationPoint.address===v.destination);

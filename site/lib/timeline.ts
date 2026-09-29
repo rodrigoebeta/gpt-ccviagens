@@ -5,6 +5,13 @@ export const orderedPlaces=(places:Place[],day:string,ids:string[]=[])=>{
  return places.filter(p=>p.date===day).sort((a,b)=>(ranks.get(a.id)??Infinity)-(ranks.get(b.id)??Infinity)||(a.time??'99').localeCompare(b.time??'99')||a.position-b.position||a.id.localeCompare(b.id));
 };
 export type TimelineEvent={id:string;time?:string;label:string;reservation?:Reservation;place?:Place;number?:number;order:number};
+export function reservationScheduleDays(r:Reservation):string[]{
+ if(r.status==='cancelled')return [];
+ if(r.kind!=='activity')return [...new Set([r.startDate,r.endDate])];
+ const days:string[]=[],date=new Date(r.startDate+'T00:00:00Z'),end=new Date(r.endDate+'T00:00:00Z');
+ for(;date<=end;date.setUTCDate(date.getUTCDate()+1))days.push(date.toISOString().slice(0,10));
+ return days;
+}
 export function dayTimeline(reservations:Reservation[],places:Place[],day:string,ids:string[]=[]):TimelineEvent[]{
  const events:TimelineEvent[]=[];
  for(const r of reservations){
@@ -15,6 +22,7 @@ export function dayTimeline(reservations:Reservation[],places:Place[],day:string
   }else{
    const label=reservationLabels[r.kind];
    if(r.startDate===day)events.push({id:r.id+'-start',time:r.startTime,label:r.kind==='car'?'Retirada · '+label:label,reservation:r,order:0});
+   if(r.kind==='activity'&&r.startDate<day&&day<r.endDate)events.push({id:r.id+'-ongoing',label:'Em andamento · '+label,reservation:r,order:0});
    if(r.endDate===day&&r.endDate!==r.startDate)events.push({id:r.id+'-end',time:r.endTime,label:(r.kind==='car'?'Devolução':r.kind==='activity'?'Fim':'Chegada')+' · '+label,reservation:r,order:0});
   }
  }

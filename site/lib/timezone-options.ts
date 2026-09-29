@@ -6,7 +6,13 @@ export function timezoneOffset(zone:string,date:string){
  }catch{return null;}
 }
 export function timezoneLabel(zone:string,date:string){const offset=timezoneOffset(zone,date);return zone.replaceAll('_',' ')+' · '+(offset??'Fuso não reconhecido');}
-export function timezoneOptions(current:string){return [...new Set(['UTC',...Intl.supportedValuesOf('timeZone'),...(current?[current]:[])])].sort();}
+export function timezoneOptions(current:string,date:string){
+ return [...new Set(['UTC',...Intl.supportedValuesOf('timeZone'),...(current?[current]:[])])].map(zone=>{
+  const match=timezoneOffset(zone,date)?.match(/^GMT([+-])(\d{2}):(\d{2})(?::(\d{2}))?$/);
+  const offset=match?(match[1]==='-'?-1:1)*(Number(match[2])*3600+Number(match[3])*60+Number(match[4]??0)):Infinity;
+  return {zone,offset};
+ }).sort((a,b)=>a.offset-b.offset||a.zone.localeCompare(b.zone)).map(item=>item.zone);
+}
 // Match the stored wall clock to real instants; gaps and repeated DST hours need confirmation.
 export function reservationOffset(zone:string|undefined,date:string,time:string|undefined){
  if(!zone)return 'Fuso não informado';

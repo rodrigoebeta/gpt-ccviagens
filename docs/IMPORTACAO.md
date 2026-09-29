@@ -100,3 +100,9 @@ PDF, JPEG, PNG, GIF, WebP e TXT abrem no visualizador do painel. PDF/TXT têm p�
 
 
 Para os pontos no mapa, preencha `location` com a hospedagem ou origem e `destination` com o local da chegada. Prefira nome completo, cidade e país; não invente endereço nem use somente código de aeroporto quando o documento trouxer o nome. Em hotéis, mantenha o nome do estabelecimento no título. Ônibus usa `kind: "bus"`.
+
+## Dados específicos de voos
+
+Para `kind: "flight"`, o objeto opcional `reservation.flight` aceita `originIata`, `destinationIata` (três letras, convertidas para maiúsculas), `originAirport`, `destinationAirport` (nomes, até 300 caracteres), `number` (número do voo, até 40 caracteres), `locator` (localizador, até 100) e `tickets` (até 30 objetos `{number, passenger?}`, número de até 100 caracteres e passageiro opcional de até 300). Números são texto: preservar zeros e formatação. Campos só são preenchidos com evidência da fonte; omitir os ausentes, sem inventar IATA a partir da cidade. Cada reserva de voo representa um trecho; conexões com voos diferentes devem permanecer em seus respectivos trechos, com a proveniência adequada.
+
+`confirmation` continua sendo a referência genérica original. Não presumir que ela seja localizador ou ticket; não extrair valores ambíguos de anotações automaticamente. `location`/`destination` e seus pontos continuam identificando os endereços para mapa, separadamente dos códigos e nomes de aeroporto. Não fabricar coordenadas a partir de IATA. `title`, datas, horários, fusos, fontes, documentos e controles de versão continuam no contrato geral. O objeto é opcional e não altera fingerprints de importações antigas que não o contêm.

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.4",
+  "version": "0.2.5",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -64,8 +64,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 33990,
-      "sha256": "386e332579b340551ab4c98b803ba9e7eb25714a81ee737469224554143e4c82"
+      "bytes": 34695,
+      "sha256": "5dcd18b0e4eb44ad8f666c8a0b9459e89edc64cdce24aa53d6da2deeedd0bfba"
     },
     {
       "path": "LICENSE.md",
@@ -89,8 +89,8 @@
     },
     {
       "path": "release.json",
-      "bytes": 671,
-      "sha256": "7abbf0477ba31a4719c5f2d37ff27896ba6e572452564743a5dfefed5d4cdf9e"
+      "bytes": 424,
+      "sha256": "2884306e35d6e1e952422b832553b7099bad21042c44872878545f8a1f745c92"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -279,8 +279,8 @@
     },
     {
       "path": "site/app/day-timeline.tsx",
-      "bytes": 11154,
-      "sha256": "fe1c1bfec8481aa1b3d5ca79ead2867ce0d9a1ec1bfebb99f7bba66a9a9b6913"
+      "bytes": 11159,
+      "sha256": "ae65229df8910245f351ac2b876d183df8377d5afb168d5e93774c19f872c69c"
     },
     {
       "path": "site/app/destination-picker.tsx",
@@ -304,13 +304,13 @@
     },
     {
       "path": "site/app/flight-summary.tsx",
-      "bytes": 1422,
-      "sha256": "b6937771b89721341701a0a0f7af80331c8de481f0337dc984016efbc8d273ef"
+      "bytes": 2017,
+      "sha256": "3671059d10fd956d5b5eb8a99b157195ed31730e8dc573c1e407120316ac1d93"
     },
     {
       "path": "site/app/globals.css",
-      "bytes": 125287,
-      "sha256": "e9ce54e32f1523d4199822eea771c80845918b0c7fc0a2306741569773caace0"
+      "bytes": 125362,
+      "sha256": "878c58b2ca804d50636345f1f94c0c234237667ecd9e5cc7d6ec2d72dcfdf244"
     },
     {
       "path": "site/app/home-cover.tsx",
@@ -945,7 +945,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 494,
-      "sha256": "a28a4875938320e6294bc4c35485ca39a064d27a40994f14a06f30751f88bb07"
+      "sha256": "87270668c58ec454e8e918ce28a70a0f70ed51dfdefc1312847c989711e02e41"
     },
     {
       "path": "site/lib/document-preview.ts",

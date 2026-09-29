@@ -692,6 +692,7 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .flight-identifiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0 0 16px}
 .flight-identifiers>div{min-width:0}.flight-identifiers dt{font-size:12px;color:var(--muted);margin-bottom:4px}
 .flight-identifiers dd{margin:0;font-size:14px;font-weight:600;overflow-wrap:anywhere}
+.flight-passengers{grid-column:1/-1}.flight-passengers dd{font-weight:400}
 .flight-ticket-numbers{grid-column:1/-1}.flight-ticket-numbers ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
 .flight-ticket-numbers li{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px}
 .flight-ticket-numbers small{font-size:12px;font-weight:400;color:var(--muted)}

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.4",
+  "version": "0.2.5",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Versão 0.2.4. Preenchimento de nome e localização de aeroportos pelo IATA, preservando dados manuais e pontos selecionados. Catálogo local sem novas chamadas ao OSM; localização de referência não substitui endereço postal confirmado.\r\nAPIs, guias e instruções de sincronização compartilham o contrato completo das reservas, incluindo dados de voo, múltiplos tickets e pontos no mapa. Assistente orientado a consultar os campos atuais e conferir o que foi salvo. Tarefas já existentes precisam receber o prompt atualizado sem mudar seu marco inicial."
+  "notes": "Versão 0.2.5. No card de voo, tickets aparecem somente quando há número preenchido e não há localizador. Passageiros ficam sempre visíveis, reunindo nomes da reserva e dos tickets sem duplicatas; ausência é indicada como Não informados. Ver reserva mantém números e associação de cada ticket ao passageiro."
 }

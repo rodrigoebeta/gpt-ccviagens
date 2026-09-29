@@ -45,7 +45,7 @@ Com conexão confirmada, identifique o serviço e proponha buscar reservas de vi
 
 Sem conexão, Question: **Conectar meu e-mail** / **Usar arquivos ou outra fonte** / **Conhecer o fluxo por enquanto**. Descubra o plugin correto e conduza autorização oficial; siga o guia de instalação para eventual novo chat. Para arquivos, oriente o controle de anexar ou a fonte/pasta acessível. Não solicite upload numa ferramenta Question que só aceite texto; use-a apenas para escolhas e confirmação. Não prometa acesso local no Work da web.
 
-**Com viagem:** leia as viagens autorizadas e suas datas. Se houver várias, ofereça escolha. Busque pelas datas dos serviços e referências da viagem, não só pelo recebimento da mensagem: uma compra feita meses antes pode pertencer ao período. Confira a correspondência e permissão de edição antes de importar.
+**Com viagem:** leia as viagens autorizadas, suas datas e os destinos cadastrados. Se houver várias, ofereça escolha. Use cidades/regiões e variações dos nomes para orientar a busca; amplie pelos estabelecimentos e operadores encontrados. Confira datas dos serviços, ano, alterações e cancelamentos, não só o recebimento da mensagem: uma compra feita meses antes pode pertencer ao período. Pedidos pontuais podem incluir viagens passadas pela API do assistente, sem alterar o escopo da rotina agendada. Confira a correspondência e permissão de edição antes de importar; ausência de resultados não comprova ausência de reserva.
 
 **Sem viagem:** ainda ofereça conexão, arquivos e explicação. Para salvar, será necessário criar uma viagem na Central. Pode haver busca exploratória pontual autorizada de confirmações recentes: ofereça **Últimos 30 dias de mensagens** / **Últimos 90 dias de mensagens** e explique que isso é um recorte inicial de mensagens, não filtro de datas dos serviços nem automação. Resuma somente reservas relevantes, sem criar viagem ou importar. Oriente a criação na interface com base nas datas conferidas. Se a pessoa adiar novamente, prossiga com documentos, Scheduled Tasks e locais, sem insistir nem iniciar busca recorrente irrestrita.
 
@@ -53,11 +53,19 @@ Sem resultados ou reservas, registre prática adiada e continue. Não termine o 
 
 ## 4. Reservas e documentos
 
+Apresente **Programação → Adicionar reserva**, ao lado de Adicionar lugar: Hospedagem, Transporte (voo, trem, ônibus, aluguel de carro, transfer, ferry) e Evento ou atividade. Não exige comprovante; o registro identifica cadastro manual. Hospedagem usa nome do hotel, endereço, check-in/check-out e um único fuso; carro usa retirada/devolução. Referência, viajantes e anotações são opcionais. Não crie um registro só para demonstrar; pratique se houver uma reserva real que a pessoa queira cadastrar.
+
+Mostre a busca do endereço dentro do formulário: pesquisar nome/cidade, conferir unidade e selecionar um resultado preenche endereço e ponto; no hotel, também o nome. Prefira grafias originais. Digitar sem selecionar continua permitido e não equivale a ponto confirmado. Mudança no nome do hotel/endereço desfaz a seleção. Confira persistência e mapa quando a prática for autorizada; sem correspondência ou provedor disponível, preserve o formulário e explique a pendência. Evento no mapa usa o local selecionado, não uma dedução pelo título do evento.
+
 Explique: o Work lê confirmações e comprovantes autorizados, extrai os dados, reúne os documentos e envia à viagem existente. A Central guarda a reserva e os anexos; reimportações reconhecem a mesma reserva. Divergências ficam para conferir, preservando ajustes manuais.
 
 Siga docs/IMPORTACAO.md. **Priorize a API autenticada do assistente**, em `POST /api/assistant/trips/{id}/import`, após configurar a autenticação da própria instalação conforme docs/SINCRONIZACAO.md. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Documentos da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
 
 Confira datas, passageiros, documentos, recarga e reimportação sem duplicatas. Diferencie salvo, já existente, atualizado e **Para revisar**. Mostre abrir o documento, páginas, zoom, Ajustar, pinça no celular e Baixar (opcional). PDF/imagens/TXT são aceitos; siga o guia para conversões. Sem comprovante, explique sem inventar arquivo.
+
+**Conferir endereços e mapa:** o agente lê os endereços importados e o estado das localizações, pesquisa em fontes oficiais para completar/conferir hotéis, eventos, estações, aeroportos e outros lugares, e salva apenas correções sustentadas, preservando fontes e a versão atual. Siga a etapa de endereços em docs/IMPORTACAO.md. Para viagens passadas, confirme o endereço da época/edição; o site atual pode ter mudado. A pessoa só precisa esclarecer ambiguidades que as fontes não resolvem.
+
+**Critério de conclusão:** separar reserva/comprovantes salvos, endereços conferidos e pontos localizados; mostrar pendências específicas. Endereço preenchido não significa ponto confirmado. A busca automática cobre hotéis, voos, trens, ônibus e ferry; carro e transfer usam pontos selecionados no formulário. Eventos aparecem no mapa quando seu local é selecionado explicitamente, sem dedução automática pelo título. **Recuperação:** falhas temporárias respeitam o intervalo; sem correspondência, revisar a evidência antes de repetir; sem acesso à pesquisa, registrar o limite e seguir o onboarding. Não inventar coordenadas nem criar lugares duplicados para contornar a limitação.
 
 Question: **Entendi; ver automação** / **Preciso de ajuda com a importação**. Resolva a dúvida e continue; não use “quer aprender mais?” como portão para encerrar.
 
@@ -120,7 +128,7 @@ Mostre mapa do dia, números dos lugares, hospedagem durante a estadia e transpo
 
 Apresente edição e pendências: **Detalhes e convidados → Editar viagem** corrige nome, datas e destinos. Se itens ficarem fora do período, a Central exige ajustes prévios e não apaga reservas. Editar a Central não altera o fornecedor. Não provoque conflitos para demonstrar.
 
-Localizações de reservas são verificadas em segundo plano e guardadas para participantes autorizados. A reserva fica salva se a busca falhar. A central de pendências reúne revisões e locais não confirmados: **Conferir reserva** abre os dados; **Tentar localizar novamente** respeita o intervalo do serviço. Falha de conexão não prova endereço incorreto.
+A busca automática cobre hotéis, voos, trens, ônibus e ferry; carro e transfer usam pontos selecionados no formulário. Eventos aparecem no mapa quando seu local é selecionado explicitamente, sem dedução automática pelo título. Localizações são guardadas para participantes autorizados. A reserva fica salva se a busca falhar. A central de pendências reúne revisões e locais não confirmados: **Conferir reserva** abre os dados; **Tentar localizar novamente** respeita o intervalo do serviço. Falha de conexão não prova endereço incorreto. Retome o resultado da etapa 4, sem apresentar importação concluída como confirmação de todos os endereços.
 
 Fotos/capas e celular são opcionais: Question **Quero experimentar** / **Deixar para depois**. Diferencie capa da viagem e imagem inicial da conta. Atalho no telefone não oferece uso offline. Mostre **Sobre este painel**, termos, privacidade e faixa sálvia quando houver atualização. Não simule uma atualização real para ensinar.
 

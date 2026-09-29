@@ -80,10 +80,13 @@ Pesquisas dependem dos provedores externos e respeitam cache/limites. Nunca inve
 
 ## Reservas, revisões e documentos
 
+Reservas suportam `hotel`, `flight`, `train`, `bus`, `car`, `transfer`, `ferry` e `activity`. A seleção explícita de um resultado real de `place-search` pode preencher `locationPoint` e `destinationPoint`: `{name,address,latitude,longitude,osmType,osmId,kind}` (sem `bbox`, `url` ou `context`). O endereço deve corresponder ao respectivo campo textual; em hotel, o nome deve corresponder a `title`. Remova a seleção ao alterar esses dados. Hospedagem manual usa um único endereço/fuso. Eventos usam o local selecionado para aparecer no mapa durante o período; não crie outro lugar para duplicar o ponto. O cadastro manual gera fonte `manual` com `entryId` real; não a fabrique em importações de e-mail/arquivo. Uma reserva manual depois encontrada numa fonte exige reconciliação explícita pelo registro existente; não presuma deduplicação entre chaves distintas.
+
 | Método e caminho | Contrato |
 | --- | --- |
 | `POST /trips/{id}/import` | Pacote de importação existente com `version:1`, `reservation`, `documents` e `change`/`reviewReason` opcionais. Uso interativo; a rotina usa `/api/sync/trips/{id}/import`. |
 | `PATCH /trips/{id}/reservations/{reservationId}` | `{baseFingerprint, reservation}`; reserva completa, proveniência preservada e fingerprint atual. Marca ajuste manual. |
+| `POST /trips/{id}/reservations` | `{requestId, reservation}`; UUID estável para tentativas do mesmo cadastro manual; campos da reserva sem `sourceKey`/`sources`, gerados pelo servidor. Proprietário/editor; datas dentro da viagem. Retorna 201 na criação, 200 na repetição idêntica e 409 se o mesmo pedido já tem outros dados. |
 | `GET /trips/{id}/reviews` | Pendências com reserva atual e fingerprint. |
 | `POST /trips/{id}/reviews` | `{id, action:"accept"|"dismiss", baseFingerprint:string|null, reservation?}`. Conferir antes de aceitar. |
 | `GET /documents/{id}` | Bytes originais; `?download=1` solicita anexo. Permissão vem da viagem correspondente. |

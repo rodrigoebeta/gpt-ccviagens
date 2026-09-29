@@ -10,14 +10,22 @@ export const reservationSourceInput=z.discriminatedUnion('provider',[
  z.object({provider:z.literal('gmail'),messageId:z.string().regex(/^[a-f0-9]{10,40}$/),subject:short}),
  z.object({provider:z.literal('file'),filename:short,sha256:z.string().regex(/^[a-f0-9]{64}$/),subject:short}).strict(),
  z.object({provider:z.literal('external'),system:short,reference:z.string().trim().min(1).max(2000),subject:short}).strict(),
+ z.object({provider:z.literal('manual'),entryId:z.string().uuid(),subject:short}).strict(),
 ]);
-export const reservationInput=z.object({
- sourceKey:short,kind:z.enum(['train','flight','bus','hotel','activity']),title:short,startDate:dateValue,endDate:dateValue,
+export const reservationPointInput=destinationInput.omit({bbox:true});
+export const reservationFields=z.object({
+ sourceKey:short,kind:z.enum(['train','flight','bus','hotel','activity','car','transfer','ferry']),title:short,startDate:dateValue,endDate:dateValue,
  startTime:time,endTime:time,timezone:z.string().max(100).optional(),endTimezone:z.string().max(100).optional(),
  location:z.string().max(1000).optional(),destination:z.string().max(1000).optional(),confirmation:z.string().max(200).optional(),
  travelers:z.array(short).max(30).default([]),notes:z.string().max(12000).default(''),
  sources:z.array(reservationSourceInput).min(1).max(50),
-}).strict().refine(v=>v.startDate<=v.endDate,'Confira as datas');
+ locationPoint:reservationPointInput.optional(),destinationPoint:reservationPointInput.optional(),
+}).strict();
+function validPoints(v:{kind:string;title:string;location?:string;destination?:string;locationPoint?:z.infer<typeof reservationPointInput>;destinationPoint?:z.infer<typeof reservationPointInput>}){
+ return (!v.locationPoint||(v.locationPoint.address===v.location&&(v.kind!=='hotel'||v.locationPoint.name===v.title)))&&(!v.destinationPoint||v.destinationPoint.address===v.destination);
+}
+export const reservationInput=reservationFields.refine(v=>v.startDate<=v.endDate,'Confira as datas').refine(validPoints,'O local selecionado mudou. Busque novamente ou remova a seleção do mapa.');
+export const manualReservationInput=z.object({requestId:z.string().uuid(),reservation:reservationFields.omit({sourceKey:true,sources:true}).refine(v=>v.startDate<=v.endDate,'Confira as datas').refine(validPoints,'Confira novamente o local selecionado.').refine(v=>v.kind!=='hotel'||(!v.destination&&!v.destinationPoint&&(!v.endTimezone||v.endTimezone===v.timezone)),'Hospedagem usa um único local e fuso.')}).strict();
 export const importInput=z.object({version:z.literal(1),reservation:reservationInput,documents:z.array(z.object({
  filename:short,label:short,mime:z.enum(['application/pdf','image/png','image/jpeg','image/gif','image/webp','text/plain']),base64:z.string().min(4).max(14000000)
 }).strict()).max(20),change:z.object({action:z.enum(['update','cancel']),baseFingerprint:z.string().regex(/^[a-f0-9]{64}$/)}).strict().optional(),reviewReason:z.string().trim().min(1).max(1000).optional()}).strict();

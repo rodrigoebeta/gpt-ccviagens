@@ -1,7 +1,8 @@
 import {database} from './service';
 import {destinationRefs,unambiguousPoint,stationReference,unambiguousStation,type Anchor,type GeoPoint} from './geography';
 import {searchPhoton} from './photon';
-type Booking={kind:string;title:string;location?:string;destination?:string;startDate:string;endDate:string};
+import type {ReservationData} from './contracts';
+type Booking=ReservationData;
 export async function searchContext(tripId:string,day?:string){
  const db=database(),row=await db.prepare('SELECT destination_locations FROM trips WHERE id=?').bind(tripId).first<{destination_locations:string}>();
  const destinations=destinationRefs(row?.destination_locations),anchors:Anchor[]=destinations.map(d=>({...d,label:d.name,tier:2}));
@@ -17,6 +18,11 @@ export async function searchContext(tripId:string,day?:string){
  // Prefer the arrival stay on changeover days; exclude cancelled and other-day stays.
  const hotel=hotels[0],other=bookings.find(r=>r.kind!=='hotel'&&((r.startDate===day&&r.location)||(r.endDate===day&&r.destination)));
  const address=hotel?.location??(other?.startDate===day?other?.location:other?.destination);
+ const selected=hotel?.locationPoint??(other?.startDate===day?other?.locationPoint:other?.destinationPoint);
+ if(selected&&selected.address===address&&(!hotel||selected.name===hotel.title)){
+  anchors.push({...selected,label:hotel?.title??selected.name,tier:hotel?0:1});
+  return {anchors:anchors.sort((a,b)=>a.tier-b.tier),fallback};
+ }
  if(address&&(hotel||!anchors.some(a=>a.tier===1))){
   try{
    const station=!hotel&&other?.kind==='train'?stationReference(address):null;

@@ -14,7 +14,7 @@ async function snapshot(tripId:string,reservationId?:string){
  })));
  // Compare the source version inside SQL so an older request cannot reset a newer edit.
  if(inputs.length)await db.batch(inputs.map(({candidate:c,hash,fingerprint})=>db.prepare(`INSERT INTO reservation_locations (key,trip_id,reservation_id,input_hash,status,note) SELECT ?,?,?,?,'pending','' WHERE EXISTS(SELECT 1 FROM reservations WHERE id=? AND trip_id=? AND fingerprint=? AND status!='cancelled') ON CONFLICT(key) DO UPDATE SET input_hash=excluded.input_hash,status='pending',point=NULL,note='',lease=NULL,lease_until=0,retry_at=0 WHERE reservation_locations.input_hash!=excluded.input_hash`).bind(c.key,tripId,c.reservationId,hash,c.reservationId,tripId,fingerprint)));
- await db.prepare("DELETE FROM reservation_locations WHERE trip_id=? AND reservation_id IN (SELECT id FROM reservations WHERE trip_id=? AND (status='cancelled' OR kind NOT IN ('hotel','flight','train','bus')))").bind(tripId,tripId).run();
+ await db.prepare("DELETE FROM reservation_locations WHERE trip_id=? AND reservation_id IN (SELECT id FROM reservations WHERE trip_id=? AND status='cancelled')").bind(tripId,tripId).run();
  return {inputs,bias};
 }
 export async function listLocations(tripId:string):Promise<LocationState[]>{

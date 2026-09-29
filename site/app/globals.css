@@ -603,3 +603,62 @@ body{font-family:Manrope,'Segoe UI',sans-serif}button,a,input{touch-action:manip
 .footer-about summary:focus-visible,.page-footer a:focus-visible{outline:2px solid var(--green);outline-offset:4px;border-radius:2px}
 @media(max-width:640px){.footer-context{flex-direction:column;gap:8px}.footer-topics>div{grid-template-columns:minmax(0,1fr);gap:8px}.footer-topics{margin-top:12px;gap:24px}.footer-meta{align-items:flex-start;flex-direction:column;gap:8px}}
 @media(prefers-reduced-motion:reduce){.footer-about>summary svg{transition:none}}
+/* Reservation entry uses the existing dialog and form vocabulary. */
+.reservation-fields{display:grid;gap:var(--reservation-section-gap);min-width:0;border:0;padding:0;margin:0}
+.reservation-fields>label,.reservation-location-field{display:grid;gap:8px;min-width:0}
+.reservation-location-field>textarea{resize:vertical;min-height:72px;max-height:160px;line-height:1.5}
+.reservation-category-picker{display:grid;gap:8px}
+.reservation-category-picker [data-slot=button]{height:auto;min-height:84px;padding:16px;text-align:left;white-space:normal;justify-content:flex-start}
+.reservation-category-picker [data-slot=button]>svg{width:24px;height:24px;flex-shrink:0;color:var(--green)}
+.reservation-category-picker [data-slot=button]>svg:last-child{margin-left:auto;width:18px}
+.reservation-category-picker span{display:grid;gap:5px}
+.reservation-category-picker strong{font-size:16px}
+.reservation-category-picker small{color:var(--muted);font-weight:400;font-size:13px;line-height:1.5}
+.reservation-location-actions,.reservation-search-footer,.reservation-editor-footer{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.reservation-location-actions [data-slot=button]{white-space:normal;height:auto;min-height:44px;text-align:left}
+.reservation-location-selected{display:flex;align-items:center;flex-wrap:wrap;gap:6px;color:var(--green);font-size:13px}
+.reservation-location-selected svg{width:16px;height:16px}
+.reservation-location-selected a,.reservation-search-footer a{text-decoration:underline;text-underline-offset:3px}
+.reservation-location-search{display:grid;gap:12px;padding:16px;background:var(--page);border-radius:16px}
+.reservation-search-row{display:flex;align-items:center;gap:8px}
+.reservation-search-row input{min-width:0;flex:1}
+.reservation-search-row [data-slot=button]{flex-shrink:0}
+.reservation-location-results{list-style:none;padding:0;margin:0;display:grid;gap:4px;max-height:300px;overflow:auto}
+.reservation-location-results button{display:flex;align-items:center;gap:12px;text-align:left;width:100%;padding:12px;border-radius:12px;min-height:60px}
+.reservation-location-results button:hover,.reservation-location-results button:focus-visible{background:var(--green-soft)}
+.reservation-location-results button>span{display:grid;gap:4px;flex:1;min-width:0;overflow-wrap:anywhere}
+.reservation-location-results button>span>span{font-size:13px;color:var(--muted);line-height:1.5}
+.reservation-location-results svg{width:18px;height:18px;flex-shrink:0;color:var(--green)}
+.reservation-search-footer{justify-content:space-between;font-size:12px;color:var(--muted)}
+.reservation-editor-footer{justify-content:flex-end}
+.reservation-edit-dialog [data-slot=dialog-title]:focus{outline:none}
+@media(max-width:480px){.day-actions{flex-wrap:wrap}.day-actions [data-slot=button]{flex:1 1 auto}.reservation-category-picker [data-slot=button]{padding:12px}.reservation-editor-footer>[data-slot=button]{flex:1}.reservation-location-search{padding:12px}.reservation-search-row{flex-wrap:wrap}.reservation-search-row input{flex-basis:100%}}
+.travel-dialog.reservation-edit-dialog{--reservation-section-gap:24px;--reservation-field-gap:16px;--reservation-control-gap:8px;--reservation-inset:32px;display:flex;flex-direction:column;gap:0;width:min(640px,calc(100% - 32px));max-width:640px!important;max-height:calc(100dvh - 32px);overflow:hidden;padding:0}
+.reservation-edit-dialog>.form-stack{min-height:0;overflow:hidden;gap:0}
+.reservation-editor-scroll{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:0 var(--reservation-inset) var(--reservation-section-gap);scrollbar-gutter:stable;scroll-padding-block:16px}
+.reservation-identity,.reservation-stage-fields{display:grid;gap:var(--reservation-field-gap);min-width:0}
+.reservation-stages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--reservation-section-gap);padding-top:var(--reservation-section-gap);border-top:1px solid var(--line)}
+.reservation-stage{border:0;padding:0;margin:0;min-width:0}
+.reservation-stage legend{font-size:16px;font-weight:700;padding:0;margin-bottom:var(--reservation-field-gap)}
+.reservation-stage-time{display:grid;gap:var(--reservation-field-gap);min-width:0}
+.reservation-stages-transport{grid-template-columns:minmax(0,1fr)}
+.reservation-stages-transport .reservation-stage+.reservation-stage{border-top:1px solid var(--line);padding-top:var(--reservation-section-gap)}
+.reservation-stages-transport .reservation-stage-time{grid-template-columns:repeat(2,minmax(0,1fr))}
+.reservation-time-context{display:grid;gap:var(--reservation-control-gap)}
+.reservation-time-context p{font-size:13px;line-height:1.6;margin:0}
+.reservation-extra{border-top:1px solid var(--line);padding-top:var(--reservation-control-gap)}
+.reservation-extra summary{cursor:pointer;font-size:14px;font-weight:600;min-height:44px;display:list-item;align-content:center;margin-left:16px}
+.reservation-extra summary small{display:block;font-size:12px;line-height:1.6;font-weight:400;color:var(--muted);margin-top:4px;overflow-wrap:anywhere}
+.reservation-extra>div{display:grid;gap:16px;padding-top:12px}
+.reservation-extra label{display:grid;gap:8px}
+.reservation-editor-actions{flex-shrink:0;border-top:1px solid var(--line);padding:16px var(--reservation-inset);background:var(--page);display:grid;gap:12px;max-height:45dvh;overflow:auto}
+.reservation-editor-footer [data-slot=button]{min-height:44px}
+.reservation-edit-dialog>[data-slot=dialog-header]{padding:var(--reservation-section-gap) 64px var(--reservation-field-gap) var(--reservation-inset);flex-shrink:0}
+.reservation-edit-dialog>[data-slot=dialog-header].reservation-header-with-back{padding:16px var(--reservation-inset) var(--reservation-section-gap)}
+.reservation-header-navigation{display:flex;align-items:center;min-height:44px;padding-right:44px;margin-bottom:var(--reservation-control-gap)}
+.reservation-category-back[data-slot=button]{justify-content:flex-start;gap:8px;min-height:44px;height:auto;padding:8px 0;white-space:normal;text-align:left;font-size:13px;color:var(--muted);border-radius:8px}
+.reservation-category-back[data-slot=button]:hover{color:var(--ink);background:transparent;text-decoration:underline;text-underline-offset:4px}
+.reservation-edit-dialog [data-slot=dialog-title]{overflow-wrap:anywhere;padding-right:0}
+.reservation-category-picker{padding:0 var(--reservation-inset) var(--reservation-section-gap);overflow-y:auto;min-height:0}
+@media(max-width:480px){.travel-dialog.reservation-edit-dialog{--reservation-inset:20px}.reservation-stages,.reservation-stages-transport .reservation-stage-time{grid-template-columns:minmax(0,1fr)}.reservation-stage+.reservation-stage{border-top:1px solid var(--line);padding-top:var(--reservation-section-gap)}.reservation-search-row [data-slot=button]{width:100%;min-height:44px}}
+@media(max-width:360px){.reservation-editor-footer{flex-direction:column;align-items:stretch}.reservation-editor-footer>[data-slot=button]{flex:none;width:100%}}

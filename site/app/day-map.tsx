@@ -1,11 +1,11 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
-import {Hotel,Plane,TrainFront,Bus} from 'lucide-react';
+import {Hotel,Plane,TrainFront,Bus,Car,Ship,Ticket,CarTaxiFront} from 'lucide-react';
 import type {Place} from '@/lib/contracts';
 import type {MapKind,ReservationMapPoint} from '@/lib/reservation-map';
-const icons={hotel:Hotel,flight:Plane,train:TrainFront,bus:Bus};
-const labels={hotel:'Hospedagem',flight:'Aeroporto',train:'Estação',bus:'Terminal / parada'};
+const icons={hotel:Hotel,flight:Plane,train:TrainFront,bus:Bus,car:Car,transfer:CarTaxiFront,ferry:Ship,activity:Ticket};
+const labels={hotel:'Hospedagem',flight:'Aeroporto',train:'Estação',bus:'Terminal / parada',car:'Aluguel de carro',transfer:'Transfer',ferry:'Ferry',activity:'Evento / atividade'};
 export default function DayMap({places,points,pending}:{places:Place[];points:ReservationMapPoint[];pending:number}){
  const el=useRef<HTMLDivElement>(null),[error,setError]=useState('');
  const signature=JSON.stringify([places.map(p=>[p.id,p.name,p.latitude,p.longitude,p.visited]),points]);

@@ -1,7 +1,7 @@
 import {env} from 'cloudflare:workers';
 import {getChatGPTUser,type ChatGPTUser} from '@/app/chatgpt-auth';
 import {assistantIdentity} from './assistant-context';
-import {importInput,reservationInput,type ReservationData} from './contracts';
+import {importInput,reservationInput,manualReservationInput,type ReservationData} from './contracts';
 export class AppError extends Error{constructor(public status:number,message:string){super(message)}}
 export function database(){if(!env.DB)throw new AppError(503,'Armazenamento indisponível. Tente novamente.');return env.DB;}
 export function bucket(){if(!env.BUCKET)throw new AppError(503,'Comprovantes indisponíveis. Tente novamente.');return env.BUCKET;}
@@ -92,7 +92,7 @@ async function persistBundle(tripId:string,id:string,bundle:ImportBundle,existin
   statements.push(db.prepare('INSERT INTO reservation_changes (id,reservation_id,data,changed_at,action) SELECT ?,id,data,?,? FROM reservations WHERE id=? AND fingerprint=?'+reviewGuard).bind(crypto.randomUUID(),now,manual?'manual':bundle.change?.action??'update',id,existing.fingerprint,...reviewArgs));
   statements.push(db.prepare('UPDATE reservations SET kind=?,title=?,start_date=?,end_date=?,data=?,fingerprint=?,status=?,updated_at=?,manual_override=? WHERE id=? AND fingerprint=?'+reviewGuard).bind(r.kind,r.title,r.startDate,r.endDate,data,fingerprint,status,now,manual?1:0,id,existing.fingerprint,...reviewArgs));
  }else if(!existing){
-  statements.push(db.prepare('INSERT INTO reservations (id,trip_id,source_key,kind,title,start_date,end_date,data,fingerprint,imported_at,status) SELECT ?,?,?,?,?,?,?,?,?,?,? WHERE 1=1'+reviewGuard+' ON CONFLICT(id) DO NOTHING').bind(id,tripId,r.sourceKey,r.kind,r.title,r.startDate,r.endDate,data,fingerprint,now,status,...reviewArgs));
+  statements.push(db.prepare('INSERT INTO reservations (id,trip_id,source_key,kind,title,start_date,end_date,data,fingerprint,imported_at,status,manual_override) SELECT ?,?,?,?,?,?,?,?,?,?,?,? WHERE 1=1'+reviewGuard+' ON CONFLICT(id) DO NOTHING').bind(id,tripId,r.sourceKey,r.kind,r.title,r.startDate,r.endDate,data,fingerprint,now,status,manual?1:0,...reviewArgs));
  }
  for(const f of files)statements.push(db.prepare('INSERT INTO documents (id,reservation_id,object_key,filename,mime,label,bytes,sha256) SELECT ?,?,?,?,?,?,?,? WHERE EXISTS (SELECT 1 FROM reservations WHERE id=? AND fingerprint=?)'+reviewGuard+' ON CONFLICT(reservation_id,sha256) DO NOTHING').bind(f.id,id,f.key,f.filename,f.mime,f.label,f.bytes.length,f.hash,id,fingerprint,...reviewArgs));
  if(reviewId)statements.push(db.prepare("UPDATE reviews SET status='accepted' WHERE id=? AND status='pending' AND EXISTS (SELECT 1 FROM reservations WHERE id=? AND fingerprint=?)").bind(reviewId,id,fingerprint));
@@ -118,6 +118,13 @@ export async function importReservation(tripId:string,user:ChatGPTUser,input:unk
   ||(existing&&existing.fingerprint!==desired&&(!bundle.change||bundle.change.baseFingerprint!==existing.fingerprint)?'A reserva já existe com outra versão. Compare antes de substituir.':null);
  if(reason)return queueReview(tripId,id,bundle,reason,existing?.fingerprint??null);
  try{return await persistBundle(tripId,id,bundle,existing);}catch(e){if(e instanceof AppError&&e.status===409)return queueReview(tripId,id,bundle,'A reserva mudou durante a importação. Confira as duas versões.',existing?.fingerprint??null);throw e;}
+}
+export async function createManualReservation(tripId:string,user:ChatGPTUser,input:unknown){
+ const trip=await access(tripId,user,true),parsed=manualReservationInput.parse(input),r=reservationInput.parse({...parsed.reservation,sourceKey:'manual:'+parsed.requestId,sources:[{provider:'manual',entryId:parsed.requestId,subject:'Cadastro manual'}]});
+ if(r.startDate<trip.start_date||r.endDate>trip.end_date)throw new AppError(422,'Escolha datas dentro do período da viagem.');
+ const id=await digest(tripId+'\n'+r.sourceKey),existing=await database().prepare('SELECT fingerprint,data,status,manual_override FROM reservations WHERE id=?').bind(id).first<StoredReservation>();
+ if(existing&&(existing.status!=='active'||existing.fingerprint!==await digest(JSON.stringify(r))))throw new AppError(409,'Este cadastro já foi salvo com outros dados. Atualize a programação antes de editar.');
+ return persistBundle(tripId,id,{version:1,reservation:r,documents:[]},existing,undefined,true);
 }
 export async function editReservation(tripId:string,id:string,user:ChatGPTUser,base:string,input:unknown){
  const trip=await access(tripId,user,true),r=reservationInput.parse(input),db=database();

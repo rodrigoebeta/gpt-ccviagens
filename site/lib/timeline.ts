@@ -1,4 +1,5 @@
 import type {Place,Reservation} from './contracts';
+import {reservationLabels} from './reservation-kinds';
 export const orderedPlaces=(places:Place[],day:string,ids:string[]=[])=>{
  const ranks=new Map(ids.map((id,i)=>[id,i]));
  return places.filter(p=>p.date===day).sort((a,b)=>(ranks.get(a.id)??Infinity)-(ranks.get(b.id)??Infinity)||(a.time??'99').localeCompare(b.time??'99')||a.position-b.position||a.id.localeCompare(b.id));
@@ -12,9 +13,9 @@ export function dayTimeline(reservations:Reservation[],places:Place[],day:string
    if(r.startDate===day)events.push({id:r.id+'-in',time:r.startTime,label:'Check-in',reservation:r,order:0});
    if(r.endDate===day)events.push({id:r.id+'-out',time:r.endTime,label:'Check-out',reservation:r,order:0});
   }else{
-   const label=r.kind==='train'?'Trem':r.kind==='flight'?'Voo':r.kind==='bus'?'Ônibus':'Atividade';
-   if(r.startDate===day)events.push({id:r.id+'-start',time:r.startTime,label,reservation:r,order:0});
-   if(r.endDate===day&&r.endDate!==r.startDate)events.push({id:r.id+'-end',time:r.endTime,label:'Chegada / fim · '+label,reservation:r,order:0});
+   const label=reservationLabels[r.kind];
+   if(r.startDate===day)events.push({id:r.id+'-start',time:r.startTime,label:r.kind==='car'?'Retirada · '+label:label,reservation:r,order:0});
+   if(r.endDate===day&&r.endDate!==r.startDate)events.push({id:r.id+'-end',time:r.endTime,label:(r.kind==='car'?'Devolução':r.kind==='activity'?'Fim':'Chegada')+' · '+label,reservation:r,order:0});
   }
  }
  orderedPlaces(places,day).forEach((p,i)=>events.push({id:p.id,time:p.time??undefined,label:'Lugar',place:p,number:i+1,order:p.position}));

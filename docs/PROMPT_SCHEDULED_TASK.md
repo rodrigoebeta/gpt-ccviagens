@@ -55,7 +55,7 @@ Cada POST contém uma reserva e seus documentos, como objeto JSON estrito com `v
 
 Campos de `reservation`:
 
-- Obrigatórios: `sourceKey` (chave estável da mesma reserva, 1–300 caracteres), `kind` (`train`, `flight`, `bus`, `hotel` ou `activity`), `title` (1–300), `startDate` e `endDate` (`YYYY-MM-DD`, datas reais, início não posterior ao fim) e `sources` (1–50 fontes).
+- Obrigatórios: `sourceKey` (chave estável da mesma reserva, 1–300 caracteres), `kind` (`train`, `flight`, `bus`, `car`, `transfer`, `ferry`, `hotel` ou `activity`), `title` (1–300), `startDate` e `endDate` (`YYYY-MM-DD`, datas reais, início não posterior ao fim) e `sources` (1–50 fontes).
 - Opcionais: `startTime`/`endTime` (`HH:mm`), `timezone`/`endTimezone` (até 100 caracteres), `location`/`destination` (até 1.000), `confirmation` (até 200), `travelers` (até 30 nomes de 1–300), `notes` (até 12.000). Não invente horários, códigos, pessoas ou fusos ausentes.
 - Cada fonte tem `subject` (1–300) e um formato: Gmail usa `provider: "gmail"` + `messageId` real hexadecimal minúsculo de 10–40 caracteres; arquivo usa `provider: "file"` + `filename` (1–300) + `sha256` dos bytes originais (64 hex minúsculos); outros apps usam `provider: "external"` + `system` (1–300) + `reference` real (1–2.000). Não transforme IDs de outros provedores em messageId Gmail.
 

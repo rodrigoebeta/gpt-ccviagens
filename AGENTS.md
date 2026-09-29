@@ -8,6 +8,12 @@ Leia README.md, CONFIGURAR_NO_WORK.md e GUIA_DO_PRODUTO.md; depois siga ONBOARDI
 
 ## Condução
 
+- Trem/ônibus: usar `transit.number`, `originStation`, `originCity`, `destinationStation` e `destinationCity`, todos opcionais e baseados em evidência. Preservar grafia e zeros; serviço não é localizador/ticket. Nome/cidade são independentes de endereço/ponto; não extrair por adivinhação do título. Manter compatibilidade com reservas sem transit e conferir cadastro, edição, importação, assistant/sync e respectivas capacidades/guias.
+
+- Onboarding PWA: O assistente deve avisar no onboarding, após o primeiro login: instale a Central no celular como PWA para abri-la como aplicativo; ela funciona offline para consultar viagens e comprovantes já carregados nesse aparelho. Ensine a instalação e o preparo, não apenas entregue um link. A pessoa pode adiar a prática; a explicação é obrigatória. Registre separadamente instalação, preparo e teste em modo avião.
+
+- PWA/offline: preservar manifesto com credenciais, ícones e worker da build. Consultar apenas dados/comprovantes já carregados no aparelho; não armazenar autenticação, segredos, APIs do assistente/sync ou administração. Não oferecer edição/fila de envio offline nem mapas para download. Limpar cópias pessoais ao sair/trocar de conta e nunca substituir recusas de acesso por cache. Revogação remota depende de reconexão. Ensinar preparo e teste real em modo avião conforme docs/PWA.md; não declarar instalação no telefone a partir apenas de testes locais.
+
 - Quando houver uma alteração de layout solicitada, aplicar Impeccable Layout e depois Distill, incluindo estados preenchidos, expandidos e de erro afetados. Hooks e detector complementam a avaliação estrutural e a conferência no navegador; não a substituem. Preservar o visual entregue; a instalação comum não exige redesign.
 
 - Faça o trabalho autorizado ao seu alcance. Não delegue comandos técnicos à pessoa. Oriente cada ação manual no momento certo, com motivo, local, passos, resultado esperado e próxima ação.

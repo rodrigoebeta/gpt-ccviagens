@@ -1,0 +1,9 @@
+.offline-notice{display:flex;align-items:flex-start;gap:12px;padding:16px;margin-bottom:24px;background:var(--soft);border-radius:12px;color:var(--ink)}
+.offline-notice>svg{width:20px;height:20px;flex:none;margin-top:2px}
+.offline-notice>div{min-width:0}
+.offline-notice strong{font-size:14px;font-weight:650}
+.offline-notice p{margin:4px 0 0;font-size:14px;line-height:1.5;color:var(--muted)}
+.offline-notice a{display:inline-flex;align-items:center;min-height:44px;margin-top:4px}
+.pwa-install{display:inline-flex;gap:8px;align-items:center;min-height:44px}
+.pwa-install svg{width:16px;height:16px}
+.pwa-storage-note{font-size:13px;line-height:1.5;color:var(--muted);max-width:65ch}

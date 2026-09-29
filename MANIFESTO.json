@@ -1,5 +1,5 @@
 {
-  "version": "0.2.5",
+  "version": "0.3.1",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -14,8 +14,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 16162,
-      "sha256": "1fcb2fbd5d0e07fd263290224b48bedbb79ce3d89da05807e986713873251a04"
+      "bytes": 17630,
+      "sha256": "74ba496a77f7e144fe4479743643c562f94bf24e613d819236796001efcbca8f"
     },
     {
       "path": "COMECE_AQUI.md",
@@ -34,8 +34,8 @@
     },
     {
       "path": "docs/API_ASSISTENTE.md",
-      "bytes": 15627,
-      "sha256": "f0d2afb6dd653fa21235c5ff977bd0f6ae1c12128148d34f6b7210a1cbc3ee82"
+      "bytes": 17766,
+      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
     },
     {
       "path": "docs/ATUALIZACOES.md",
@@ -44,28 +44,33 @@
     },
     {
       "path": "docs/IMPORTACAO.md",
-      "bytes": 22031,
-      "sha256": "57474b8756d80daae3e6b33c08f394e3d53dccb1195a95d0a1dd710994a02400"
+      "bytes": 24154,
+      "sha256": "c3d38bb0c446b0440e3964c65fe77161ee86cd11b94436841382f5bcbcf87229"
     },
     {
       "path": "docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 17848,
-      "sha256": "b977a7a16940f6fa0c53b8e28f2e816a1b72d88c96a32270791dd4eb17379165"
+      "bytes": 18404,
+      "sha256": "093ddae68179b314b2f8980fbf1a8b778c60e43b156c5e3ba97420317908f898"
     },
     {
       "path": "docs/PROMPT_WORK_API.md",
-      "bytes": 3553,
-      "sha256": "20016e82a8c258a396c0ecbaf87e598764f3692052e4e3b50de391f3ea12580a"
+      "bytes": 4087,
+      "sha256": "244c7cef586f52e49f0dc3a2a4279a1d356b1456a47f2d13dcf1988ae575b66f"
+    },
+    {
+      "path": "docs/PWA.md",
+      "bytes": 5365,
+      "sha256": "3f9a649d1cf351327a1fd20561ade8e4129ac2898c0eaf869de810786ddd3882"
     },
     {
       "path": "docs/SINCRONIZACAO.md",
-      "bytes": 20252,
-      "sha256": "512f0fe03d307e1599d5c1bf33864c23cef69ef22a3a5cc2f7f57ad9ce800c9c"
+      "bytes": 20689,
+      "sha256": "e27a39827001f0caa53e0bde2123bc0c3c45e993718f509d5ebafefb81bba303"
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 34695,
-      "sha256": "5dcd18b0e4eb44ad8f666c8a0b9459e89edc64cdce24aa53d6da2deeedd0bfba"
+      "bytes": 36236,
+      "sha256": "d6841a6e61c43ff75c2b551ead7e90962aed15b4dcc7c502585da9192ac74f3a"
     },
     {
       "path": "LICENSE.md",
@@ -74,23 +79,23 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 26073,
-      "sha256": "403255779ddd6da824e72296032e5b358be9e4490f9c5538773304c7d868b0d6"
+      "bytes": 28528,
+      "sha256": "d21d7606122c6312a0df24e1035a25dae437e0020dadd2db733d1d70057875cb"
     },
     {
       "path": "PRIVACIDADE.md",
-      "bytes": 6586,
-      "sha256": "91eae421cc4ffc55884a8dd8215a58a43b843207c9190d131164e25706066249"
+      "bytes": 7280,
+      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
     },
     {
       "path": "README.md",
-      "bytes": 5726,
-      "sha256": "035f6741bf66ff02cc27937f985af6d7b4554415c1033221c68ab930fe82be02"
+      "bytes": 6380,
+      "sha256": "4ad86ce7031fdf23c70722e5f86798515e5ab8aa4933b5a0a8361867dc3e24bc"
     },
     {
       "path": "release.json",
-      "bytes": 424,
-      "sha256": "2884306e35d6e1e952422b832553b7099bad21042c44872878545f8a1f745c92"
+      "bytes": 576,
+      "sha256": "a7d9d41be455fa0652fd06f3fc218c2b01409e25befc34b3ec52b3c49c30cff2"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -274,13 +279,13 @@
     },
     {
       "path": "site/app/day-map.tsx",
-      "bytes": 4791,
-      "sha256": "c1b16b2e0190abc95fc1c281dfa0d7704e99a8fa81e72557fc30bde9825c398b"
+      "bytes": 4933,
+      "sha256": "6c7d56e2ad6bfb0ebbccc42fe97b6b79245c2baaafd44b5b37b5f1612890856d"
     },
     {
       "path": "site/app/day-timeline.tsx",
-      "bytes": 11159,
-      "sha256": "ae65229df8910245f351ac2b876d183df8377d5afb168d5e93774c19f872c69c"
+      "bytes": 11304,
+      "sha256": "4a88a00656aaf60d28a223786a1cc5f838ab1aec855e8446ba9d5148e9ea5071"
     },
     {
       "path": "site/app/destination-picker.tsx",
@@ -294,8 +299,8 @@
     },
     {
       "path": "site/app/document-viewer.tsx",
-      "bytes": 11194,
-      "sha256": "0891a01f89fc971cde968c02a57c0bfe3de809727b8cef44d8b70684fa3cbe1d"
+      "bytes": 11313,
+      "sha256": "ad93f678f2571ffad0eaa1d9760240b7bec2c4628c4172ceee0e7e85a1940406"
     },
     {
       "path": "site/app/flight-fields.tsx",
@@ -314,13 +319,13 @@
     },
     {
       "path": "site/app/home-cover.tsx",
-      "bytes": 1823,
-      "sha256": "276376c9712c2d37cd6937855021168a3364f927328078b75f15f11e9b1dcf3a"
+      "bytes": 1896,
+      "sha256": "083198e25fa3d93d6b3972abe962ed6ba8e1d397df4df1be0092cc5a7768c510"
     },
     {
       "path": "site/app/installation-client.tsx",
-      "bytes": 4087,
-      "sha256": "94d7baaa4d4c0542d972f34135a697ca3fe0ce016cd098a7cc18bfc6ff1ebf6c"
+      "bytes": 4187,
+      "sha256": "4aa538c723d398a4ec89659ed48802679d96da1a52c3e04c5df4e908a57affaf"
     },
     {
       "path": "site/app/installation.css",
@@ -329,8 +334,8 @@
     },
     {
       "path": "site/app/layout.tsx",
-      "bytes": 1096,
-      "sha256": "ba345f1747609b620643a2be9b6274050a04d69d7f39d4efc0285885a62ded86"
+      "bytes": 1160,
+      "sha256": "5b651f76f4da644807aba9281618c030ba6f89963db2f484adad6c332f1f78fd"
     },
     {
       "path": "site/app/notice-toast.tsx",
@@ -339,13 +344,13 @@
     },
     {
       "path": "site/app/page.tsx",
-      "bytes": 870,
-      "sha256": "696fa204ee619602b2f4f69742cba200baf9600acf3ba329e6760d39028bf81a"
+      "bytes": 1167,
+      "sha256": "a15bf31f50c34a87a1b25d0a5da309af5d8c6a6f993f8dad9f30938146cee309"
     },
     {
       "path": "site/app/pending-hub.tsx",
-      "bytes": 3366,
-      "sha256": "9afb4c8b65a00a64bd6749c5d0f6d108ecbf8d379495e9ef05282140e4e95349"
+      "bytes": 3484,
+      "sha256": "52e0801dd1d5864ad70cc313935f43be251455b8599af7546385faa76c158b52"
     },
     {
       "path": "site/app/place-address.tsx",
@@ -364,8 +369,18 @@
     },
     {
       "path": "site/app/planning-workspace.tsx",
-      "bytes": 40850,
-      "sha256": "19e3ed6cda827a8917576fd70f9ea6c94851a0efd8c181c5695cba227e80bdf4"
+      "bytes": 40924,
+      "sha256": "7abdeaab146704d5d44495a54eb9e37213c867edc54cbd991db766ba07441ccf"
+    },
+    {
+      "path": "site/app/pwa-client.tsx",
+      "bytes": 5320,
+      "sha256": "23f9403ca41405f6be5802a360cf072f04d85de85c015a7e0982f34279695e27"
+    },
+    {
+      "path": "site/app/pwa.css",
+      "bytes": 685,
+      "sha256": "dc6f3bbec435cbe729b4a79e5551cee2eef42d7a719174fda8a1f7b8268c00c4"
     },
     {
       "path": "site/app/reservation-address.tsx",
@@ -379,8 +394,8 @@
     },
     {
       "path": "site/app/reservation-editor.tsx",
-      "bytes": 11991,
-      "sha256": "bd0aee80e9d6ec204fba0ba36b63c6300d790a229607b1bb0575f38b68dfeaac"
+      "bytes": 12874,
+      "sha256": "c755379de9b821016cc6d3c781cf94d86ba9b828f7dd705fe64eb2fb9d22fc9a"
     },
     {
       "path": "site/app/reservation-icon.tsx",
@@ -398,9 +413,24 @@
       "sha256": "3ad44b6610641a436aa0ad986289ae5259a48be11604861e22d8beb92f15cad2"
     },
     {
+      "path": "site/app/transit-fields.tsx",
+      "bytes": 745,
+      "sha256": "5a87897167934440fd40093588a6b5d31c55be7e8fb9e29c84e1390df96a63b6"
+    },
+    {
+      "path": "site/app/transit-summary.tsx",
+      "bytes": 1192,
+      "sha256": "873f5f7846adcbc608c5c5db0eddcfe14e7f832d1c3d6eb89c662aa33620b157"
+    },
+    {
+      "path": "site/app/transit.css",
+      "bytes": 1092,
+      "sha256": "aceee246585a46033f8e6606d110a73b39793e156b4181c2a000a8a393b49a73"
+    },
+    {
       "path": "site/app/travel-app.tsx",
-      "bytes": 37577,
-      "sha256": "5f339036f850ce4042ce8b4ab2f3d38ca0297b2d33d99a2dcdc0bd888d589cc3"
+      "bytes": 38463,
+      "sha256": "c8f54f05c7ee523b2c86361359c87385cb6295d727539f06128911b40f322b55"
     },
     {
       "path": "site/app/trip-date-picker.tsx",
@@ -424,8 +454,18 @@
     },
     {
       "path": "site/app/use-reservation-locations.ts",
-      "bytes": 1936,
-      "sha256": "e62ff6c94836ff91eeacdeae58696529601ff2858e4381d0272d72f6b006aa7b"
+      "bytes": 2073,
+      "sha256": "caaa97f003d616acd79213f11c4f7748d95dadc798838c54c61823310ff0a76c"
+    },
+    {
+      "path": "site/build/pwa-plugin.ts",
+      "bytes": 1699,
+      "sha256": "dd420dcace5d3a670d733914c4ba2f49bf7e8df1629aabdab864a289a6190928"
+    },
+    {
+      "path": "site/build/service-worker.js",
+      "bytes": 15355,
+      "sha256": "644d83ffec974c54280b40ef985181d9363f2dc775b478303672088870b63161"
     },
     {
       "path": "site/build/sites-vite-plugin.LICENSE",
@@ -934,8 +974,8 @@
     },
     {
       "path": "site/lib/contracts.ts",
-      "bytes": 6483,
-      "sha256": "14e13f0989848b6ddbf7db16319134d2709dff32fb80ebca91e8795dd5f2e4c4"
+      "bytes": 7114,
+      "sha256": "d5b7adfcee263f2763b7270a836c06ec785d6b7ff618dfbae20b28a62db25b2b"
     },
     {
       "path": "site/lib/date-time-fields.ts",
@@ -945,7 +985,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 494,
-      "sha256": "87270668c58ec454e8e918ce28a70a0f70ed51dfdefc1312847c989711e02e41"
+      "sha256": "4c45dd1238ba6e32f8c4dcb5f8f6b4f6c3421b4a481711d6116299ec15c0aa36"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -969,8 +1009,8 @@
     },
     {
       "path": "site/lib/import-contract.ts",
-      "bytes": 5493,
-      "sha256": "8cbbe600d61cecd2444d6d69be90a2a979d3cf0f9211f8a7ba0dcd90a31cd240"
+      "bytes": 6558,
+      "sha256": "025ddd58be896e9b7864110af7bc8203c69a5358258d01a191be75049d5bff64"
     },
     {
       "path": "site/lib/installation-contract.ts",
@@ -1066,6 +1106,11 @@
       "path": "site/lib/timezone-options.ts",
       "bytes": 2264,
       "sha256": "21abd4df08d2f8b03f80b77a9b4cc8b3aa33e149c52c8ce75a732ea666863bbb"
+    },
+    {
+      "path": "site/lib/transit-details.ts",
+      "bytes": 780,
+      "sha256": "9e3e01f0b663c15dbd8891d843e1a3971569b1a68eae59a30e45fa6b7665aa10"
     },
     {
       "path": "site/lib/utils.ts",
@@ -2264,8 +2309,8 @@
     },
     {
       "path": "site/vite.config.ts",
-      "bytes": 2240,
-      "sha256": "4b9d8a6b14fd155328847bc6cd063c6bf44c58c64de8d46911cdf0ede611e367"
+      "bytes": 2295,
+      "sha256": "436983c587836dd1a0a5efc47cd364b182ca686c60e2b8e9b3cb33e5025de8dc"
     }
   ]
 }

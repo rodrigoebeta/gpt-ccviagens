@@ -10,7 +10,6 @@ export const metadata: Metadata = {
     "codex-preview": "development",
     "application-origin": "puko-central",
   },
-  manifest: "/manifest.webmanifest",
   appleWebApp: { capable: true, title: "Viagens", statusBarStyle: "default" },
   icons: {
     icon: [{url:"/favicon.svg?v=12",type:"image/svg+xml"},{url:"/icon-32.png",sizes:"32x32",type:"image/png"}],
@@ -28,6 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head><link rel="manifest" href="/manifest.webmanifest" crossOrigin="use-credentials"/></head>
       <body className="antialiased puko-central" data-puko="central">{children}</body>
     </html>
   );

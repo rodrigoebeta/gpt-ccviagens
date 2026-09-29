@@ -37,3 +37,7 @@ A consulta da última versão é uma operação separada da recepção de ativid
 Uma falha temporária no envio não impede o uso da Central. O serviço não contém comando de bloqueio remoto. Instalações que removam ou bloqueiem o mecanismo podem não aparecer nas métricas; os números não representam uma contagem certificada de todas as cópias existentes.
 
 
+
+## Cópias locais para consulta offline
+
+O navegador pode armazenar neste aparelho consultas de viagens, reservas, listas, localizações, capas/fotos próprias e comprovantes abertos, além dos arquivos que executam o aplicativo. Essas cópias permitem consulta offline e não são enviadas à telemetria. Não incluem credenciais de automação. Sair da conta ou detectar troca de conta remove as cópias pessoais; uma revogação feita em outro aparelho só pode ser detectada com conexão. O armazenamento do navegador não é um cofre criptografado e pode ser removido por falta de espaço ou limpeza. Em aparelho compartilhado, saia da conta e remova os dados do site. Veja docs/PWA.md.

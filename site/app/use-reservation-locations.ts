@@ -1,7 +1,9 @@
 'use client';
+import {usePwa} from './pwa-client';
 import {useEffect,useState} from 'react';
 import type {LocationState} from '@/lib/reservation-map';
 export function useReservationLocations(tripId:string,refreshKey:number){
+ const {offline}=usePwa();
  const [locations,setLocations]=useState<LocationState[]>([]),[error,setError]=useState(''),[busy,setBusy]=useState(false),[reload,setReload]=useState(0);
  useEffect(()=>{
   const controller=new AbortController();let active=true;let timer:ReturnType<typeof setTimeout>|undefined;
@@ -10,11 +12,11 @@ export function useReservationLocations(tripId:string,refreshKey:number){
   async function step(){try{
    let rows=await read();if(!active)return;setLocations(rows);
    const pending=rows.find(r=>r.status==='pending');
-   if(pending){rows=await read({key:pending.key});if(!active)return;setLocations(rows);}
-   if(rows.some(r=>r.status==='pending'||r.status==='processing'))timer=setTimeout(step,2200);
+   if(pending&&!offline&&navigator.onLine){rows=await read({key:pending.key});if(!active)return;setLocations(rows);}
+   if(!offline&&navigator.onLine&&rows.some(r=>r.status==='pending'||r.status==='processing'))timer=setTimeout(step,2200);
   }catch(e){if(active)setError((e as Error).message);}}
   void step();return()=>{active=false;controller.abort();if(timer)clearTimeout(timer);};
- },[tripId,refreshKey,reload]);
- async function retry(key:string){if(busy)return;setBusy(true);setError('');try{const r=await fetch('/api/trips/'+tripId+'/locations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,retry:true})});const data=await r.json() as {error?:string};if(!r.ok)throw Error(data.error||'Não foi possível tentar novamente.');setReload(n=>n+1);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
+ },[tripId,refreshKey,reload,offline]);
+ async function retry(key:string){if(busy||offline)return;setBusy(true);setError('');try{const r=await fetch('/api/trips/'+tripId+'/locations',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key,retry:true})});const data=await r.json() as {error?:string};if(!r.ok)throw Error(data.error||'Não foi possível tentar novamente.');setReload(n=>n+1);}catch(e){setError((e as Error).message);}finally{setBusy(false);}}
  return {locations,error,busy,retry,refresh:()=>setReload(n=>n+1)};
 }

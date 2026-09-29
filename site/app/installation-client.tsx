@@ -1,4 +1,5 @@
 'use client';
+import {usePwa} from './pwa-client';
 import {useEffect,useRef,useState} from 'react';
 import {RefreshCw,ChevronRight,Copy,Check,X} from 'lucide-react';
 import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
@@ -6,17 +7,18 @@ import {Button} from '@/components/ui/button';
 import {pukoNewerVersion,pukoUpdatePrompt,releaseInput,type CentralRelease} from '@/lib/installation-contract';
 import './installation.css';
 export default function InstallationClient({enabled,canUpdate,version,initialRelease=null}:{enabled:boolean;canUpdate:boolean;version:string;initialRelease?:CentralRelease|null}){
+ const {offline}=usePwa();
  const [release,setRelease]=useState<CentralRelease|null>(initialRelease),[open,setOpen]=useState(false),[copied,setCopied]=useState(false),[copyError,setCopyError]=useState(false),[dismissed,setDismissed]=useState('');
  const text=useRef<HTMLTextAreaElement>(null);
  const [origin,setOrigin]=useState('');
  useEffect(()=>{
-  setOrigin(window.location.origin);if(!enabled)return;
+  setOrigin(window.location.origin);if(!enabled||offline||!navigator.onLine)return;
   let last=0,timer:ReturnType<typeof setTimeout>|undefined,alive=true;
   const discover=async()=>{if(!canUpdate)return;try{const response=await fetch('/api/installation');if(!response.ok)return;const status=await response.json() as {release:unknown};const parsed=releaseInput.safeParse(status.release);if(alive)setRelease(parsed.success?parsed.data:null);}catch{/* No interruption when discovery is unavailable. */}};
   const activity=()=>{if(document.visibilityState!=='visible'||Date.now()-last<3600000)return;last=Date.now();void discover();void fetch('/api/installation',{method:'POST'}).catch(()=>{});timer=setTimeout(()=>void discover(),12000);};
   activity();document.addEventListener('visibilitychange',activity);window.addEventListener('pointerdown',activity,{passive:true});window.addEventListener('keydown',activity);
   return()=>{alive=false;clearTimeout(timer);document.removeEventListener('visibilitychange',activity);window.removeEventListener('pointerdown',activity);window.removeEventListener('keydown',activity);};
- },[enabled,canUpdate]);
+ },[enabled,canUpdate,offline]);
  if(!canUpdate||!release||!pukoNewerVersion(release.version,version)||dismissed===release.version)return null;
  const prompt=pukoUpdatePrompt(origin,release.repository);
  const copy=async()=>{try{await navigator.clipboard.writeText(prompt);setCopied(true);setCopyError(false);}catch{setCopyError(true);text.current?.focus();text.current?.select();}};

@@ -1,5 +1,5 @@
 {
-  "version": "0.2.5",
+  "version": "0.3.1",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Versão 0.2.5. No card de voo, tickets aparecem somente quando há número preenchido e não há localizador. Passageiros ficam sempre visíveis, reunindo nomes da reserva e dos tickets sem duplicatas; ausência é indicada como Não informados. Ver reserva mantém números e associação de cada ticket ao passageiro."
+  "notes": "Versão 0.3.1. PWA com consulta offline das viagens e comprovantes já abertos, orientação de instalação no celular durante o onboarding e campos de serviço, estações/terminais e cidades para trem/ônibus. Cards do roteiro por partida e chegada. Cadastro, edição, importação e APIs do assistente/sync compartilham o novo contrato e preservam reservas antigas. Novos conteúdos e alterações exigem conexão; confira a instalação e o modo avião no telefone."
 }

@@ -39,7 +39,7 @@ export default function DocumentViewer({document:doc,localFile,onClose,returnFoc
    let blob:Blob;
    if(localFile)blob=localFile;
    else{const response=await fetch(url,{signal:controller.signal,credentials:'same-origin',cache:'no-store'});
-    if(!response.ok)throw Error(response.status===401||response.status===403?'Seu acesso a este documento não está disponível. Feche a prévia e entre novamente.':'Não foi possível carregar o arquivo. Tente novamente.');
+    if(!response.ok)throw Error(response.status===401||response.status===403?'Seu acesso a este documento não está disponível. Feche a prévia e entre novamente.':response.status===503?'Não foi possível carregar este documento. Abra-o com internet antes de consultá-lo offline.':'Não foi possível carregar o arquivo. Tente novamente.');
     blob=await response.blob();}
    if(!alive)return;
    if(kind==='pdf'){

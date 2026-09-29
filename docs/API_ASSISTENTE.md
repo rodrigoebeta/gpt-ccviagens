@@ -6,7 +6,7 @@ Para continuar em outra conversa, o instalador preenche e entrega [PROMPT_WORK_A
 
 ## Descoberta e autenticação
 
-Comece por `GET /api/assistant/capabilities`. A resposta contém os caminhos, métodos, contratos e regras da versão instalada. Leia `reservationImportContract` a cada execução: todos os campos aceitos, subcampos de voo/tickets/pontos, limites e regras por categoria. Envie dados disponíveis e comprovados; preserve campos já conhecidos ao atualizar. Não dependa de uma lista de campos memorizada. Não adivinhe endpoints. As rotas abaixo têm prefixo `/api/assistant`, usam JSON em escritas e aceitam o mesmo par de headers:
+Comece por `GET /api/assistant/capabilities`. A resposta contém os caminhos, métodos, contratos e regras da versão instalada. Leia `reservationImportContract` a cada execução: todos os campos aceitos, subcampos de voo/tickets, trem/ônibus e pontos, limites e regras por categoria. Envie dados disponíveis e comprovados; preserve campos já conhecidos ao atualizar. Não dependa de uma lista de campos memorizada. Não adivinhe endpoints. As rotas abaixo têm prefixo `/api/assistant`, usam JSON em escritas e aceitam o mesmo par de headers:
 
 - `OAI-Sites-Authorization: Bearer <token>`
 - `X-Central-Sync-Token: <token>`
@@ -118,3 +118,19 @@ A localização automática de hospedagens usa também endereço completo confor
 ## Aeroportos por código IATA
 
 `GET /api/assistant/airports/{iata}` faz consulta exata no catálogo local OurAirports, sem chamada ao OSM. Retorna `status` (`found`, `not_found` ou `ambiguous`), `airport` (`iata`, `name`, `location`, `sourceUrl`) ou `null`, `provider` e `catalogDate`. Código inválido retorna 400. `location` reúne nome, cidade atendida e país; não é endereço postal validado. Preencha apenas lacunas ou valores ainda derivados do código, preservando endereço, terminal e ponto já confirmados. Código de cidade não substitui IATA de aeroporto. Consulte [IMPORTACAO.md](IMPORTACAO.md) para os campos `flight` e a distinção entre texto e ponto no mapa.
+
+## Trem e ônibus: serviço, estações e cidades
+
+Para `kind: "train"` ou `"bus"`, use o objeto opcional `reservation.transit`:
+
+| Campo | Conteúdo e limite |
+|---|---|
+| `number` | Identificador do serviço, texto de 1–40 caracteres. Preserve letras, espaços e zeros iniciais. |
+| `originStation` / `destinationStation` | Nome da estação ou terminal de partida/chegada, 1–300 caracteres. |
+| `originCity` / `destinationCity` | Cidade de cada etapa, 1–300 caracteres. |
+
+Todos os subcampos são opcionais; omita desconhecidos. Texto vazio, número JSON, campo extra ou `transit` em outra categoria retorna 400. O serviço não substitui `confirmation` e não é bilhete/localizador. Preserve a grafia da fonte; não extraia cidades de partes arbitrárias do endereço. `location`/`destination` continuam sendo endereços/localizações e os pontos OSM continuam em `locationPoint`/`destinationPoint`.
+
+O mesmo contrato atende cadastro manual (`POST /api/assistant/trips/{id}/reservations`, sem sourceKey/sources e com requestId), edição (`PATCH /api/assistant/trips/{id}/reservations/{reservationId}`, Reservation completo e baseFingerprint), importação (`POST /api/assistant/trips/{id}/import`) e sincronização (`POST /api/sync/trips/{id}/import`). As rotas da interface correspondentes em `/api/trips` usam o mesmo schema, com login/CSRF. Leitura de viagens devolve `transit` quando presente; as capacidades do assistente e de sync divulgam `transitFields` e `TransitDetails`. Não há uma rota nova nem ampliação de permissões.
+
+Reservas antigas sem `transit` continuam aceitas sem migração ou preenchimento automático. Para complementar uma reserva, leia sua versão atual, preserve os demais campos e fontes, envie a atualização e releia para conferir cada subcampo. Omitir dados de uma fonte nova não autoriza apagar informações já conhecidas. Atualização por importação mantém `change`/fingerprint e revisão de conflitos; não crie outra sourceKey. O card mostra estações/terminais, cidades abaixo dos nomes e serviço; endereços completos e referência continuam na consulta.

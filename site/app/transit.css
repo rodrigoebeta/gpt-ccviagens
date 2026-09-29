@@ -1,0 +1,14 @@
+.transit-summary{container-type:inline-size}
+.transit-route{display:grid;grid-template-columns:minmax(0,1fr) 20px minmax(0,1fr);align-items:start;gap:16px;margin:16px 0}
+.transit-route>div{min-width:0}
+.transit-route dt,.transit-service dt{font-size:12px;color:var(--muted);margin-bottom:4px}
+.transit-route dd,.transit-service dd{margin:0;overflow-wrap:anywhere}
+.transit-route strong{display:block;font-size:20px;font-weight:600;line-height:1.35}
+.transit-route dd>span{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:4px}
+.transit-route>svg{width:20px;height:20px;color:var(--muted);margin-top:24px}
+.transit-service{margin:0 0 16px}
+.transit-service dd{font-size:14px;font-weight:600}
+.transit-station-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.transit-station-fields label{display:grid;align-content:start;gap:8px;min-width:0}
+@container(max-width:360px){.transit-route{grid-template-columns:minmax(0,1fr)}.transit-route>svg{display:none}}
+@media(max-width:480px){.transit-station-fields{grid-template-columns:minmax(0,1fr)}}

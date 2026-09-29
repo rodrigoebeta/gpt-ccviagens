@@ -118,3 +118,19 @@ Ao complementar uma reserva, preserve campos já conhecidos ausentes na nova fon
 No cadastro/edição de voo, três letras consultam o catálogo local OurAirports e preenchem nome e localização de referência (nome, cidade atendida e país), se vazios. Dados digitados e pontos selecionados são preservados. Ao trocar o código, somente campos ainda iguais ao preenchimento automático daquela edição são substituídos. Código desconhecido/ambíguo ou falha mantém o preenchimento manual disponível.
 
 No uso interativo, o assistente pode consultar `GET /api/assistant/airports/{iata}` e usar `airport.name`, `airport.location`, `sourceUrl` e `catalogDate` como referência, preservando dados confirmados. O catálogo atual não prova endereço histórico, rua, CEP, terminal, fuso ou ponto OSM. A importação conserva os campos enviados; não inventa esses dados a partir do código. A tarefa agendada continua no escopo `/api/sync` e preenche o que as fontes autorizadas comprovam.
+
+## Trem e ônibus: serviço, estações e cidades
+
+Para `kind: "train"` ou `"bus"`, use o objeto opcional `reservation.transit`:
+
+| Campo | Conteúdo e limite |
+|---|---|
+| `number` | Identificador do serviço, texto de 1–40 caracteres. Preserve letras, espaços e zeros iniciais. |
+| `originStation` / `destinationStation` | Nome da estação ou terminal de partida/chegada, 1–300 caracteres. |
+| `originCity` / `destinationCity` | Cidade de cada etapa, 1–300 caracteres. |
+
+Todos os subcampos são opcionais; omita desconhecidos. Texto vazio, número JSON, campo extra ou `transit` em outra categoria retorna 400. O serviço não substitui `confirmation` e não é bilhete/localizador. Preserve a grafia da fonte; não extraia cidades de partes arbitrárias do endereço. `location`/`destination` continuam sendo endereços/localizações e os pontos OSM continuam em `locationPoint`/`destinationPoint`.
+
+O mesmo contrato atende cadastro manual (`POST /api/assistant/trips/{id}/reservations`, sem sourceKey/sources e com requestId), edição (`PATCH /api/assistant/trips/{id}/reservations/{reservationId}`, Reservation completo e baseFingerprint), importação (`POST /api/assistant/trips/{id}/import`) e sincronização (`POST /api/sync/trips/{id}/import`). As rotas da interface correspondentes em `/api/trips` usam o mesmo schema, com login/CSRF. Leitura de viagens devolve `transit` quando presente; as capacidades do assistente e de sync divulgam `transitFields` e `TransitDetails`. Não há uma rota nova nem ampliação de permissões.
+
+Reservas antigas sem `transit` continuam aceitas sem migração ou preenchimento automático. Para complementar uma reserva, leia sua versão atual, preserve os demais campos e fontes, envie a atualização e releia para conferir cada subcampo. Omitir dados de uma fonte nova não autoriza apagar informações já conhecidas. Atualização por importação mantém `change`/fingerprint e revisão de conflitos; não crie outra sourceKey. O card mostra estações/terminais, cidades abaixo dos nomes e serviço; endereços completos e referência continuam na consulta.

@@ -1,4 +1,5 @@
 'use client';
+import {usePwa} from './pwa-client';
 import NoticeToast from './notice-toast';
 import {useEffect,useRef,useState,type FormEvent,type ReactNode} from 'react';
 import {ArrowRight,ArrowUpRight,CalendarPlus,Check,ChevronRight,FolderPlus,LoaderCircle,Map,MapPin,Pencil,Plus,RefreshCw,Trash2} from 'lucide-react';
@@ -31,7 +32,8 @@ async function request(path:string,body?:unknown,method=body?'POST':'GET'){
 function placeData(p:Place):PlaceData{const {id,position,revision,photo,...data}=p;void id;void position;void revision;void photo;return data;}
 export type DayPlanningControls={toolbar:ReactNode;map:ReactNode;lists:ReactNode;draggingPlace:boolean;daily:Place[];busy:boolean;onEdit:(p:Place)=>void;onPhoto:(p:Place)=>void;onVisited:(p:Place)=>void;onRemove:(p:Place)=>void;onUnschedule:(p:Place)=>void;order:ReturnType<typeof useDayOrder>;onRefresh:()=>Promise<void>};
 export default function PlanningWorkspace({trip,day,reservations,refreshKey,onChanged,onPlaces,onLoading,onReservation,onAddReservation,renderDay}:{trip:Trip;day:string;reservations:Reservation[];refreshKey:number;onChanged:()=>Promise<void>;onPlaces:(places:Place[])=>void;onLoading:(loading:boolean)=>void;onReservation:(reservation:Reservation)=>void;onAddReservation:()=>void;renderDay:(controls:DayPlanningControls)=>ReactNode}){
- const base='/api/trips/'+trip.id,canEdit=trip.role!=='reader';
+ const {offline}=usePwa();
+ const base='/api/trips/'+trip.id,canEdit=!offline&&trip.role!=='reader';
  const locationState=useReservationLocations(trip.id,refreshKey);
  const order=useDayOrder(trip.id,day,refreshKey);
  const [draggedId,setDraggedId]=useState<string|null>(null),scheduleLock=useRef(false);

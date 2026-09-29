@@ -1,5 +1,6 @@
 'use client';
 import {useEffect,useRef,useState} from 'react';
+import {usePwa} from './pwa-client';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {Hotel,Plane,TrainFront,Bus,Car,Ship,Ticket,CarTaxiFront} from 'lucide-react';
 import type {Place} from '@/lib/contracts';
@@ -7,6 +8,7 @@ import type {MapKind,ReservationMapPoint} from '@/lib/reservation-map';
 const icons={hotel:Hotel,flight:Plane,train:TrainFront,bus:Bus,car:Car,transfer:CarTaxiFront,ferry:Ship,activity:Ticket};
 const labels={hotel:'Hospedagem',flight:'Aeroporto',train:'Estação',bus:'Terminal / parada',car:'Aluguel de carro',transfer:'Transfer',ferry:'Ferry',activity:'Evento / atividade'};
 export default function DayMap({places,points,pending}:{places:Place[];points:ReservationMapPoint[];pending:number}){
+ const {offline}=usePwa();
  const el=useRef<HTMLDivElement>(null),[error,setError]=useState('');
  const signature=JSON.stringify([places.map(p=>[p.id,p.name,p.latitude,p.longitude,p.visited]),points]);
  const locatedPlaces=places.some(p=>!p.visited&&p.latitude!==null&&p.longitude!==null);
@@ -37,7 +39,7 @@ export default function DayMap({places,points,pending}:{places:Place[];points:Re
  },[signature]);
  const kinds=[...new Set(points.map(p=>p.kind))] as MapKind[];
  return <div className="day-map-frame">
-  {pending>0&&<p className="map-note" role="status">Localizando pontos das reservas… {pending} pendente(s).</p>}
+  {pending>0&&<p className="map-note" role="status">{offline?'Localizações pendentes. Reconecte-se para continuar a busca.':`Localizando pontos das reservas… ${pending} pendente(s).`}</p>}
   <div ref={el} className="day-map" aria-label="Mapa dos lugares e reservas do dia"/>
   <div className="map-support">
    {error&&<p className="form-error" role="alert">{error}</p>}

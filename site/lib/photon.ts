@@ -3,7 +3,7 @@ import {photonResults,type GeoPoint,type GeoResult} from './geography';
 type Options={areas?:boolean;stations?:boolean;bias?:GeoPoint;waitForGate?:boolean};
 export async function searchPhoton(query:string,options:Options={}):Promise<GeoResult[]>{
  const db=database(),now=Date.now(),normalized=query.trim().toLowerCase();
- const spec=JSON.stringify({v:3,q:normalized,areas:!!options.areas,stations:!!options.stations,bias:options.bias?[options.bias.latitude.toFixed(3),options.bias.longitude.toFixed(3)]:null});
+ const spec=JSON.stringify({v:4,q:normalized,areas:!!options.areas,stations:!!options.stations,bias:options.bias?[options.bias.latitude.toFixed(3),options.bias.longitude.toFixed(3)]:null});
  const key=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(spec)))).map(v=>v.toString(16).padStart(2,'0')).join('');
  const hit=await db.prepare('SELECT data FROM place_search_cache WHERE query_hash=? AND expires_at>?').bind(key,now).first<{data:string}>();if(hit)return JSON.parse(hit.data);
  await db.prepare("INSERT INTO integration_settings (name,instance_id,next_request_at) VALUES ('photon',?,0) ON CONFLICT(name) DO NOTHING").bind(crypto.randomUUID()).run();

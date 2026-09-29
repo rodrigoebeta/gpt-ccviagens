@@ -14,7 +14,7 @@ Registre por etapa: apresentado, praticado, verificado, prática adiada ou bloqu
 
 ## 1. Entrar e entender o compartilhamento
 
-Entregue a URL confirmada pelo Sites, guie o login oficial e apresente Viagens, Programação e Documentos da Viagem. Question: **SIM, abri minha Central** / **Preciso de ajuda para entrar**. Se falhar, confira URL e sessão antes de alterar configurações.
+Entregue a URL confirmada pelo Sites, guie o login oficial e apresente Viagens, Programação e Reservas da Viagem. Question: **SIM, abri minha Central** / **Preciso de ajuda para entrar**. Se falhar, confira URL e sessão antes de alterar configurações.
 
 Antes de encerrar o turno de instalação, explique as duas permissões:
 
@@ -55,11 +55,11 @@ Sem resultados ou reservas, registre prática adiada e continue. Não termine o 
 
 Apresente **Programação → Adicionar reserva**, ao lado de Adicionar lugar: Hospedagem, Transporte (voo, trem, ônibus, aluguel de carro, transfer, ferry) e Evento ou atividade. Não exige comprovante; o registro identifica cadastro manual. Hospedagem usa nome do hotel, endereço, check-in/check-out e um único fuso; carro usa retirada/devolução. Referência, viajantes e anotações são opcionais. Não crie um registro só para demonstrar; pratique se houver uma reserva real que a pessoa queira cadastrar.
 
-Mostre a busca do endereço dentro do formulário: pesquisar nome/cidade, conferir unidade e selecionar um resultado preenche endereço e ponto; no hotel, também o nome. Prefira grafias originais. Digitar sem selecionar continua permitido e não equivale a ponto confirmado. Mudança no nome do hotel/endereço desfaz a seleção. Confira persistência e mapa quando a prática for autorizada; sem correspondência ou provedor disponível, preserve o formulário e explique a pendência. Evento no mapa usa o local selecionado, não uma dedução pelo título do evento.
+Mostre **Buscar nome ou endereço** dentro do formulário. **Nome da hospedagem** identifica o hotel ou apartamento; **Nome ou endereço** é a consulta ao mapa: nome e cidade, ou rua, número e cidade. Imóveis sem nome comercial também podem ser encontrados. Confira o endereço e use **Usar este local**; a seleção preenche endereço/ponto e preserva o nome já informado. **Alterar local** permite refazer a escolha. Digitar sem selecionar não confirma um ponto; alterar endereço desfaz a seleção, renomear hospedagem não. Na importação, hospedagem não encontrada pelo nome também é pesquisada pelo endereço: só uma correspondência única com rua/número/cidade e sem divergências é aceita. Pendências continuam visíveis quando faltam dados, há ambiguidade ou falha do provedor. Confira persistência/mapa quando autorizado. Evento no mapa usa seleção explícita, não dedução pelo título.
 
 Explique: o Work lê confirmações e comprovantes autorizados, extrai os dados, reúne os documentos e envia à viagem existente. A Central guarda a reserva e os anexos; reimportações reconhecem a mesma reserva. Divergências ficam para conferir, preservando ajustes manuais.
 
-Siga docs/IMPORTACAO.md. **Priorize a API autenticada do assistente**, em `POST /api/assistant/trips/{id}/import`, após configurar a autenticação da própria instalação conforme docs/SINCRONIZACAO.md. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Documentos da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
+Siga docs/IMPORTACAO.md. **Priorize a API autenticada do assistente**, em `POST /api/assistant/trips/{id}/import`, após configurar a autenticação da própria instalação conforme docs/SINCRONIZACAO.md. Confira identidade oficial, viagem, edição e contrato. Não grave diretamente no banco/bucket para contornar a API. Se o chat não tiver transporte autenticado, prepare o arquivo privado e guie **Reservas da Viagem → Importar reserva → selecionar arquivo**, explicando que é a alternativa manual.
 
 Confira datas, passageiros, documentos, recarga e reimportação sem duplicatas. Diferencie salvo, já existente, atualizado e **Para revisar**. Mostre abrir o documento, páginas, zoom, Ajustar, pinça no celular e Baixar (opcional). PDF/imagens/TXT são aceitos; siga o guia para conversões. Sem comprovante, explique sem inventar arquivo.
 
@@ -120,6 +120,8 @@ Guie **Programação → Guardar lugar**: buscar nome/cidade, usar link ou cadas
 
 Selecione o dia e use **Incluir no dia** para programar um lugar. No computador, pode arrastar da lista até **Inserir aqui** na posição desejada; teclado: Espaço, setas, Espaço; Escape cancela. Reordenar não muda horários das reservas. **Remover do roteiro**, quando o local pertence a uma lista, retira a data e preserva local/lista; excluir o lugar é outra ação.
 
+Para vários locais, mostre **Selecionar lugares → marcar itens ou Selecionar todos → Dia do roteiro → Incluir no roteiro**. A data começa no dia aberto. Os locais permanecem na lista; itens já programados mantêm sua data e ficam fora da seleção. Cancelar ou trocar de lista descarta somente a seleção. Em conflito, conferir a lista atualizada antes de repetir; não há inclusão parcial.
+
 Question: **Quero adicionar um local** / **Entendi; praticar depois** / **Preciso de ajuda**. Sem viagem, explique e registre a prática futura. Se praticar, confira lista/dia e persistência; não salve lugares só para demonstrar.
 
 Mostre mapa do dia, números dos lugares, hospedagem durante a estadia e transportes na partida/chegada. Um link sozinho não garante coordenadas. Visitado é compartilhado entre lista/roteiro e retira o ponto do mapa. Explique **Priorizar o contexto do dia**, referência usada e desativação. Busca não garante catálogo completo nem distância por trajeto.
@@ -135,3 +137,11 @@ Fotos/capas e celular são opcionais: Question **Quero experimentar** / **Deixar
 Só declare onboarding apresentado depois das etapas obrigatórias 1 a 6. Entregue URL real, links de compartilhamento, estado da importação e automação (verificada, adiada ou bloqueada), práticas e pendências. Distinga **instalação publicada**, **onboarding apresentado** e **fluxos verificados**. Sem viagem não é possível comprovar persistência/importação, mas é possível explicar todo o uso.
 
 Registre versão, projeto, URL, decisões, evidências, etapas e próxima ação em `.private/HANDOFF.md` e `.private/TASK_PLAN.md`; inclua identificação não secreta da tarefa se existir. Na nuvem, preserve continuidade privada acessível ao projeto. Não guarde credenciais nem conteúdo integral de e-mails. Na troca de chat, forneça briefing preenchido e retome sem reinstalar ou repetir consentimentos.
+
+### Anexar um comprovante manualmente
+
+Abra uma reserva, entre em **Documentos** e use **Adicionar documento**. Aceita PDF ou imagens JPG, PNG, WebP e GIF, até 10 MB por arquivo. Proprietário e editores podem anexar; leitores visualizam. O envio começa ao selecionar o arquivo, mantém o original e informa se já estava anexado. Em falha, confira o formato/tamanho e tente novamente; a reserva e os documentos anteriores são preservados. Abra o arquivo para conferir a prévia e feche para voltar à reserva.
+
+Para reunir tudo em um passo, use **Adicionar reserva → escolha a categoria → Documentos**. Selecione um ou vários arquivos: até 10 MB cada, 20 MB e 20 documentos por cadastro. Clique no nome da pill para conferir e no X para remover da seleção. Os arquivos só são anexados ao salvar a reserva; cancelar descarta o rascunho. Depois, abra **Ver reserva → Documentos** para consultar ou enviar mais. Esse caminho posterior também funciona em reservas importadas automaticamente. O agente apresenta ambas as opções; a conclusão é conferir um arquivo na reserva salva. Se o salvamento falhar, os campos e arquivos continuam no modal para nova tentativa sem duplicação.
+
+Ao editar horários, escolha o fuso no dropdown; o GMT exibido acompanha a data indicada. Hospedagem usa um fuso; transportes podem ter fusos diferentes na partida e chegada.

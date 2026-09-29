@@ -12,7 +12,7 @@ export function reservationMapCandidates(reservations:Booking[],day:string):MapC
  return reservations.flatMap(r=>{
   if(r.status==='cancelled')return [];
   const kind=r.kind as MapKind;
-  const point=(end:'stay'|'start'|'end',label:string,address?:string):MapCandidate=>{const selected=end==='end'?r.destinationPoint:r.locationPoint;return {key:r.id+':'+end,reservationId:r.id,kind,title:r.title,label,address:address?.trim()??'',...(selected&&selected.address===address&&(kind!=='hotel'||selected.name===r.title)?{selectedPoint:selected}:{})};};
+  const point=(end:'stay'|'start'|'end',label:string,address?:string):MapCandidate=>{const selected=end==='end'?r.destinationPoint:r.locationPoint;return {key:r.id+':'+end,reservationId:r.id,kind,title:r.title,label,address:address?.trim()??'',...(selected&&selected.address===address?{selectedPoint:selected}:{})};};
   if(kind==='hotel')return r.startDate<=day&&r.endDate>=day?[point('stay','Hospedagem',r.location)]:[];
   if(kind==='activity')return r.locationPoint&&r.startDate<=day&&r.endDate>=day?[point('stay','Evento / atividade',r.location)]:[];
   return [...(r.startDate===day?[point('start',kind==='car'?'Retirada':'Partida',r.location)]:[]),...(r.endDate===day?[point('end',kind==='car'?'Devolução':'Chegada',r.destination)]:[])];

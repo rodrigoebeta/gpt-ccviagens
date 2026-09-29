@@ -9,7 +9,7 @@ async function snapshot(tripId:string,reservationId?:string){
  const trip=await db.prepare('SELECT destination_locations FROM trips WHERE id=?').bind(tripId).first<{destination_locations:string}>();
  const bias=destinationRefs(trip?.destination_locations)[0];
  const inputs=await Promise.all(rows.results.flatMap(r=>allReservationCandidates([{...JSON.parse(r.data),id:r.id,status:r.status}]).map(async candidate=>{
-  const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify({v:1,candidate,bias})));
+  const bytes=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify({v:candidate.kind==='hotel'&&!candidate.selectedPoint?2:1,candidate,bias})));
   return {candidate,hash:[...new Uint8Array(bytes)].map(b=>b.toString(16).padStart(2,'0')).join(''),fingerprint:r.fingerprint};
  })));
  // Compare the source version inside SQL so an older request cannot reset a newer edit.

@@ -1,5 +1,5 @@
 import {database} from './service';
-import {destinationRefs,unambiguousPoint,stationReference,unambiguousStation,type Anchor,type GeoPoint} from './geography';
+import {destinationRefs,unambiguousPoint,unambiguousAddress,stationReference,unambiguousStation,type Anchor,type GeoPoint} from './geography';
 import {searchPhoton} from './photon';
 import type {ReservationData} from './contracts';
 type Booking=ReservationData;
@@ -19,14 +19,16 @@ export async function searchContext(tripId:string,day?:string){
  const hotel=hotels[0],other=bookings.find(r=>r.kind!=='hotel'&&((r.startDate===day&&r.location)||(r.endDate===day&&r.destination)));
  const address=hotel?.location??(other?.startDate===day?other?.location:other?.destination);
  const selected=hotel?.locationPoint??(other?.startDate===day?other?.locationPoint:other?.destinationPoint);
- if(selected&&selected.address===address&&(!hotel||selected.name===hotel.title)){
+ if(selected&&selected.address===address){
   anchors.push({...selected,label:hotel?.title??selected.name,tier:hotel?0:1});
   return {anchors:anchors.sort((a,b)=>a.tier-b.tier),fallback};
  }
  if(address&&(hotel||!anchors.some(a=>a.tier===1))){
   try{
    const station=!hotel&&other?.kind==='train'?stationReference(address):null;
-   const query=(station?.query??(hotel?hotel.title+' '+address:address)).slice(0,200),results=await searchPhoton(query,{stations:!!station,bias:destinations[0],waitForGate:true}),point=station?unambiguousStation(results,station.name):unambiguousPoint(results,query,hotel?.title);
+   const query=(station?.query??(hotel?hotel.title+' '+address:address)).slice(0,200),results=await searchPhoton(query,{stations:!!station,bias:destinations[0],waitForGate:true});
+   let point=station?unambiguousStation(results,station.name):unambiguousPoint(results,query,hotel?.title);
+   if(!point&&hotel)point=unambiguousAddress(await searchPhoton(address.slice(0,200),{bias:destinations[0],waitForGate:true}),address);
    if(point)anchors.push({...point,label:hotel?hotel.title:station?'Estação '+point.name:address,tier:hotel?0:1});
    else fallback=hotel?'Não foi possível identificar a hospedagem com segurança; usando o roteiro e os destinos disponíveis.':'Não foi possível identificar o local da reserva com segurança; usando os destinos disponíveis, se houver.';
   }catch{fallback=hotel?'Localização da hospedagem indisponível; usando o roteiro e os destinos disponíveis.':'Localização da reserva indisponível; usando os destinos disponíveis, se houver.';}

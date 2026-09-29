@@ -1,7 +1,9 @@
 'use client';
+import NoticeToast from './notice-toast';
 import {useEffect,useRef,useState,type FormEvent,type ReactNode} from 'react';
 import {ArrowRight,ArrowUpRight,CalendarPlus,Check,ChevronRight,FolderPlus,LoaderCircle,Map,MapPin,Pencil,Plus,RefreshCw,Trash2} from 'lucide-react';
 import {Button} from '@/components/ui/button';
+import {Checkbox} from '@/components/ui/checkbox';
 import {Select,SelectContent,SelectItem,SelectTrigger,SelectValue} from '@/components/ui/select';
 import {Dialog,DialogContent,DialogHeader,DialogTitle,DialogDescription} from '@/components/ui/dialog';
 import {DropdownMenu,DropdownMenuContent,DropdownMenuItem,DropdownMenuSeparator,DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
@@ -46,6 +48,11 @@ export default function PlanningWorkspace({trip,day,reservations,refreshKey,onCh
  }}));
  const [places,setPlaces]=useState<Place[]>([]),[lists,setLists]=useState<PlaceList[]>([]),[reviews,setReviews]=useState<Review[]>([]);
  const [listId,setListId]=useState(''),[loading,setLoading]=useState(true),[busy,setBusy]=useState(false),[error,setError]=useState(''),[notice,setNotice]=useState('');
+ const [selecting,setSelecting]=useState(false),[selected,setSelected]=useState<{id:string;revision:number}[]>([]),[selectionDay,setSelectionDay]=useState(day),[selectionError,setSelectionError]=useState('');
+ const selectionTrigger=useRef<HTMLButtonElement|null>(null),selectAll=useRef<HTMLButtonElement|null>(null);
+ useEffect(()=>{setSelecting(false);setSelected([]);setSelectionError('');},[listId,base,canEdit]);
+ useEffect(()=>{setSelected(current=>current.filter(s=>places.some(p=>p.id===s.id&&p.revision===s.revision&&p.listId===listId&&!p.date)));},[places,listId]);
+ useEffect(()=>{if(selecting)selectAll.current?.focus();},[selecting]);
  const [draft,setDraft]=useState<PlaceData|null>(null),[editing,setEditing]=useState<Place|null>(null),[removing,setRemoving]=useState<Place|null>(null);
  const [listEditor,setListEditor]=useState<PlaceList|'new'|null>(null),[listName,setListName]=useState(''),[showMap,setShowMap]=useState(false),[linkNote,setLinkNote]=useState('');
  const listMenuTrigger=useRef<HTMLButtonElement|null>(null),pendingListAction=useRef<(()=>void)|null>(null);
@@ -66,6 +73,22 @@ export default function PlanningWorkspace({trip,day,reservations,refreshKey,onCh
  const draggedEvent=events.find(e=>e.id===draggedId);
  const dragTitle=draggedPlace?.name??draggedEvent?.place?.name??draggedEvent?.reservation?.title;
  const daily=orderedPlaces(places,day,order.ids),visible=places.filter(p=>p.listId===listId),currentList=lists.find(l=>l.id===listId);
+ const eligible=visible.filter(p=>!p.date),selectedIds=new Set(selected.map(p=>p.id));
+ function closeSelection(){setSelecting(false);setSelected([]);setSelectionError('');requestAnimationFrame(()=>{(selectionTrigger.current??document.getElementById('planning-title'))?.focus();});}
+ async function scheduleSelection(e:FormEvent){
+  e.preventDefault();if(!canEdit||busy||scheduleLock.current||!selected.length||!selectionDay)return;
+  scheduleLock.current=true;setBusy(true);setSelectionError('');setNotice('');
+  const count=selected.length,date=selectionDay;
+  try{
+   await request(base+'/places/schedule',{listId,date,places:selected});
+   setNotice(count===1?'Lugar incluído em '+dateLabel(date)+'.':count+' lugares incluídos em '+dateLabel(date)+'.');
+   try{await refresh();}catch{setError('Os lugares foram incluídos. Atualize a página para conferir o roteiro.');}
+   closeSelection();
+  }catch(e){
+   setSelectionError((e as Error).message);
+   try{await refresh();}catch{setSelected([]);setSelectionError('Não foi possível confirmar a inclusão. Atualize a página e confira o roteiro antes de tentar novamente.');}
+  }finally{setBusy(false);scheduleLock.current=false;}
+ }
  function add(toDay=false){editTrigger.current=document.activeElement as HTMLElement;setEntryMode('search');searchEpoch.current++;setSearchBusy(false);setSearchQuery('');setSearchResults([]);setSearchDone(false);setEditing(null);setLinkNote('');setError('');setDraft({name:'',address:'',url:'',date:toDay?day:null,time:null,latitude:null,longitude:null,notes:'',visited:false,listId:toDay?null:(listId||lists[0]?.id||null)});}
  function edit(p:Place){setEntryMode('details');editTrigger.current=document.activeElement as HTMLElement;searchEpoch.current++;setSearchBusy(false);setSearchQuery('');setSearchResults([]);setSearchDone(false);setError('');setEditing(p);setLinkNote('');setDraft(placeData(p));}
  async function save(e:FormEvent){e.preventDefault();if(!draft)return;if(!draft.name.trim()){setError('Informe o nome do lugar.');placeField.current?.focus();return;}if(!draft.date&&!draft.listId){setError('Escolha um dia ou uma lista para guardar o lugar.');return;}if(draft.date&&(draft.date<trip.start_date||draft.date>trip.end_date)){setError('Escolha um dia dentro do período da viagem.');return;}const ok=await run(async()=>{await request(base+'/places',editing?{id:editing.id,revision:editing.revision,place:draft}:draft,editing?'PATCH':'POST');},'Lugar salvo.');if(ok)setDraft(null);}
@@ -96,12 +119,25 @@ export default function PlanningWorkspace({trip,day,reservations,refreshKey,onCh
   if(!review)return;const ok=await run(async()=>{await request(base+'/reviews',{id:review.id,action,baseFingerprint:review.baseFingerprint,...(action==='accept'?{reservation:{...review.reservation,...reviewDates}}:{})});await onChanged();},action==='accept'?'Revisão aplicada.':'Proposta descartada; reserva salva preservada.');if(ok)setReview(null);
  }
  const listsPanel=(<section id="planejamento" className="planning-workspace" aria-labelledby="planning-title">
-  <div className="section-heading"><h2 id="planning-title">Listas de lugares</h2><Button variant="ghost" size="icon" aria-label="Atualizar lugares e revisões" disabled={busy||loading} onClick={()=>run(refresh,'Listas e revisões atualizadas.')}><RefreshCw/></Button></div>
-  <div className="planning-toolbar"><div className="list-picker-row"><Select value={listId} onValueChange={setListId} disabled={loading||!lists.length}><SelectTrigger aria-label="Lista de lugares"><SelectValue placeholder={loading?'Carregando listas…':'Nenhuma lista'}/></SelectTrigger><SelectContent>{lists.map(l=><SelectItem key={l.id} value={l.id}>{l.name}</SelectItem>)}</SelectContent></Select>{canEdit&&<DropdownMenu><DropdownMenuTrigger asChild><Button ref={listMenuTrigger} variant="ghost" size="icon" aria-label="Opções da lista" disabled={busy}><MoreHorizontal/></Button></DropdownMenuTrigger><DropdownMenuContent align="end" onCloseAutoFocus={e=>{if(pendingListAction.current){e.preventDefault();const action=pendingListAction.current;pendingListAction.current=null;listMenuTrigger.current?.focus();action();}}}><DropdownMenuItem disabled={!currentList} onSelect={()=>{pendingListAction.current=()=>{setListEditor(currentList!);setListName(currentList!.name);setError('');};}}><Pencil/>Renomear lista</DropdownMenuItem><DropdownMenuItem onSelect={()=>{pendingListAction.current=()=>{setListEditor('new');setListName('');setError('');};}}><FolderPlus/>Nova lista</DropdownMenuItem></DropdownMenuContent></DropdownMenu>}</div>{canEdit&&<Button variant="outline" className="list-add" disabled={loading||!lists.length} onClick={()=>add()}><Plus/> Guardar lugar</Button>}</div>
-  {canEdit&&visible.some(p=>!p.date)&&<p className="list-drag-hint">Arraste até a posição desejada no roteiro ou use Incluir no dia.</p>}
+  <div className="section-heading"><h2 id="planning-title" tabIndex={-1}>Listas de lugares</h2><Button variant="ghost" size="icon" aria-label="Atualizar lugares e revisões" disabled={busy||loading} onClick={()=>run(refresh,'Listas e revisões atualizadas.')}><RefreshCw/></Button></div>
+  <div className="planning-toolbar"><div className="list-picker-row"><Select value={listId} onValueChange={setListId} disabled={busy||loading||!lists.length}><SelectTrigger aria-label="Lista de lugares"><SelectValue placeholder={loading?'Carregando listas…':'Nenhuma lista'}/></SelectTrigger><SelectContent>{lists.map(l=><SelectItem key={l.id} value={l.id}>{l.name}</SelectItem>)}</SelectContent></Select>{canEdit&&!selecting&&<DropdownMenu><DropdownMenuTrigger asChild><Button ref={listMenuTrigger} variant="ghost" size="icon" aria-label="Opções da lista" disabled={busy}><MoreHorizontal/></Button></DropdownMenuTrigger><DropdownMenuContent align="end" onCloseAutoFocus={e=>{if(pendingListAction.current){e.preventDefault();const action=pendingListAction.current;pendingListAction.current=null;listMenuTrigger.current?.focus();action();}}}><DropdownMenuItem disabled={!currentList} onSelect={()=>{pendingListAction.current=()=>{setListEditor(currentList!);setListName(currentList!.name);setError('');};}}><Pencil/>Renomear lista</DropdownMenuItem><DropdownMenuItem onSelect={()=>{pendingListAction.current=()=>{setListEditor('new');setListName('');setError('');};}}><FolderPlus/>Nova lista</DropdownMenuItem></DropdownMenuContent></DropdownMenu>}</div>{canEdit&&!selecting&&<div className="list-entry-actions"><Button variant="outline" className="list-add" disabled={busy||loading||!lists.length} onClick={()=>add()}><Plus/> Guardar lugar</Button>
+   {!!eligible.length&&<Button ref={selectionTrigger} variant="ghost" className="list-select-action" disabled={busy||loading} onClick={()=>{setSelectionDay(day);setSelected([]);setSelectionError('');setSelecting(true);}}>Selecionar lugares</Button>}
+  </div>}</div>
+  {selecting&&<form className="list-selection-controls" onSubmit={scheduleSelection} aria-label="Incluir lugares no roteiro">
+   <div className="list-selection-heading"><span role="status">{selected.length} {selected.length===1?'selecionado':'selecionados'}</span><Button type="button" variant="ghost" disabled={busy} onClick={closeSelection}>Cancelar seleção</Button></div>
+   <fieldset disabled={busy} className="list-selection-destination form-stack">
+    <DateField label="Dia do roteiro" value={selectionDay} onChange={setSelectionDay} min={trip.start_date} max={trip.end_date} required/>
+    <Button type="submit" disabled={busy||!selected.length||!selectionDay||selected.length>500}>{busy?<LoaderCircle className="spin"/>:<CalendarPlus/>}{busy?'Incluindo…':'Incluir no roteiro'}</Button>
+   </fieldset>
+   {selectionError&&<p role="alert" className="form-error">{selectionError}</p>}
+   {selected.length>500&&<p role="alert" className="form-error">Inclua até 500 lugares por vez.</p>}
+   {visible.some(p=>p.date)&&<p className="list-selection-hint">Lugares já programados mantêm sua data.</p>}
+   <label className="list-select-all"><Checkbox ref={selectAll} disabled={busy||!eligible.length} checked={!!eligible.length&&selected.length===eligible.length?true:selected.length?'indeterminate':false} onCheckedChange={checked=>setSelected(checked===true?eligible.map(p=>({id:p.id,revision:p.revision})):[])}/>Selecionar todos</label>
+  </form>}
+  {canEdit&&!selecting&&visible.some(p=>!p.date)&&<p className="list-drag-hint">Arraste até a posição desejada no roteiro ou use Incluir no dia.</p>}
 
-  {loading?<p role="status">Carregando lugares…</p>:<>   {visible.length?<ol className="place-list">{visible.map(p=><ListPlace key={p.id} place={p} canDrag={canEdit&&!p.date&&!busy&&!loading&&order.ready&&!order.saving} day={day}>
-    <ListPlaceContent place={p} day={day} canEdit={canEdit} busy={busy||!order.ready||order.saving} onSchedule={()=>schedule(p)} onEdit={()=>edit(p)} onPhoto={()=>openPhoto(p)} onRemove={()=>{removeTrigger.current=document.activeElement as HTMLElement;setRemoving(p);setError('');}} onVisited={()=>void run(async()=>{await request(base+'/places',{id:p.id,revision:p.revision,place:{...placeData(p),visited:!p.visited}},'PATCH');},p.visited?'Visita desmarcada.':'Lugar marcado como visitado.')}/>
+  {loading?<p role="status">Carregando lugares…</p>:<>   {visible.length?<ol className="place-list">{visible.map(p=><ListPlace key={p.id} place={p} canDrag={canEdit&&!selecting&&!p.date&&!busy&&!loading&&order.ready&&!order.saving} day={day}>
+    {selecting?<SelectablePlace place={p} checked={selectedIds.has(p.id)} disabled={busy} onChange={checked=>{setSelectionError('');setSelected(current=>checked?[...current.filter(s=>s.id!==p.id),{id:p.id,revision:p.revision}]:current.filter(s=>s.id!==p.id));}}/>:<ListPlaceContent place={p} day={day} canEdit={canEdit} busy={busy||!order.ready||order.saving} onSchedule={()=>schedule(p)} onEdit={()=>edit(p)} onPhoto={()=>openPhoto(p)} onRemove={()=>{removeTrigger.current=document.activeElement as HTMLElement;setRemoving(p);setError('');}} onVisited={()=>void run(async()=>{await request(base+'/places',{id:p.id,revision:p.revision,place:{...placeData(p),visited:!p.visited}},'PATCH');},p.visited?'Visita desmarcada.':'Lugar marcado como visitado.')}/>}
    </ListPlace>)}</ol>:<div className="planning-empty"><p>Esta lista ainda está vazia.<br/>Guarde lugares para escolher o dia depois.</p></div>}
 </>}
   </section>);
@@ -115,7 +151,7 @@ export default function PlanningWorkspace({trip,day,reservations,refreshKey,onCh
  };
  return <>
   {error&&!draft&&!review&&!listEditor&&!removing&&<p role="alert" className="form-error">{error}</p>}
-  <div className="planning-status-row"><div className="planning-status-message">{notice&&<p className="planning-notice" role="status"><Check/>{notice}</p>}</div><div className="planning-jump"><a className="lists-jump" href="#planejamento"><MapPin/> Listas de lugares <ChevronDown/></a></div></div>
+  <NoticeToast message={notice} onClose={()=>setNotice('')}/><div className="planning-status-row"><div className="planning-jump"><a className="lists-jump" href="#planejamento"><MapPin/> Listas de lugares <ChevronDown/></a></div></div>
   <PendingHub reviews={loading?[]:reviews} locations={locationState.locations} error={locationState.error} busy={locationState.busy} onRetry={key=>void locationState.retry(key)} onRefresh={locationState.refresh} onReservation={id=>{const r=reservations.find(r=>r.id===id);if(r)onReservation(r);}} onReview={r=>{reviewTrigger.current=document.activeElement as HTMLElement;setReview(r);setReviewDates({startDate:r.reservation.startDate,endDate:r.reservation.endDate});setError('');}}/>
   <DndContext key={day} sensors={sensors} collisionDetection={args=>{
    if(String(args.active.id).startsWith('list-place:')){
@@ -212,3 +248,8 @@ function ListPlaceContent({place:p,day,canEdit,busy,onSchedule,onEdit,onPhoto,on
  </div>;
 }
 // Place search uses the selected day; results never change the saved itinerary.
+
+function SelectablePlace({place,checked,disabled,onChange}:{place:Place;checked:boolean;disabled:boolean;onChange:(checked:boolean)=>void}){
+ const address=compactAddress(place.address),content=<span className="selectable-place-copy"><strong>{place.name}</strong>{place.address&&<span>{address.street}{address.locality&&' · '+address.locality}</span>}{place.date&&<span>Programado para {dateLabel(place.date)}</span>}{place.visited&&<span>Visitado</span>}</span>;
+ return place.date?<div className="selectable-place is-scheduled">{content}</div>:<label className={'selectable-place'+(checked?' is-selected':'')}><Checkbox checked={checked} disabled={disabled} aria-label={'Selecionar '+place.name} onCheckedChange={value=>onChange(value===true)}/>{content}</label>;
+}

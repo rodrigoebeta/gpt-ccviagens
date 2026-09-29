@@ -9,8 +9,10 @@ import {documentKind,documentFormat} from '@/lib/document-preview';
 import type {Doc} from '@/lib/contracts';
 
 type Size={width:number;height:number};
-export default function DocumentViewer({document:doc,onClose,returnFocus}:{document:Doc;onClose:()=>void;returnFocus:RefObject<HTMLButtonElement|null>}){
+export default function DocumentViewer({document:doc,localFile,onClose,returnFocus}:{document:Doc;localFile?:File;onClose:()=>void;returnFocus:RefObject<HTMLButtonElement|null>}){
  const kind=documentKind(doc.mime),url='/api/documents/'+encodeURIComponent(doc.id);
+ const [localUrl,setLocalUrl]=useState('');
+ useEffect(()=>{if(!localFile)return;const value=URL.createObjectURL(localFile);setLocalUrl(value);return()=>URL.revokeObjectURL(value);},[localFile]);
  const [pdf,setPdf]=useState<PDFDocumentProxy|null>(null),[image,setImage]=useState(''),[text,setText]=useState('');
  const [loading,setLoading]=useState(true),[error,setError]=useState(''),[attempt,setAttempt]=useState(0);
  const [pageText,setPageText]=useState('');
@@ -34,9 +36,12 @@ export default function DocumentViewer({document:doc,onClose,returnFocus}:{docum
   setLoading(true);setError('');setPdf(null);setImage('');setText('');setPage(1);setNatural({width:0,height:0});setPageReady(false);setPasswordPrompt('');passwordReply.current=null;
   if(kind==='unsupported'){setLoading(false);return;}
   (async()=>{
-   const response=await fetch(url,{signal:controller.signal,credentials:'same-origin',cache:'no-store'});
-   if(!response.ok)throw Error(response.status===401||response.status===403?'Seu acesso a este documento não está disponível. Feche a prévia e entre novamente.':'Não foi possível carregar o arquivo. Tente novamente.');
-   const blob=await response.blob();if(!alive)return;
+   let blob:Blob;
+   if(localFile)blob=localFile;
+   else{const response=await fetch(url,{signal:controller.signal,credentials:'same-origin',cache:'no-store'});
+    if(!response.ok)throw Error(response.status===401||response.status===403?'Seu acesso a este documento não está disponível. Feche a prévia e entre novamente.':'Não foi possível carregar o arquivo. Tente novamente.');
+    blob=await response.blob();}
+   if(!alive)return;
    if(kind==='pdf'){
     const lib=await import('pdfjs-dist');if(!alive)return;
     const assets='/pdfjs/'+lib.version+'/';lib.GlobalWorkerOptions.workerSrc=assets+'pdf.worker.min.mjs';
@@ -49,7 +54,7 @@ export default function DocumentViewer({document:doc,onClose,returnFocus}:{docum
    if(alive)setLoading(false);
   })().catch(e=>{if(alive&&e.name!=='AbortError'){setLoading(false);setError(e.message?.startsWith('Seu acesso')||e.message?.startsWith('Não foi possível carregar')?e.message:'Não foi possível exibir este arquivo. Ele pode estar incompleto ou ter um formato incompatível.');}});
   return()=>{alive=false;controller.abort();passwordReply.current=null;if(objectUrl)URL.revokeObjectURL(objectUrl);if(task)void task.destroy().catch(()=>{});};
- },[url,kind,doc.mime,attempt]);
+ },[url,kind,doc.mime,attempt,localFile]);
  useEffect(()=>{
   if(!pdf)return;let alive=true;setPageReady(false);
   setPageText('');pdf.getPage(page).then(async p=>{if(alive){const v=p.getViewport({scale:1});setNatural({width:v.width,height:v.height});setPageReady(true);const content=await p.getTextContent();if(alive)setPageText(content.items.map(item=>'str' in item?item.str:'').join(' '));}}).catch(()=>{if(alive)setError('Não foi possível abrir esta página. Tente novamente.');});
@@ -70,12 +75,12 @@ export default function DocumentViewer({document:doc,onClose,returnFocus}:{docum
  },[pdf,page,pageReady,fit,size.width,size.height,renderZoom]);
  const available=!loading&&!error&&!passwordPrompt&&(kind==='image'?natural.width>0:kind==='pdf'?pageReady:kind==='text');
  const reset=()=>{void transform.current?.centerView(1,0);setZoom(1);};
- return <Dialog open onOpenChange={open=>{if(!open)onClose();}}><DialogContent className="document-viewer" showCloseButton={false} onOpenAutoFocus={event=>{event.preventDefault();heading.current?.focus();}} onCloseAutoFocus={event=>{event.preventDefault();returnFocus.current?.focus();}}>
+ return <Dialog open onOpenChange={open=>{if(!open)onClose();}}><DialogContent className="document-viewer" positioning="viewport" showCloseButton={false} onOpenAutoFocus={event=>{event.preventDefault();heading.current?.focus({preventScroll:true});}} onCloseAutoFocus={event=>{event.preventDefault();returnFocus.current?.focus({preventScroll:true});}}>
   <header className="document-viewer-header"><div><DialogTitle ref={heading} tabIndex={-1}>{doc.label}</DialogTitle><DialogDescription>{documentFormat(doc.mime)} · {doc.filename}</DialogDescription></div><Button variant="ghost" size="icon" aria-label="Fechar documento" onClick={onClose}><X/></Button></header>
   <div className="document-viewer-toolbar">
    <div className="document-pages" aria-label="Páginas"><Button variant="ghost" size="icon" aria-label="Página anterior" disabled={!available||page<=1} onClick={()=>setPage(p=>p-1)}><ChevronLeft/></Button><span aria-live="polite">{page} / {pageCount}</span><Button variant="ghost" size="icon" aria-label="Próxima página" disabled={!available||page>=pageCount} onClick={()=>setPage(p=>p+1)}><ChevronRight/></Button></div>
    <div className="document-zoom"><Button variant="ghost" size="icon" aria-label="Diminuir zoom" disabled={!available||zoom<=1.01} onClick={()=>void transform.current?.zoomOut(.25,0)}><Minus/></Button><output aria-label="Zoom">{Math.round(zoom*100)}%</output><Button variant="ghost" size="icon" aria-label="Aumentar zoom" disabled={!available||zoom>=5} onClick={()=>void transform.current?.zoomIn(.25,0)}><Plus/></Button><Button variant="ghost" className="document-fit" disabled={!available} onClick={reset}><Maximize/>Ajustar</Button></div>
-   <Button asChild variant="outline"><a href={url+'?download=1'} download={doc.filename}><Download/>Baixar</a></Button>
+   <Button asChild variant="outline"><a href={localFile?localUrl:url+'?download=1'} download={doc.filename}><Download/>Baixar</a></Button>
   </div>
   <div className="document-stage" ref={setStage}>
    {loading&&<p className="document-message" role="status"><LoaderCircle className="animate-spin"/>Carregando documento…</p>}

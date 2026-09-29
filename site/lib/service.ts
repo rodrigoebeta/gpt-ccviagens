@@ -124,7 +124,7 @@ export async function createManualReservation(tripId:string,user:ChatGPTUser,inp
  if(r.startDate<trip.start_date||r.endDate>trip.end_date)throw new AppError(422,'Escolha datas dentro do período da viagem.');
  const id=await digest(tripId+'\n'+r.sourceKey),existing=await database().prepare('SELECT fingerprint,data,status,manual_override FROM reservations WHERE id=?').bind(id).first<StoredReservation>();
  if(existing&&(existing.status!=='active'||existing.fingerprint!==await digest(JSON.stringify(r))))throw new AppError(409,'Este cadastro já foi salvo com outros dados. Atualize a programação antes de editar.');
- return persistBundle(tripId,id,{version:1,reservation:r,documents:[]},existing,undefined,true);
+ return persistBundle(tripId,id,{version:1,reservation:r,documents:parsed.documents},existing,undefined,true);
 }
 export async function editReservation(tripId:string,id:string,user:ChatGPTUser,base:string,input:unknown){
  const trip=await access(tripId,user,true),r=reservationInput.parse(input),db=database();

@@ -1,5 +1,5 @@
 import {searchPhoton} from './photon';
-import {unambiguousPoint,unambiguousStation,stationReference,type GeoPoint} from './geography';
+import {unambiguousPoint,unambiguousStation,unambiguousAddress,stationReference,type GeoPoint} from './geography';
 import type {MapCandidate,ReservationMapPoint} from './reservation-map';
 export async function resolveMapPoint(candidate:MapCandidate,bias?:GeoPoint):Promise<ReservationMapPoint|null>{
  if(candidate.selectedPoint){const {latitude,longitude,name}=candidate.selectedPoint;return {...candidate,latitude,longitude,resolvedName:name};}
@@ -14,6 +14,7 @@ export async function resolveMapPoint(candidate:MapCandidate,bias?:GeoPoint):Pro
  const generic=new Set(['hotel','hostel','resort','pousada','the','and','airport','aeroporto','international','internacional','terminal','bus','station','rodoviaria','estacao']);
  const expected=words((candidate.kind==='hotel'?candidate.title:candidate.address.split(',')[0]).replace(/\([A-Z]{3}\)/g,'')).filter(w=>!generic.has(w));
  const matched=results.filter(r=>{const actual=words(candidate.kind==='hotel'?r.name:r.name+' '+r.address);return kinds.includes(r.kind)&&expected.length>0&&expected.every(w=>actual.includes(w));});
- const result=station?unambiguousStation(results,station.name):unambiguousPoint(matched,query,candidate.kind==='hotel'?candidate.title:undefined);
+ let result=station?unambiguousStation(results,station.name):unambiguousPoint(matched,query,candidate.kind==='hotel'?candidate.title:undefined);
+ if(!result&&candidate.kind==='hotel')result=unambiguousAddress(await searchPhoton(candidate.address.slice(0,200),{bias,waitForGate:true}),candidate.address);
  return result?{...candidate,latitude:result.latitude,longitude:result.longitude,resolvedName:result.name}:null;
 }

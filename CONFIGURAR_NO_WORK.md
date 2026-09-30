@@ -4,6 +4,17 @@ O Work também opera o produto por [API do assistente](docs/API_ASSISTENTE.md): 
 
 Roteiro técnico para o GPT Work. Leia [AGENTS.md](AGENTS.md) e [GUIA_DO_PRODUTO.md](GUIA_DO_PRODUTO.md). Execute estas etapas; a pessoa participa apenas das autorizações, informações e ações de interface que dependerem dela. Use [ONBOARDING.md](ONBOARDING.md) depois da publicação.
 
+## Perguntas em todas as etapas
+
+Este procedimento vale desde a primeira escolha de Sites/projeto/pasta, inclusive o aceite dos termos, e continua em ONBOARDING.md:
+
+1. Confira as ferramentas desta conversa. **Question é o nome usado neste guia para a ferramenta nativa de perguntas ou seu equivalente disponível**, não uma garantia de capacidade do modelo. Leia o contrato e faça a chamada real para emitir a pergunta, com duas ou três opções em português e resposta livre quando suportada. Escrever “Question:” ou dizer que aguarda uma escolha não cria o controle.
+2. Confira o retorno. Não afirme que há um “quadro acima”, cartão ou botões sem evidência da apresentação. Uma chamada emitida não comprova que a pessoa viu ou respondeu à pergunta. Se houver uma pergunta pendente emitida com sucesso, aguarde a resposta real e continue apenas ações independentes.
+3. Se a ferramenta faltar, falhar ou não emitir a pergunta, **apresente imediatamente a pergunta e todas as opções em texto no chat**. Se a pessoa relatar que o quadro não apareceu, faça o mesmo na retomada, sem insistir no controle ausente. Explique uma vez que ela pode responder com o nome da opção ou com suas palavras. São opções em texto, não botões. Não exija trocar de modelo ou abrir novo chat apenas para responder.
+4. Preserve pacote conferido, Sites verificado, projeto, respostas e consentimentos anteriores. Solicite somente a escolha pendente; não reinicie download, conferência ou provisionamento por causa da pergunta. Não escolha pela pessoa com base em silêncio, tempo decorrido ou opção pré-selecionada. Aceite dos termos exige manifestação explícita após sua apresentação; aprovações obrigatórias das ferramentas seguem o mecanismo oficial.
+
+**Conclusão de cada rodada:** pergunta efetivamente emitida pela ferramenta ou apresentada em texto, decisão explícita recebida e registrada. Sem resposta, a decisão permanece pendente; uma descrição de quadro inexistente não atende a esse critério.
+
 ## 0. Sites primeiro: conta, ativação e novo chat
 
 Antes de baixar dependências, configurar ou publicar, confira se as ferramentas e habilidades oficiais de Sites estão disponíveis nesta conversa e nesta conta. Uma consulta de leitura à lista de Sites, quando permitida, confirma acesso sem criar nada. Se já estiverem disponíveis, não peça reinstalação nem novo chat desnecessário.
@@ -14,7 +25,7 @@ Use Question com **SIM, ativei o Sites** / **Não encontrei essa opção**. Agua
 
 A [documentação de plugins](https://learn.chatgpt.com/docs/plugins) orienta iniciar **novo chat após instalar**, para carregar suas habilidades. Prepare a retomada antes dessa troca. Só ofereça um botão nativo para continuar em novo chat se a ferramenta disponível suportar explicitamente esse tipo de conversa; uma ferramenta de fork de Codex não comprova suporte a um chat do Work. O caminho de menu “Continue in → Continue in a new chat” só deve ser indicado se confirmado na interface atual. Caso contrário, oriente abrir novo chat no mesmo projeto, se já existir, e entregue este briefing pronto para copiar:
 
-> Continue a instalação e publicação privada da Central de Viagens de https://github.com/rodrigoebeta/gpt-ccviagens usando Sites. Preserve o aplicativo pronto e siga README.md, AGENTS.md e CONFIGURAR_NO_WORK.md. Sites foi habilitado; confirme as ferramentas nesta conversa. Estado já verificado: [preencher]. Projeto/arquivos acessíveis: [preencher ou indicar ainda não preparado]. Aceite: [registrado, com localização privada, ou ainda não solicitado]. Próxima ação: [preencher]. Não repita etapas confirmadas nem crie uma segunda instalação. Conduza decisões por Question e complete ONBOARDING.md, mesmo se eu adiar criar a viagem.
+> Continue a instalação e publicação privada da Central de Viagens de https://github.com/rodrigoebeta/gpt-ccviagens usando Sites. Preserve o aplicativo pronto e siga README.md, AGENTS.md e CONFIGURAR_NO_WORK.md. Sites foi habilitado; confirme as ferramentas nesta conversa. Estado já verificado: [preencher]. Projeto/arquivos acessíveis: [preencher ou indicar ainda não preparado]. Aceite: [registrado, com localização privada, ou ainda não solicitado]. Decisão pendente: [pergunta e opções, ou nenhuma]. Próxima ação: [preencher]. Não repita etapas confirmadas nem crie uma segunda instalação. Chame a ferramenta de perguntas disponível; se faltar, falhar ou a pergunta não aparecer, apresente pergunta e opções em texto. Complete ONBOARDING.md, mesmo se eu adiar criar a viagem.
 
 Preencha os campos antes de entregar. No novo chat, leia a continuidade disponível, confirme projeto/arquivos e ferramentas e prossiga. Se ainda faltarem, registre o bloqueio concreto; não entre em um ciclo de abrir chats.
 
@@ -22,9 +33,21 @@ Preencha os campos antes de entregar. No novo chat, leia a continuidade disponí
 
 ## 0.1. Reunir chats e arquivos no projeto
 
-Inspecione primeiro o projeto e a pasta já selecionados. Se pertencerem à instalação, reutilize-os; não crie duplicatas. O projeto reúne os chats no Work; o Site é a aplicação hospedada e tem vínculo separado.
+Inspecione primeiro o ambiente de execução, o projeto e a pasta já selecionados. Se pertencerem à instalação, reutilize-os; não crie duplicatas. Estar em um computador não comprova execução local: confira o contexto e o acesso real a arquivos para escolher o ramo local ou web/nuvem. O projeto reúne os chats no Work; o Site é a aplicação hospedada e tem vínculo separado.
 
 **Desktop com acesso local:** ofereça em Question **Usar Central de Viagens em Documentos** / **Escolher outra pasta** / **Já tenho um projeto**. Depois da escolha, descubra a pasta Documentos real do sistema (ela pode estar no OneDrive ou redirecionada); não monte um caminho presumindo nome de usuário. Crie somente a subpasta escolhida e clone nela o repositório oficial, se vazia. Se contiver arquivos, confira antes de reutilizar e nunca sobrescreva uma pasta desconhecida. Mantenha ferramentas/cache/temporários dentro dela. Se a conversa não tiver permissão, oriente a pessoa a criar/selecionar essa pasta pelo seletor oficial e retome ali; não tente ampliar permissões silenciosamente.
+
+Se essa pergunta não puder ser apresentada pela ferramenta, ou a pessoa disser que o quadro não apareceu, entregue a pergunta concreta no chat:
+
+> Onde você quer guardar os arquivos da sua Central de Viagens?
+>
+> - Usar Central de Viagens em Documentos.
+> - Escolher outra pasta.
+> - Já tenho um projeto.
+>
+> Pode responder com o nome da opção ou com suas palavras.
+
+Pergunte apenas se a pasta/projeto ainda não tiver sido escolhido. “Escolher outra pasta” exige obter a localização e verificar acesso; “Já tenho um projeto” exige identificar e conferir o projeto existente. Sem resposta, registre **escolha de pasta pendente** e preserve a preparação. No ramo web/nuvem, conduza a escolha do projeto/fontes acessíveis, sem exigir uma pasta local em Documentos.
 
 Use a ferramenta oficial de criação/associação de projeto somente quando existir e cobrir o ambiente atual. Quando não existir, guie a pessoa a abrir **Projetos**, criar **Central de Viagens** e selecionar a pasta preparada como pasta principal do projeto local. Para projeto existente, a documentação descreve **Editar projeto → Adicionar pasta**. Confira os controles exibidos antes de dar instruções mais específicas. Não prometa automatizar o próprio desktop do ChatGPT por Computer Use. Use Question **SIM, projeto e pasta vinculados** / **Preciso de ajuda**; confirme a associação por listagem oficial/contexto do chat. Se depender só do relato, registre isso. Mantenha os próximos chats dentro desse projeto; se for preciso abrir um chat nele, forneça briefing de retomada preenchido.
 

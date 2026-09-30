@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Versão 0.3.1. PWA com consulta offline das viagens e comprovantes já abertos, orientação de instalação no celular durante o onboarding e campos de serviço, estações/terminais e cidades para trem/ônibus. Cards do roteiro por partida e chegada. Cadastro, edição, importação e APIs do assistente/sync compartilham o novo contrato e preservam reservas antigas. Novos conteúdos e alterações exigem conexão; confira a instalação e o modo avião no telefone."
+  "notes": "Versão 0.3.2. Instalação e onboarding orientam a chamada real da ferramenta de perguntas e apresentam as opções em texto quando ela faltar, falhar ou a pergunta não aparecer. A retomada preserva etapas e decisões já confirmadas, inclusive pacote e Sites verificados, e solicita apenas a escolha pendente. Projeto e fontes seguem o ambiente local ou na nuvem. Mantidos PWA, consulta offline e campos de serviço, estações/terminais e cidades para trem/ônibus."
 }

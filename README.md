@@ -10,7 +10,7 @@ Seu site de viagens está pronto. O ChatGPT Work instala na sua conta do Sites, 
 2. Disponibilize esta pasta completa: pelo repositório, pelo ZIP ou pela pasta acessível à conversa. Se o link não permitir ler o código, use o ZIP. Só este README não contém o aplicativo.
 3. Peça: `Instale https://github.com/rodrigoebeta/gpt-ccviagens`. O Work lê este README e conduz a instalação. [COMECE_AQUI.md](COMECE_AQUI.md) é a alternativa detalhada.
 4. O Work reúne os chats em um projeto e reutiliza sua pasta; se não houver, sugere **Central de Viagens** em Documentos no desktop. Na web, usa fontes acessíveis ao projeto. Instala e publica com acesso restrito após seu aceite, solicitando **centraldeviagem** ao Sites.
-5. Entre na Central. O Work avisa e orienta a instalar no celular como PWA e a preparar a consulta offline. Crie sua viagem pela interface. Responda às opções clicáveis no chat. Mesmo se adiar o cadastro, o Work continua ensinando importação, documentos, Scheduled Tasks, listas, roteiro e compartilhamento. Começa oferecendo e-mail conectado; arquivos, pastas e nuvem também podem ser usados com acesso autorizado. Gmail não é obrigatório.
+5. Entre na Central. O Work avisa e orienta a instalar no celular como PWA e a preparar a consulta offline. Crie sua viagem pela interface. Responda às perguntas no chat: opções clicáveis quando disponíveis, ou opções em texto se a pergunta não aparecer. Mesmo se adiar o cadastro, o Work continua ensinando importação, documentos, Scheduled Tasks, listas, roteiro e compartilhamento. Começa oferecendo e-mail conectado; arquivos, pastas e nuvem também podem ser usados com acesso autorizado. Gmail não é obrigatório.
 
 Você não precisa programar, escolher um design ou executar comandos. Também não precisa de uma chave do Google Maps ou de IA. Autorizações acontecem nas interfaces oficiais; nunca envie senhas, tokens ou cookies na conversa.
 
@@ -35,6 +35,8 @@ O aviso sálvia de atualização permite copiar um pedido curto para o Work. Ele
 ## Para o Work
 
 Leia [AGENTS.md](AGENTS.md) e siga [CONFIGURAR_NO_WORK.md](CONFIGURAR_NO_WORK.md). O aplicativo completo está em `site/`; o manifesto e o verificador conferem a integridade antes da instalação. [Importação](docs/IMPORTACAO.md), [atualizações](docs/ATUALIZACOES.md) e [créditos](CREDITOS.md) complementam a entrega.
+
+**Apresente a pergunta de verdade.** Consulte as ferramentas desta conversa e chame Question ou equivalente conforme seu contrato; mencionar um “quadro acima” não cria opções. Se a ferramenta faltar, falhar ou a pessoa relatar que a pergunta não apareceu, apresente imediatamente a mesma pergunta e duas ou três opções em texto, aceitando resposta natural. Preserve o trabalho e aguarde só a decisão pendente, sem repetir verificações já concluídas. Isso vale desde a escolha de pasta até o aceite e o onboarding; siga o procedimento de perguntas em CONFIGURAR_NO_WORK.md.
 
 **Roteiro em validação.** A conclusão exige conferir o fluxo atualizado e a execução agendada autenticada. O Work verifica as capacidades da conta e informa impedimentos. A instalação começa sem viagens, documentos ou vínculo com outro Site.
 

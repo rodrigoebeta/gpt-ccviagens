@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.3.2",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -14,18 +14,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 17630,
-      "sha256": "74ba496a77f7e144fe4479743643c562f94bf24e613d819236796001efcbca8f"
+      "bytes": 18452,
+      "sha256": "895eac82d6d2e0efa3e271027f1283a27c9228a705dcb8a323c5c7e5354589cb"
     },
     {
       "path": "COMECE_AQUI.md",
-      "bytes": 2570,
-      "sha256": "b88de04b786a4a270ae142b96bcc3e2c94b39009ef532b5d42b20e5835ac133b"
+      "bytes": 3002,
+      "sha256": "e050a1f25148443a14f9cef5c72ae63191511f86578b954f80716252eb987557"
     },
     {
       "path": "CONFIGURAR_NO_WORK.md",
-      "bytes": 20299,
-      "sha256": "344c5a987e72e243e5774553b7d7110c2d02561421d54276de1344c159dce22e"
+      "bytes": 23448,
+      "sha256": "c979da6b593a75baa45e2723567c9da9295dfb1c446d82f130b6d58ccacb1699"
     },
     {
       "path": "CREDITOS.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 36236,
-      "sha256": "d6841a6e61c43ff75c2b551ead7e90962aed15b4dcc7c502585da9192ac74f3a"
+      "bytes": 36579,
+      "sha256": "a28a8bd07006c3784a0c327156732cfe54921229bde57046751dc5ba51c54d2f"
     },
     {
       "path": "LICENSE.md",
@@ -79,8 +79,8 @@
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 28528,
-      "sha256": "d21d7606122c6312a0df24e1035a25dae437e0020dadd2db733d1d70057875cb"
+      "bytes": 29047,
+      "sha256": "50878fc63708d1897a4e5972baa7b77d39ca8bb7be7b943dece5c258b97a4ca2"
     },
     {
       "path": "PRIVACIDADE.md",
@@ -89,13 +89,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6380,
-      "sha256": "4ad86ce7031fdf23c70722e5f86798515e5ab8aa4933b5a0a8361867dc3e24bc"
+      "bytes": 7053,
+      "sha256": "c95998cff47857ca7046a58ed6adc099a56c284005397e60c4b64dd246509da2"
     },
     {
       "path": "release.json",
-      "bytes": 576,
-      "sha256": "a7d9d41be455fa0652fd06f3fc218c2b01409e25befc34b3ec52b3c49c30cff2"
+      "bytes": 574,
+      "sha256": "b14605ad2437d5d5271537615cb4665e832da6bd52f87fe1ee41346761154707"
     },
     {
       "path": "scripts/registrar-aceite.mjs",
@@ -985,7 +985,7 @@
     {
       "path": "site/lib/distribution-config.ts",
       "bytes": 494,
-      "sha256": "4c45dd1238ba6e32f8c4dcb5f8f6b4f6c3421b4a481711d6116299ec15c0aa36"
+      "sha256": "e269ed9ff61ebdb3ff9c18f93b63aef6a698e19be3be007e62ee79f8a1dc5c1f"
     },
     {
       "path": "site/lib/document-preview.ts",

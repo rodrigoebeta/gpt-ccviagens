@@ -2,13 +2,13 @@
 
 O Work também opera o produto por [API do assistente](docs/API_ASSISTENTE.md): viagens, listas, locais, roteiro, reservas, revisões, documentos, capas e convidados. Após configurar a autenticação, consultar `/api/assistant/capabilities`, executar o pedido autorizado e conferir a persistência. Ensinar esse caminho durante o onboarding, sem substituir a prática inicial pela interface.
 
-Comece após publicação e login. Leia GUIA_DO_PRODUTO.md e confira os controles atuais da Central. Apresente uma etapa curta por rodada e use **Question** (ou ferramenta equivalente) com opções clicáveis. Os rótulos abaixo orientam a criação das perguntas; não são botões de Markdown.
+Comece após publicação e login. Leia GUIA_DO_PRODUTO.md e confira os controles atuais da Central. Apresente uma etapa curta por rodada e **chame de fato Question ou a ferramenta equivalente disponível**, com opções clicáveis. Siga “Perguntas em todas as etapas” de [CONFIGURAR_NO_WORK.md](CONFIGURAR_NO_WORK.md). Os rótulos abaixo orientam a chamada; não são botões de Markdown e escrevê-los não cria uma pergunta.
 
 ## Continuidade obrigatória
 
 O onboarding deve cobrir: instalação como PWA no celular e consulta offline; compartilhamento nas duas camadas; criação da viagem pela pessoa na Central; oferta de importação; reservas e documentos; Scheduled Tasks; locais em listas e roteiro. **Não encerre porque a pessoa adiou a viagem, não tem reservas ou não conectou e-mail.** Adiar a prática não pula a explicação nem as próximas rodadas. Respeite uma pausa explícita da pessoa e registre onde retomar.
 
-Use duas ou três opções curtas por pergunta, com resposta livre opcional. Texto livre pela ferramenta Question somente quando a informação não puder ser escolhida ou inferida. Não peça para digitar “sim”, números ou prompts para continuar no mesmo chat. Se a ferramenta não estiver disponível, explique uma vez e use a alternativa mais curta, sem simular botões. Espere a resposta real para ações dependentes dela; silêncio ou opção pré-selecionada não são confirmação.
+Use duas ou três opções curtas por pergunta, com resposta livre opcional. Texto livre pela ferramenta Question somente quando a informação não puder ser escolhida ou inferida. Com a ferramenta funcionando, não peça para digitar “sim”, números ou prompts para continuar no mesmo chat. Não afirme que há um “quadro acima”, cartão ou botões sem evidência da apresentação. Se a ferramenta não estiver disponível, retornar erro ou não emitir a pergunta, ou se a pessoa informar que ela não apareceu, explique uma vez e apresente imediatamente a pergunta e suas opções em texto, sem simular botões; aceite o nome da opção ou resposta natural. Preserve decisões e etapas anteriores e peça apenas a decisão pendente. Espere a resposta real para ações dependentes dela; silêncio, tempo decorrido ou opção pré-selecionada não são confirmação.
 
 Registre por etapa: apresentado, praticado, verificado, prática adiada ou bloqueado. Não marque uma explicação obrigatória como adiada só porque faltam dados para praticar. Não crie dados de exemplo. Não repita decisões confirmadas.
 

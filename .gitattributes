@@ -15,3 +15,4 @@
 *.webp -text
 *.avif -text
 *.pdf -text
+*.zip -text

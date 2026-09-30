@@ -1,6 +1,6 @@
 // Public publisher information; no installation credentials belong here.
 export const distribution = {
-  version: '0.3.2',
+  version: '0.3.3',
   termsVersion: '2026-09-27.3',
   publisher: 'Rodrigo Purchio',
   contact: 'contato@rodrigoebeta.com',

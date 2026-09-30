@@ -1,0 +1,15 @@
+{
+  "name": "ccviagens",
+  "interface": {
+    "displayName": "Central de Viagens"
+  },
+  "plugins": [
+    {
+      "name": "ccviagens",
+      "source": {
+        "source": "local",
+        "path": "./plugins/ccviagens"
+      }
+    }
+  ]
+}

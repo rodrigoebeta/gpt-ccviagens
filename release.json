@@ -1,5 +1,5 @@
 {
-  "version": "0.3.2",
+  "version": "0.3.3",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "Versão 0.3.2. Instalação e onboarding orientam a chamada real da ferramenta de perguntas e apresentam as opções em texto quando ela faltar, falhar ou a pergunta não aparecer. A retomada preserva etapas e decisões já confirmadas, inclusive pacote e Sites verificados, e solicita apenas a escolha pendente. Projeto e fontes seguem o ambiente local ou na nuvem. Mantidos PWA, consulta offline e campos de serviço, estações/terminais e cidades para trem/ônibus."
+  "notes": "0.3.3: preparo de pasta/projeto como primeiro passo; onboarding por Skill, instrução final clara em negrito e URL completa para copiar no celular. Skill de importação com buscas complementares, referências versionadas e contrato da API descoberto ao vivo. Acompanhamento sugerido três vezes por dia, a cada oito horas, oferecendo primeiro plugin + Skill + prompt curto. ZIP pronto incluído para enviar em Plugins no ChatGPT, sem exigir submissão ao diretório público; instalação/seleção/referências cloud verificadas. Prompt completo e autossuficiente como fallback por preferência, recusa de instalação ou falta de suporte; execução real a comprovar e sem cursor local presumido."
 }

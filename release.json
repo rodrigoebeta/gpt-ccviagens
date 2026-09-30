@@ -1,5 +1,5 @@
 {
-  "version": "0.3.3",
+  "version": "0.3.4",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
-  "notes": "0.3.3: preparo de pasta/projeto como primeiro passo; onboarding por Skill, instrução final clara em negrito e URL completa para copiar no celular. Skill de importação com buscas complementares, referências versionadas e contrato da API descoberto ao vivo. Acompanhamento sugerido três vezes por dia, a cada oito horas, oferecendo primeiro plugin + Skill + prompt curto. ZIP pronto incluído para enviar em Plugins no ChatGPT, sem exigir submissão ao diretório público; instalação/seleção/referências cloud verificadas. Prompt completo e autossuficiente como fallback por preferência, recusa de instalação ou falta de suporte; execução real a comprovar e sem cursor local presumido."
+  "notes": "0.3.4: plugin com o nome Centro de Comando de Viagens e o mesmo ícone de bússola usado no favicon da Central, incluído no ZIP pronto para envio em Plugins no ChatGPT. Mantém onboarding por etapas com pasta/projeto primeiro, última instrução em negrito e URL completa no celular; plugin + Skill + prompt curto como primeira opção e prompt integral autossuficiente como fallback. Importação inicial com buscas complementares e acompanhamento sugerido três vezes por dia, a cada oito horas, preservando T0, fontes e deduplicação. Seleção do plugin no formulário Scheduled Tasks observada em teste de conta; execução real, originais e persistência continuam verificações separadas."
 }

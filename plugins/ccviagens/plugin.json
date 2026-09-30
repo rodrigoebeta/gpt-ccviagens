@@ -1,14 +1,16 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ccviagens",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Instalação guiada e importação de reservas da Central de Viagens.",
   "repository": "https://github.com/rodrigoebeta/gpt-ccviagens",
   "extensions": {
     "com.openai": {
       "interface": {
-        "displayName": "Central de Viagens",
-        "shortDescription": "Instalação guiada e importação de reservas para a sua Central de Viagens."
+        "displayName": "Centro de Comando de Viagens",
+        "shortDescription": "Instalação guiada e importação de reservas para a sua Central de Viagens.",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
       }
     }
   }

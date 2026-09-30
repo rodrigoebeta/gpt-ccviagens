@@ -2,10 +2,10 @@
 
 **Rota recomendada após escolher e instalar o plugin.** O onboarding oferece plugin + Skill + este prompt curto, verificando disponibilidade cloud conforme SKILLS.md. Se a pessoa não quiser instalar ou faltar suporte, entregue PROMPT_SCHEDULED_TASK.md integral. A execução real do agendador deve ser comprovada depois de salvar; não substituir automaticamente uma tarefa existente.
 
-Instalador: use somente depois de instalar/habilitar ccviagens-importar no ambiente **cloud**, confirmar sua seleção nativa e acesso às referências da mesma versão. Siga SKILLS.md. No ChatGPT, selecione a Skill com @ e confira o item reconhecido; no desktop/Codex, use a invocação real disponível ($ ou seletor). Escrever o nome não prova vínculo. Preencha todos os campos e entregue somente o bloco abaixo, substituindo a primeira linha pela invocação reconhecida na conta. Sem suporte de Skill no executor, use PROMPT_SCHEDULED_TASK.md integral; não entregar um prompt curto dependente de pasta local. A programação é configurada no agendador, separadamente do texto.
+Instalador: use somente depois de instalar/habilitar o plugin no ambiente **cloud** e confirmar acesso à Skill ccviagens-importar e às referências da mesma versão. Siga SKILLS.md. No ChatGPT e no formulário de Scheduled Tasks, digite @ e selecione o plugin **Centro de Comando de Viagens**, conferindo o item reconhecido; se a Skill for oferecida separadamente, pode selecioná-la. O texto solicita a Skill de importação incluída nesse plugin. No desktop/Codex, use a invocação real disponível ($ ou seletor). Escrever apenas o nome não prova vínculo. Preencha todos os campos e entregue somente o bloco abaixo, substituindo a primeira linha pelo item nativo reconhecido na conta; na colagem manual, a pessoa seleciona esse item no próprio campo antes de colar as demais linhas. Sem suporte da Skill/referências no executor, use PROMPT_SCHEDULED_TASK.md integral; não entregar um prompt curto dependente de pasta local. A programação é configurada no agendador, separadamente do texto.
 
 ```text
-[INVOCACAO_NATIVA_CONFIRMADA_DA_SKILL_CCVIAGENS_IMPORTAR]
+[MENCAO_NATIVA_CONFIRMADA_DO_PLUGIN_OU_SKILL]
 Execute a Skill ccviagens-importar no modo acompanhamento incremental autorizado, aplicando todo o procedimento operacional e os recursos versionados dela.
 
 Projeto Sites exato: [PROJETO_DESTA_INSTALACAO]

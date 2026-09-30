@@ -92,7 +92,7 @@ O build também prepara os recursos locais do visualizador PDF. Preserve fontes,
 
 Se houver vínculo anterior na cópia pessoal, confirme a identidade/propriedade e reutilize o Site. Na primeira instalação, crie um Site na conta da pessoa pelo fluxo oficial, com banco D1 `DB`, arquivos R2 `BUCKET` e acesso restrito. Salve o `project_id` retornado em `.openai/hosting.json`; não invente ou reutilize dados de outra instalação.
 
-Solicite **`centraldeviagem`** como slug padrão. A forma esperada é `centraldeviagem.<identificador-da-conta>.chatgpt.site`, mas só entregue como endereço real a URL retornada pelo Sites. Se o nome não estiver disponível, ofereça duas alternativas válidas em Question e use a escolhida, sem excluir outro Site. Não crie novamente um Site já provisionado nem renomeie uma instalação existente só para impor esse padrão.
+Solicite **`ccviagens`** como slug padrão. A forma esperada é `ccviagens.<identificador-da-conta>.chatgpt.site`, mas só entregue como endereço real a URL retornada pelo Sites. Se o nome não estiver disponível, ofereça duas alternativas válidas em Question e use a escolhida, sem excluir outro Site. Não crie novamente um Site já provisionado nem renomeie uma instalação existente só para impor esse padrão.
 
 Crie `.private/HANDOFF.md` e `.private/TASK_PLAN.md` para registrar versão do pacote, estado, verificações, bloqueios e próxima ação. Configuração provisionada, viagens, comprovantes e continuidade permanecem privados; não os envie ao repositório de distribuição. As autorizações são feitas nas interfaces oficiais; não peça senha, cookie ou token no chat.
 

@@ -1,7 +1,7 @@
 {
   "name": "ccviagens",
   "interface": {
-    "displayName": "Central de Viagens"
+    "displayName": "Centro de Comando de Viagens"
   },
   "plugins": [
     {

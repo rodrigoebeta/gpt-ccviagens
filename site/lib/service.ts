@@ -6,6 +6,7 @@ export class AppError extends Error{constructor(public status:number,message:str
 export function database(){if(!env.DB)throw new AppError(503,'Armazenamento indisponível. Tente novamente.');return env.DB;}
 export function bucket(){if(!env.BUCKET)throw new AppError(503,'Comprovantes indisponíveis. Tente novamente.');return env.BUCKET;}
 export async function identity(){const u=assistantIdentity()??await getChatGPTUser();if(!u)throw new AppError(401,'Entre com sua conta do ChatGPT.');return u;}
+export async function writableInstallation(requestUrl:string){await identity();const {assertInstallationWritable,reportInstallationActivity}=await import('./installation');await reportInstallationActivity(requestUrl);await assertInstallationWritable();}
 export async function access(id:string,u:ChatGPTUser,write=false,owner=false){
  const db=database();const trip=await db.prepare('SELECT * FROM trips WHERE id=?').bind(id).first<{owner_id:string;start_date:string;end_date:string}>();
  if(!trip)throw new AppError(404,'Viagem não encontrada.');if(trip.owner_id===u.userId)return {...trip,role:'owner'};

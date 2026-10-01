@@ -14,12 +14,12 @@ Ao orientar o celular, mostrar a URL HTTPS **completa da Central da pessoa em bl
 
 ## Perguntas em todas as etapas
 
-Este procedimento vale desde o primeiro preparo de projeto/pasta e depois Sites, inclusive o aceite dos termos, e continua em ONBOARDING.md:
+Este procedimento vale desde o primeiro preparo de projeto/pasta e depois Sites, com exceção do aceite dos termos, realizado somente dentro da Central, e continua em ONBOARDING.md:
 
 1. Confira as ferramentas desta conversa. **Question é o nome usado neste guia para a ferramenta nativa de perguntas ou seu equivalente disponível**, não uma garantia de capacidade do modelo. Leia o contrato e faça a chamada real para emitir a pergunta, com duas ou três opções em português e resposta livre quando suportada. Escrever “Question:” ou dizer que aguarda uma escolha não cria o controle.
 2. Confira o retorno. Não afirme que há um “quadro acima”, cartão ou botões sem evidência da apresentação. Uma chamada emitida não comprova que a pessoa viu ou respondeu à pergunta. Se houver uma pergunta pendente emitida com sucesso, aguarde a resposta real e continue apenas ações independentes.
 3. Se a ferramenta faltar, falhar ou não emitir a pergunta, **apresente imediatamente a pergunta e todas as opções em texto no chat**. Se a pessoa relatar que o quadro não apareceu, faça o mesmo na retomada, sem insistir no controle ausente. Explique uma vez que ela pode responder com o nome da opção ou com suas palavras. São opções em texto, não botões. Não exija trocar de modelo ou abrir novo chat apenas para responder.
-4. Preserve pacote conferido, Sites verificado, projeto, respostas e consentimentos anteriores. Solicite somente a escolha pendente; não reinicie download, conferência ou provisionamento por causa da pergunta. Não escolha pela pessoa com base em silêncio, tempo decorrido ou opção pré-selecionada. Aceite dos termos exige manifestação explícita após sua apresentação; aprovações obrigatórias das ferramentas seguem o mecanismo oficial.
+4. Preserve pacote conferido, Sites verificado, projeto, respostas e consentimentos anteriores. Solicite somente a escolha pendente; não reinicie download, conferência ou provisionamento por causa da pergunta. Não escolha pela pessoa com base em silêncio, tempo decorrido ou opção pré-selecionada. O aceite dos termos fica exclusivamente no aplicativo; aprovações obrigatórias das ferramentas seguem o mecanismo oficial.
 
 **Conclusão de cada rodada:** pergunta efetivamente emitida pela ferramenta ou apresentada em texto, decisão explícita recebida e registrada. Sem resposta, a decisão permanece pendente; uma descrição de quadro inexistente não atende a esse critério.
 
@@ -65,17 +65,17 @@ Confira as ferramentas/habilidades oficiais do Sites na conta atual e consulte a
 
 **Conclusão:** pacote íntegro e acesso oficial ao Sites confirmado. A pessoa não precisa executar comandos ou fornecer chaves Cloudflare.
 
-## Aceite antes da configuração
+## Preparar a ativação no aplicativo
 
-Depois da conferência somente de leitura, consulte LICENSE.md, PRIVACIDADE.md e site/lib/distribution-config.ts. Se ready estiver false ou se repository, telemetryEndpoint ou releaseEndpoint estiverem ausentes, preserve o trabalho e informe que a distribuição oficial ainda não foi liberada; não invente endereços nem remova esse bloqueio.
+Leia [LICENSE.md](LICENSE.md) e [PRIVACIDADE.md](PRIVACIDADE.md) da mesma versão. O agente não explica a telemetria pelo chat: a pessoa lê as condições e aceita no aplicativo após login. Não há coleta antes do aceite pessoal no aplicativo.
 
-Apresente uso permitido/restrições, coleta obrigatória, finalidade, campos, envio do hostname externo, responsável, retenção e direitos. Explique que a telemetria integra o modelo que viabiliza a oferta gratuita e sem anúncios, orienta o investimento e a continuidade dos recursos, sem venda de dados. Sem os indicadores, o desenvolvimento ou funções de versões futuras podem ser reduzidos ou encerrados; isso não é bloqueio remoto da instalação. Depois de apresentar essas informações e os documentos completos, peça uma única confirmação clara: a pessoa aceita os termos e o aviso de privacidade e deseja prosseguir com a instalação nessas condições? Não trate o pedido inicial de instalação como resposta antecipada. Obtenha manifestação explícita antes de ativar a coleta. Não aceite por ela. Só depois execute node scripts/registrar-aceite.mjs --aceite-explicito-confirmado. Preserve .private/aceite.json e não repita aceite válido nas retomadas. O aceite contratual não comprova por si só conformidade legal.
+O aceite é feito exclusivamente pelo proprietário dentro da Central, após o primeiro login: abrir o aviso de ativação, ler os termos e a privacidade, marcar a opção e ativar. O agente orienta somente a abertura da Central; os termos e a privacidade são lidos no aplicativo. Não apresenta uma explicação prévia da telemetria nem solicita aceite pelo chat, não marca a opção, não chama a API de aceite, não registra consentimento por script, variável de ambiente ou alteração direta do banco. A publicação inicial pode ocorrer antes do aceite, em modo de consulta e sem coleta. Só depois da ação pessoal e da confirmação do receptor são liberadas alterações e importações. Convidados não aceitam pela instalação. Um aceite já registrado no aplicativo é preservado em retomadas; novo aceite só é solicitado no aplicativo quando os termos mudarem materialmente.
 
-No ambiente hospedado, configure CENTRAL_TERMS_VERSION e CENTRAL_TERMS_ACCEPTED_AT a partir do registro; configure CENTRAL_INSTALLATION_OWNER_ID com a identidade oficial verificada do proprietário, nunca inventada. O aviso de versão é apresentado ao proprietário; convidados não recebem instruções para atualizar o código. Não configure credenciais do receptor nem instale Docker: isso pertence ao titular da distribuição.
+Configure somente CENTRAL_INSTALLATION_OWNER_ID com a identidade oficial verificada do proprietário, nunca inventada. Não use CENTRAL_TERMS_VERSION, CENTRAL_TERMS_ACCEPTED_AT nem o antigo registrar-aceite.mjs como aceite. Não configure credenciais do receptor nem instale Docker: isso pertence ao titular da distribuição.
 
 ## 2. Preparar e compilar o aplicativo
 
-Todas as escolhas do roteiro usam Question, inclusive o aceite: **Li e aceito; instalar minha Central** / **Quero esclarecer os termos** / **Não aceito**. Não avance sem resposta explícita após a apresentação dos termos. A recusa encerra a ativação sem telemetria; dúvidas recebem explicação antes de nova decisão. Escolher “SIM, ativei o Sites” não é aceite dos termos da Central.
+As escolhas do roteiro usam Question. O aceite dos termos é a exceção: a pessoa o realiza exclusivamente dentro da Central depois do login. Não use uma pergunta no chat, download ou autorização de Sites como substituto desse aceite.
 
 Dentro de `site/`:
 
@@ -100,17 +100,17 @@ Crie `.private/HANDOFF.md` e `.private/TASK_PLAN.md` para registrar versão do p
 
 ## 4. Aplicar migrações e publicar
 
-O banco novo recebe as migrações de `site/drizzle/`, de `0000` a `0011`, em ordem, com journal/snapshots preservados. Não gere migrações para instalar. Use o procedimento oficial para o banco hospedado e confirme aplicação; migrar uma prévia local não migra a produção. Em retomadas/atualizações, aplique somente as pendentes antes de publicar o código que depende delas.
+O banco novo recebe as migrações de `site/drizzle/`, de `0000` a `0012`, em ordem, com journal/snapshots preservados. Não gere migrações para instalar. Use o procedimento oficial para o banco hospedado e confirme aplicação; migrar uma prévia local não migra a produção. Em retomadas/atualizações, aplique somente as pendentes antes de publicar o código que depende delas.
 
 Prepare fonte e artefato pelo fluxo oficial. O artefato deve corresponder ao mesmo commit de fonte e conter a saída `dist/`, inclusive `.openai/hosting.json` e `.openai/drizzle/`. Após vincular a instalação, compile novamente se o build anterior não contiver o vínculo correto. Não inclua dependências instaladas, caches, estado local ou segredos no artefato.
 
-O pedido de instalação deste produto pronto inclui sua publicação privada. Após aceite, preparação e verificações, salve a versão e publique com acesso restrito, sem perguntar “publicar agora ou fazer mais ajustes?”. A pessoa usará o produto fornecido; não ofereça decisões de design ou construção. Respeite uma restrição expressa de apenas preparar e aprovações obrigatórias das ferramentas. Se a ferramenta aceitar um artefato compilado localmente, forneça-o no formato oficial. Se houver erro remoto, compare perfil, lockfile e registros; não altere dependências por tentativa. Em falha, consulte o estado da operação antes de repetir.
+O pedido de instalação deste produto pronto inclui sua publicação privada. Após preparação e verificações, salve a versão e publique com acesso restrito, sem perguntar “publicar agora ou fazer mais ajustes?”. A pessoa usará o produto fornecido; não ofereça decisões de design ou construção. Respeite uma restrição expressa de apenas preparar e aprovações obrigatórias das ferramentas. Se a ferramenta aceitar um artefato compilado localmente, forneça-o no formato oficial. Se houver erro remoto, compare perfil, lockfile e registros; não altere dependências por tentativa. Em falha, consulte o estado da operação antes de repetir.
 
 **Conclusão:** o serviço informa publicação concluída e retorna a URL atual. Uma versão salva não equivale a Site publicado. Não amplie a audiência para resolver falhas de acesso.
 
 ## 5. Verificar e iniciar o onboarding
 
-Abra a URL publicada, conclua o login oficial quando a pessoa precisar participar e confirme que a sessão usa a conta esperada. Use a primeira viagem e os dados autorizados durante o onboarding, sem povoar a instalação com exemplos.
+Abra a URL publicada, conclua o login oficial quando a pessoa precisar participar e confirme que a sessão usa a conta esperada. Oriente o proprietário a abrir o aviso de ativação, ler os documentos completos e aceitar pessoalmente no aplicativo. Confira writable:true antes da primeira alteração. Se recusar ou adiar, preserve consulta e registre ativação pendente; continue explicações independentes, sem tentar escrever. Use a primeira viagem e os dados autorizados durante o onboarding, sem povoar a instalação com exemplos.
 
 | Conferência | Evidência e recuperação |
 | --- | --- |
@@ -130,7 +130,7 @@ Ao oferecer a sincronização, use Question com escolhas reais e preserve decis�
 
 ## Conferir telemetria e versão
 
-Depois da publicação e do primeiro acesso autenticado, confira o estado local da instalação e a recepção pelo serviço oficial pelos meios autorizados; não declare entrega somente porque uma tarefa foi agendada. O ID persiste no banco entre atualizações. Não envie dados reais de viagem para testar. Falhas não bloqueiam a Central; aguarde o intervalo de recuperação. Distinga ausência de versão nova, consulta pendente e falha de conexão. O painel administrativo do autor não faz parte desta instalação.
+Depois da publicação e do primeiro acesso autenticado, confira /api/installation pelos meios autorizados: writable:true exige contato confirmado; configured:true sozinho indica aceite/configuração. O ID persiste no banco entre atualizações. Não envie dados reais de viagem para testar. Falhas temporárias têm tolerância de sete dias desde a última confirmação; após esse prazo, a consulta permanece e alterações ficam suspensas. Distinga ausência de versão nova, consulta pendente e falha de conexão. O painel administrativo do autor não faz parte desta instalação.
 
 ## 6. Entregar e retomar
 
@@ -141,3 +141,7 @@ Entregue a URL, o que foi verificado, as limitações específicas e a próxima 
 Se precisar mudar de conversa/ambiente, forneça briefing pronto com versão, URL da própria instalação, vínculo privado disponível pelo meio permitido, decisões, etapas concluídas, bloqueio e próxima ação. Não inclua segredos ou dependências da máquina anterior. Para atualizar uma central existente, siga [docs/ATUALIZACOES.md](docs/ATUALIZACOES.md).
 
 Registre a evidência da instalação atual antes de declará-la concluída; não trate este roteiro como prova de execução.
+
+## Confirmar a ativação de telemetria
+
+Depois do primeiro login em HTTPS, conferir /api/installation autenticada: writable:true exige confirmação do receptor para os termos atuais. configured:true sozinho só indica aceite/configuração. A rotina é automática após o aceite; não pedir novas confirmações à pessoa durante o uso normal. Sem confirmação, explicar a consulta preservada e orientar o proprietário pelo aviso de ativação. Com aceite antigo, orientar a leitura e a ação pessoal no aviso do aplicativo; com proprietário não configurado, corrigir CENTRAL_INSTALLATION_OWNER_ID pela identidade oficial antes de aceitar no painel. Não declarar ativação, ausência de erro ou instalação concluída apenas porque o build passou.

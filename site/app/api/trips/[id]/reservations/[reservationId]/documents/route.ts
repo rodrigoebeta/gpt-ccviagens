@@ -1,10 +1,11 @@
+import {writableInstallation} from '@/lib/service';
 import {z} from 'zod';
 import {documentUploadTypes} from '@/lib/document-upload';
 import {access,AppError,bucket,csrf,database,decodeFile,handle,identity,readJson,respond,withTripUpload} from '@/lib/service';
 export const dynamic='force-dynamic';
 const input=z.object({filename:z.string().trim().min(1).max(300),mime:z.enum(documentUploadTypes),base64:z.string().min(4).max(14000000)}).strict();
 export async function POST(req:Request,{params}:{params:Promise<{id:string;reservationId:string}>}){return handle(async()=>{
- csrf(req);const {id,reservationId}=await params;await access(id,await identity(),true);
+ csrf(req);await writableInstallation(req.url);const {id,reservationId}=await params;await access(id,await identity(),true);
  const db=database();
  if(!await db.prepare('SELECT id FROM reservations WHERE id=? AND trip_id=?').bind(reservationId,id).first())throw new AppError(404,'Reserva não encontrada.');
  const file=input.parse(await readJson(req,14002000)),bytes=decodeFile(file.base64,file.mime);

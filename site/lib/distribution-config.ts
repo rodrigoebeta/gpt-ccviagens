@@ -1,11 +1,12 @@
 // Public publisher information; no installation credentials belong here.
 export const distribution = {
-  version: '0.3.4',
-  termsVersion: '2026-09-27.3',
+  version: '0.4.0',
+  legacyReleaseVersion: '0.4.0',
+  termsVersion: '2026-10-01.1',
   publisher: 'Rodrigo Purchio',
   contact: 'contato@rodrigoebeta.com',
   repository: 'https://github.com/rodrigoebeta/gpt-ccviagens',
   telemetryEndpoint: 'https://rodrigoebeta.com/telemetria-ccv/v1/activity',
-  releaseEndpoint: 'https://raw.githubusercontent.com/rodrigoebeta/gpt-ccviagens/main/release.json',
+  releaseEndpoint: 'https://rodrigoebeta.com/telemetria-ccv/v1/release',
   ready: true,
 } as const;

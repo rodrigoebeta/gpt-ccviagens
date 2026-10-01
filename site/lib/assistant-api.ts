@@ -52,6 +52,7 @@ const routes:Entry[]=[
 
 export function assistantCapabilities(){return {
  apiVersion:1,basePath:'/api/assistant',reservationImportContract,credentialScope:'O token permite as operações abaixo com as permissões atuais do usuário configurado. Não compartilhar com convidados. O prompt limita a tarefa agendada a /api/sync; o token não é exclusivo dessa tarefa.',
+ installationPolicy:{telemetryRequired:true,confirmationGraceDays:7,unconfirmedStatus:423,recovery:'O proprietário aceita os termos no painel; contatos posteriores são automáticos. Consultas continuam disponíveis, alterações exigem confirmação válida. O gateway não pode aceitar termos.'},
  authentication:{gateway:'OAI-Sites-Authorization: Bearer <token>',application:'X-Central-Sync-Token: <token>',source:'get_site.siwc_bypass_bearer_token em memória, sem rotacionar ou persistir',contentType:'application/json'},
  rules:['Não enviar identidade do usuário por headers/corpo.','Ler antes de editar; preservar campos não solicitados.','Em409, reler e comparar; não sobrescrever à força.','Exclusão, compartilhamento e criação de viagem dependem de pedido explícito.','Não há API de administração de telemetria, aceite legal, segredos ou publicação neste gateway.'],
  schemas:{

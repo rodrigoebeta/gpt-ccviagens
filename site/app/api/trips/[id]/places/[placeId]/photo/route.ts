@@ -1,3 +1,4 @@
+import {writableInstallation} from '@/lib/service';
 import {z} from 'zod';
 import {access,AppError,bucket,csrf,database,decodeFile,handle,identity,readJson,respond,withTripUpload} from '@/lib/service';
 import {placeInput} from '@/lib/contracts';
@@ -14,7 +15,7 @@ export async function GET(_:Request,{params}:Context){return handle(async()=>{
  return new Response(file.body,{headers:{'Content-Type':file.httpMetadata?.contentType??'image/jpeg','Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
 });}
 async function save(req:Request,{params}:Context,reset:boolean){return handle(async()=>{
- const raw=await readJson(req,reset?1000:2900000);csrf(req);const data:{revision:number;candidateId?:string;mime?:'image/jpeg'|'image/png';base64?:string}=reset?rev.parse(raw):input.parse(raw),{id,placeId}=await params;await access(id,await identity(),true);
+ const raw=await readJson(req,reset?1000:2900000);csrf(req);await writableInstallation(req.url);const data:{revision:number;candidateId?:string;mime?:'image/jpeg'|'image/png';base64?:string}=reset?rev.parse(raw):input.parse(raw),{id,placeId}=await params;await access(id,await identity(),true);
  const db=database(),row=await db.prepare('SELECT data,photo_key,revision FROM places WHERE id=? AND trip_id=?').bind(placeId,id).first<{data:string;photo_key:string|null;revision:number}>();
  if(!row)throw new AppError(404,'Lugar não encontrado.');if(row.revision!==data.revision)throw new AppError(409,'Este lugar mudou. Feche a foto e atualize a programação antes de salvar.');
  let photo:PlacePhoto|null=null,key:string|null=null,bytes:Uint8Array|undefined;

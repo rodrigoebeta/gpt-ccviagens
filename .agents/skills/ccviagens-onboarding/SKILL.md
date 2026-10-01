@@ -13,7 +13,7 @@ Antes de executar no computador, a própria pessoa cria/escolhe a pasta e a asso
 
 Leia somente o recurso necessário à etapa:
 - Instalação, ferramentas, verificações e publicação privada autorizada: [CONFIGURAR_NO_WORK.md](references/CONFIGURAR_NO_WORK.md).
-- Antes do aceite: [LICENSE.md](references/LICENSE.md) e [PRIVACIDADE.md](references/PRIVACIDADE.md); não aceitar em nome da pessoa.
+- Para orientar a abertura da Central: [LICENSE.md](references/LICENSE.md) e [PRIVACIDADE.md](references/PRIVACIDADE.md); não aceitar em nome da pessoa.
 - Depois da publicação: siga uma etapa de [ONBOARDING.md](references/ONBOARDING.md) por rodada. Consulte [GUIA_DO_PRODUTO.md](references/GUIA_DO_PRODUTO.md) apenas para o recurso apresentado.
 - Celular: [PWA.md](references/docs/PWA.md).
 - Importação: [IMPORTACAO.md](references/docs/IMPORTACAO.md). Use ccviagens-importar se disponível; sem ela, o guia mantém o fluxo completo.
@@ -32,3 +32,7 @@ Depois de publicar, entregue link clicável e a URL HTTPS completa confirmada pe
 Adiar viagem, importação ou prática no celular não encerra as explicações. Cubra PWA/offline, duas camadas de compartilhamento, viagem criada pela pessoa, fontes/importação, documentos, acompanhamento agendado e locais/listas/roteiro. Registre apresentado, praticado, verificado, adiado ou bloqueado. Telefone, modo avião e execução cloud exigem evidência própria; uma explicação ou teste local não os comprova.
 
 Guarde estado e próxima ação na continuidade privada acessível ao projeto, sem segredos. Para trocar de chat, entregue briefing preenchido e solicite a próxima ação em negrito no fim. Preserve dados e não criar exemplos na instalação real.
+
+### Confirmação de telemetria
+
+Consultar CONFIGURAR_NO_WORK e PRIVACIDADE da mesma versão antes de publicar. O aceite é feito exclusivamente pelo proprietário dentro da Central, após o primeiro login: abrir o aviso de ativação, ler os termos e a privacidade, marcar a opção e ativar. O agente orienta somente a abertura da Central; os termos e a privacidade são lidos no aplicativo. Não apresenta uma explicação prévia da telemetria nem solicita aceite pelo chat, não marca a opção, não chama a API de aceite, não registra consentimento por script, variável de ambiente ou alteração direta do banco. A publicação inicial pode ocorrer antes do aceite, em modo de consulta e sem coleta. Só depois da ação pessoal e da confirmação do receptor são liberadas alterações e importações. Convidados não aceitam pela instalação. Um aceite já registrado no aplicativo é preservado em retomadas; novo aceite só é solicitado no aplicativo quando os termos mudarem materialmente. configured:true indica configuração/aceite; writable:true indica primeiro contato confirmado e confirmação técnica válida por sete dias. Conferir após primeiro login HTTPS. O aceite é único por versão material dos termos; renovações são automáticas. Não habilitar alterações nem declarar instalação ativada sem essa prova. Preservar consulta e orientar recuperação em falha.

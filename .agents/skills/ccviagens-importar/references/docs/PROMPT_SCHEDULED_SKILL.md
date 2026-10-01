@@ -22,3 +22,8 @@ Em cada execução, obtenha a credencial desta instalação via get_site somente
 ```
 
 Sugestão de horários: 00:00, 08:00 e 16:00 no fuso da pessoa, ou outro conjunto confirmado com intervalos de oito horas. Isso são três horários diários locais; mudanças de horário de verão podem alterar o intervalo real em UTC. Se a pessoa exigir oito horas reais contínuas, confirme suporte a intervalo UTC/âncora no agendador e explique a diferença antes de salvar. Reutilize horários/fuso já escolhidos, confira próxima execução e não criar tarefas nesta instalação apenas para demonstrar.
+
+
+## Instalação em modo de consulta
+
+Em HTTP 423, preservar dados e pendências, relatar que alterações/importações estão suspensas e orientar o proprietário pelo aviso da Central. O aceite é pessoal e exclusivo no aplicativo; a rotina não aceita termos nem altera configurações para contornar a regra. Contatos técnicos são automáticos após o aceite. Preservar T0 e reconsultar/deduplicar ao retomar; não tratar uma importação recusada como concluída.

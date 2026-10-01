@@ -22,9 +22,13 @@ Use duas ou três opções curtas por pergunta, com resposta livre opcional. Tex
 
 Registre por etapa: apresentado, praticado, verificado, prática adiada ou bloqueado. Não marque uma explicação obrigatória como adiada só porque faltam dados para praticar. Não crie dados de exemplo. Não repita decisões confirmadas.
 
-## 1. Entrar e entender o compartilhamento
+## 1. Entrar, ativar e entender o compartilhamento
 
 Entregue a URL confirmada pelo Sites, guie o login oficial e apresente Viagens, Programação e Reservas da Viagem. Question: **SIM, abri minha Central** / **Preciso de ajuda para entrar**. Se falhar, confira URL e sessão antes de alterar configurações.
+
+O aceite é feito exclusivamente pelo proprietário dentro da Central, após o primeiro login: abrir o aviso de ativação, ler os termos e a privacidade, marcar a opção e ativar. O agente orienta somente a abertura da Central; os termos e a privacidade são lidos no aplicativo. Não apresenta uma explicação prévia da telemetria nem solicita aceite pelo chat, não marca a opção, não chama a API de aceite, não registra consentimento por script, variável de ambiente ou alteração direta do banco. A publicação inicial pode ocorrer antes do aceite, em modo de consulta e sem coleta. Só depois da ação pessoal e da confirmação do receptor são liberadas alterações e importações. Convidados não aceitam pela instalação. Um aceite já registrado no aplicativo é preservado em retomadas; novo aceite só é solicitado no aplicativo quando os termos mudarem materialmente.
+
+Confira /api/installation autenticada antes das práticas que alterem dados. configured:true indica aceite registrado; writable:true indica confirmação técnica válida. Em ativação pendente, registre o motivo e continue as explicações independentes.
 
 Antes de encerrar o turno de instalação, explique as duas permissões:
 
@@ -167,3 +171,7 @@ Abra uma reserva, entre em **Documentos** e use **Adicionar documento**. Aceita 
 Para reunir tudo em um passo, use **Adicionar reserva → escolha a categoria → Documentos**. Selecione um ou vários arquivos: até 10 MB cada, 20 MB e 20 documentos por cadastro. Clique no nome da pill para conferir e no X para remover da seleção. Os arquivos só são anexados ao salvar a reserva; cancelar descarta o rascunho. Depois, abra **Ver reserva → Documentos** para consultar ou enviar mais. Esse caminho posterior também funciona em reservas importadas automaticamente. O agente apresenta ambas as opções; a conclusão é conferir um arquivo na reserva salva. Se o salvamento falhar, os campos e arquivos continuam no modal para nova tentativa sem duplicação.
 
 Ao editar horários, escolha o fuso no dropdown; o GMT exibido acompanha a data indicada. Hospedagem usa um fuso; transportes podem ter fusos diferentes na partida e chegada.
+
+## Telemetria e avisos após o primeiro login
+
+A ativação exige aceite explícito e primeiro contato confirmado pelo receptor. O aceite não se repete no uso normal: contatos automáticos durante o uso renovam a confirmação, normalmente a cada 24 horas. Após sete dias sem confirmação válida, a instalação impede alterações e importações, inclusive pelas APIs assistant/sync, e mantém consulta a viagens e comprovantes. O contato confirmado restabelece as alterações automaticamente. Uma falha de rede não comprova descumprimento. Novos avisos de versão dependem da telemetria confirmada; não há instalação automática de código. Oriente somente a abertura da Central; a leitura das condições e o aceite pessoal ficam exclusivamente no aviso do aplicativo depois do login. Confira a confirmação real antes de alterar dados. O proprietário pode ativar pelo aviso do painel. Não peça aceite a convidados, não simule contato do receptor e não trate ausência de aviso de update como prova de versão atual. Em atualização de termos, a ação deve ser explícita e dada pelo responsável dentro da Central.

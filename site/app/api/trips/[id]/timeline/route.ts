@@ -1,3 +1,4 @@
+import {writableInstallation} from '@/lib/service';
 import {z} from 'zod';
 import {access,csrf,database,handle,identity,readJson,respond,AppError,listReservations} from '@/lib/service';
 import {dateValue,placeInput,type Reservation} from '@/lib/contracts';
@@ -17,7 +18,7 @@ export async function GET(req:Request,{params}:Context){return handle(async()=>{
  return respond({ids:row?JSON.parse(row.event_ids):[],currentIds:await currentIds(id,day),revision:row?.revision??0});
 });}
 export async function POST(req:Request,{params}:Context){return handle(async()=>{
- csrf(req);const input=z.object({day:dateValue,revision:z.number().int().min(0),ids:z.array(z.string().min(1).max(200)).max(2000)}).strict().parse(await readJson(req,450000));
+ csrf(req);await writableInstallation(req.url);const input=z.object({day:dateValue,revision:z.number().int().min(0),ids:z.array(z.string().min(1).max(200)).max(2000)}).strict().parse(await readJson(req,450000));
  const {id}=await params,trip=await access(id,await identity(),true);
  if(input.day<trip.start_date||input.day>trip.end_date)throw new AppError(422,'Escolha um dia dentro da viagem.');
  const current=await currentIds(id,input.day),sent=new Set(input.ids);

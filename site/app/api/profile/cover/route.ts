@@ -1,3 +1,4 @@
+import {writableInstallation} from '@/lib/service';
 import {z} from 'zod';
 import {AppError,bucket,csrf,database,decodeFile,handle,identity,readJson,respond} from '@/lib/service';
 export const dynamic='force-dynamic';
@@ -15,7 +16,7 @@ export async function GET(req:Request){return handle(async()=>{
 async function save(req:Request,reset:boolean){return handle(async()=>{
  // Read the bounded body before returning errors, including on a reused connection.
  const raw=await readJson(req,reset?1000:2900000);
- csrf(req);const user=await identity();
+ csrf(req);await writableInstallation(req.url);const user=await identity();
  const image=reset?null:imageInput.parse(raw);
  const input=image??revisionInput.parse(raw);
  let bytes:Uint8Array|undefined;

@@ -11,6 +11,7 @@ export const centralInstallation=sqliteTable('central_installation',{
  singleton:integer('singleton').primaryKey(),id:text('id').notNull(),token:text('token').notNull(),
  nextAttemptAt:integer('next_attempt_at').notNull().default(0),lastSentAt:integer('last_sent_at'),
  releaseJson:text('release_json'),releaseCheckedAt:integer('release_checked_at').notNull().default(0),
+ termsVersion:text('terms_version'),termsAcceptedAt:text('terms_accepted_at'),confirmedTermsVersion:text('confirmed_terms_version'),
 });
 export const trips = sqliteTable('trips', {
  id:text('id').primaryKey(), ownerId:text('owner_id').notNull(), name:text('name').notNull(),

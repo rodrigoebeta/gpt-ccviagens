@@ -38,3 +38,8 @@ Em ambos os modos, descubra `reservationImportContract` no endpoint de capacidad
 Cada POST importa **uma reserva**, com `{version:1,reservation,documents,change?,reviewReason?}`. `sourceKey` e `sources` ficam dentro de `reservation`; não enviar bundleVersion, array externo de reservas nem campos não aceitos no envelope. Para vários grupos, fazer POSTs separados pelo contrato e limites atuais. Preserve identidade, proveniência real, campos existentes, ajustes manuais, estado/cronologia e fingerprint atual. `documents` contém bytes originais base64, nome e MIME; URL temporária, OCR ou descrição não são arquivos. JSON é um corpo HTTP e pode ser montado em memória; salvar arquivo local não é requisito. Se usar temporário, manter privado no ambiente da execução e sem credenciais. Dividir envios de documentos conforme limites, sem truncar dados.
 
 Obtenha token de get_site em cada execução; não salvá-lo no prompt, Skill, JSON, relatório ou arquivo. Envie somente à origem HTTPS confirmada e sem redirects, nos cabeçalhos documentados. 401/403/503 interrompem ações dependentes; 409 exige releitura/versões, não repetição cega. Relate falhas específicas e não contornar permissões.
+
+
+## Instalação em modo de consulta
+
+Em HTTP 423, preservar dados e pendências, relatar que alterações/importações estão suspensas e orientar o proprietário pelo aviso da Central. O aceite é pessoal e exclusivo no aplicativo; a rotina não aceita termos nem altera configurações para contornar a regra. Contatos técnicos são automáticos após o aceite. Preservar T0 e reconsultar/deduplicar ao retomar; não tratar uma importação recusada como concluída.

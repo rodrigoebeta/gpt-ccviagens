@@ -1,12 +1,13 @@
+import {writableInstallation} from '@/lib/service';
 import {z} from 'zod';
 import {tripInput} from '@/lib/contracts';
 import {assistantTrip,deleteAssistantTrip} from '@/lib/assistant-trips';
 import {access,AppError,csrf,database,handle,identity,readJson,respond} from '@/lib/service';
 export const dynamic='force-dynamic';
 export async function GET(_:Request,{params}:{params:Promise<{id:string}>}){return handle(async()=>{const {id}=await params,data=await assistantTrip(id,await identity());return respond({...data,role:data.trip.role});});}
-export async function DELETE(req:Request,{params}:{params:Promise<{id:string}>}){return handle(async()=>{csrf(req);const {id}=await params;const result=await deleteAssistantTrip(id,await identity(),await readJson(req,2000));return respond(result,result.retryRequired?202:200);});}
+export async function DELETE(req:Request,{params}:{params:Promise<{id:string}>}){return handle(async()=>{csrf(req);await writableInstallation(req.url);const {id}=await params;const result=await deleteAssistantTrip(id,await identity(),await readJson(req,2000));return respond(result,result.retryRequired?202:200);});}
 export async function PATCH(req:Request,{params}:{params:Promise<{id:string}>}){return handle(async()=>{
- const input=await readJson(req,100000);csrf(req);const {id}=await params;await access(id,await identity(),true);
+ const input=await readJson(req,100000);csrf(req);await writableInstallation(req.url);const {id}=await params;await access(id,await identity(),true);
  const {trip:t,base}=z.object({trip:tripInput,base:tripInput}).strict().parse(input);
  const db=database();
  // Keep the range check in the write itself, so an existing item cannot be hidden.

@@ -1,6 +1,6 @@
 # Licença de uso da Central de Viagens
 
-Versão 2026-09-27.3 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
+Versão 2026-10-01.1 · Titular: Rodrigo Purchio · Contato: contato@rodrigoebeta.com
 
 ## Oferta gratuita e condições
 
@@ -22,9 +22,9 @@ Modificações autorizadas para uso próprio não concedem permissão de distrib
 
 ## Telemetria e aceite
 
-A distribuição oficial inclui telemetria obrigatória, conforme PRIVACIDADE.md. Ao confirmar que deseja prosseguir com a instalação depois de receber e aceitar estes termos e o aviso de privacidade, a pessoa responsável concorda com as condições dessa oferta. O aceite deve ser explícito e registrado antes de ativar a coleta; o simples download ou pedido inicial de instalação não o substitui. O assistente não aceita em nome da pessoa. Se ela não concordar, deve encerrar a instalação antes da ativação.
+A distribuição oficial inclui telemetria obrigatória, conforme PRIVACIDADE.md. O preparo e a publicação privada podem ocorrer antes da ativação, sem coleta e em modo de consulta. A pessoa responsável aceita estes termos e o aviso de privacidade exclusivamente dentro da Central, após login, pela opção explícita no aviso de ativação. O aceite é registrado no banco da própria instalação antes de ativar a coleta. Download, pedido de instalação, resposta ao assistente ou configuração de ambiente não substituem essa ação. O assistente não pode aceitar em nome da pessoa. Se ela não concordar ou adiar, alterações e importações permanecem indisponíveis; a consulta aos dados existentes é preservada.
 
-Não desative ou adultere deliberadamente o mecanismo para contornar esta condição, ressalvados os direitos assegurados pela legislação aplicável. Indisponibilidade temporária de rede ou do receptor não bloqueia o aplicativo nem comprova descumprimento.
+Não desative ou adultere deliberadamente o mecanismo para contornar esta condição, ressalvados os direitos assegurados pela legislação aplicável. A ativação exige aceite explícito e primeiro contato confirmado pelo receptor. O aceite não se repete no uso normal: contatos automáticos durante o uso renovam a confirmação, normalmente a cada 24 horas. Após sete dias sem confirmação válida, a instalação impede alterações e importações, inclusive pelas APIs assistant/sync, e mantém consulta a viagens e comprovantes. O contato confirmado restabelece as alterações automaticamente. Uma falha de rede não comprova descumprimento. Novos avisos de versão dependem da telemetria confirmada; não há instalação automática de código.
 
 O aceite contratual não substitui a definição da base legal adequada ao eventual tratamento de dados pessoais nem afasta direitos previstos em lei. Alterações materiais das condições devem ser informadas antes de exigir novo aceite ou ampliar a coleta.
 
@@ -32,7 +32,7 @@ O aceite contratual não substitui a definição da base legal adequada ao event
 
 A consulta de versões informa atualizações que forem disponibilizadas. Ela não garante novas versões, manutenção permanente, entrega de avisos ou instalação automática. O titular pode decidir a continuidade do desenvolvimento conforme adoção, recursos e observância da licença. Sem os indicadores fornecidos pela telemetria, ou se não houver condições de manter a oferta, o desenvolvimento poderá ser reduzido ou encerrado e recursos poderão ser alterados ou retirados de versões futuras, observados os direitos aplicáveis. Mudanças materiais nas condições serão informadas antes de sua adoção; este aceite não autoriza a ampliação silenciosa da coleta.
 
-A atualização assistida preserva dados e personalizações e requer autorização de publicação. Essas possibilidades não representam retirada automática de funções de uma instalação nem bloqueio remoto: o aplicativo não contém esse comando. O encerramento de novas versões não apaga viagens ou documentos das cópias já instaladas.
+A atualização assistida preserva dados e personalizações e requer autorização de publicação. As restrições automáticas previstas acima suspendem alterações sem apagar dados; a consulta continua disponível. Não há comando administrativo para apagar viagens ou bloquear remotamente toda a instalação. O encerramento de novas versões não apaga viagens ou documentos das cópias já instaladas.
 
 ## Escopo e terceiros
 

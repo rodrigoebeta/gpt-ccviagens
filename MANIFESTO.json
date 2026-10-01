@@ -1,5 +1,5 @@
 {
-  "version": "0.3.4",
+  "version": "0.4.0",
   "status": "released-for-use-independent-installation-pending",
   "files": [
     {
@@ -9,18 +9,18 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/AGENTS.md",
-      "bytes": 22348,
-      "sha256": "431876e13b6f49645df74990dad30776e69f0979db9c03526803b2574bb22eb8"
+      "bytes": 24897,
+      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/COMECE_AQUI.md",
-      "bytes": 4601,
-      "sha256": "0b80aab629366ecb6afa489ea96a70e79ee1fe03196ae2df030de9b4792640b4"
+      "bytes": 4689,
+      "sha256": "16bb4f062f87dd36655c91a3f261f2fa24b1530d7389b185e5b7f80c48ce30a6"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/CONFIGURAR_NO_WORK.md",
-      "bytes": 24533,
-      "sha256": "dee512809738ea8fa905ad4e142cdffd580bc3c0ee8ce51adcaabd43bc0b83b2"
+      "bytes": 25159,
+      "sha256": "6dd4ec4f126ff86f35dcc6d799ee960dfac35e0ca7c3232c64a7951bcdcebc53"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/CREDITOS.md",
@@ -29,13 +29,13 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/API_ASSISTENTE.md",
-      "bytes": 17766,
-      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
+      "bytes": 18202,
+      "sha256": "ef5989a55843a6601af60d375634c539c0f5902a501eaf815fbd8f76cd2d87bf"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/ATUALIZACOES.md",
-      "bytes": 3516,
-      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
+      "bytes": 4595,
+      "sha256": "76a039c7eaaf4a5d30455c0b349dd5e353d0be22d1402a7ef350b5f2d91b25a9"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/BUSCA_RESERVAS.md",
@@ -49,13 +49,13 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/PROMPT_SCHEDULED_SKILL.md",
-      "bytes": 3537,
-      "sha256": "5de63a855a28399bc854f4d5c11ad931b35b5fedb9dd237956a40128eecb5b72"
+      "bytes": 4010,
+      "sha256": "4c6eb7b3dbd7fbb4d402879c7ecfd184780a684e7ffb89f9613822f6a0bc26b5"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 19246,
-      "sha256": "14e5fd94f01c56257078be31f2176db4e8b33eb15f7ea1a4a924d571c269a9bd"
+      "bytes": 19682,
+      "sha256": "d326c62bd85d8304727352187d5659dd26d829b3d01057e8f6f348fdcdd739a0"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/PROMPT_WORK_API.md",
@@ -69,8 +69,8 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/SINCRONIZACAO.md",
-      "bytes": 23221,
-      "sha256": "7e76951586b28b13e45d6f438c8e86af0b3326ee123470f1379a328a101dddc9"
+      "bytes": 23657,
+      "sha256": "802aa5340092289b96df5f5854a2e03c8f3556d290e802fbfbf46eae151a4ad1"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/docs/SKILLS.md",
@@ -79,48 +79,48 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/GUIA_DO_PRODUTO.md",
-      "bytes": 38986,
-      "sha256": "c95774a7571c050a3d80c9586d69bcb13620188d5da453d3a9c841ef36d907db"
+      "bytes": 40138,
+      "sha256": "8f0aebf8e357f88b295cf1882953f0509ec18c1edc5def1e2d4fa52b3d395036"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/LICENSE.md",
-      "bytes": 6015,
-      "sha256": "b08d8aaade68d2c57188490b24261719c9ef138afe277a6e4571c823ccf2761c"
+      "bytes": 6785,
+      "sha256": "6a1d22a3692b7ae17aa27099e190fedc7b8466d3dd70fc8843cd8f6340dcea5e"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/ONBOARDING.md",
-      "bytes": 33516,
-      "sha256": "9543cb6ce9b7eba4f43afbc873583917258126d2e1d1d129d470dac4d332a329"
+      "bytes": 35819,
+      "sha256": "270275241c7b51369539ab04021b0f8a69633282b78ce2c8a7ede356f85a4ba9"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/PRIVACIDADE.md",
-      "bytes": 7280,
-      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
+      "bytes": 8215,
+      "sha256": "2ac5709f13a48da757ad5b6ee1e2f144c9464bed9ffad1a0ce58ed4178704500"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/README.md",
-      "bytes": 9117,
-      "sha256": "5348f575e352808196d590ae610a4819a8999d2df480767727f8274a9cc12653"
+      "bytes": 9262,
+      "sha256": "e638c37413203cb0259dc00e4834ef61df5d6eb5c0ec390af0011e414f7d98b1"
     },
     {
       "path": ".agents/skills/ccviagens-importar/SKILL.md",
-      "bytes": 6666,
-      "sha256": "754678613ce9138df777e769f9c9305b4d17a358e3f5d6d4aa408549206f7d0d"
+      "bytes": 7139,
+      "sha256": "432ebb8d5a671b476aac62707ee382195e82852379d2d896d8ea056a11a80b6e"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/AGENTS.md",
-      "bytes": 22348,
-      "sha256": "431876e13b6f49645df74990dad30776e69f0979db9c03526803b2574bb22eb8"
+      "bytes": 24897,
+      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/COMECE_AQUI.md",
-      "bytes": 4601,
-      "sha256": "0b80aab629366ecb6afa489ea96a70e79ee1fe03196ae2df030de9b4792640b4"
+      "bytes": 4689,
+      "sha256": "16bb4f062f87dd36655c91a3f261f2fa24b1530d7389b185e5b7f80c48ce30a6"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/CONFIGURAR_NO_WORK.md",
-      "bytes": 24533,
-      "sha256": "dee512809738ea8fa905ad4e142cdffd580bc3c0ee8ce51adcaabd43bc0b83b2"
+      "bytes": 25159,
+      "sha256": "6dd4ec4f126ff86f35dcc6d799ee960dfac35e0ca7c3232c64a7951bcdcebc53"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/CREDITOS.md",
@@ -129,13 +129,13 @@
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/API_ASSISTENTE.md",
-      "bytes": 17766,
-      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
+      "bytes": 18202,
+      "sha256": "ef5989a55843a6601af60d375634c539c0f5902a501eaf815fbd8f76cd2d87bf"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/ATUALIZACOES.md",
-      "bytes": 3516,
-      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
+      "bytes": 4595,
+      "sha256": "76a039c7eaaf4a5d30455c0b349dd5e353d0be22d1402a7ef350b5f2d91b25a9"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/BUSCA_RESERVAS.md",
@@ -149,13 +149,13 @@
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/PROMPT_SCHEDULED_SKILL.md",
-      "bytes": 3537,
-      "sha256": "5de63a855a28399bc854f4d5c11ad931b35b5fedb9dd237956a40128eecb5b72"
+      "bytes": 4010,
+      "sha256": "4c6eb7b3dbd7fbb4d402879c7ecfd184780a684e7ffb89f9613822f6a0bc26b5"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 19246,
-      "sha256": "14e5fd94f01c56257078be31f2176db4e8b33eb15f7ea1a4a924d571c269a9bd"
+      "bytes": 19682,
+      "sha256": "d326c62bd85d8304727352187d5659dd26d829b3d01057e8f6f348fdcdd739a0"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/PROMPT_WORK_API.md",
@@ -169,8 +169,8 @@
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/SINCRONIZACAO.md",
-      "bytes": 23221,
-      "sha256": "7e76951586b28b13e45d6f438c8e86af0b3326ee123470f1379a328a101dddc9"
+      "bytes": 23657,
+      "sha256": "802aa5340092289b96df5f5854a2e03c8f3556d290e802fbfbf46eae151a4ad1"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/docs/SKILLS.md",
@@ -179,33 +179,33 @@
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/GUIA_DO_PRODUTO.md",
-      "bytes": 38986,
-      "sha256": "c95774a7571c050a3d80c9586d69bcb13620188d5da453d3a9c841ef36d907db"
+      "bytes": 40138,
+      "sha256": "8f0aebf8e357f88b295cf1882953f0509ec18c1edc5def1e2d4fa52b3d395036"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/LICENSE.md",
-      "bytes": 6015,
-      "sha256": "b08d8aaade68d2c57188490b24261719c9ef138afe277a6e4571c823ccf2761c"
+      "bytes": 6785,
+      "sha256": "6a1d22a3692b7ae17aa27099e190fedc7b8466d3dd70fc8843cd8f6340dcea5e"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/ONBOARDING.md",
-      "bytes": 33516,
-      "sha256": "9543cb6ce9b7eba4f43afbc873583917258126d2e1d1d129d470dac4d332a329"
+      "bytes": 35819,
+      "sha256": "270275241c7b51369539ab04021b0f8a69633282b78ce2c8a7ede356f85a4ba9"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/PRIVACIDADE.md",
-      "bytes": 7280,
-      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
+      "bytes": 8215,
+      "sha256": "2ac5709f13a48da757ad5b6ee1e2f144c9464bed9ffad1a0ce58ed4178704500"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/README.md",
-      "bytes": 9117,
-      "sha256": "5348f575e352808196d590ae610a4819a8999d2df480767727f8274a9cc12653"
+      "bytes": 9262,
+      "sha256": "e638c37413203cb0259dc00e4834ef61df5d6eb5c0ec390af0011e414f7d98b1"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/SKILL.md",
-      "bytes": 4701,
-      "sha256": "18952229f0e1a359e344d2bb2172e74f89c7932b970d3f1ea54a9971d06dfdc2"
+      "bytes": 6127,
+      "sha256": "4f09814567f24eba3345de90af3c0f40cde0d6a90e98d1617c59c07316883bf0"
     },
     {
       "path": ".gitattributes",
@@ -219,23 +219,23 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 22348,
-      "sha256": "431876e13b6f49645df74990dad30776e69f0979db9c03526803b2574bb22eb8"
+      "bytes": 24897,
+      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
     },
     {
       "path": "ccviagens-plugin.zip",
-      "bytes": 257959,
-      "sha256": "c7d211b70e0ca0d9782b08fa556cc23016ebe09e3fff3948fce7945b1204c746"
+      "bytes": 266647,
+      "sha256": "194fad0dc2d6c539b076c5a6293aa9c372badaf2925eafe27dbd7304516f3f77"
     },
     {
       "path": "COMECE_AQUI.md",
-      "bytes": 4601,
-      "sha256": "0b80aab629366ecb6afa489ea96a70e79ee1fe03196ae2df030de9b4792640b4"
+      "bytes": 4689,
+      "sha256": "16bb4f062f87dd36655c91a3f261f2fa24b1530d7389b185e5b7f80c48ce30a6"
     },
     {
       "path": "CONFIGURAR_NO_WORK.md",
-      "bytes": 24533,
-      "sha256": "dee512809738ea8fa905ad4e142cdffd580bc3c0ee8ce51adcaabd43bc0b83b2"
+      "bytes": 25159,
+      "sha256": "6dd4ec4f126ff86f35dcc6d799ee960dfac35e0ca7c3232c64a7951bcdcebc53"
     },
     {
       "path": "CREDITOS.md",
@@ -244,13 +244,13 @@
     },
     {
       "path": "docs/API_ASSISTENTE.md",
-      "bytes": 17766,
-      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
+      "bytes": 18202,
+      "sha256": "ef5989a55843a6601af60d375634c539c0f5902a501eaf815fbd8f76cd2d87bf"
     },
     {
       "path": "docs/ATUALIZACOES.md",
-      "bytes": 3516,
-      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
+      "bytes": 4595,
+      "sha256": "76a039c7eaaf4a5d30455c0b349dd5e353d0be22d1402a7ef350b5f2d91b25a9"
     },
     {
       "path": "docs/BUSCA_RESERVAS.md",
@@ -264,13 +264,13 @@
     },
     {
       "path": "docs/PROMPT_SCHEDULED_SKILL.md",
-      "bytes": 3537,
-      "sha256": "5de63a855a28399bc854f4d5c11ad931b35b5fedb9dd237956a40128eecb5b72"
+      "bytes": 4010,
+      "sha256": "4c6eb7b3dbd7fbb4d402879c7ecfd184780a684e7ffb89f9613822f6a0bc26b5"
     },
     {
       "path": "docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 19246,
-      "sha256": "14e5fd94f01c56257078be31f2176db4e8b33eb15f7ea1a4a924d571c269a9bd"
+      "bytes": 19682,
+      "sha256": "d326c62bd85d8304727352187d5659dd26d829b3d01057e8f6f348fdcdd739a0"
     },
     {
       "path": "docs/PROMPT_WORK_API.md",
@@ -284,8 +284,8 @@
     },
     {
       "path": "docs/SINCRONIZACAO.md",
-      "bytes": 23221,
-      "sha256": "7e76951586b28b13e45d6f438c8e86af0b3326ee123470f1379a328a101dddc9"
+      "bytes": 23657,
+      "sha256": "802aa5340092289b96df5f5854a2e03c8f3556d290e802fbfbf46eae151a4ad1"
     },
     {
       "path": "docs/SKILLS.md",
@@ -294,18 +294,23 @@
     },
     {
       "path": "GUIA_DO_PRODUTO.md",
-      "bytes": 38986,
-      "sha256": "c95774a7571c050a3d80c9586d69bcb13620188d5da453d3a9c841ef36d907db"
+      "bytes": 40138,
+      "sha256": "8f0aebf8e357f88b295cf1882953f0509ec18c1edc5def1e2d4fa52b3d395036"
+    },
+    {
+      "path": "latest-release.json",
+      "bytes": 356,
+      "sha256": "06206ef07482e20fac208f01669754750f386e6acc262244cef2d61ed39449af"
     },
     {
       "path": "LICENSE.md",
-      "bytes": 6015,
-      "sha256": "b08d8aaade68d2c57188490b24261719c9ef138afe277a6e4571c823ccf2761c"
+      "bytes": 6785,
+      "sha256": "6a1d22a3692b7ae17aa27099e190fedc7b8466d3dd70fc8843cd8f6340dcea5e"
     },
     {
       "path": "ONBOARDING.md",
-      "bytes": 33516,
-      "sha256": "9543cb6ce9b7eba4f43afbc873583917258126d2e1d1d129d470dac4d332a329"
+      "bytes": 35819,
+      "sha256": "270275241c7b51369539ab04021b0f8a69633282b78ce2c8a7ede356f85a4ba9"
     },
     {
       "path": "plugins/ccviagens/assets/icon.png",
@@ -320,22 +325,22 @@
     {
       "path": "plugins/ccviagens/plugin.json",
       "bytes": 601,
-      "sha256": "4280beb82dc890393cbe8cf0c2080c37919b4a6d32bd824f154bca953682b335"
+      "sha256": "d19d654c4fb9f97fa0bc6b5d522c6afe5af8b360c67f6349adb8192eefed6a8c"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/AGENTS.md",
-      "bytes": 22348,
-      "sha256": "431876e13b6f49645df74990dad30776e69f0979db9c03526803b2574bb22eb8"
+      "bytes": 24897,
+      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/COMECE_AQUI.md",
-      "bytes": 4601,
-      "sha256": "0b80aab629366ecb6afa489ea96a70e79ee1fe03196ae2df030de9b4792640b4"
+      "bytes": 4689,
+      "sha256": "16bb4f062f87dd36655c91a3f261f2fa24b1530d7389b185e5b7f80c48ce30a6"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/CONFIGURAR_NO_WORK.md",
-      "bytes": 24533,
-      "sha256": "dee512809738ea8fa905ad4e142cdffd580bc3c0ee8ce51adcaabd43bc0b83b2"
+      "bytes": 25159,
+      "sha256": "6dd4ec4f126ff86f35dcc6d799ee960dfac35e0ca7c3232c64a7951bcdcebc53"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/CREDITOS.md",
@@ -344,13 +349,13 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/API_ASSISTENTE.md",
-      "bytes": 17766,
-      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
+      "bytes": 18202,
+      "sha256": "ef5989a55843a6601af60d375634c539c0f5902a501eaf815fbd8f76cd2d87bf"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/ATUALIZACOES.md",
-      "bytes": 3516,
-      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
+      "bytes": 4595,
+      "sha256": "76a039c7eaaf4a5d30455c0b349dd5e353d0be22d1402a7ef350b5f2d91b25a9"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/BUSCA_RESERVAS.md",
@@ -364,13 +369,13 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/PROMPT_SCHEDULED_SKILL.md",
-      "bytes": 3537,
-      "sha256": "5de63a855a28399bc854f4d5c11ad931b35b5fedb9dd237956a40128eecb5b72"
+      "bytes": 4010,
+      "sha256": "4c6eb7b3dbd7fbb4d402879c7ecfd184780a684e7ffb89f9613822f6a0bc26b5"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 19246,
-      "sha256": "14e5fd94f01c56257078be31f2176db4e8b33eb15f7ea1a4a924d571c269a9bd"
+      "bytes": 19682,
+      "sha256": "d326c62bd85d8304727352187d5659dd26d829b3d01057e8f6f348fdcdd739a0"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/PROMPT_WORK_API.md",
@@ -384,8 +389,8 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/SINCRONIZACAO.md",
-      "bytes": 23221,
-      "sha256": "7e76951586b28b13e45d6f438c8e86af0b3326ee123470f1379a328a101dddc9"
+      "bytes": 23657,
+      "sha256": "802aa5340092289b96df5f5854a2e03c8f3556d290e802fbfbf46eae151a4ad1"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/docs/SKILLS.md",
@@ -394,48 +399,48 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/GUIA_DO_PRODUTO.md",
-      "bytes": 38986,
-      "sha256": "c95774a7571c050a3d80c9586d69bcb13620188d5da453d3a9c841ef36d907db"
+      "bytes": 40138,
+      "sha256": "8f0aebf8e357f88b295cf1882953f0509ec18c1edc5def1e2d4fa52b3d395036"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/LICENSE.md",
-      "bytes": 6015,
-      "sha256": "b08d8aaade68d2c57188490b24261719c9ef138afe277a6e4571c823ccf2761c"
+      "bytes": 6785,
+      "sha256": "6a1d22a3692b7ae17aa27099e190fedc7b8466d3dd70fc8843cd8f6340dcea5e"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/ONBOARDING.md",
-      "bytes": 33516,
-      "sha256": "9543cb6ce9b7eba4f43afbc873583917258126d2e1d1d129d470dac4d332a329"
+      "bytes": 35819,
+      "sha256": "270275241c7b51369539ab04021b0f8a69633282b78ce2c8a7ede356f85a4ba9"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/PRIVACIDADE.md",
-      "bytes": 7280,
-      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
+      "bytes": 8215,
+      "sha256": "2ac5709f13a48da757ad5b6ee1e2f144c9464bed9ffad1a0ce58ed4178704500"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/README.md",
-      "bytes": 9117,
-      "sha256": "5348f575e352808196d590ae610a4819a8999d2df480767727f8274a9cc12653"
+      "bytes": 9262,
+      "sha256": "e638c37413203cb0259dc00e4834ef61df5d6eb5c0ec390af0011e414f7d98b1"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/SKILL.md",
-      "bytes": 6666,
-      "sha256": "754678613ce9138df777e769f9c9305b4d17a358e3f5d6d4aa408549206f7d0d"
+      "bytes": 7139,
+      "sha256": "432ebb8d5a671b476aac62707ee382195e82852379d2d896d8ea056a11a80b6e"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/AGENTS.md",
-      "bytes": 22348,
-      "sha256": "431876e13b6f49645df74990dad30776e69f0979db9c03526803b2574bb22eb8"
+      "bytes": 24897,
+      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/COMECE_AQUI.md",
-      "bytes": 4601,
-      "sha256": "0b80aab629366ecb6afa489ea96a70e79ee1fe03196ae2df030de9b4792640b4"
+      "bytes": 4689,
+      "sha256": "16bb4f062f87dd36655c91a3f261f2fa24b1530d7389b185e5b7f80c48ce30a6"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/CONFIGURAR_NO_WORK.md",
-      "bytes": 24533,
-      "sha256": "dee512809738ea8fa905ad4e142cdffd580bc3c0ee8ce51adcaabd43bc0b83b2"
+      "bytes": 25159,
+      "sha256": "6dd4ec4f126ff86f35dcc6d799ee960dfac35e0ca7c3232c64a7951bcdcebc53"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/CREDITOS.md",
@@ -444,13 +449,13 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/API_ASSISTENTE.md",
-      "bytes": 17766,
-      "sha256": "d695e0e101a9b24fbecba3cfed0f5da86d1720609c99a998070dd72afbce36b6"
+      "bytes": 18202,
+      "sha256": "ef5989a55843a6601af60d375634c539c0f5902a501eaf815fbd8f76cd2d87bf"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/ATUALIZACOES.md",
-      "bytes": 3516,
-      "sha256": "fc77e8c01e5e653cc43e54455b960d0abb94386df142d1f4e78cd356635682fc"
+      "bytes": 4595,
+      "sha256": "76a039c7eaaf4a5d30455c0b349dd5e353d0be22d1402a7ef350b5f2d91b25a9"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/BUSCA_RESERVAS.md",
@@ -464,13 +469,13 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/PROMPT_SCHEDULED_SKILL.md",
-      "bytes": 3537,
-      "sha256": "5de63a855a28399bc854f4d5c11ad931b35b5fedb9dd237956a40128eecb5b72"
+      "bytes": 4010,
+      "sha256": "4c6eb7b3dbd7fbb4d402879c7ecfd184780a684e7ffb89f9613822f6a0bc26b5"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/PROMPT_SCHEDULED_TASK.md",
-      "bytes": 19246,
-      "sha256": "14e5fd94f01c56257078be31f2176db4e8b33eb15f7ea1a4a924d571c269a9bd"
+      "bytes": 19682,
+      "sha256": "d326c62bd85d8304727352187d5659dd26d829b3d01057e8f6f348fdcdd739a0"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/PROMPT_WORK_API.md",
@@ -484,8 +489,8 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/SINCRONIZACAO.md",
-      "bytes": 23221,
-      "sha256": "7e76951586b28b13e45d6f438c8e86af0b3326ee123470f1379a328a101dddc9"
+      "bytes": 23657,
+      "sha256": "802aa5340092289b96df5f5854a2e03c8f3556d290e802fbfbf46eae151a4ad1"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/docs/SKILLS.md",
@@ -494,58 +499,53 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/GUIA_DO_PRODUTO.md",
-      "bytes": 38986,
-      "sha256": "c95774a7571c050a3d80c9586d69bcb13620188d5da453d3a9c841ef36d907db"
+      "bytes": 40138,
+      "sha256": "8f0aebf8e357f88b295cf1882953f0509ec18c1edc5def1e2d4fa52b3d395036"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/LICENSE.md",
-      "bytes": 6015,
-      "sha256": "b08d8aaade68d2c57188490b24261719c9ef138afe277a6e4571c823ccf2761c"
+      "bytes": 6785,
+      "sha256": "6a1d22a3692b7ae17aa27099e190fedc7b8466d3dd70fc8843cd8f6340dcea5e"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/ONBOARDING.md",
-      "bytes": 33516,
-      "sha256": "9543cb6ce9b7eba4f43afbc873583917258126d2e1d1d129d470dac4d332a329"
+      "bytes": 35819,
+      "sha256": "270275241c7b51369539ab04021b0f8a69633282b78ce2c8a7ede356f85a4ba9"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/PRIVACIDADE.md",
-      "bytes": 7280,
-      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
+      "bytes": 8215,
+      "sha256": "2ac5709f13a48da757ad5b6ee1e2f144c9464bed9ffad1a0ce58ed4178704500"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/README.md",
-      "bytes": 9117,
-      "sha256": "5348f575e352808196d590ae610a4819a8999d2df480767727f8274a9cc12653"
+      "bytes": 9262,
+      "sha256": "e638c37413203cb0259dc00e4834ef61df5d6eb5c0ec390af0011e414f7d98b1"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/SKILL.md",
-      "bytes": 4701,
-      "sha256": "18952229f0e1a359e344d2bb2172e74f89c7932b970d3f1ea54a9971d06dfdc2"
+      "bytes": 6127,
+      "sha256": "4f09814567f24eba3345de90af3c0f40cde0d6a90e98d1617c59c07316883bf0"
     },
     {
       "path": "PRIVACIDADE.md",
-      "bytes": 7280,
-      "sha256": "0e10a57f49d0e665ba01233cb5476c116ea1722e565631c24abecd18211e5dcc"
+      "bytes": 8215,
+      "sha256": "2ac5709f13a48da757ad5b6ee1e2f144c9464bed9ffad1a0ce58ed4178704500"
     },
     {
       "path": "README.md",
-      "bytes": 9117,
-      "sha256": "5348f575e352808196d590ae610a4819a8999d2df480767727f8274a9cc12653"
+      "bytes": 9262,
+      "sha256": "e638c37413203cb0259dc00e4834ef61df5d6eb5c0ec390af0011e414f7d98b1"
     },
     {
       "path": "release.json",
-      "bytes": 804,
-      "sha256": "3d84aa7ed14f425fb9180ee2fe6e54d95181417428a81405a90f24cefecf0304"
-    },
-    {
-      "path": "scripts/registrar-aceite.mjs",
-      "bytes": 1509,
-      "sha256": "13ac294838f7c99406e6adf2e92056ebd695335fad9767a2cb111fa0ec20075b"
+      "bytes": 485,
+      "sha256": "50cf24f3c75147059a4515136303cca8cd01b42661f089811604c6796722a590"
     },
     {
       "path": "scripts/verificar-pacote.mjs",
-      "bytes": 2986,
-      "sha256": "4a6b21eec7a0834888554b14fe756399c313ac0d88d24ec6b2174376f2f6b36f"
+      "bytes": 3348,
+      "sha256": "323a5d48761685e64d6e3e1f243ccd4328114584331235e740924c29fc959264"
     },
     {
       "path": "site/.npmrc",
@@ -569,13 +569,18 @@
     },
     {
       "path": "site/app/api/destinations/search/route.ts",
-      "bytes": 536,
-      "sha256": "a0d30496f3358f15a6315394b6d53c639b0b7fd9327bc8135128ff3c3d1172ff"
+      "bytes": 624,
+      "sha256": "7b65cddb992df224c2873116923e8312372f8170e0cf3669008e780a92dd2e40"
     },
     {
       "path": "site/app/api/documents/[id]/route.ts",
       "bytes": 1039,
       "sha256": "1c08729cc235612c8d67bcebaca2db7f2b2b4e0b6b826c1a57567f4b57655954"
+    },
+    {
+      "path": "site/app/api/installation/consent/route.ts",
+      "bytes": 577,
+      "sha256": "672ed135b2b7ea47a9ced218a3c855c612a4d8bdf98854256ab81fb665775766"
     },
     {
       "path": "site/app/api/installation/route.ts",
@@ -584,18 +589,18 @@
     },
     {
       "path": "site/app/api/profile/cover/route.ts",
-      "bytes": 3040,
-      "sha256": "756abfeba67eeeb99d28a06f5b4f3314c127251edd62a67a8417780f2a65a90f"
+      "bytes": 3128,
+      "sha256": "7c3b2f0defe9f7a6a69493827911c27182dff67fbd1c39dddd3f36e292fbf852"
     },
     {
       "path": "site/app/api/sync/capabilities/route.ts",
-      "bytes": 505,
-      "sha256": "e5691e6c9d5cf26db2a367ad5989d08632eeaddc469af8f086f3b173b89a5b17"
+      "bytes": 792,
+      "sha256": "6fc0eadd8a8d8cc25591a552640093f957193b9b8dfbfe422cf48224b73a568b"
     },
     {
       "path": "site/app/api/sync/trips/[id]/import/route.ts",
-      "bytes": 774,
-      "sha256": "43cbb81348aa8bd308c9c4170de05fb5297961705de6f0497613bfc3ef0a10f9"
+      "bytes": 951,
+      "sha256": "b7ba8056a73dc5f52bba6ff9f8ebf08e99754552fcff93e372effd4abe51530e"
     },
     {
       "path": "site/app/api/sync/trips/[id]/route.ts",
@@ -609,33 +614,33 @@
     },
     {
       "path": "site/app/api/trips/[id]/cover/route.ts",
-      "bytes": 2432,
-      "sha256": "ad8312e0e7bd8bf1bbe92fef1dd4fea3b17365c8da3acaecdbf86711a6484f46"
+      "bytes": 2556,
+      "sha256": "0526336c49282abba86287a66740a717ae68e46af5947644907e3bea01907332"
     },
     {
       "path": "site/app/api/trips/[id]/import/route.ts",
-      "bytes": 464,
-      "sha256": "05749754acdb3072e06b0d5a116d4e2e854f82757b6bc1a1914fe88f1a172e78"
+      "bytes": 552,
+      "sha256": "0d355d5d51da7ab03c3914f409ff0f62f982c53dfb0fba791351486763b625e3"
     },
     {
       "path": "site/app/api/trips/[id]/lists/route.ts",
-      "bytes": 4161,
-      "sha256": "0c6e96b91db1b1c169101c4bed0c10d4c5a0a75be7bfc33007c31d882e036cf4"
+      "bytes": 4417,
+      "sha256": "ce153c3d52486856144b99ebaec6c32dbb1296644a88a24a1d669c93dea2beb7"
     },
     {
       "path": "site/app/api/trips/[id]/locations/route.ts",
-      "bytes": 843,
-      "sha256": "c6c3b9a6e44201d5aa5e658c56fd4873d40ea986a02be6c0df1abb00621afca1"
+      "bytes": 931,
+      "sha256": "d465c2aec3bb1ad431a6edf6a82ad708eb5ee4b8ee3eaa985fd9066ebfb9b239"
     },
     {
       "path": "site/app/api/trips/[id]/map-point/route.ts",
-      "bytes": 1715,
-      "sha256": "2aaf424d27254748e38844e61859d35093476929846903d689dc3d893898e737"
+      "bytes": 1803,
+      "sha256": "49a09cb64d5d6318cd136a805ce92c40340e6311df2277006561fef8ae4a0416"
     },
     {
       "path": "site/app/api/trips/[id]/members/route.ts",
-      "bytes": 1393,
-      "sha256": "606ceb87c5f6dd596bdc86ba6956fd741f880839bfb63eb4dc723c376db1682f"
+      "bytes": 1517,
+      "sha256": "0670e07beeb08a8523829fa0412798cac3b00d81af26960d8360168ad0b2e65c"
     },
     {
       "path": "site/app/api/trips/[id]/period-items/route.ts",
@@ -644,68 +649,78 @@
     },
     {
       "path": "site/app/api/trips/[id]/place-search/route.ts",
-      "bytes": 1178,
-      "sha256": "8ea4835f7b509e3d01cd25385204d620554e489be1ab6d918f29490a8f6df0be"
+      "bytes": 1266,
+      "sha256": "96c87deee11ceae04b27d1daa17cdbae34c392eb1f1083863076e6b3c9386ef8"
     },
     {
       "path": "site/app/api/trips/[id]/places/[placeId]/photo-search/route.ts",
-      "bytes": 703,
-      "sha256": "127c5e29238defc167d0a6b432e59f245bbb0383bb54839ab2e06496ee88c3fc"
+      "bytes": 791,
+      "sha256": "765bc216680a1c6eb163fd42ed518510bc0a80c37fea01f97dfc4e6e93c900b6"
     },
     {
       "path": "site/app/api/trips/[id]/places/[placeId]/photo/route.ts",
-      "bytes": 3590,
-      "sha256": "0686a31c0a1046ddc0f000cab41076cef1d8aa57943109a2422a66e374ee5bf3"
+      "bytes": 3678,
+      "sha256": "6e1fa66cef4e3ef06e873a759a3b51525400d571ed474efdb7ad39cd4523a395"
     },
     {
       "path": "site/app/api/trips/[id]/places/route.ts",
-      "bytes": 4051,
-      "sha256": "505cadee89c43134be96b01d2ad7e4c30be4b475a35d24ad57d445d71d9e8ded"
+      "bytes": 4211,
+      "sha256": "b7053905b14aa78d7ca2d57cac0a3e800df525bee6b12c84b8a601d253fe0a59"
     },
     {
       "path": "site/app/api/trips/[id]/places/schedule/route.ts",
-      "bytes": 1944,
-      "sha256": "000471d959d06f8dbda1ce0280891c046c6cd25b2ce8b1f88846b536be0e11a3"
+      "bytes": 2032,
+      "sha256": "7bdfac2d145b57e7fa2706fda99449b296fcdc4372765fceaffac1512d0ecbbe"
     },
     {
       "path": "site/app/api/trips/[id]/reservations/[reservationId]/documents/route.ts",
-      "bytes": 2124,
-      "sha256": "3f52235ebaa2d0e7ca55c3a424b3df042821a6aa97d86ca892025e9a8db9d738"
+      "bytes": 2212,
+      "sha256": "0b5461d66afabc9a9091c0b6514a3598892bdbea0e27cec0ab37e34a7e8a42d8"
     },
     {
       "path": "site/app/api/trips/[id]/reservations/[reservationId]/route.ts",
-      "bytes": 756,
-      "sha256": "82f20144c221fe79d2a89122cfd46463252f21c9a1e1efb426201335cdef09de"
+      "bytes": 844,
+      "sha256": "08c2e5ab879fe2bff1682b10fe6e15eee2ca4bdfc9e3cd0f5adb9221d2034aae"
     },
     {
       "path": "site/app/api/trips/[id]/reservations/route.ts",
-      "bytes": 476,
-      "sha256": "3fc397f5a63570c90a65f548038621cdfaf88733cc929d28164bae21cdbbb0ee"
+      "bytes": 564,
+      "sha256": "45300f7fafbfc4d7bf032fdf1cfeba2b66b02a148f0b3b21741e9c315989e082"
     },
     {
       "path": "site/app/api/trips/[id]/reviews/route.ts",
-      "bytes": 1036,
-      "sha256": "6f466ea488e8ae2d6ea4d12d4481c6a165bf37b4a5400da23f517c7ea30eb404"
+      "bytes": 1124,
+      "sha256": "f0e8a8161b00d40d12ac202ffb7265696b2e12dd5429331cae09f686c56b5fe9"
     },
     {
       "path": "site/app/api/trips/[id]/route.ts",
-      "bytes": 2704,
-      "sha256": "1b84751b217792d3ca1a7bfd5e85d4682c7a6901f8812233526be6337d293d61"
+      "bytes": 2828,
+      "sha256": "9021d53d3489bc29a59ea1155f8f4af9275385056d5512a6189fe8ab40088bd5"
     },
     {
       "path": "site/app/api/trips/[id]/timeline/route.ts",
-      "bytes": 2862,
-      "sha256": "35d4ffb2323a9fb1496d9b479910b48829fab1b341b6cbf73fb3b01cd87d5213"
+      "bytes": 2950,
+      "sha256": "7b315129be007011f38ae3fe368fcb31b355192bd0421b351557fcfc21dc504a"
     },
     {
       "path": "site/app/api/trips/route.ts",
-      "bytes": 1522,
-      "sha256": "b799c1f950b88ab6599220a4fcb450ec43a14f6f61e6ce10beb2d415e9c2a7db"
+      "bytes": 1610,
+      "sha256": "30f622994b84613a77e2842c41ff8266107be00d6e8fc487258c80e393c6f617"
     },
     {
       "path": "site/app/chatgpt-auth.ts",
       "bytes": 2550,
       "sha256": "4265a2e7c2dcb3a6f4b7026f762bf5b6e4caec76cc13c0a45987ee9a9f2e42cc"
+    },
+    {
+      "path": "site/app/conditions/page.tsx",
+      "bytes": 750,
+      "sha256": "6de6c93b921d58498cfad774ed36be475417eae4fad9333293cfc4f2a90fd8b1"
+    },
+    {
+      "path": "site/app/conditions/policies.css",
+      "bytes": 583,
+      "sha256": "fab94c5436347ea807fdd8efc850a8891891fca44618326c3395157b44ceacd6"
     },
     {
       "path": "site/app/cover-editor.tsx",
@@ -763,14 +778,19 @@
       "sha256": "083198e25fa3d93d6b3972abe962ed6ba8e1d397df4df1be0092cc5a7768c510"
     },
     {
+      "path": "site/app/installation-access.tsx",
+      "bytes": 674,
+      "sha256": "69a092eda23ca5938157fdf484e11b0e980312e5f4d1c0b0f045131f907d4140"
+    },
+    {
       "path": "site/app/installation-client.tsx",
-      "bytes": 4187,
-      "sha256": "4aa538c723d398a4ec89659ed48802679d96da1a52c3e04c5df4e908a57affaf"
+      "bytes": 8253,
+      "sha256": "76ce1987b7152378c45330a05ac885f8a8554e4460a11998570452792d7afa80"
     },
     {
       "path": "site/app/installation.css",
-      "bytes": 2756,
-      "sha256": "af78477a23d4bb3ce68b3943d446ab5e27f41988d21ce59768aeca0e92e2445f"
+      "bytes": 3765,
+      "sha256": "2d0d3227430663ceeb37970dc72e6c880e16a85aed62e16f799ed896dc5fd2ab"
     },
     {
       "path": "site/app/layout.tsx",
@@ -784,8 +804,8 @@
     },
     {
       "path": "site/app/page.tsx",
-      "bytes": 1167,
-      "sha256": "a15bf31f50c34a87a1b25d0a5da309af5d8c6a6f993f8dad9f30938146cee309"
+      "bytes": 1350,
+      "sha256": "7d17ab19b89821cc64d00aed7707f249720a39b900c53c954581db3b9cfc4858"
     },
     {
       "path": "site/app/pending-hub.tsx",
@@ -869,8 +889,8 @@
     },
     {
       "path": "site/app/travel-app.tsx",
-      "bytes": 38463,
-      "sha256": "c8f54f05c7ee523b2c86361359c87385cb6295d727539f06128911b40f322b55"
+      "bytes": 38734,
+      "sha256": "dc02f801df91d40bf5bf872aff83028b2027d3f76b791fc904a548cf077b742f"
     },
     {
       "path": "site/app/trip-date-picker.tsx",
@@ -919,8 +939,8 @@
     },
     {
       "path": "site/cloudflare-env.d.ts",
-      "bytes": 368,
-      "sha256": "163de22ad9e3787c0f680c89da384c8aa961cb629490487cdff5c9968a86ceee"
+      "bytes": 292,
+      "sha256": "45fd04a7a9919ad63e0909adb8ac3e1453608ce0177f8faf1f384c0238fbc37f"
     },
     {
       "path": "site/components.json",
@@ -1239,8 +1259,8 @@
     },
     {
       "path": "site/db/schema.ts",
-      "bytes": 5667,
-      "sha256": "a45b2a2208c2b722890e64cf42a0d2df8230e93f95df5e8fc79d0161caafa832"
+      "bytes": 5800,
+      "sha256": "5ee728bafcab946e79ba88d72d17117f48aac0c63a3ae1c59753e9a6141695bc"
     },
     {
       "path": "site/drizzle.config.ts",
@@ -1308,9 +1328,14 @@
       "sha256": "8779d83f5bd5c1b1a853ccd00f30a6d4cfadf02123beaec690813dc834ee83e6"
     },
     {
+      "path": "site/drizzle/0012_installation_confirmation.sql",
+      "bytes": 256,
+      "sha256": "cd0199424f5d5554dfc3bb9233216edba82703390e829c19bb52a07866283784"
+    },
+    {
       "path": "site/drizzle/meta/_journal.json",
-      "bytes": 1785,
-      "sha256": "c89ca42fd8af27bf95dfa1c6960c38a65f5208f99940b5425731ef4a288e9262"
+      "bytes": 1940,
+      "sha256": "26a015f38f18d777e4440e30ba0602d534836638502d8f158fc7491d680aa08f"
     },
     {
       "path": "site/drizzle/meta/0000_snapshot.json",
@@ -1373,6 +1398,11 @@
       "sha256": "cd348d0438ec167eaf64c913f4eea00201bb3b656b7f7c821fb1bb082b4a4a63"
     },
     {
+      "path": "site/drizzle/meta/0012_snapshot.json",
+      "bytes": 28619,
+      "sha256": "82bec007ed1202855a0ef9688b6d70ee9778b437b608b37bfaf55a655f9d2b28"
+    },
+    {
       "path": "site/eslint.config.mjs",
       "bytes": 846,
       "sha256": "f22a254df7d934bbf9be499d3c969a13abb7f7f64c03f5967d0095cad81dfe06"
@@ -1399,8 +1429,8 @@
     },
     {
       "path": "site/lib/assistant-api.ts",
-      "bytes": 10965,
-      "sha256": "51c04be139d04ef3bdfdee73cd79bec6c1d4c8cf0d16fbb340b0e590e470423f"
+      "bytes": 11265,
+      "sha256": "c42934d8ef5c583c06e4a1d916ea32816afe37857deac9553ba1dbe7971bd04b"
     },
     {
       "path": "site/lib/assistant-context.ts",
@@ -1424,8 +1454,13 @@
     },
     {
       "path": "site/lib/distribution-config.ts",
-      "bytes": 494,
-      "sha256": "887a083beaa6689c05714a46cd8f0debe8f8a678590a7b1a1c9a52ca13ad1633"
+      "bytes": 499,
+      "sha256": "cbe28cc74d14aabe9f5c680afcece501f361ca4ef449f61725cfb259c77a0203"
+    },
+    {
+      "path": "site/lib/distribution-policies.ts",
+      "bytes": 15223,
+      "sha256": "2f3cf2efb6c8648dc1786628efd988d533b099819ea558f208ee95bc8b913994"
     },
     {
       "path": "site/lib/document-preview.ts",
@@ -1459,8 +1494,8 @@
     },
     {
       "path": "site/lib/installation.ts",
-      "bytes": 4231,
-      "sha256": "c271dfbad9ecdd108f4dabb34db11c427798171cfbc48bd4617ec3ba570d911c"
+      "bytes": 6380,
+      "sha256": "6784d0b7bcaa983aebb5a6676a7121951f2c16cd861ca28d2cf165a0ba781b4c"
     },
     {
       "path": "site/lib/photo-contracts.ts",
@@ -1504,8 +1539,8 @@
     },
     {
       "path": "site/lib/reservation-locations.ts",
-      "bytes": 4870,
-      "sha256": "7784d1c27436dbda0738dfd14071db3a59a9138013688c1df896d010f710987e"
+      "bytes": 4919,
+      "sha256": "ab867332d54205ea7e9a127dd302d86c0a7e1eee21b202c960077e51cfff955d"
     },
     {
       "path": "site/lib/reservation-map.ts",
@@ -1529,8 +1564,8 @@
     },
     {
       "path": "site/lib/service.ts",
-      "bytes": 18278,
-      "sha256": "33141db23f16f2e6d2f73e46631d83f354022d35f2625dfdd44d8d733b65eac0"
+      "bytes": 18532,
+      "sha256": "58f1938bca514302aa7d63bb0ad1200b830c65f0eb903b1ce1710aa8f4eef137"
     },
     {
       "path": "site/lib/sync.ts",
@@ -1564,8 +1599,8 @@
     },
     {
       "path": "site/package-lock.json",
-      "bytes": 509248,
-      "sha256": "1d8d0be67622924b463c9962e313d6ae424b4dae3f0c35791e9fd79e28a9e366"
+      "bytes": 510166,
+      "sha256": "4358975c1670d86f8dc6582966270530a23df8b013b03bf6813143a7ba3fe225"
     },
     {
       "path": "site/package.json",

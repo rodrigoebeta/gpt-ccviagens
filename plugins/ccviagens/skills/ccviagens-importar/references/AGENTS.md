@@ -88,7 +88,7 @@ Leia README.md na entrada, CONFIGURAR_NO_WORK.md durante a instalação e a etap
 - Entregue URL verificada, instruções de uso e pendências específicas. Verificação local não comprova hospedagem; largura móvel simulada não comprova telefone físico. Instalação em conta independente continua pendente até a execução real.
 
 
-## Telemetria e avisos — decisão de 01/10/2026
+## Telemetria e avisos
 
 A ativação exige aceite explícito e primeiro contato confirmado pelo receptor. O aceite não se repete no uso normal: contatos automáticos durante o uso renovam a confirmação, normalmente a cada 24 horas. Após sete dias sem confirmação válida, a instalação impede alterações e importações, inclusive pelas APIs assistant/sync, e mantém consulta a viagens e comprovantes. O contato confirmado restabelece as alterações automaticamente. Uma falha de rede não comprova descumprimento. Novos avisos de versão dependem da telemetria confirmada; não há instalação automática de código. Não interpretar confirmação técnica como novo aceite da pessoa. Aceite anterior só é repetido quando a versão dos termos mudar materialmente. Na instalação e atualização, preservar identidade/credencial e exigir primeiro contato real; configuração ou publicação por si só não comprovam ativação. Nunca remover o mecanismo para contornar essas condições. Em falha persistente, explicar o modo de consulta e orientar recuperação; não alterar reservas nem credenciais. Versões antigas só recebem a regra ao atualizar. O aviso público release.json é a transição 0.4.0 congelada; os seguintes vêm do receptor. O código entregue pode ser modificado: a verificação técnica não é uma garantia inviolável.
 

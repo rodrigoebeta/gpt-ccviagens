@@ -9,8 +9,8 @@
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/AGENTS.md",
-      "bytes": 24897,
-      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
+      "bytes": 24870,
+      "sha256": "42910bf58f412db234a257019148695eec63cf79d53b3fb4108a9d28e64c3257"
     },
     {
       "path": ".agents/skills/ccviagens-importar/references/COMECE_AQUI.md",
@@ -109,8 +109,8 @@
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/AGENTS.md",
-      "bytes": 24897,
-      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
+      "bytes": 24870,
+      "sha256": "42910bf58f412db234a257019148695eec63cf79d53b3fb4108a9d28e64c3257"
     },
     {
       "path": ".agents/skills/ccviagens-onboarding/references/COMECE_AQUI.md",
@@ -219,13 +219,13 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 24897,
-      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
+      "bytes": 24870,
+      "sha256": "42910bf58f412db234a257019148695eec63cf79d53b3fb4108a9d28e64c3257"
     },
     {
       "path": "ccviagens-plugin.zip",
-      "bytes": 266647,
-      "sha256": "194fad0dc2d6c539b076c5a6293aa9c372badaf2925eafe27dbd7304516f3f77"
+      "bytes": 266599,
+      "sha256": "82b7cd2f95b66d07effdd181606d875bd51e3721e15aed9f17be3b6a3d85103d"
     },
     {
       "path": "COMECE_AQUI.md",
@@ -329,8 +329,8 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/AGENTS.md",
-      "bytes": 24897,
-      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
+      "bytes": 24870,
+      "sha256": "42910bf58f412db234a257019148695eec63cf79d53b3fb4108a9d28e64c3257"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-importar/references/COMECE_AQUI.md",
@@ -429,8 +429,8 @@
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/AGENTS.md",
-      "bytes": 24897,
-      "sha256": "3d5dc73f6f49dbc0ee88e6552d6431863f08acea03e72f213303e75c3a9df4fa"
+      "bytes": 24870,
+      "sha256": "42910bf58f412db234a257019148695eec63cf79d53b3fb4108a9d28e64c3257"
     },
     {
       "path": "plugins/ccviagens/skills/ccviagens-onboarding/references/COMECE_AQUI.md",
